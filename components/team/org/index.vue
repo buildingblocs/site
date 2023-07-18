@@ -3,7 +3,7 @@
         <div class="px-4 mx-auto max-w-screen-xl text-center lg:px-6">
             <div class="mx-auto mb-8 max-w-screen-xl lg:mb-8">
                 <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-200 sm:text-4xl text-left">Our Organisers</h2>
-                <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-slate-400 text-left">Without our organizers, we wouldn't be able to organize much of BuildingBloCS, hence this serves as NuxtLink <i>thank-you note</i> to all of them for their willingness to help and make BuildingBloCS possible!</p>
+                <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-slate-400 text-left">Without our organizers, we wouldn't be able to organize much of BuildingBloCS, hence this serves as a <i>thank-you note</i> to all of them for their willingness to help and make BuildingBloCS possible!</p>
             </div>
             <div>
                 <h2 class="text-3xl tracking-tight text-left font-extrabold pb-8 text-gray-900 dark:text-white">Emcees</h2>
