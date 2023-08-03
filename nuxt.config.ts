@@ -1,10 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/color-mode'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/color-mode', '@nuxt/image'],
   colorMode: {
-    preference: 'dark',
     fallback: 'dark',
-    classSuffix: ''
+    classSuffix: '',
   },
   css: ['~/assets/css/main.css'],
   devtools: { enabled: true },

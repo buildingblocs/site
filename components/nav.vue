@@ -6,7 +6,7 @@
                 <div class="flex lg:flex-1">
                     <NuxtLink class="-m-1.5 p-1.5" to="/">
                         <span class="sr-only">BuildingBloCS</span>
-                        <img class="h-8 w-auto" src="/logo.png" alt="" />
+                        <nuxt-img format="webp" class="h-8 w-auto" src="/logo.png" alt="" />
                     </NuxtLink>
                 </div>
                 <div class="flex lg:hidden">
@@ -37,7 +37,7 @@
                     <div class="flex items-center justify-between">
                         <NuxtLink class="-m-1.5 p-1.5" to="/">
                             <span class="sr-only">BuildingBloCS</span>
-                            <img class="h-8 w-auto" src="/logo.png" alt="" />
+                            <nuxt-img format="webp" class="h-8 w-auto" src="/logo.png" alt="" />
                         </NuxtLink>
                         <Mode />
                         <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700 dark:text-slate-200" @click="mobileMenuOpen = false">
@@ -77,6 +77,7 @@ const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Events', href: '/events' },
     { name: 'Our Team', href: '/team' },
+    { name: 'Our Partners', href: '/partners' },
 ]
 
 const mobileMenuOpen = ref(false)
