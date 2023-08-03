@@ -17,7 +17,10 @@
                     </div>
                 </div>
                 <div class="px-2">
-Under maintainece
+                    <TeamOic />
+                    <TeamExco />
+                    <TeamOrg />
+                    <TeamWs />
                 </div>
                 <Footer />
             </div>

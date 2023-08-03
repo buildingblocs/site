@@ -21,7 +21,7 @@ module.exports = {
     darkSelector: '.dark-mode',
   },
   plugins: [
-    require('flowbite/plugin')
+    require('flowbite/plugin', 'tailwindcss-dark-mode')
   ],
   darkMode: 'class',
 }
