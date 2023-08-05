@@ -12,7 +12,7 @@
           </div>
         </div>
         <img :src="img" alt=""
-          class="pt-1 object-cover object-center w-full max-h-[25rem] lg:max-h-full rounded-xl shadow-xl ring-1 ring-gray-400/10"
+          class="object-cover object-center w-full max-h-[25rem] lg:max-h-full rounded-xl shadow-xl ring-1 ring-gray-400/10"
         />
       </div>
     </div>

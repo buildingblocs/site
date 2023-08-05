@@ -77,6 +77,7 @@ const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Events', href: '/events' },
     { name: 'Our Team', href: '/team' },
+    { name: 'Our Partners', href: '/partners' },
 ]
 
 const mobileMenuOpen = ref(false)

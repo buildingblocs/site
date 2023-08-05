@@ -2,7 +2,6 @@
 export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/color-mode'],
   colorMode: {
-    preference: 'dark',
     fallback: 'dark',
     classSuffix: ''
   },
