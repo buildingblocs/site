@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: [
     "./components/**/*.{js,vue,ts}",
@@ -15,9 +17,13 @@ module.exports = {
   },
   purgeCSS: {
     whitelist: ['dark-mode'],
-   },
+  },
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+      },
+    },
     darkSelector: '.dark-mode',
   },
   plugins: [

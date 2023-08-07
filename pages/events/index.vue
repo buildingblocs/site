@@ -1,12 +1,8 @@
 <template>
     <div class="bg-white dark:bg-slate-800">
-
-        <head>
-            <title>Events - BuildingBlocs 2023</title>
-        </head>
         <div>
             <Nav />
-            <div class="pt-32">
+            <div class="pt-16 sm:pt-32">
                 <div class="relative isolate pt-14 lg:px-8">
                     <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
                         aria-hidden="true">
@@ -15,7 +11,8 @@
                     </div>
                     <div class="mx-auto max-w-4xl">
                         <div class="text-center">
-                            <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl dark:text-white pb-24">
+                            <h1
+                                class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl dark:text-white pb-10 sm:pb-10 sm:pb-24">
                                 Our Events</h1>
                         </div>
                     </div>
@@ -70,4 +67,32 @@ export default {
         };
     }
 }
+</script>
+
+<script setup>
+useSeoMeta({
+    title: 'Events - BuildingBloCS 2023',
+    description: 'Ignite your passion in computing',
+    ogTitle: 'Events - BuildingBloCS 2023',
+    ogDescription: 'Ignite your passion in computing',
+    ogImage: '/index/hero/img3.jpg',
+    ogUrl: 'https://new.buildingblocs.sg/events',
+    twitterTitle: 'Events - BuildingBloCS 2023',
+    twitterDescription: 'Ignite your passion in computing',
+    twitterImage: '/index/hero/img3.jpg',
+    twitterCard: 'summary_large_image'
+})
+
+useHead({
+    htmlAttrs: {
+        lang: 'en'
+    },
+    link: [
+        {
+            rel: 'icon',
+            type: 'image/png',
+            href: '/favicon.png'
+        }
+    ]
+})
 </script>

@@ -3,14 +3,14 @@
         <div class="px-6 pt-14 lg:px-8">
             <div class="absolute bottom-16 md:bottom-10 lg:left-8 left-6 ">
                 <div class="text-center">
-                    <h1 class="text-left text-6xl font-bold tracking-tight text-gray-900 sm:text-8xl dark:text-white">
+                    <h1 class="text-left text-6xl font-bold tracking-tight sm:text-8xl text-white">
                         Ignite your passion <br class="hidden sm:inline"> in computing.</h1>
                 </div>
             </div>
             <div class="absolute md:bottom-10 md:right-10 bottom-5 left-7 xl:left-9">
                 <div class="text-right">
                     <NuxtLink href="#statement"
-                        class="text-sm font-semibold leading-6 text-gray-900 dark:text-slate-200">Learn more <span
+                        class="text-sm font-semibold leading-6 text-slate-200">Learn more <span
                             aria-hidden="true">↓</span></NuxtLink>
                 </div>
             </div>

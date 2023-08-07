@@ -2,15 +2,15 @@
     <footer class="p-4 sm:p-6 dark:bg-slate-800">
         <div class="mx-auto max-w-screen-xl">
             <hr class="my-6 border-1 border-orange-300 sm:mx-auto pb-6 dark:border-gray-700 lg:my-8" />
-            <div class="pl-4">
+            <div class="pl-2">
                 <div class="mb-8 md:mb-0">
                     <NuxtLink href="/" class="flex items-center md:pb-7">
-                        <img src="/logo.png" class="mr-3 h-8" alt="BuildingBloCS" />
+                        <nuxt-img format="webp" src="/logo.png" class="mr-3 h-8" alt="BuildingBloCS" />
                         <span
                             class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">BuildingBloCS</span>
                     </NuxtLink>
                 </div>
-                <ul class="flex flex-col sm:flex-wrap sm:flex-row text-gray-900 dark:text-white sm:space-x-4">
+                <ul class="flex flex-col sm:flex-wrap sm:flex-row text-lg text-gray-600 dark:text-slate-300 sm:space-x-4">
                     <li class="mb-6">
                         <NuxtLink href="/" class="hover:underline">Home</NuxtLink>
                     </li>
