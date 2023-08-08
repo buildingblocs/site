@@ -25,12 +25,13 @@
       </div>
     </div>
     <!-- Swiper background -->
-    <Swiper :modules="[SwiperAutoplay]" :slides-per-view="1" :loop="true" :effect="'creative'"
+    <Swiper :modules="[SwiperAutoplay]" :slides-per-view="1" :loop="true" :effect="'creative'" :lazyPreloadPrevNext="3"
       :autoplay="{ delay: 8000, disableOnInteraction: false }" class="z-0">
       <SwiperSlide v-for="slide in slides" :key="slide">
         <div class="absolute top-0 left-0 w-full h-full fade from-transparent to-black"></div>
         <!-- Add "object-cover" class to stretch the image -->
-        <nuxt-img format="webp" class="object-cover w-full h-full" :src="slide" alt="" />
+        <nuxt-img format="webp" class="object-cover w-full h-full swiper-lazy" :src="slide" alt="" />
+        <div class="swiper-lazy-preloader"></div>
       </SwiperSlide>
     </Swiper>
   </div>
@@ -50,10 +51,10 @@ export default {
       slides: [
         "/index/hero/img2.jpg",
         "/index/hero/img3.jpg",
-        "/index/hero/img3.png",
         "/index/hero/img4.png",
         "/index/hero/img5.jpg",
         "/index/hero/img6.jpg",
+        "/index/hero/img3.png",
       ],
       LtextRpicTitle1: 'By students, for students.',
       LtextRpicDesc1:

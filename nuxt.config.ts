@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/color-mode', 'nuxt-swiper', '@nuxt/image'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/color-mode', 'nuxt-swiper', '@nuxt/image', '@nuxtjs/robots', 'nuxt-simple-sitemap'],
   app: {
     head: {
       link: [{ rel: 'stylesheet', href: 'https://rsms.me/inter/inter.css' }],

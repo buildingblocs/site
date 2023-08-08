@@ -12,19 +12,19 @@
                 </div>
                 <ul class="flex flex-col sm:flex-wrap sm:flex-row text-lg text-gray-600 dark:text-slate-300 sm:space-x-4">
                     <li class="mb-6">
-                        <NuxtLink href="/" class="hover:underline">Home</NuxtLink>
+                        <NuxtLink href="/" aria-label="Home" class="hover:underline">Home</NuxtLink>
                     </li>
                     <li class="mb-6">
-                        <NuxtLink href="/events" class="hover:underline">Events</NuxtLink>
+                        <NuxtLink href="/events" aria-label="Events" class="hover:underline">Events</NuxtLink>
                     </li>
                     <li class="mb-6">
-                        <NuxtLink href="/team" class="hover:underline">Our Team</NuxtLink>
+                        <NuxtLink href="/team" aria-label="Our Team" class="hover:underline">Our Team</NuxtLink>
                     </li>
                     <li class="mb-6">
-                        <NuxtLink href="/partners" class="hover:underline">Our Partners</NuxtLink>
+                        <NuxtLink href="/partners" aria-label="Our Partners" class="hover:underline">Our Partners</NuxtLink>
                     </li>
                     <li class="mb-6">
-                        <NuxtLink href="/events/sept" class="hover:underline">Sept Conference</NuxtLink>
+                        <NuxtLink href="/events/sept" aria-label="September Conference" class="hover:underline">Sept Conference</NuxtLink>
                     </li>
                     <li class="mb-6">
                         <NuxtLink href="https://go.buildingblocs.sg/june"

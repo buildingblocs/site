@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl dark:text-white mt-2 mb-10">
+        <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl dark:text-white">
             {{ title }}
         </h1>
         <h2 class="text-xl font-semibold tracking-tight text-gray-900 sm:text-3xl dark:text-white mb-4">

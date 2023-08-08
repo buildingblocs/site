@@ -30,8 +30,34 @@
                         </div>
                         <div class="mx-1 md:mx-7">
                             <div class="mx-1 md:mx-7 max-w-lg">
-                                <div v-for="timeline in timelines" :key="timeline.date">
-                                    <timeline :date="timeline.date" :events="timeline.events" />
+                                <div class="mx-1 md:mx-7 max-w-lg">
+                                    <div v-for="timeline in timelines" :key="timeline.date">
+                                        <h1
+                                            class="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl dark:text-white">
+                                            {{ timeline.title }}
+                                        </h1>
+                                        <h2
+                                            class="text-xl font-semibold tracking-tight text-gray-900 sm:text-3xl dark:text-white mb-4">
+                                            {{ timeline.date }}
+                                        </h2>
+                                        <ol class="relative border-l border-gray-200 dark:border-gray-700 mb-10">
+                                            <li v-for="event in timeline.events" :key="event.title" class="mb-10 ml-4">
+                                                <div
+                                                    class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-800 dark:bg-gray-600">
+                                                </div>
+                                                <time
+                                                    class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-400">{{
+                                                        event.date }}</time>
+                                                <h3
+                                                    class="text-md font-semibold tracking-tight text-gray-900 sm:text-xl dark:text-white">
+                                                    {{ event.title }}
+                                                </h3>
+                                                <p class="mb-4 text-lg leading-8 text-gray-600 dark:text-slate-300">
+                                                    {{ event.desc }}
+                                                </p>
+                                            </li>
+                                        </ol>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -45,8 +71,6 @@
 </template>
 
 <script setup>
-import timeline from "~/components/timeline.vue";
-
 const timelines = [
     {
         date: "3rd Sept",
@@ -110,7 +134,7 @@ const timelines = [
                 title: "Hackathon",
                 desc: "You are tasked to solve a community need (can be related to Singapore) and submit it by 7 Sept 2359. Along with a website/webapp, you will have to prepare a deck of slides with your creativity process, features of your work and a demo.",
             },
-],
+        ],
     },
 ];
 

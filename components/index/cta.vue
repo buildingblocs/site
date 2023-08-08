@@ -30,7 +30,7 @@
                 </div>
                 <div class="pt-7">
                     <div class="lg:absolute bg-white/5 ring-1 lg:rounded-l-lg rounded-t-lg ring-white/10 lg:w-[46rem]">
-                        <nuxt-img format="webp" class="lg:rounded-l-lg rounded-t-lg" src="/index/img5.png" />
+                        <nuxt-img format="webp" alt="An image of a lady with a FossAsia lanyard holding a laptop in a auditorium" class="lg:rounded-l-lg rounded-t-lg" src="/index/img5.png" />
                     </div>
                 </div>
             </div>
