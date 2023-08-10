@@ -120,7 +120,7 @@
         <div id="accordion-flush-body-6" class="hidden" aria-labelledby="accordion-flush-heading-2">
             <div class="py-5 border-b border-gray-200 dark:border-gray-700">
                 <p class="mb-2 text-lg text-gray-600 dark:text-slate-300">The hackathon will be carried out in groups of three. You may indicate who you would like to be grouped with (make sure it's mutual) and we'll take that into consideration. We'll fill any empty slots randomly, taking into consideration your school and age to ensure a pleasant collaboration experience!
-must i go for all workshops</p>
+                </p>
             </div>
         </div>
     </div>
