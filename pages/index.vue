@@ -29,7 +29,7 @@
       :autoplay="{ delay: 8000, disableOnInteraction: false }" class="z-0">
       <SwiperSlide v-for="slide in slides" :key="slide">
         <div class="absolute top-0 left-0 w-full h-full fade from-transparent to-black"></div>
-        <nuxt-img format="webp" class="object-cover w-full h-full swiper-lazy" :src="slide" alt="" />
+        <nuxt-img format="webp" class="object-cover w-full h-full swiper-lazy mt-10" :src="slide" />
         <div class="swiper-lazy-preloader"></div>
       </SwiperSlide>
     </Swiper>
@@ -122,5 +122,6 @@ useHead({
 .fade {
   mask: linear-gradient(transparent, transparent, black);
   backdrop-filter: blur(10px);
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
 }
 </style>

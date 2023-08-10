@@ -10,14 +10,14 @@
                     </NuxtLink>
                 </div>
                 <NuxtLink href="/events/sept"
-                    class="xl:hidden flex items-center hover:underline rounded-full bg-gray-300 dark:bg-gray-900 bg-opacity-30 dark:bg-opacity-30 px-3 py-1 text-xs font-semibold text-gray-600 hover:bg-opacity-20 dark:text-slate-200 dark:hover:bg-opacity-50 shadow-sm dark:hover:bg-gray-900 hover:bg-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500">
-                    Join us for the Sept Conference
+                    class="xl:hidden flex items-center hover:underline rounded-full bg-gray-300 dark:bg-gray-900 bg-opacity-30 dark:bg-opacity-30 px-3 py-1 text-xs sm:text-sm font-semibold text-gray-600 hover:bg-opacity-20 dark:text-slate-200 dark:hover:bg-opacity-50 shadow-sm dark:hover:bg-gray-900 hover:bg-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500">
+                    Learn about the Sept Conference
                     <span aria-hidden="true" class="ml-1">&rarr;</span>
                 </NuxtLink>
                 <div class="flex xl:hidden">
                     <Menu as="div" class="relative inline-block text-left mt-1">
                         <div>
-                            <MenuButton
+                            <MenuButton aria-label="Menu"
                                 class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-300">
                                 <Bars3Icon class="h-6 w-6" aria-hidden="true" />
                             </MenuButton>
@@ -69,7 +69,7 @@
                 <div class="hidden xl:flex xl:flex-1 xl:justify-end">
                     <NuxtLink href="/events/sept"
                         class="flex items-center hover:underline rounded-full bg-gray-300 dark:bg-gray-900 bg-opacity-30 dark:bg-opacity-30 px-3 py-1 text-xs 2xl:text-sm font-semibold text-gray-600 hover:bg-opacity-20 dark:text-slate-200 dark:hover:bg-opacity-50 shadow-sm dark:hover:bg-gray-900 hover:bg-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500">
-                        Join us for the Sept Conference
+                        Learn about the Sept Conference
                         <span aria-hidden="true" class="ml-1">&rarr;</span>
                     </NuxtLink>
                     <Mode />
@@ -85,7 +85,6 @@
 </template>
   
 <script setup>
-import { ref } from 'vue'
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
 import { Bars3Icon } from '@heroicons/vue/24/outline'
 
@@ -95,6 +94,4 @@ const navigation = [
     { name: 'Our Team', href: '/team' },
     { name: 'Our Partners', href: '/partners/' },
 ]
-
-const mobileMenuOpen = ref(false)
 </script>
