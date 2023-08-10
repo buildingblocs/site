@@ -19,14 +19,54 @@
                                 Dates: 3, 4 and 5 Sept <br>
                                 Venue: Online <br>
                                 Email contact for queries:
-                                <NuxtLink to="mailto:hello@buildingblocs.sg" class="text-orange-300 hover:underline">
+                                <NuxtLink to="mailto:hello@buildingblocs.sg"
+                                    class="text-orange-500 dark:text-orange-400 hover:underline">
                                     hello@buildingblocs.sg
                                 </NuxtLink>
                             </p>
                             <p class="mt-3 text-lg leading-8 text-gray-600 dark:text-slate-300">BuildingBloCS’s
                                 annual September conference will be happening on <b>3rd, 4th and 5th Sept</b> virtually.
                                 This year’s conference will be on <b>Web Development.</b></p>
-                            <EventsSeptFaq />
+                            <p class="mt-3 text-lg leading-8 text-gray-600 dark:text-slate-300">Ready? 
+                                <NuxtLink
+                                    to="https://go.buildingblocs.sg/sep2023signup"
+                                    class="text-orange-500 dark:text-orange-400 hover:underline">
+                                    Register today.
+                                </NuxtLink>
+                            </p>
+                            <div>
+                                <div class="mt-6">
+                                    <Disclosure v-for="(faq, index) in faqs" :key="index" v-slot="{ open }">
+                                        <DisclosureButton
+                                            class="mt-2 flex items-center justify-between rounded-lg bg-orange-100 px-4 py-2 text-left sm:text-xl text-orange-900 hover:bg-orange-200 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-75 text-md font-semibold tracking-tight w-full">
+                                            <span>{{ faq.question }}</span>
+                                            <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''"
+                                                class="h-5 w-5 text-orange-500" />
+                                        </DisclosureButton>
+                                        <DisclosurePanel class="px-4 pt-4 pb-2 text-lg text-gray-600 dark:text-slate-300">
+                                            {{ faq.answer }}
+                                        </DisclosurePanel>
+                                    </Disclosure>
+                                    <Disclosure v-slot="{ open }">
+                                        <DisclosureButton
+                                            class="mt-2 flex items-center justify-between rounded-lg bg-orange-100 px-4 py-2 text-left sm:text-xl text-orange-900 hover:bg-orange-200 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-75 text-md font-semibold tracking-tight w-full">
+                                            <span>What if something pops up and I can't make it?</span>
+                                            <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''"
+                                                class="h-5 w-5 text-orange-500" />
+                                        </DisclosureButton>
+                                        <DisclosurePanel class="px-4 pt-4 pb-2 text-lg text-gray-600 dark:text-slate-300">
+                                            Email us at
+                                            <NuxtLink to="mailto:hello@buildingblocs.sg"
+                                                class="text-orange-300 hover:underline">
+                                                hello@buildingblocs.sg
+                                            </NuxtLink>
+                                            or approach us on Discord in any appropriate channels and we will update your
+                                            signup status
+                                            accordingly.
+                                        </DisclosurePanel>
+                                    </Disclosure>
+                                </div>
+                            </div>
                         </div>
                         <div class="mx-1 md:mx-7">
                             <div class="mx-1 md:mx-7 max-w-lg">
@@ -71,6 +111,31 @@
 </template>
 
 <script setup>
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
+import { ChevronUpIcon } from '@heroicons/vue/20/solid'
+
+const faqs = [
+    {
+        question: "Must I go for all workshops?",
+        answer: "Not at all! You can choose which workshops you would like to attend.",
+    },
+    {
+        question: "Why should I sign up?",
+        answer: "You can learn a whole lot of new skills and it’ll be really fun!",
+    },
+    {
+        question: "Is the event free?",
+        answer: "Yep, thanks to our generous sponsors, it’s completely free!",
+    },
+    {
+        question: "Are there prizes?",
+        answer: "There are prizes including Sony Headphones and Amazon gift cards for every member of the winning group!",
+    },
+    {
+        question: "How will the hackathon groups be allocated?",
+        answer: "The hackathon will be carried out in groups of three. You may indicate who you would like to be grouped with (make sure it's mutual) and we'll take that into consideration. We'll fill any empty slots randomly, taking into consideration your school and age to ensure a pleasant collaboration experience!",
+    },
+];
 const timelines = [
     {
         date: "3rd Sept",

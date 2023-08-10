@@ -48,7 +48,7 @@
 const partners = [
   { pic: '/partners/aisg.png', name: 'AI Singapore', desc: 'AISG is a government-driven organization dedicated to accelerating the adoption of artificial intelligence in Singapore. They help Singaporeans accustom to our evolving world.' },
   { pic: '/partners/bettersg.svg', name: 'Better.sg', desc: 'A volunteer-run charity that build open source products that is free anyone to use. They specialize on building online tools as well as provides resources and support the #techforgood community.' },
-  { pic: '/partners/cys.png', name: 'Cyber Youth Singapore', desc: 'Cyber Youth Singapore is a registered charity under the Charities Act. They are a youth movement that empowers youths with skills and opportunities to become trailblazers of our digital future.' },
+  { pic: '/partners/cys.png', name: 'Cyber Youth Singapore', desc: 'Cyber Youth Singapore is a registered charity under the Charities Act. They empower youths with skills and opportunities to become trailblazers of our digital future.' },
   { pic: '/partners/gcloud.svg', name: 'Google Cloud', desc: 'Google Cloud is a suite of cloud computing services that runs on the same infrastructure that Google uses internally for its end-user products, such as Google Search, Gmail, Google Drive, and YouTube.' },
   { pic: '/partners/meta.svg', name: 'Meta', desc: 'A global tech giant and with their cutting-edge technologies and vast resources, Meta is at the forefront of shaping the future of the digital landscape. They are a supporter of the open source community.' },
 ]
@@ -79,69 +79,3 @@ useHead({
     ]
 })
 </script>
-
-<script>
-export default {
-// Call the function after the component is mounted
-mounted() {
-  this.adjustCardHeights();
-  // Add an event listener to re-adjust card heights on window resize
-  window.addEventListener("resize", this.adjustCardHeights);
-},
-beforeDestroy() {
-  // Remove the event listener when the component is destroyed
-  window.removeEventListener("resize", this.adjustCardHeights);
-},
-methods: {
-  adjustCardHeights() {
-    const cards = this.$refs.card;
-    if (!cards) return;
-    let maxCardHeight = 0;
-
-    // Reset card heights to auto before calculating the new max height
-    cards.forEach((card) => {
-      card.style.height = "auto";
-      maxCardHeight = Math.max(maxCardHeight, card.offsetHeight);
-    });
-
-    // Set all cards to the calculated max height
-    cards.forEach((card) => {
-      card.style.height = `${maxCardHeight}px`;
-    });
-  },
-},
-};
-</script>
-
-<style scoped>
-.grid {
-display: grid;
-}
-
-.grid-cols-1 {
-grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-/* Set the desired number of columns at different breakpoints */
-@media (min-width: 640px) {
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-}
-
-@media (min-width: 1024px) {
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-}
-
-/* Add styling for the card container */
-.m-2 {
-margin: 0.5rem;
-}
-
-/* Adjust card content styling as needed */
-.max-w-xs {
-max-width: 20rem;
-}
-</style>

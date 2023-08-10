@@ -2,4 +2,5 @@
 @tailwind components;
 @tailwind utilities;
 
+html{scroll-behavior:smooth}
 /* css file to style scrollbar for future use */
