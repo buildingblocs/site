@@ -30,7 +30,6 @@
       <SwiperSlide v-for="slide in slides" :key="slide">
         <div class="absolute top-0 left-0 w-full h-full fade from-transparent to-black"></div>
         <nuxt-img format="webp" class="object-cover w-full h-full swiper-lazy mt-10" :src="slide" />
-        <div class="swiper-lazy-preloader"></div>
       </SwiperSlide>
     </Swiper>
   </div>
