@@ -73,11 +73,11 @@
                                 <div class="mx-1 md:mx-7 max-w-lg">
                                     <div v-for="timeline in timelines" :key="timeline.date">
                                         <h1
-                                            class="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl dark:text-white">
+                                            class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl dark:text-white">
                                             {{ timeline.title }}
                                         </h1>
                                         <h2
-                                            class="text-xl font-semibold tracking-tight text-gray-900 sm:text-3xl dark:text-white mb-4">
+                                            class="text-2xl font-semibold tracking-tight text-gray-900 sm:text-3xl dark:text-white mb-4">
                                             {{ timeline.date }}
                                         </h2>
                                         <ol class="relative border-l border-gray-200 dark:border-gray-700 mb-10">
@@ -89,11 +89,14 @@
                                                     class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-400">{{
                                                         event.date }}</time>
                                                 <h3
-                                                    class="text-md font-semibold tracking-tight text-gray-900 sm:text-xl dark:text-white">
+                                                    class="text-lg font-semibold tracking-tight text-gray-900 sm:text-xl dark:text-white">
                                                     {{ event.title }}
                                                 </h3>
-                                                <p class="mb-4 text-lg leading-8 text-gray-600 dark:text-slate-300">
+                                                <p class="sm:text-lg text-md text-gray-600 dark:text-slate-300">
                                                     {{ event.desc }}
+                                                </p>
+                                                <p class="text-md text-gray-500 dark:text-slate-400">
+                                                    {{ event.author }}
                                                 </p>
                                             </li>
                                         </ol>
@@ -143,17 +146,20 @@ const timelines = [
             {
                 date: "10am - 11.30am",
                 title: "Intro to Design Thinking and Figma",
-                desc: "by Du Yuhan and Cervon Wong",
+                author: "by Du Yuhan and Cervon Wong",
+                desc: "Less design thinking, more design."
             },
             {
                 date: "3pm - 5pm",
                 title: "Intro to HTML/CSS/JS",
-                desc: "by Justin Chee, Oon Zheng Kang, Saw Ze Dong and Harry Cheong",
+                author: "by Justin Chee, Oon Zheng Kang, Saw Ze Dong and Harry Cheong",
+                desc: "Introduction to the basics of how a website is made."
             },
             {
                 date: "7pm - 9pm",
                 title: "Intro to Vue",
-                desc: "by Mayukh Das and Lee I-Shiang",
+                author: "by Mayukh Das and Lee I-Shiang",
+                desc: "An introduction to Vue, a Javascript Framework."
             },
         ],
     },
@@ -163,17 +169,20 @@ const timelines = [
             {
                 date: "10am - 12pm",
                 title: "Intro to React",
-                desc: "by Liu Wenkai and “Peter” Zeyu Yao",
+                author: "by Liu Wenkai and “Peter” Zeyu Yao",
+                desc: "Learn about React’s component-based design and ship a site using it."
             },
             {
                 date: "2pm - 3.30pm",
                 title: "Intro to Nuxt.JS and TailwindCSS",
-                desc: "by Aung Kaung Myat",
+                author: "by Aung Kaung Myat",
+                desc: "Learn how to build a website for yourself in SPA mode, hosted on Netlify."
             },
             {
                 date: "7pm - 8.30pm",
                 title: "Intro to Next.JS",
-                desc: "by Vadapalli Dedeep Sai and Raghav Kumar",
+                author: "by Vadapalli Dedeep Sai and Raghav Kumar",
+                desc: "Learn about Next components and server side rendering. Host a simple blog webapp using Vercel."
             },
         ],
     },
@@ -182,13 +191,15 @@ const timelines = [
         events: [
             {
                 date: "10am - 12pm",
-                title: "Intro to CI/CD",
-                desc: "by Mahir Shah and Hugo Maximus Lim",
+                title: "Intro to Website Deployment",
+                author: "by Mahir Shah and Hugo Maximus Lim",
+                desc: "Learn how to host your website."
             },
             {
                 date: "3pm - 5pm",
                 title: "Intro to Flask (and PythonAnywhere)",
-                desc: "by Yap Yuan Xi and Neil Bhandari",
+                author: "by Yap Yuan Xi and Neil Bhandari",
+                desc: "Look at how Flask connects your Python code to the internet, and ship a data scraping app using it."
             },
         ],
     },

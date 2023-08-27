@@ -16,6 +16,8 @@
     "@nuxtjs/tailwindcss": "^6.7.2",
     "@types/node": "^20",
     "nuxt": "^3.6.0",
+    "nuxt-clarity-analytics": "^0.0.6",
+    "nuxt-gtag": "^0.6.1",
     "nuxt-simple-sitemap": "^3.1.5"
   },
   "dependencies": {

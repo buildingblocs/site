@@ -33,7 +33,7 @@
                                     Title Large (Default)</h3>
                                 <h4 class="text-lg font-semibold tracking-tight text-gray-900 sm:text-2xl dark:text-white">
                                     Title Medium</h4>
-                                <h5 class="text-md font-semibold tracking-tight text-gray-900 sm:text-xl dark:text-white">
+                                <h5 class="text-lg font-semibold tracking-tight text-gray-900 sm:text-xl dark:text-white">
                                     Title Small</h5>
                             </div>
                             <div>
