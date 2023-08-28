@@ -43,7 +43,7 @@
                                 </div>
                                 <MenuItem v-slot="{ active }">
                                 <div class="px-1 py-1">
-                                    <NuxtLink to="https://go.buildingblocs.sg/sep2023signup" :class="[
+                                    <NuxtLink to="/events/sept" :class="[
                                         active ? 'bg-orange-500 text-white' : 'text-gray-900 dark:text-gray-200',
                                         'group flex w-full items-center rounded-md px-2 py-2 text-sm font-semibold',
                                     ]">
@@ -73,7 +73,7 @@
                         <span aria-hidden="true" class="ml-1">&rarr;</span>
                     </NuxtLink>
                     <Mode />
-                    <NuxtLink href="https://go.buildingblocs.sg/sep2023signup"
+                    <NuxtLink href="/events/sept"
                         class="hover:underline rounded-md bg-orange-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500">
                         Register
                         <span aria-hidden="true">&rarr;</span>

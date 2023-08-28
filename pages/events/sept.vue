@@ -27,12 +27,7 @@
                             <p class="mt-3 text-lg leading-8 text-gray-600 dark:text-slate-300">BuildingBloCS’s
                                 annual September conference will be happening on <b>3rd, 4th and 5th Sept</b> virtually.
                                 This year’s conference will be on <b>Web Development.</b></p>
-                            <p class="mt-3 text-lg leading-8 text-gray-600 dark:text-slate-300">Ready? 
-                                <NuxtLink
-                                    to="https://go.buildingblocs.sg/sep2023signup"
-                                    class="text-orange-500 dark:text-orange-400 hover:underline">
-                                    Register today.
-                                </NuxtLink>
+                            <p class="mt-3 text-lg leading-8 text-gray-600 dark:text-slate-300">We have closed signups due to overwhelming demand. Please email us for any queries. We hope to see you at our future events!
                             </p>
                             <div>
                                 <div class="mt-6">
