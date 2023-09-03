@@ -24,10 +24,10 @@
                                     hello@buildingblocs.sg
                                 </NuxtLink>
                             </p>
-                            <p class="mt-3 text-lg leading-8 text-gray-600 dark:text-slate-300">BuildingBloCS’s
-                                annual September conference will be happening on <b>3rd, 4th and 5th Sept</b> virtually.
-                                This year’s conference will be on <b>Web Development.</b></p>
-                            <p class="mt-3 text-lg leading-8 text-gray-600 dark:text-slate-300">We have closed signups due to overwhelming demand. Please email us for any queries. We hope to see you at our future events!
+                          <p class="mt-3 text-lg leading-8 text-gray-600 dark:text-slate-300 font-bold">Please note
+                            that the workshop "Intro to Vue" has been cancelled. We apologise for any inconvenience caused.</p>
+                            <p class="mt-3 text-lg leading-8 text-gray-600 dark:text-slate-300">BuildingBloCS’s annual September conference will be happening on <b>3rd, 4th and 5th Sept</b> virtually. This year’s conference will be on <b>Web Development.</b></p>
+                            <p class="mt-3 text-lg leading-8 text-gray-600 dark:text-slate-300">We have closed signups due to overwhelming demand. Please email us for any queries and make sure you're in the Discord channel to receive updates on the event. We hope to see you at our future events!
                             </p>
                             <div>
                                 <div class="mt-6">
@@ -149,12 +149,6 @@ const timelines = [
                 title: "Intro to HTML/CSS/JS",
                 author: "by Justin Chee, Oon Zheng Kang, Saw Ze Dong and Harry Cheong",
                 desc: "Introduction to the basics of how a website is made."
-            },
-            {
-                date: "7pm - 9pm",
-                title: "Intro to Vue",
-                author: "by Mayukh Das and Lee I-Shiang",
-                desc: "An introduction to Vue, a Javascript Framework."
             },
         ],
     },

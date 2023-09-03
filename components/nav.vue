@@ -11,7 +11,7 @@
                 </div>
                 <NuxtLink href="/events/sept"
                     class="xl:hidden flex items-center hover:underline rounded-full bg-gray-300 dark:bg-gray-900 bg-opacity-30 dark:bg-opacity-30 px-3 py-1 text-xs sm:text-sm font-semibold text-gray-600 hover:bg-opacity-20 dark:text-slate-200 dark:hover:bg-opacity-50 shadow-sm dark:hover:bg-gray-900 hover:bg-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500">
-                    Learn about the Sept Conference
+                    Sept Conference
                     <span aria-hidden="true" class="ml-1">&rarr;</span>
                 </NuxtLink>
                 <div class="flex xl:hidden">
@@ -69,7 +69,7 @@
                 <div class="hidden xl:flex xl:flex-1 xl:justify-end">
                     <NuxtLink href="/events/sept"
                         class="flex items-center hover:underline rounded-full bg-gray-300 dark:bg-gray-900 bg-opacity-30 dark:bg-opacity-30 px-3 py-1 text-xs 2xl:text-sm font-semibold text-gray-600 hover:bg-opacity-20 dark:text-slate-200 dark:hover:bg-opacity-50 shadow-sm dark:hover:bg-gray-900 hover:bg-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500">
-                        Learn about the Sept Conference
+                        Sept Conference
                         <span aria-hidden="true" class="ml-1">&rarr;</span>
                     </NuxtLink>
                     <Mode />
