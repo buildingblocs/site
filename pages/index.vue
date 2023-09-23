@@ -29,7 +29,7 @@
       :autoplay="{ delay: 8000, disableOnInteraction: false }" class="z-0">
       <SwiperSlide v-for="slide in slides" :key="slide">
         <div class="absolute top-0 left-0 w-full h-full fade from-transparent to-black"></div>
-        <nuxt-img format="webp" class="object-cover w-full h-full swiper-lazy mt-10" :src="slide" />
+        <nuxt-img format="webp" class="object-cover w-full h-full swiper-lazy" :src="slide" />
       </SwiperSlide>
     </Swiper>
   </div>
@@ -86,19 +86,6 @@ useSeoMeta({
   twitterDescription: 'Ignite your passion in computing',
   twitterImage: '/index/hero/img2.jpg',
   twitterCard: 'summary_large_image'
-})
-
-useHead({
-  htmlAttrs: {
-    lang: 'en'
-  },
-  link: [
-    {
-      rel: 'icon',
-      type: 'image/png',
-      href: '/favicon.png'
-    }
-  ]
 })
 </script>
 

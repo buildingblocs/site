@@ -65,17 +65,4 @@ useSeoMeta({
     twitterImage: '/index/hero/img4.png',
     twitterCard: 'summary_large_image'
 })
-
-useHead({
-    htmlAttrs: {
-        lang: 'en'
-    },
-    link: [
-        {
-            rel: 'icon',
-            type: 'image/png',
-            href: '/favicon.png'
-        }
-    ]
-})
 </script>
