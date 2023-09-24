@@ -501,5 +501,146 @@
         "imageSrc": "/teams/ppl/lee_i-shiang.jpeg",
         "name": "Lee I-Shiang",
         "description": "Hi, I'm I-Shiang :P I like coding, chemistry, and cheese."
+      },
+      "sai": {
+        "githubLink": "https://github.com/ovds",
+        "inLink": "https://linkedin.com/in/dedeep-sai-vadapalli-32941725a",
+        "imageSrc": "/teams/ppl/sai.jpeg",
+        "name": "Vadapalli Dedeep Sai",
+        "description": "Hi! I have an overall passion in all things coding. I also love to talk to new people"
+      },
+      "raghavkumar": {
+        "githubLink": "https://github.com/gitxxyl",
+        "imageSrc": "/teams/ppl/raghav_kumar.png",
+        "name": "Raghav Kumar",
+        "description": "I love computer science! I am a mega major nerd bird. Yippee!"
+      },
+      "myat": {
+        "githubLink": "https://github.com/icepcp",
+        "webLink": "https://icepcp.com/",
+        "imageSrc": "/teams/ppl/myat.jpg",
+        "name": "Aung Kaung Myat",
+        "description": "Hello, I'm Myat, and I love building simple solutions for big problems, along with design and websites!"
+      },
+      "johnson": {
+        "githubLink": "https://github.com/cpp-johnny",
+        "imageSrc" : "/teams/ppl/ngjohnson.jpg",
+        "name": "Ng Johnson",
+        "description": "Hi! I'm quite interested in programming, fav thing to do is finding out about cool tech lol."
+      },
+      "junhan": {
+        "githubLink": "https://github.com/Snowmannnnnn",
+        "imageSrc": "/teams/ppl/junhan.jpg",
+        "name": "Ng Jun Han",
+        "description": "I'm a JC2 student at njc who have an interest in coding."
+      },
+      "saamiya": {
+        "githubLink": "https://github.com/saamiyakhan",
+        "imageSrc": "/teams/ppl/saamiya.jpeg",
+        "name": "Saamiya Khan",
+        "description": "I'm saamiya, i love sleep and food and traveling and cats. horror movies and marvel too"
+      },
+      "raghavsriram": {
+        "githubLink": "https://github.com/rs1311",
+        "imageSrc": "/teams/ppl/raghav_sriram.jpg",
+        "name": "Raghav Sriram",
+        "description": "Hey there! I am Raghav Sriram. I learnt to type on a keyboard before I even learnt to write."
+      },
+      "tpsean": {
+        "githubLink": "https://github.com/serotonincrash",
+        "imageSrc": "/teams/ppl/Sean Wong.jpg",
+        "name": "Sean Wong",
+        "description": "I'm Sean, currently serving NS - I like keyboards, taking walks in the park and photography."
+      },
+      "matthias": {
+        "githubLink": "https://github.com/Mattthias31",
+        "imageSrc": "/teams/ppl/Matthias_Tan.jpg",
+        "name": "Matthias Tan",
+        "description": "I'm Matthias from DHS and I'm in infocomm cca"
+      },
+      "tongyu": {
+        "githubLink": "https://github.com/bucketfish",
+        "imageSrc": "/teams/ppl/tongyu.jpg",
+        "name": "Jiang Tongyu",
+        "description": "I like making music, crafts, writing, and coding games or websites. Also I am a fish :)"
+      },
+      "shivani": {
+        "githubLink": "https://github.com/Shivaniiiiiiiiiiii",
+        "imageSrc": "/teams/ppl/shivani.jpg",
+        "name": "Shivani Ramesh Kanna",
+        "description": "I am Shivani, from TJC. I am a really sociable person!"
+      },
+      "vijay": {
+        "githubLink": "https://github.com/Vjlantee",
+        "imageSrc": "/teams/ppl/vijay.jpg",
+        "name": "Vijay Ramanathan",
+        "description": "In my free time I love listening to music and I have a really bad memory at times"
+      },
+      "jeffrey": {
+        "githubLink": "https://github.com/jeffzy15",
+        "imageSrc": "/teams/ppl/Allen_Jeffrey.PNG",
+        "name": "Allen Jeffrey",
+        "description": "Hi, I like to develop apps and tinker with new technologies in my free time."
+      },
+      "seelun": {
+        "githubLink": "https://github.com/1lluXion",
+        "imageSrc": "/teams/ppl/Ong_See_lun.jpg",
+        "name": "Ong See Lun",
+        "description": "Started dabbling in coding/AI in JC after joining infocomm for my CCA. "
+      },
+      "shengxin": {
+        "githubLink": "https://github.com/Coffeediaries",
+        "imageSrc": "/teams/ppl/sheng_xin.jpg",
+        "name": "Cheah Sheng Xin",
+        "description": "Hello! My area of interest includes solving problems, researching about topics in stem and craft"
+      },
+      "kairos": {
+        "githubLink": "https://github.com/Kairos-T",
+        "webLink": "https://kairostay.com",
+        "imageSrc":"/teams/ppl/Kairos_Tay.jpg",
+        "name": "Kairos Tay",
+        "description": "Hi! I take part actively in CTFs, and am interested in the field of cybersecurity and tech."
+      },
+      "alexis": {
+        "githubLink": "https://github.com/BTSuns",
+        "imageSrc": "/teams/ppl/alexis.jpg",
+        "name": "Alexis Henri Milesi",
+        "description": "I likes CS. Joined BBCS June Conference in 2022 and had a good time in Advanced track."
+      },
+      "ayden": {
+        "githubLink": "https://github.com/aedena",
+        "imageSrc": "/teams/ppl/ayden.jpg",
+        "name": "Ayden Ang",
+        "description": "Hi! I'm Ayden, a JC1 student from NUS High. Mostly into gaming, photography and coding (mostly AI)."
+      },
+      "edwinkoon": {
+        "githubLink": "https://github.com/InfernoTower1943",
+        "imageSrc": "/teams/ppl/blank.jpg",
+        "name": "Edwin Koon",
+        "description": "Most of my hobbies involve computers. I am also (unfortunately?) a grass toucher."
+      },
+      "lucius": {
+        "githubLink": "https://github.com/czlucius",
+        "imageSrc": "/teams/ppl/lucius.jpg",
+        "name": "Lucius Chee Zihan",
+        "description": "I'm a self-taught student developer, and aspiring software engineer."
+      },
+      "alyssa": {
+        "githubLink": "https://github.com/AlyssaMohamedIqbal",
+        "imageSrc": "/teams/ppl/alyssa.jpg",
+        "name": "Alyssa Mohamed Iqbal",
+        "description": "I'm an extrovert who has a passion for helping people! I guarantee humor."
+      },
+      "cayden": {
+        "githubLink": "https://github.com/",
+        "imageSrc": "/teams/ppl/blank.jpg",
+        "name": "Cayden Tan",
+        "description": "Hi, I'm Cayden Tan, a JC1 student from DHS."
+      },
+      "nikita": {
+        "githubLink": "https://github.com/",
+        "imageSrc": "/teams/ppl/blank.jpg",
+        "name": "Nikita",
+        "description": "Hi, I'm Nikta, a JC1 student from ACJC."
       }
 }

@@ -213,13 +213,33 @@ const teamMembers = [
     exco: ["duhan", "mahir", "justinchee", "kaiwen", "wenkai", "minjia", "zedong"].map(it => database[it]),
     organisers: {
       "Human Resources": [
-        {name: "eugene", lead: true}, {name: "vinita", lead: true}, {name: "ozk"}, {name: "dhanvine"}
+        {name: "eugene", lead: true}, {name: "vinita", lead: true}, 
+        {name: "johnson"}, {name: "junhan"}, {name: "elston"}, {name: "saamiya"},
+        {name: "dhanvine"}, {name: "raghavsriram"}, {name: "kabir"}
       ].map(it => ({...(database[it.name]), lead: it.lead || false})),
       "Quality Assurance": [
-        {name: "neil", lead: true}, {name: "ashley", lead: true}, {name: "junee"}, {name: "hugo"}
+        {name: "neil", lead: true}, {name: "ashley", lead: true}, 
+        {name: "tpsean"}, {name: "claralee"}, {name: "matthias"},
+        {name: "weiyi"}, {name: "hugo"}, {name: "kabir"}, {name: "tongyu"},
+        {name: "jack"}, {name: "kashvi"}, {name: "shivani"}, {name: "vijay"}, 
+        {name: "jeffrey"}, {name: "seelun"}
+      ].map(it => ({...(database[it.name]), lead: it.lead || false})),
+      "Workshop Admin": [
+        {name: "justinchee", lead: true}, {name: "duhan", lead: true}, {name: "kaiwen", lead: true}, {name: "zedong", lead: true},
+        {name: "nikita"}, {name: "shengxin"}, {name: "cayden"},
+        {name: "harry"}, {name: "ozk"}, {name: "kairos"}, {name: "alexis"}, 
+        {name: "ayden"}, {name: "edwinkoon"}, {name: "raghavkumar"}, {name: "sai"},
+        {name: "lucius"}, {name: "dhanvine"}, {name: "alyssa"}, {name: "weiyi"}
+      ].map(it => ({...(database[it.name]), lead: it.lead || false})),
+      "Publicity & Design": [
+        {name: "minjia", lead: true}, {name: "lehan", lead: true},
+        // {name: "julyan"}, {name: "trisha"},
+        {name: "myat"}, {name: "sophiachua"},
+        // {name: "claraong"}, {name: "angelina"},
+        {name: "peter"}, {name: "asha"}
       ].map(it => ({...(database[it.name]), lead: it.lead || false})),
       "Workshop Speakers": [
-        "duhan", "cervon", "justinchee", "zedong", "ozk", "harry", "wenkai", "bobby", "mayukh", // "myat", "sai", "raghav", 
+        "duhan", "cervon", "justinchee", "zedong", "ozk", "harry", "wenkai", "bobby", "mayukh", "myat", "sai", "raghavkumar",
         "mahir", "hugo", "yuanxi", "kabir", "neil"
       ].map(it => database[it])
     }
