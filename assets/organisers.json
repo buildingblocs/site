@@ -1,0 +1,505 @@
+{
+    "oneytlam": {
+        "githubLink": "https://github.com/oneytlam",
+        "inLink": "https://linkedin.com/in/oneytlam",
+        "imageSrc": "/teams/ppl/yikting.png",
+        "name": "Lam Yik Ting",
+        "description": "YT here - explorer of AI, Web Dev, and Cybersec. If I'm not listening to music, I'm probably on a BuildingBloCS call. :>"
+    },
+    "yauleqi": {
+        "githubLink": "https://github.com/teraSurfer40141",
+        "inLink": "https://linkedin.com/in/yau-le-qi-045889234",
+        "imageSrc": "/teams/ppl/leqi.png",
+        "name": "Yau Le Qi",
+        "description": "Hi, I'm Le Qi, a JC2 student from TJC. I like all things computers 😎."
+    },
+    "prannay": {
+        "githubLink": "https://github.com/ThePyProgrammer",
+        "inLink": "https://linkedin.com/in/prannaya-gupta",
+        "webLink": "https://prannay.dev/",
+        "imageSrc": "/teams/ppl/prannay.jpg",
+        "name": "Prannaya Gupta",
+        "description": "Hi I'm Prannaya, a JC2 Student at NUSH and I like training AI, developing software and golfing the hell out of some code 🙂."
+    },
+    "kaiwen": {
+        "githubLink": "https://github.com/deadly-nightshade",
+        "imageSrc": "/teams/ppl/kaiwen.jpg",
+        "name": "Khoo Kai Wen",
+        "description": "Hi, I'm a JC1 Student at NUSH"
+    },
+    "zayan": {
+        "githubLink": "https://github.com/waffleSheep",
+        "inLink": "https://linkedin.com/in/karimi-zayan-1a64a8264",
+        "imageSrc": "/teams/ppl/zayan.jpg",
+        "name": "Zayan Karimi",
+        "description": "JC2 student from NUSH. PhD in rizzology from the Pete Davidson school of chasing tail."
+    },
+    "duhan": {
+        "githubLink": "https://github.com/TwelvePenguins",
+        "inLink": "https://linkedin.com/in/yuhan-du-12p3ngu5",
+        "imageSrc": "/teams/ppl/duyuhan.jpeg",
+        "name": "Du Yuhan",
+        "description": "Year 4 student from MGS. Your average workaholic penguin and Red Dead Redemption 2 enjoyer."
+    },
+    "jinen": {
+        "githubLink": "https://github.com/shindeux",
+        "inLink": "https://linkedin.com/in/cher-jin-en-675092235",
+        "imageSrc": "/teams/ppl/cherjinen.jpeg",
+        "name": "Cher Jin En",
+        "description": "Hi, I listen to MAMAMOO and play Solitaire for fun"
+    },
+    "suraj": {
+        "githubLink": "https://github.com/Tsk78",
+        "inLink": "https://linkedin.com/in/suraj-kumar-2839b4233",
+        "imageSrc": "/teams/ppl/suraj.png",
+        "name": "Suraj Kumar",
+        "description": "Hello, I'm Suraj and coding with black coffee and music is my thing."
+    },
+    "bryant": {
+        "githubLink": "https://github.com/flame-staff",
+        "imageSrc": "/teams/ppl/bryant.jpeg",
+        "name": "Bryant Shi",
+        "description": "Yo My name is Bryant. I am a fellow CS student and heavily enjoy games"
+    },
+    "renoir": {
+        "githubLink": "https://github.com/RenoirTan",
+        "imageSrc": "/teams/ppl/renoir.jpg",
+        "name": "Renoir Tan",
+        "description": "I'm a JC2 Student at RI."
+    },
+    "seth": {
+        "githubLink": "https://github.com/idkSeth",
+        "inLink": "https://linkedin.com/in/seth-yong-00672b229",
+        "imageSrc": "/teams/ppl/seth.jpeg",
+        "name": "Seth Olav Yong",
+        "description": "Hi, I'm Seth, a Poly 2 student from SP."
+    },
+    "yuanxi": {
+        "githubLink": "https://github.com/Haloen",
+        "inLink": "https://linkedin.com/in/yuan-xi-yap-5b3205242",
+        "imageSrc": "/teams/ppl/yuanxi.jpg",
+        "name": "Yap Yuan Xi",
+        "description": "Hi, I'm Yuan Xi and I'm a JC2 student in NUSH. I like CTFing, IOing and Software Development."
+    },
+    "mahit": {
+        "githubLink": "https://github.com/AppleGesus",
+        "imageSrc": "/teams/ppl/sanke_mahit.jpg",
+        "name": "Sanke Mahit",
+        "description": "My name is Sanke Mahit and I am in JC2 this year!"
+    },
+    "dhanvine": {
+        "githubLink": "https://github.com/Dhanvine321",
+        "inLink": "https://linkedin.com/in/dhanvine-rameshkumar",
+        "imageSrc": "/teams/ppl/dhanvine.jpg",
+        "name": "Dhanvine Rameshkumar",
+        "description": "Hi I'm Dhanvine, a Sec 4 student from TJC. I like to code AI and learn new things everyday!"
+    },
+    "isaackok": {
+        "githubLink": "https://github.com/Kweice",
+        "inLink": "https://linkedin.com/in/isaac-kok",
+        "imageSrc": "/teams/ppl/isaac.jpg",
+        "name": "Isaac Kok",
+        "description": "Hi I'm Isaac. I do card tricks, listen to mandopop and my favourite artist is Joker Xue."
+    },
+    "ozk": {
+        "githubLink": "https://github.com/ozk100",
+        "imageSrc": "/teams/ppl/oon_zheng_kang.jpg",
+        "name": "Oon Zheng Kang",
+        "description": "Hi, I'm Zheng Kang, a JC1 student from DHS."
+    },
+    "eugene": {
+        "githubLink": "https://github.com/python-noob-dotcom",
+        "inLink": "https://linkedin.com/in/eugene-ang-8ab711264",
+        "imageSrc": "/teams/ppl/eugeneang.jpg",
+        "name": "Eugene Ang",
+        "description": "Hi, I'm Eugene and i believe that caffeine is a miracle drug"
+    },
+    "tsk": {
+        "githubLink": "https://github.com/sotong1337",
+        "inLink": "https://linkedin.com/in/tan-swee-kang-rvhs-370aa8248",
+        "imageSrc": "/teams/ppl/swee_kang.jpg",
+        "name": "Tan Swee Kang",
+        "description": "H2 computing student does CTF, competitive programming and competitions."
+    },
+    "vinita": {
+        "githubLink": "https://github.com/vi-nita",
+        "imageSrc": "/teams/ppl/adapaka_vinita.jpg",
+        "name": "Adapaka Vinita",
+        "description": "I am a fast learner and am passionate about coding and programming. I also enjoy dancing."
+    },
+    "neil": {
+        "githubLink": "https://github.com/Armweak5104",
+        "imageSrc": "/teams/ppl/neil.png",
+        "name": "Neil Bhandari",
+        "description": "I will be in JC1 in 2023. I code mainly in python and C++. I also fail captcha tests too much."
+    },
+    "shawn": {
+        "githubLink": "https://github.com/shzh05",
+        "imageSrc": "/teams/ppl/shawn_han.jpeg",
+        "name": "Shawn Han Zhi Heng",
+        "description": "I am J2 in RVHS, I'm currently taking H2 Computing and it is my favourite subject as I enjoy coding."
+    },
+    "jamestan": {
+        "githubLink": "https://github.com/Dragonslayer262",
+        "inLink": "https://linkedin.com/in/james-tan-dejun",
+        "imageSrc": "/teams/ppl/james_tan.png",
+        "name": "James Tan Dejun",
+        "description": "I'm a JC2 student in RVHS. I mainly enjoy doing competitive programming and machine learning."
+    },
+    "justinwang": {
+        "githubLink": "https://github.com/plwanejexperto",
+        "imageSrc": "/teams/ppl/justin_wang.jpeg",
+        "name": "Justin Wang",
+        "description": "I have an interest in designing UI and UX and I am passionate to learn more about computing :)"
+    },
+    "sahana": {
+        "githubLink": "https://github.com/sahanaaganesh",
+        "imageSrc": "/teams/ppl/blank.jpg",
+        "name": "Sahana Ganesh",
+        "description": "I'm a student."
+    },
+    "cervon": {
+        "githubLink": "https://github.com/cervonwong",
+        "inLink": "https://linkedin.com/in/cervonwong",
+        "webLink": "https://cervonwong.com/",
+        "imageSrc": "/teams/ppl/cervon.jpg",
+        "name": "Cervon Wong",
+        "description": "Hi, I'm Cervon, JC2 student from NUSH! AI, Robotics and Linguistics nerd 😎"
+    },
+    "vishal": {
+        "githubLink": "https://github.com/delargement",
+        "imageSrc": "/teams/ppl/vishal.png",
+        "name": "Kannan Vishal",
+        "description": "Hey, I'm a sixth year from NUSH who likes post-punk, post-industrial and post-hardcore."
+    },
+    "hnin": {
+        "githubLink": "https://github.com/hninsatphyusin",
+        "inLink": "https://linkedin.com/in/hnin-sat-phyu-sin-54344b265",
+        "imageSrc": "/teams/ppl/hnin.jpg",
+        "name": "Hnin Sat Phyu Sin",
+        "description": "🤡"
+    },
+    "junee": {
+        "githubLink": "https://github.com/JunEe23",
+        "imageSrc": "/teams/ppl/junee.jpg",
+        "name": "Cheah Jun Ee",
+        "description": "I take A level computing in jc and my combi is CCME."
+    },
+    "edwinliew": {
+        "githubLink": "https://github.com/edwinlmy5",
+        "imageSrc": "/teams/ppl/edwin_liew.jpg",
+        "name": "Edwin Liew",
+        "description": "My name is Edwin and I'm one of the project managers for ACJC's Technology Council"
+    },
+    "arthur": {
+        "githubLink": "https://github.com/arthurngTJC",
+        "imageSrc": "/teams/ppl/blank.jpg",
+        "name": "Arthur Junior Ng",
+        "description": "I am a JC2 student from TJC."
+    },
+    "kimwee": {
+        "githubLink": "https://github.com/DangerousPotential",
+        "inLink": "https://linkedin.com/in/kim-wee-teh-963b9726a",
+        "imageSrc": "/teams/ppl/teh_kim_wee.jpg",
+        "name": "Teh Kim Wee",
+        "description": "I'm Kim Wee, currently studying in ASRJC. Python is my main programming language"
+    },
+    "xiyuan": {
+        "githubLink": "https://github.com/xiyuan1avery",
+        "inLink": "https://linkedin.com/in/xiyuan-zhang-b819a7242",
+        "imageSrc": "/teams/ppl/zhang_xiyuan.jpg",
+        "name": "Zhang Xiyuan",
+        "description": "Hi im Xiyuan from VJC!!! I luv coffee, running, math & programming. Curious&Learn&Enjoy@BBCS2023"
+    },
+    "hugo": {
+        "githubLink": "https://github.com/cakular",
+        "imageSrc": "/teams/ppl/hugo.jpg",
+        "name": "Hugo Maximus Lim",
+        "description": "Hi, I'm Hugo, a JC1 student from NUSH."
+    },
+    "jiaxuan": {
+        "githubLink": "https://github.com/Jiaxuan06",
+        "inLink": "https://linkedin.com/in/jiaxuan-tang-ba383a264",
+        "imageSrc": "/teams/ppl/jiaxuan.jpg",
+        "name": "Tang Jiaxuan",
+        "description": "Hello! I am Jiaxuan, a JC1 student from TJC annd I am a coffee addict 🤣"
+    },
+    "leducminh": {
+        "githubLink": "https://github.com/ID-minh4354",
+        "imageSrc": "/teams/ppl/leducminh.jpeg",
+        "name": "Le Duc Minh",
+        "description": "Hi, I'm a JC2 student from HCI."
+    },
+    "jack": {
+        "githubLink": "https://github.com/jack-0000000",
+        "inLink": "https://linkedin.com/in/lim-jack-tjc-1633b4277",
+        "imageSrc": "/teams/ppl/lim_jack.jpg",
+        "name": "Lim Jack",
+        "description": "I am keen in learning more about computer science and developing my own programs."
+    },
+    "asha": {
+        "githubLink": "https://github.com/Ash3926",
+        "imageSrc": "/teams/ppl/asha_solomon.jpg",
+        "name": "Asha Solomon",
+        "description": "I'm Asha from TJC, I like running and crafts. Favorite subjects(at O's) are Maths and Physics :)"
+    },
+    "ashley": {
+        "githubLink": "https://github.com/IsoceledAsh",
+        "inLink": "https://linkedin.com/in/ashley-alexster-1a1961278",
+        "imageSrc": "/teams/ppl/ashley_alexster.jpg",
+        "name": "Ashley Alexster",
+        "description": "Hi, I'm Ashley! I have always been interested in CS stuff since I was young, and currently take Computing as a subject in JC"
+    },
+    "kashvi": {
+        "githubLink": "https://github.com/kat-fly",
+        "imageSrc": "/teams/ppl/kashvi_kothari.jpg",
+        "name": "Kothari Kashvi Chintan",
+        "description": "I have been a member of Infocomm Club since primary school. I currently take H2 computing."
+    },
+    "mahamantra": {
+        "githubLink": "https://github.com/mahaachu",
+        "imageSrc": "/teams/ppl/mahamantra_sivagnanam.jpeg",
+        "name": "Mahamantra Sivagnanam",
+        "description": "Hi! My name's Mahamantra Sivagnanam. I really enjoy programming and coming up with new ideas and innovations"
+    },
+    "justinchee": {
+        "githubLink": "https://github.com/Giganaer",
+        "imageSrc": "/teams/ppl/chee_justin.jpg",
+        "name": "Chee Justin Suwattana",
+        "description": "Hi I'm Justin, a JC1 computing student in DHS who also likes playing guitar"
+    },
+    "ghayathri": {
+        "githubLink": "https://github.com/Gau567",
+        "inLink": "https://linkedin.com/in/ghayathri-seetharaman-471422272",
+        "imageSrc": "/teams/ppl/blank.jpg",
+        "name": "Anangore Seetharaman Ghayathri",
+        "description": "Passionate about AI and CS, aims to achieve in the industry. Enjoys crime/thriller books."
+    },
+    "minjia": {
+      "githubLink": "https://github.com/MinJiaTse",
+      "imageSrc": "/teams/ppl/tseminjia.jpeg",
+      "name": "Tse Min Jia",
+      "description": "Hello, I'm Min Jia :), a Year 5 student in Dunman High School. Nice to meet you! 😁"
+    },
+    "wayne": {
+        "githubLink": "https://github.com/Zernier",
+        "imageSrc": "/teams/ppl/wayne_ang.jpg",
+        "name": "Wayne Ang",
+        "description": "I am a JC2 from ACJC currently. I like reading books, listening to new music and playing the guitar."
+    },
+    "claralee":   {
+        "githubLink": "https://github.com/Ninrolds6",
+        "imageSrc": "/teams/ppl/clara_lee.jpeg",
+        "name": "Clara Lee",
+        "description": "I'm Clara from ASRJC! My CCA is badminton I take computing for A levels. I crochet and do coding in my free time"
+    },
+    "andrel":   {
+        "githubLink": "https://github.com/antndrel",
+        "imageSrc": "/teams/ppl/andrel.jpg",
+        "name": "Quoid Jing-Xuan Andrel",
+        "description": "Hello! I am Andrel from TJC"
+    },
+    "celine": {
+        "githubLink": "https://github.com/celnat312",
+        "inLink": "https://linkedin.com/in/celinenatalie",
+        "imageSrc": "/teams/ppl/celine_natalie.jpeg",
+        "name": "Celine Natalie Wongso Lesmono",
+        "description": "I took H2 computing when I was in JC and I joined BBCS in 2021 and 2022!"
+    },
+    "lehan": {
+        "githubLink": "https://github.com/lh00000",
+        "inLink": "https://linkedin.com/in/le-han-yau-5a6187261",
+        "imageSrc": "/teams/ppl/blank.jpg",
+        "name": "Yau Le Han",
+        "description": "Sec 4 student exploring CS passion, with no experience, eager to learn and gain skills."
+    },
+    "sophiachua": {
+        "githubLink": "https://github.com/TAUVX",
+        "imageSrc": "/teams/ppl/sophia_chua.jpg",
+        "name": "Sophia Chua",
+        "description": "I am interested in the Fine Arts and like to make art when inspiration strikes me."
+    },
+    "kabir": {
+        "githubLink": "https://github.com/ka-bear",
+        "imageSrc": "/teams/ppl/kabir.png",
+        "name": "Kabir Jain",
+        "description": "Hi I'm Kabir, a JC1 student from NUSH. I love Physics, and especially AI."
+    },
+    "mahir": {
+        "githubLink": "https://github.com/RottenLemons",
+        "inLink": "https://linkedin.com/in/mahir-shah-681aa0261",
+        "imageSrc": "/teams/ppl/mahir.png",
+        "name": "Mahir Shah",
+        "description": "NUSH student who likes CTFs, AI and C++. Games and dies in Physics sometimes."
+    },
+    "ashwin": {
+        "githubLink": "https://github.com/electron13",
+        "inLink": "https://linkedin.com/in/ashwin-l-82968a202",
+        "imageSrc": "/teams/ppl/ashwin.jpg",
+        "name": "Ashwin Lokesh",
+        "description": "I am Ashwin."
+    },
+    "jed": {
+        "githubLink": "https://github.com/jedlimlx",
+        "imageSrc": "/teams/ppl/jed.png",
+        "name": "Jed Lim",
+        "description": "Hi I'm Jed, a JC2 student from NUSH who is passionate about AI and Physics (particularly Fluid Dynamics)."
+    },
+    "ishneet": {
+        "githubLink": "https://github.com/Ishneet0710",
+        "inLink": "https://linkedin.com/in/ishneet-singh-a51697210",
+        "imageSrc": "/teams/ppl/ishneet.jpg",
+        "name": "Ishneet Singh",
+        "description": "Hi, I'm Ishneet, a JC2 student from TJC."
+    },
+    "pann": {
+        "githubLink": "https://github.com/LegiboY",
+        "imageSrc": "/teams/ppl/pann.jpg",
+        "name": "Papangkorn Wangchochedkun",
+        "description": "Hi, my name is Pann. VJC J1, trying to comprehend this uncommented code. Used to be a Scrabble god."
+    },
+    "wenkai": {
+        "githubLink": "https://github.com/squi-ddy",
+        "webLink": "https://squiddy.me/",
+        "imageSrc": "/teams/ppl/wenkai.jpg",
+        "name": "Liu Wenkai",
+        "description": "Hi, I'm Wenkai, a JC1 student from NUSH."
+    },
+    "zerui": {
+        "githubLink": "https://github.com/theriseof9",
+        "inLink": "https://linkedin.com/in/wang-zerui-a21b41242",
+        "imageSrc": "/teams/ppl/zerui.jpg",
+        "name": "Wang Zerui",
+        "description": "Hi I'm Zerui from NUSH, I like CTFs and blahajs!"
+      },
+      "weiyi": {
+        "githubLink": "https://github.com/fwyr",
+        "imageSrc": "/teams/ppl/maweiyi.jpeg",
+        "name": "Ma Weiyi",
+        "description": "Hello! I'm Weiyi, a DHS student who just happens to like computers."
+      },
+      "zedong": {
+        "githubLink": "https://github.com/sawzedong",
+        "inLink": "https://linkedin.com/in/ze-dong-saw-9b3936242",
+        "webLink": "https://sawzedong.github.io/portfolio/",
+        "imageSrc": "/teams/ppl/sawzedong.jpeg",
+        "name": "Saw Ze Dong",
+        "description": "Hi, i'm a JC1 student from Dunman High, interested in programming websites, trying out AI and more"
+      },
+      "harry": {
+        "githubLink": "https://github.com/Harry-cheong",
+        "inLink": "https://linkedin.com/in/harry-cheong-72bbb5212",
+        "imageSrc": "/teams/ppl/harry.jpg",
+        "name": "Cheong Jun Kai Harry",
+        "description": "I'm Harry. I love tinkering with tech. I love card throwing."
+      },
+      "jerome": {
+        "githubLink": "https://github.com/jeromepalayoor",
+        "inLink": "https://linkedin.com/in/jeromepalayoor",
+        "webLink": "https://jeromepalayoor.com/",
+        "imageSrc": "/teams/ppl/jerome_palayoor.png",
+        "name": "Jerome Palayoor",
+        "description": "I love math and coding and recently picked up cyber security."
+      },
+      "danielchua": {
+        "githubLink": "https://github.com/indaniel",
+        "imageSrc": "/teams/ppl/daniel_chua.jpg",
+        "name": "Daniel Chua Han",
+        "description": "Hi, I'm Daniel, a JC2 student from SAJC. I occasionally do informatics."
+      },
+      "peter": {
+        "githubLink": "https://github.com/cytronicoder",
+        "inLink": "https://linkedin.com/in/cytronicoder",
+        "webLink": "https://www.cytronicoder.com/",
+        "imageSrc": "/teams/ppl/peter.jpeg",
+        "name": "Zeyu Yao (Peter)",
+        "description": "I'm a student developer currently studying in Singapore."
+      },
+      "raymond": {
+        "githubLink": "https://github.com/provsalt",
+        "inLink": "https://linkedin.com/in/raymond-goo",
+        "webLink": "https://www.raygoo.tech/",
+        "imageSrc": "/teams/ppl/raymond_goo.jpg",
+        "name": "Raymond Goo",
+        "description": "I like doing things and stuff software related."
+      },
+      "jinghong": {
+        "inLink": "https://linkedin.com/in/ma-jinghong-a18b5022",
+        "imageSrc": "/teams/ppl/jinghong.jpg",
+        "name": "Ma Jinghong",
+        "description": "I am a J2 student from HCI, and take PCME. I hope to help out for this event and learn relevant skills :)"
+      },
+      "rajharsh": {
+        "githubLink": "https://github.com/Hars-raj",
+        "inLink": "https://linkedin.com/in/raj-harsh-b92931241",
+        "imageSrc": "/teams/ppl/raj_harsh.png",
+        "name": "Raj Harsh",
+        "description": "I am a JC2 student at YIJC, I take H2 computing and have an interest in programming and AI"
+      },
+      "junheng": {
+        "githubLink": "https://github.com/azazazo",
+        "inLink": "https://linkedin.com/in/tan-junheng-776037131",
+        "imageSrc": "/teams/ppl/tan_junheng.png",
+        "name": "Tan Junheng",
+        "description": "biggest blåhaj fan🦈❤️❤️ i like crypto(graphy) and sometimes play ctfs"
+      },
+      "christian": {
+        "githubLink": "https://github.com/Xenon1345",
+        "imageSrc": "/teams/ppl/christian.jpg",
+        "name": "Christian James Tan",
+        "description": "ctf player, crypto and rev enthusiast and blåhaj's second biggest fan 🦈"
+      },
+      "vincent": {
+        "githubLink": "https://github.com/cryptoAlgorithm",
+        "inLink": "https://linkedin.com/in/vincent-k-774963245",
+        "imageSrc": "/teams/ppl/kwok_vincent.jpg",
+        "name": "Vincent Kwok",
+        "description": "I make beautiful cross-plarform experiences and sometimes do CTFs. ♥️ swift!"
+      },
+      "justinlim": {
+        "githubLink": "https://github.com/jun-lsh",
+        "imageSrc": "/teams/ppl/justin_lim.jpg",
+        "name": "Lim Sue Han Justin",
+        "description": "hi I'm Justin Lim from NUSH, I like rev and pwn lots. excessive user of the :slight_smile: emoji"
+      },
+      "jessie": {
+        "githubLink": "https://github.com/jcc-kh",
+        "inLink": "https://linkedin.com/in/jessie-chin-kh",
+        "imageSrc": "/teams/ppl/jessie.jpg",
+        "name": "Jessie Chin Kit Hey",
+        "description": ""
+      },
+      "ian": {
+        "githubLink": "https://github.com/TheRoundRoads",
+        "imageSrc": "/teams/ppl/ian.jpg",
+        "name": "Ian Goh",
+        "description": "Hi I'm Ian Goh! I'm currently a JC2 computing student studying in DHS. I also enjoy watching anime!"
+      },
+      "elston": {
+        "githubLink": "https://github.com/Elstuhn",
+        "inLink": "https://linkedin.com/in/elstuhn",
+        "imageSrc": "/teams/ppl/elston.jpg",
+        "name": "Elston Tan",
+        "description": "Hello, I'm Elston. I love learning and playing around with AI, my favourite game is Sekiro."
+      },
+      "joey": {
+        "githubLink": "https://github.com/fishjojo1",
+        "inLink": "https://linkedin.com/in/fishjojo1",
+        "imageSrc": "/teams/ppl/joeytang.jpeg",
+        "name": "Joey Tang",
+        "description": ""
+      },
+      "mayukh": {
+        "githubLink": "https://github.com/jeffilluminati",
+        "imageSrc": "/teams/ppl/mayukh.jpg",
+        "name": "Mayukh Das",
+        "description": ""
+      },
+      "bobby": {
+        "githubLink": "https://github.com/BenTan101",
+        "inLink": "https://linkedin.com/in/lee-i-shiang",
+        "imageSrc": "/teams/ppl/lee_i-shiang.jpeg",
+        "name": "Lee I-Shiang",
+        "description": "Hi, I'm I-Shiang :P I like coding, chemistry, and cheese."
+      }
+}
