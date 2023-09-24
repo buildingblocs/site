@@ -670,7 +670,7 @@ const teamMembersOic = [
   {
     githubLink: 'https://github.com/ThePyProgrammer',
     inLink: 'https://linkedin.com/in/prannaya-gupta',
-    webLink: 'https://prannay.ml/',
+    webLink: 'https://prannay.dev/',
     imageSrc: '/teams/ppl/prannay.jpg',
     name: 'Prannaya Gupta',
     description: "Hi I'm Prannaya, a JC2 Student at NUSH and I like training AI, developing software and golfing the hell out of some code 🙂."
