@@ -15,9 +15,32 @@
                 BuildingBloCS {{ year }} is led by a set of <s>charismatic</s> passionate overall ICs who overlook various departments within the organisation. Having worked together on organising BuildingBloCS {{ year - 1 }} last year, the organisers aim to help make BuildingBloCS {{ year }} even bigger and more far-reaching than ever before.
               </PageHead>
 
-              <div class="flex flex-wrap justify-center">
-                <TeamCard class="m-2" v-for="(teamMember, index) in oics[year]" :key="index" :teamMember="teamMember"></TeamCard>
-              </div>
+              
+            <TabGroup :defaultIndex="Object.keys(oics).indexOf(year)">
+              <TabList class="flex item-center rounded-xl w-96 justify-center mx-auto mb-8">
+                <Tab v-for="(category, index) in Object.keys(oics)"
+                  as="template" :key="category" v-slot="{ selected }">
+                  <button
+                    :class="[
+                      'w-full text-medium leading-5 font-extrabold',
+                      'focus:outline-none justify-center',
+                      selected ? 'text-orange-300' : 'text-orange-100 text-opacity-40 hover:text-orange-300 hover:text-opacity-70',
+                      index == 0 ? 'rounded-l-xl' : index == Object.keys(oics).length-1 ? 'rounded-r-xl' : '',
+                    ]">
+                    {{ category }}
+                  </button>
+                </Tab>
+              </TabList>
+              <TabPanels class="mt-2">
+                <TabPanel v-for="[year, oic] in Object.entries(oics)" :key="year" v-slot="{ selected }" class="p-3 focus:outline-none">
+                  <div class="flex flex-wrap justify-center">
+                    <TeamCard class="m-2" v-for="(teamMember, index) in oic" :key="index" :teamMember="teamMember"></TeamCard>
+                  </div>
+                </TabPanel>
+              </TabPanels>
+            </TabGroup>
+
+
             </div>
           </section>
 
