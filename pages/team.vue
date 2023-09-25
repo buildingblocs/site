@@ -12,23 +12,23 @@
           <section>
             <div class="px-4 mx-auto max-w-screen-xl text-center lg:px-6">
               <PageHead title="Our OICs">
-                BuildingBloCS 2023 is led by a set of <s>charismatic</s> passionate overall ICs who overlook various departments within the organisation. Having worked together on organising BuildingBloCS 2022 last year, the organisers aim to help make BuildingBloCS 2023 even bigger and more far-reaching than ever before.
+                BuildingBloCS {{ year }} is led by a set of <s>charismatic</s> passionate overall ICs who overlook various departments within the organisation. Having worked together on organising BuildingBloCS {{ year - 1 }} last year, the organisers aim to help make BuildingBloCS {{ year }} even bigger and more far-reaching than ever before.
               </PageHead>
 
               <div class="flex flex-wrap justify-center">
-                <TeamCard class="m-2" v-for="(teamMember, index) in oics[2024]" :key="index" :teamMember="teamMember"></TeamCard>
+                <TeamCard class="m-2" v-for="(teamMember, index) in oics[year]" :key="index" :teamMember="teamMember"></TeamCard>
               </div>
             </div>
           </section>
 
           <div class="pt-24 pb-8 justify-center">
-            <TabGroup :defaultIndex="1">
-              <TabList class="flex rounded-xl bg-orange-200 w-96 justify-center">
+            <TabGroup :defaultIndex="2">
+              <TabList class="flex item-center rounded-xl bg-orange-200 w-96 justify-center mx-auto mb-8">
                 <Tab v-for="(category, index) in sections"
                   as="template" :key="category" v-slot="{ selected }">
                   <button
                     :class="[
-                      'w-full py-2.5 font-extrabold text-xl leading-5 text-orange-700',
+                      'w-full py-2.5 font-extrabold text-medium leading-5 text-orange-700',
                       'focus:outline-none justify-center',
                       selected ? 'bg-orange-300' : 'hover:bg-orange-200',
                       index == 0 ? 'rounded-l-xl' : index == sections.length-1 ? 'rounded-r-xl' : '',
@@ -79,7 +79,9 @@ useSeoMeta({
     twitterCard: 'summary_large_image'
 })
 
-const sections = ['Mar', 'Jun', 'Sep', 'Dec']
+const sections = ["Mar '23", "Jun '23", "Sep '23", "Dec '23"];
+
+const year = (new Date()).getFullYear();
 
 const oics = {
   2023: ["oneytlam", "yauleqi", "prannay"].map(it => database[it]),
@@ -188,7 +190,7 @@ const teamMembers = [
     }
   },
   { // December
-    exco: ["yuanxi", "zerui", "kashvi", "asha"].map(it => database[it]),
+    // exco: ["yuanxi", "zerui", "kashvi", "asha"].map(it => database[it]),
     organisers: {
       "Challenge Setters": ["yuanxi", "zerui", "junheng", "christian", "jerome", "justinlim"].map(it => database[it]),
       "Infrastructure and Platform": ["vincent", "zerui"].map(it => database[it]),
@@ -196,8 +198,6 @@ const teamMembers = [
     }
   }
 ]
-
-const teamMembersOic = ["oneytlam", "yauleqi", "prannay"].map(it => database[it]);
 
 
 
