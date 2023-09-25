@@ -1,155 +1,97 @@
 <template>
-    <div class="bg-white dark:bg-slate-800">
-        <div>
-            <Nav />
-            <div class="pt-16 sm:pt-32">
-            <div class="relative isolate pt-14 lg:px-8">
-                <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
-                    <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[50deg] bg-gradient-to-tr from-[#eae2b7] to-[#fcbf49] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-                        style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" />
-                </div>
-                <div class="mx-auto max-w-4xl">
-                    <div class="text-center">
-                    <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl dark:text-white pb-10 sm:pb-24">Our Team</h1>
-                    </div>
-                </div>
-                <div class="px-2">
+  <div class="bg-white dark:bg-slate-800">
+    <Nav />
+    <div class="pt-16 sm:pt-32">
+      <div class="relative isolate pt-14 lg:px-8">
+        <PatchesYellow />
+        
+        <PageTitle text="Our Team" />
+
+        <div class="px-2">
+          <!-- OIC Section -->
+          <section>
+            <div class="px-4 mx-auto max-w-screen-xl text-center lg:px-6">
+              <PageHead title="Our OICs">
+                BuildingBloCS 2023 is led by a set of <s>charismatic</s> passionate overall ICs who overlook various departments within the organisation. Having worked together on organising BuildingBloCS 2022 last year, the organisers aim to help make BuildingBloCS 2023 even bigger and more far-reaching than ever before.
+              </PageHead>
+
+              <div class="flex flex-wrap justify-center">
+                <TeamCard class="m-2" v-for="(teamMember, index) in oics[2024]" :key="index" :teamMember="teamMember"></TeamCard>
+              </div>
+            </div>
+          </section>
+
+          <div class="pt-24 pb-8 justify-center">
+            <TabGroup :defaultIndex="1">
+              <TabList class="flex rounded-xl bg-orange-200 w-96 justify-center">
+                <Tab v-for="(category, index) in sections"
+                  as="template" :key="category" v-slot="{ selected }">
+                  <button
+                    :class="[
+                      'w-full py-2.5 font-extrabold text-xl leading-5 text-orange-700',
+                      'focus:outline-none justify-center',
+                      selected ? 'bg-orange-300' : 'hover:bg-orange-300',
+                      index == 0 ? 'rounded-l-xl' : index == sections.length-1 ? 'rounded-r-xl' : '',
+                    ]">
+                    {{ category }}
+                  </button>
+                </Tab>
+              </TabList>
+
+              <TabPanels class="mt-2">
+                <!-- June Conference 2023 -->
+                <TabPanel class="rounded-xl p-3 focus:outline-none">
+                  <TeamExco :members="teamMembers[0].exco" />
+                    
                   <section>
                     <div class="px-4 mx-auto max-w-screen-xl text-center lg:px-6">
-                      <div class="mx-auto mb-8 max-w-screen-xl lg:mb-16">
-                        <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-200 sm:text-4xl text-left">Our OICs</h2>
-                        <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-slate-400 text-left">BuildingBloCS 2023 is led by a set of <s>charismatic</s> passionate overall ICs who overlook various departments within the organisation. Having worked together on organising BuildingBloCS 2022 last year, the organisers aim to help make BuildingBloCS 2023 even bigger and more far-reaching than ever before.</p>
-                      </div>
-                        <div class="flex flex-wrap justify-center">
-                          <TeamCard class="m-2" v-for="(teamMember, index) in teamMembersOic" :key="index" :teamMember="teamMember"></TeamCard>
-                        </div>
+                      <PageHead title="Our Organisers">
+                        Without our organizers, we wouldn't be able to organize much of BuildingBloCS, hence this serves as a <i>thank-you note</i> to all of them for their willingness to help and make BuildingBloCS possible!
+                      </PageHead>
+                      <TeamSubcomm v-for="[name, members] in Object.entries(teamMembers[0].organisers)" :name="name" :members="members" :key="name" />
                     </div>
                   </section>
-                  <div class="pt-24 pb-8 justify-center">
-                  <TabGroup :defaultIndex="1">
-                    <TabList class="flex space-x-1 rounded-xl bg-orange-200 p-1 w-96 justify-center">
-                      <Tab
-                        v-for="category in ['Jun', 'Sep', 'Dec']"
-                        as="template"
-                        :key="category"
-                        v-slot="{ selected }"
-                      >
-                        <button
-                          :class="[
-                            'w-full rounded-lg py-2.5 font-extrabold text-xl leading-5 text-orange-700',
-                            'ring-opacity-0 focus:outline-none justify-center',
-                            selected
-                              ? 'bg-orange-300 shadow'
-                              : 'hover:bg-orange-300',
-                          ]"
-                        >
-                          {{ category }}
-                        </button>
-                      </Tab>
-                    </TabList>
+                </TabPanel>
+                
+                
+                <!-- September Conference 2023 -->
+                <TabPanel class="rounded-xl p-3 focus:outline-none">
+                  <TeamExco :members="teamMembers[1].exco" />
 
-                    <TabPanels class="mt-2">
-                      <TabPanel class="rounded-xl p-3 focus:outline-none">
-                        <section class="pb-24">
-                          <div class="px-4 mx-auto max-w-screen-xl text-center lg:px-6">
-                            <div class="mx-auto mb-8 max-w-screen-xl lg:mb-8">
-                              <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-200 sm:text-4xl text-left">Our Executive Committee (Exco)</h2>
-                              <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-slate-400 text-left">In addition to the OICs, BuildingBloCS 2023 is largely indebted to our Executive Committee that strives to help with event management and other tasks, such that work is easily distributed to organisers.</p>
-                            </div>
-                            <div class="flex flex-wrap justify-center">
-                              <TeamCard class="m-2" v-for="(teamMember, index) in teamMembers[0].exco" :key="index" :teamMember="teamMember"></TeamCard>
-                            </div>
-                          </div>
-                        </section>
-                        
-                        <section>
-                          <div class="px-4 mx-auto max-w-screen-xl text-center lg:px-6">
-                            <div class="mx-auto mb-8 max-w-screen-xl lg:mb-8">
-                              <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-200 sm:text-4xl text-left">Our Organisers</h2>
-                              <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-slate-400 text-left">Without our organizers, we wouldn't be able to organize much of BuildingBloCS, hence this serves as a <i>thank-you note</i> to all of them for their willingness to help and make BuildingBloCS possible!</p>
-                            </div>
-                            <div v-for="[name, members] in Object.entries(teamMembers[0].organisers)" :key="name">
-                              <h2 class="text-3xl pt-16 tracking-tight text-left font-extrabold pb-8 text-gray-900 dark:text-white">{{ name }}</h2>
-                              <div class="flex flex-wrap justify-center">
-                                <TeamCard class="m-2" v-for="(teamMember, index) in members" :key="index" :teamMember="teamMember"></TeamCard>
-                              </div>
-                            </div>
-                          </div>
-                        </section>
-                      </TabPanel>
+                  <section>
+                    <div class="px-4 mx-auto max-w-screen-xl text-center lg:px-6">
+                      <PageHead title="Our Organisers">
+                        Without our organizers, we wouldn't be able to organize much of BuildingBloCS, hence this serves as a <i>thank-you note</i> to all of them for their willingness to help and make BuildingBloCS possible!
+                      </PageHead>
+                      <TeamSubcomm v-for="[name, members] in Object.entries(teamMembers[1].organisers)" :name="name" :members="members" :key="name" />
+                    </div>
+                  </section>
+                </TabPanel>
+                
+                
+                <!-- December Conference 2023 -->
+                <TabPanel class="rounded-xl p-3 focus:outline-none">
+                  <TeamExco :members="teamMembers[2].exco" />
+
+                  <section>
+                    <div class="px-4 mx-auto max-w-screen-xl text-center lg:px-6">
+                      <PageHead title="Our Organisers">
+                        Without our organizers, we wouldn't be able to organize much of BuildingBloCS, hence this serves as a <i>thank-you note</i> to all of them for their willingness to help and make BuildingBloCS possible!
+                      </PageHead>
+                      <TeamSubcomm v-for="[name, members] in Object.entries(teamMembers[2].organisers)" :name="name" :members="members" :key="name" />
+                    </div>
+                  </section>
+                </TabPanel>
 
 
-
-
-                      <TabPanel class="rounded-xl p-3 focus:outline-none">
-                        <section class="pb-24">
-                          <div class="px-4 mx-auto max-w-screen-xl text-center lg:px-6">
-                            <div class="mx-auto mb-8 max-w-screen-xl lg:mb-8">
-                              <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-200 sm:text-4xl text-left">Our Executive Committee (Exco)</h2>
-                              <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-slate-400 text-left">In addition to the OICs, BuildingBloCS 2023 is largely indebted to our Executive Committee that strives to help with event management and other tasks, such that work is easily distributed to organisers.</p>
-                            </div>
-                            <div class="flex flex-wrap justify-center">
-                              <TeamCard class="m-2" v-for="(teamMember, index) in teamMembers[1].exco" :key="index" :teamMember="teamMember"></TeamCard>
-                            </div>
-                          </div>
-                        </section>
-                        
-                        <section>
-                          <div class="px-4 mx-auto max-w-screen-xl text-center lg:px-6">
-                            <div class="mx-auto mb-8 max-w-screen-xl lg:mb-8">
-                              <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-200 sm:text-4xl text-left">Our Organisers</h2>
-                              <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-slate-400 text-left">Without our organizers, we wouldn't be able to organize much of BuildingBloCS, hence this serves as a <i>thank-you note</i> to all of them for their willingness to help and make BuildingBloCS possible!</p>
-                            </div>
-                            <div v-for="[name, members] in Object.entries(teamMembers[1].organisers)" :key="name">
-                              <h2 class="text-3xl pt-16 tracking-tight text-left font-extrabold pb-8 text-gray-900 dark:text-white">{{ name }}</h2>
-                              <div class="flex flex-wrap justify-center">
-                                <TeamCard class="m-2" v-for="(teamMember, index) in members" :key="index" :teamMember="teamMember"></TeamCard>
-                              </div>
-                            </div>
-                          </div>
-                        </section>
-                      </TabPanel>
-
-
-
-
-                      <TabPanel class="rounded-xl p-3 focus:outline-none">
-                        <section class="pb-24">
-                          <div class="px-4 mx-auto max-w-screen-xl text-center lg:px-6">
-                            <div class="mx-auto mb-8 max-w-screen-xl lg:mb-8">
-                              <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-200 sm:text-4xl text-left">Our Executive Committee (Exco)</h2>
-                              <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-slate-400 text-left">In addition to the OICs, BuildingBloCS 2023 is largely indebted to our Executive Committee that strives to help with event management and other tasks, such that work is easily distributed to organisers.</p>
-                            </div>
-                            <div class="flex flex-wrap justify-center">
-                              <TeamCard class="m-2" v-for="(teamMember, index) in teamMembers[2].exco" :key="index" :teamMember="teamMember"></TeamCard>
-                            </div>
-                          </div>
-                        </section>
-                        
-                        <section>
-                          <div class="px-4 mx-auto max-w-screen-xl text-center lg:px-6">
-                            <div class="mx-auto mb-8 max-w-screen-xl lg:mb-8">
-                              <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-200 sm:text-4xl text-left">Our Organisers</h2>
-                              <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-slate-400 text-left">Without our organizers, we wouldn't be able to organize much of BuildingBloCS, hence this serves as a <i>thank-you note</i> to all of them for their willingness to help and make BuildingBloCS possible!</p>
-                            </div>
-                            <div v-for="[name, members] in Object.entries(teamMembers[2].organisers)" :key="name">
-                              <h2 class="text-3xl pt-16 tracking-tight text-left font-extrabold pb-8 text-gray-900 dark:text-white">{{ name }}</h2>
-                              <div class="flex flex-wrap justify-center">
-                                <TeamCard class="m-2" v-for="(teamMember, index) in members" :key="index" :teamMember="teamMember"></TeamCard>
-                              </div>
-                            </div>
-                          </div>
-                        </section>
-                      </TabPanel>
-                    </TabPanels>
-                  </TabGroup>
-                  </div>
-                </div>
-                <Footer />
-            </div>
-            </div>
+              </TabPanels>
+            </TabGroup>
+          </div>
         </div>
+        <Footer />
+      </div>
     </div>
+  </div>
 </template>
 
 <script setup>
@@ -169,6 +111,13 @@ useSeoMeta({
     twitterImage: '/index/hero/img3.png',
     twitterCard: 'summary_large_image'
 })
+
+const sections = ['Jun', 'Sep', 'Dec']
+
+const oics = {
+  2023: ["oneytlam", "yauleqi", "prannay"].map(it => database[it]),
+  2024: ["duhan", "justinchee", "mahir"].map(it => database[it])
+}
 
 
 const teamMembers = [
