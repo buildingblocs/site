@@ -30,7 +30,7 @@
                     :class="[
                       'w-full py-2.5 font-extrabold text-xl leading-5 text-orange-700',
                       'focus:outline-none justify-center',
-                      selected ? 'bg-orange-300' : 'hover:bg-orange-300',
+                      selected ? 'bg-orange-300' : 'hover:bg-orange-200',
                       index == 0 ? 'rounded-l-xl' : index == sections.length-1 ? 'rounded-r-xl' : '',
                     ]">
                     {{ category }}
@@ -39,51 +39,18 @@
               </TabList>
 
               <TabPanels class="mt-2">
-                <!-- June Conference 2023 -->
-                <TabPanel class="rounded-xl p-3 focus:outline-none">
-                  <TeamExco :members="teamMembers[0].exco" />
+                <TabPanel v-for="(membersList, index) in teamMembers" :key="index" v-slot="{ selected }" class="p-3 focus:outline-none">
+                  <TeamExco v-if="membersList.exco" :members="membersList.exco" />
                     
                   <section>
                     <div class="px-4 mx-auto max-w-screen-xl text-center lg:px-6">
                       <PageHead title="Our Organisers">
                         Without our organizers, we wouldn't be able to organize much of BuildingBloCS, hence this serves as a <i>thank-you note</i> to all of them for their willingness to help and make BuildingBloCS possible!
                       </PageHead>
-                      <TeamSubcomm v-for="[name, members] in Object.entries(teamMembers[0].organisers)" :name="name" :members="members" :key="name" />
+                      <TeamSubcomm v-for="[name, members] in Object.entries(membersList.organisers)" :name="name" :members="members" :key="name" />
                     </div>
                   </section>
                 </TabPanel>
-                
-                
-                <!-- September Conference 2023 -->
-                <TabPanel class="rounded-xl p-3 focus:outline-none">
-                  <TeamExco :members="teamMembers[1].exco" />
-
-                  <section>
-                    <div class="px-4 mx-auto max-w-screen-xl text-center lg:px-6">
-                      <PageHead title="Our Organisers">
-                        Without our organizers, we wouldn't be able to organize much of BuildingBloCS, hence this serves as a <i>thank-you note</i> to all of them for their willingness to help and make BuildingBloCS possible!
-                      </PageHead>
-                      <TeamSubcomm v-for="[name, members] in Object.entries(teamMembers[1].organisers)" :name="name" :members="members" :key="name" />
-                    </div>
-                  </section>
-                </TabPanel>
-                
-                
-                <!-- December Conference 2023 -->
-                <TabPanel class="rounded-xl p-3 focus:outline-none">
-                  <TeamExco :members="teamMembers[2].exco" />
-
-                  <section>
-                    <div class="px-4 mx-auto max-w-screen-xl text-center lg:px-6">
-                      <PageHead title="Our Organisers">
-                        Without our organizers, we wouldn't be able to organize much of BuildingBloCS, hence this serves as a <i>thank-you note</i> to all of them for their willingness to help and make BuildingBloCS possible!
-                      </PageHead>
-                      <TeamSubcomm v-for="[name, members] in Object.entries(teamMembers[2].organisers)" :name="name" :members="members" :key="name" />
-                    </div>
-                  </section>
-                </TabPanel>
-
-
               </TabPanels>
             </TabGroup>
           </div>
@@ -112,7 +79,7 @@ useSeoMeta({
     twitterCard: 'summary_large_image'
 })
 
-const sections = ['Jun', 'Sep', 'Dec']
+const sections = ['Mar', 'Jun', 'Sep', 'Dec']
 
 const oics = {
   2023: ["oneytlam", "yauleqi", "prannay"].map(it => database[it]),
@@ -121,17 +88,15 @@ const oics = {
 
 
 const teamMembers = [
-  { // June
-    exco: ["kaiwen", "zayan", "duhan", "jinen", "suraj", "bryant", "renoir", "seth", "yuanxi"].map(it => database[it]),
+  { // March
     organisers: {
-      "Emcees": ["zayan", "mahit", "dhanvine"].map(it => database[it]),
       "Human Resources": [
         {name: "suraj", lead: true}, {name: "isaackok", lead: true}, {name: "ozk"}, {name: "eugene"}, {name: "dhanvine"}, {name: "tsk"}, {name: "vinita"}
       ].map(it => ({...(database[it.name]), lead: it.lead || false})),
       "Quality Assurance": [
         {name: "bryant", lead: true}, {name: "neil"}, {name: "shawn"}, {name: "jamestan"}, {name: "justinwang"}, 
-        {name: "sahana"}, {name: "cervon"}, {name: "vishal"}, {name: "yuanxi"}, {name: "hnin"}, {name: "junee"}, 
-        {name: "edwinliew"}, {name: "arthur"}, {name: "mahit"}, {name: "kimwee"}, {name: "xiyuan"}, {name: "hugo"}
+        {name: "sahana"}, {name: "cervon"}, {name: "vishal"}, {name: "yuanxi"}, {name: "junee"}, 
+        {name: "edwinliew"}, {name: "arthur"}, {name: "kimwee"}
       ].map(it => ({...(database[it.name]), lead: it.lead || false})),
       "Workshop Admin": [
         {name: "kaiwen", lead: true}, {name: "zayan", lead: true}, {name: "jinen", lead: true}, {name: "duhan", lead: true},
@@ -143,14 +108,43 @@ const teamMembers = [
         {name: "edwinliew"}, {name: "wayne"}, {name: "cervon"}, {name: "claralee"}, {name: "andrel"}, {name: "celine"},
         {name: "lehan"}, {name: "sophiachua"}
       ].map(it => ({...(database[it.name]), lead: it.lead || false})),
+      "Team Starvation": [
+        {name: "seth", lead: true}, {name: "wenkai", lead: true}, {name: "yuanxi", lead: true},
+        {name: "kabir"}, {name: "mahir"}, {name: "jed"}, {name: "ishneet"}, {name: "zerui"}, {name: "weiyi"},
+        {name: "zedong"}, {name: "harry"}, {name: "danielchua"}, {name: "jinghong"}
+      ].map(it => ({...(database[it.name]), lead: it.lead || false})),
+      "Workshop Speakers": [
+        "kaiwen", "zayan", "jinghong", "ian", "ishneet"
+      ].map(it => database[it])
+    }
+  },
+  { // June
+    exco: ["kaiwen", "zayan", "duhan", "jinen", "suraj", "bryant", "renoir", "seth", "yuanxi"].map(it => database[it]),
+    organisers: {
+      "Emcees": ["zayan", "mahit", "dhanvine"].map(it => database[it]),
+      "Human Resources": [
+        {name: "suraj", lead: true}, {name: "isaackok", lead: true}, {name: "ozk"}, {name: "eugene"}, {name: "dhanvine"}, {name: "tsk"}, {name: "vinita"}
+      ].map(it => ({...(database[it.name]), lead: it.lead || false})),
+      "Quality Assurance": [
+        {name: "bryant", lead: true}, {name: "neil"}, {name: "shawn"}, {name: "jamestan"}, {name: "justinwang"}, 
+        {name: "sahana"}, {name: "hnin"}, {name: "junee"}, 
+        {name: "edwinliew"}, {name: "arthur"}, {name: "mahit"}, {name: "kimwee"}, {name: "xiyuan"}, {name: "hugo"}
+      ].map(it => ({...(database[it.name]), lead: it.lead || false})),
+      "Workshop Admin": [
+        {name: "kaiwen", lead: true}, {name: "zayan", lead: true}, {name: "jinen", lead: true}, {name: "duhan", lead: true},
+        {name: "jiaxuan"}, {name: "leducminh"}, {name: "jack"}, {name: "asha"}, {name: "ashley"}, {name: "kashvi"}, {name: "justinchee"}
+      ].map(it => ({...(database[it.name]), lead: it.lead || false})),
+      "Publicity & Design": [
+        {name: "minjia", lead: true}, {name: "renoir", lead: true},
+        {name: "edwinliew"}, {name: "wayne"}, {name: "claralee"}, {name: "andrel"}, {name: "celine"},
+        {name: "lehan"}, {name: "sophiachua"}
+      ].map(it => ({...(database[it.name]), lead: it.lead || false})),
       "Hackathon": [
         {name: "kabir", lead: true}, {name: "mahir", lead: true},
         {name: "ashwin"}, {name: "jed"}, {name: "ishneet"}, {name: "pann"}
       ].map(it => ({...(database[it.name]), lead: it.lead || false})),
       "Development": [
-        {name: "seth", lead: true}, {name: "wenkai", lead: true}, {name: "yuanxi", lead: true},
-        {name: "kabir"}, {name: "mahir"}, {name: "jed"}, {name: "ishneet"}, {name: "zerui"}, {name: "weiyi"},
-        {name: "zedong"}, {name: "harry"}, {name: "jerome"}, {name: "danielchua"}, {name: "peter"}, 
+        {name: "seth", lead: true}, {name: "jerome"}, {name: "danielchua"}, {name: "peter"},
         {name: "raymond"}, {name: "jinghong"}, {name: "rajharsh"}
       ].map(it => ({...(database[it.name]), lead: it.lead || false})),
       "Workshop Speakers": [
