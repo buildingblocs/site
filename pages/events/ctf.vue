@@ -98,7 +98,7 @@ import { ChevronUpIcon } from '@heroicons/vue/20/solid'
 
 
 function link(text, url) {
-    return `<NuxtLink to="${url}" class="text-orange-500 dark:text-orange-400 hover:underline">${text}</NuxtLink>`
+    return `<a href="${url}" class="text-orange-500 dark:text-orange-400 hover:underline">${text}</a>`
 }
 
 const faqs = [
