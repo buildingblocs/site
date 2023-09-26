@@ -12,23 +12,19 @@
                     <div class="mx-auto lg:max-w-7xl lg:flex justify-center max-w-lg px-8 sm:px-0">
                         <div class="text-left sm:pb-8 max-w-xl">
                             <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl dark:text-white">
-                                September Conference</h1>
+                                BBCS x BlahajCTF</h1>
                             <h2 class="text-3xl mt-6 font-semibold tracking-tight text-gray-900 dark:text-white">
                                 Key Details</h2>
                             <p class="mt-3 text-lg leading-8 text-gray-600 dark:text-slate-300">
-                                Dates: 3, 4 and 5 Sept <br>
+                                Date: 2nd December <br>
                                 Venue: Online <br>
                                 Email contact for queries:
-                                <NuxtLink to="mailto:hello@buildingblocs.sg"
-                                    class="text-orange-500 dark:text-orange-400 hover:underline">
-                                    hello@buildingblocs.sg
-                                </NuxtLink>
+                                <NuxtLink to="mailto:hello@buildingblocs.sg" class="text-orange-500 dark:text-orange-400 hover:underline">hello@buildingblocs.sg</NuxtLink>
                             </p>
-                          <p class="mt-3 text-lg leading-8 text-gray-600 dark:text-slate-300 font-bold">Please note
-                            that the workshop "Intro to Vue" has been cancelled. We apologise for any inconvenience caused.</p>
-                            <p class="mt-3 text-lg leading-8 text-gray-600 dark:text-slate-300">BuildingBloCS’s annual September conference will be happening on <b>3rd, 4th and 5th Sept</b> virtually. This year’s conference will be on <b>Web Development.</b></p>
-                            <p class="mt-3 text-lg leading-8 text-gray-600 dark:text-slate-300">We have closed signups due to overwhelming demand. Please email us for any queries and make sure you're in the Discord channel to receive updates on the event. We hope to see you at our future events!
-                            </p>
+                          <!-- <p class="mt-3 text-lg leading-8 text-gray-600 dark:text-slate-300 font-bold">Please note
+                            that the workshop "Intro to Vue" has been cancelled. We apologise for any inconvenience caused.</p> -->
+                            <p class="mt-3 text-lg leading-8 text-gray-600 dark:text-slate-300">BuildingBloCS's collaboration with Team Blahaj brings you... <b>BlahajCTF</b>! This for-beginners CTF will be happening on <b>2nd Dec</b> virtually.</p>
+                            <!-- <p class="mt-3 text-lg leading-8 text-gray-600 dark:text-slate-300">We have closed signups due to overwhelming demand. Please email us for any queries and make sure you're in the Discord channel to receive updates on the event. We hope to see you at our future events!</p> -->
                             <div>
                                 <div class="mt-6">
                                     <Disclosure v-for="(faq, index) in faqs" :key="index" v-slot="{ open }">
@@ -39,40 +35,9 @@
                                                 class="h-5 w-5 text-orange-500" />
                                         </DisclosureButton>
                                         <DisclosurePanel class="px-4 pt-4 pb-2 text-lg text-gray-600 dark:text-slate-300">
-                                            {{ faq.answer }}
+                                            <span v-html="faq.answer"></span>
                                         </DisclosurePanel>
                                     </Disclosure>
-                                    <Disclosure v-slot="{ open }">
-                                        <DisclosureButton
-                                            class="mt-2 flex items-center justify-between rounded-lg bg-orange-100 px-4 py-2 text-left sm:text-xl text-orange-900 hover:bg-orange-200 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-75 text-md font-semibold tracking-tight w-full">
-                                            <span>What if something pops up and I can't make it?</span>
-                                            <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''"
-                                                class="h-5 w-5 text-orange-500" />
-                                        </DisclosureButton>
-                                        <DisclosurePanel class="px-4 pt-4 pb-2 text-lg text-gray-600 dark:text-slate-300">
-                                            Email us at
-                                            <NuxtLink to="mailto:hello@buildingblocs.sg"
-                                                class="text-orange-300 hover:underline">
-                                                hello@buildingblocs.sg
-                                            </NuxtLink>
-                                            or approach us on Discord in any appropriate channels and we will update your
-                                            signup status
-                                            accordingly.
-                                        </DisclosurePanel>
-                                    </Disclosure>
-                                </div>
-                            </div>
-
-
-                            <div class="text-left pb-4 sm:pb-12 max-w-xl mt-12">
-                                <h2 class="text-3xl mt-6 font-semibold tracking-tight text-gray-900 dark:text-white">
-                                    Find out how the Singathon turned out.</h2>
-                                <div class="mt-8">   
-                                    <NuxtLink href="https://singathon.devpost.com/project-gallery"
-                                        class="rounded-md bg-orange-600 px-3.5 py-3.5 text-medium font-semibold text-white shadow-sm hover:bg-orange-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500">
-                                        See Project Gallery
-                                        <span aria-hidden="true">&rarr;</span>
-                                    </NuxtLink>
                                 </div>
                             </div>
 
@@ -81,7 +46,10 @@
                         <div class="mx-1 md:mx-7">
                             <div class="mx-1 md:mx-7 max-w-lg">
                                 <div class="mx-1 md:mx-7 max-w-lg">
-                                    <div v-for="timeline in timelines" :key="timeline.date">
+                                    <nuxt-img format="webp" src="/events/img5.png" alt=""
+                                        class="object-cover object-center w-full max-h-[25rem] lg:max-h-full rounded-xl shadow-xl ring-1 ring-gray-400/10"
+                                    />
+                                    <!-- <div v-for="timeline in timelines" :key="timeline.date">
                                         <h1
                                             class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl dark:text-white">
                                             {{ timeline.title }}
@@ -110,7 +78,7 @@
                                                 </p>
                                             </li>
                                         </ol>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -128,28 +96,59 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { ChevronUpIcon } from '@heroicons/vue/20/solid'
 
+
+function link(text, url) {
+    return `<NuxtLink to="${url}" class="text-orange-500 dark:text-orange-400 hover:underline">${text}</NuxtLink>`
+}
+
 const faqs = [
     {
-        question: "Must I go for all workshops?",
-        answer: "Not at all! You can choose which workshops you would like to attend.",
+        question: "What is a CTF event?",
+        answer: "A CTF event is a competition in which participants solve a series of challenges, often related to cybersecurity, to earn points or '<i>flags</i>'. CTF events can be held online or in-person, and they can be organized by universities, companies, or other organizations.",
     },
     {
-        question: "Why should I sign up?",
-        answer: "You can learn a whole lot of new skills and it’ll be really fun!",
+        question: "What types of challenges are included in a CTF event?",
+        answer: `
+        CTF events typically include a variety of different challenge categories, including:
+        <ul class="list-disc list-outside ml-6">
+            <li><b>Pwn</b>: Exploitation challenges involving vulnerabilities and reverse engineering.</li>
+            <li><b>Crypto</b>: Challenges related to cryptographic puzzles and ciphers.</li>
+            <li><b>Web</b>: Challenges involving web application vulnerabilities.</li>
+            <li><b>Forensics</b>: Challenges analyzing digital evidence.</li>
+            <li><b>Misc</b>: A catch-all for diverse challenges.</li>
+        </ul>`,
     },
     {
-        question: "Is the event free?",
-        answer: "Yep, thanks to our generous sponsors, it’s completely free!",
+        question: "What resources are available for learning more about CTFs and the different challenge categories?",
+        answer: `
+        There are many resources available for learning about CTFs and the different challenge categories. Some good places to start include:
+
+        <ul class="list-disc list-outside ml-6">
+            <li>${link('The CTF Field Guide', 'https://trailofbits.github.io/ctf')}</li>
+            <li>${link('The CTFTime Website', 'https://ctftime.org')}</li>
+            <li>${link('The CTF Subreddit', 'https://www.reddit.com/r/ctf')}</li>
+            <li>${link('The pwnable.kr Website', 'https://pwnable.tw')}</li>
+            <li>${link('The Cryptopals Website', 'https://cryptopals.com')}</li>
+            <li>${link('The Web Security Academy', 'https://portswigger.net/web-security')}</li>
+        </ul>`,
+    },
+    // {
+    //     question: "Must I go for all the workshops?",
+    //     answer: "No, not at all! The workshops are for beginners, and you are free to pop in and join whichever one you like!",
+    // },
+    {
+        question: "Is this group or individual, and how are groups allocated?",
+        answer: "It's in groups of up to 4 people, and you can sign up with other participants to be in the same group.",
     },
     {
-        question: "Are there prizes?",
-        answer: "There are prizes including Sony Headphones and Amazon gift cards for every member of the winning group!",
-    },
-    {
-        question: "How will the hackathon groups be allocated?",
-        answer: "The hackathon will be carried out in groups of three. You may indicate who you would like to be grouped with (make sure it's mutual) and we'll take that into consideration. We'll fill any empty slots randomly, taking into consideration your school and age to ensure a pleasant collaboration experience!",
-    },
+        question: "What if something pops up and I can't make it?",
+        answer: `
+        Email us at ${link('hello@buildingblocs.sg', 'mailto:hello@buildingblocs.sg')}
+        or approach us on Discord in any appropriate channels and we will update your
+        signup status accordingly.`
+    }
 ];
+
 const timelines = [
     {
         date: "3rd Sept",
@@ -220,13 +219,13 @@ const timelines = [
 ];
 
 useSeoMeta({
-    title: 'Sept Conference - BuildingBloCS 2023',
+    title: 'BBCS x BlahajCTF - BuildingBloCS 2023',
     description: 'Ignite your passion in computing',
-    ogTitle: 'Sept Conference - BuildingBloCS 2023',
+    ogTitle: 'BBCS x BlahajCTF - BuildingBloCS 2023',
     ogDescription: 'Ignite your passion in computing',
     ogImage: '/index/hero/img5.jpg',
-    ogUrl: 'https://new.buildingblocs.sg/events/sept',
-    twitterTitle: 'Sept Conference - BuildingBloCS 2023',
+    ogUrl: 'https://new.buildingblocs.sg/events/ctf',
+    twitterTitle: 'BBCS x BlahajCTF - BuildingBloCS 2023',
     twitterDescription: 'Ignite your passion in computing',
     twitterImage: '/index/hero/img5.jpg',
     twitterCard: 'summary_large_image'

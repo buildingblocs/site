@@ -14,6 +14,11 @@
                     Sept Conference
                     <span aria-hidden="true" class="ml-1">&rarr;</span>
                 </NuxtLink>
+                <NuxtLink href="/events/ctf"
+                    class="xl:hidden flex items-center hover:underline rounded-full bg-gray-300 dark:bg-gray-900 bg-opacity-30 dark:bg-opacity-30 px-3 py-1 text-xs sm:text-sm font-semibold text-gray-600 hover:bg-opacity-20 dark:text-slate-200 dark:hover:bg-opacity-50 shadow-sm dark:hover:bg-gray-900 hover:bg-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500">
+                    BBCS x BlahajCTF
+                    <span aria-hidden="true" class="ml-1">&rarr;</span>
+                </NuxtLink>
                 <div class="flex xl:hidden">
                     <Menu as="div" class="relative inline-block text-left mt-1">
                         <div>
@@ -41,7 +46,7 @@
                                     </template>
                                     </MenuItem>
                                 </div>
-                                <MenuItem v-slot="{ active }">
+                                <!-- <MenuItem v-slot="{ active }">
                                 <div class="px-1 py-1">
                                     <NuxtLink to="/events/sept" :class="[
                                         active ? 'bg-orange-500 text-white' : 'text-gray-900 dark:text-gray-200',
@@ -50,7 +55,7 @@
                                         Register &rarr;
                                     </NuxtLink>
                                 </div>
-                                </MenuItem>
+                                </MenuItem> -->
                                 <div class="pl-1 py-1 flex">
                                     <p
                                         class="group flex w-full items-center rounded-md px-2 py-2 text-sm font-semibold text-gray-900 dark:text-gray-200">
@@ -66,18 +71,24 @@
                     <NuxtLink v-for="item in navigation" :key="item.name" :href="item.href"
                         class="text-sm font-semibold leading-6 text-gray-900 dark:text-slate-200">{{ item.name }}</NuxtLink>
                 </div>
-                <div class="hidden xl:flex xl:flex-1 xl:justify-end">
+                <div class="hidden xl:flex xl:flex-1 space-x-1 xl:justify-end">
                     <NuxtLink href="/events/sept"
                         class="flex items-center hover:underline rounded-full bg-gray-300 dark:bg-gray-900 bg-opacity-30 dark:bg-opacity-30 px-3 py-1 text-xs 2xl:text-sm font-semibold text-gray-600 hover:bg-opacity-20 dark:text-slate-200 dark:hover:bg-opacity-50 shadow-sm dark:hover:bg-gray-900 hover:bg-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500">
                         Sept Conference
                         <span aria-hidden="true" class="ml-1">&rarr;</span>
                     </NuxtLink>
+                    
+                    <NuxtLink href="/events/ctf"
+                        class="flex items-center hover:underline rounded-full bg-gray-300 dark:bg-gray-900 bg-opacity-30 dark:bg-opacity-30 px-3 py-1 text-xs 2xl:text-sm font-semibold text-gray-600 hover:bg-opacity-20 dark:text-slate-200 dark:hover:bg-opacity-50 shadow-sm dark:hover:bg-gray-900 hover:bg-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500">
+                        BBCS x BlahajCTF
+                        <span aria-hidden="true" class="ml-1">&rarr;</span>
+                    </NuxtLink>
                     <Mode />
-                    <NuxtLink href="/events/sept"
+                    <!-- <NuxtLink href="/events/sept"
                         class="hover:underline rounded-md bg-orange-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500">
                         Register
                         <span aria-hidden="true">&rarr;</span>
-                    </NuxtLink>
+                    </NuxtLink> -->
                 </div>
             </nav>
         </header>

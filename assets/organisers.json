@@ -83,6 +83,7 @@
     },
     "mahit": {
         "githubLink": "https://github.com/AppleGesus",
+        "inLink": "https://www.linkedin.com/in/mahit-sanke-a9aa03279",
         "imageSrc": "/teams/ppl/sanke_mahit.jpg",
         "name": "Sanke Mahit",
         "description": "My name is Sanke Mahit and I am in JC2 this year!"
@@ -129,6 +130,7 @@
     },
     "neil": {
         "githubLink": "https://github.com/Armweak5104",
+        "inLink": "https://www.linkedin.com/in/neil-bhandari-a65698281",
         "imageSrc": "/teams/ppl/neil.png",
         "name": "Neil Bhandari",
         "description": "I will be in JC1 in 2023. I code mainly in python and C++. I also fail captcha tests too much."
@@ -596,6 +598,7 @@
       },
       "kairos": {
         "githubLink": "https://github.com/Kairos-T",
+        "inLink": "https://www.linkedin.com/in/kairoshestiatay",
         "webLink": "https://kairostay.com",
         "imageSrc":"/teams/ppl/Kairos_Tay.jpg",
         "name": "Kairos Tay",
@@ -621,6 +624,7 @@
       },
       "lucius": {
         "githubLink": "https://github.com/czlucius",
+        "inLink": "https://www.linkedin.com/in/lucius-chee",
         "imageSrc": "/teams/ppl/lucius.jpg",
         "name": "Lucius Chee Zihan",
         "description": "I'm a self-taught student developer, and aspiring software engineer."
