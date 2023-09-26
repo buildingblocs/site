@@ -4,11 +4,7 @@
             <Nav />
             <div class="pt-16 sm:pt-32">
                 <div class="relative isolate pt-14 lg:px-8">
-                    <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-                        aria-hidden="true">
-                        <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[40deg] bg-gradient-to-tr from-[#9fa39c] to-[#ffc8c8] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-                            style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" />
-                    </div>
+                    <PatchesLarger />
                     <div class="mx-auto lg:max-w-7xl lg:flex justify-center max-w-lg px-8 sm:px-0">
                         <div class="text-left sm:pb-8 max-w-xl">
                             <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl dark:text-white">
@@ -34,7 +30,7 @@
                                             <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''"
                                                 class="h-5 w-5 text-orange-500" />
                                         </DisclosureButton>
-                                        <DisclosurePanel class="px-4 pt-4 pb-2 text-lg text-gray-600 dark:text-slate-300">
+                                        <DisclosurePanel class="px-4 py-4 pb-2 text-lg text-gray-600 dark:text-slate-300">
                                             <span v-html="faq.answer"></span>
                                         </DisclosurePanel>
                                     </Disclosure>
