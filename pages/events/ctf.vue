@@ -220,7 +220,7 @@ useSeoMeta({
     ogTitle: 'BBCS x BlahajCTF - BuildingBloCS 2023',
     ogDescription: 'Ignite your passion in computing',
     ogImage: '/index/hero/img5.jpg',
-    ogUrl: 'https://new.buildingblocs.sg/events/ctf',
+    ogUrl: 'https://buildingblocs.sg/events/ctf',
     twitterTitle: 'BBCS x BlahajCTF - BuildingBloCS 2023',
     twitterDescription: 'Ignite your passion in computing',
     twitterImage: '/index/hero/img5.jpg',

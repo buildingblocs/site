@@ -95,7 +95,7 @@ useSeoMeta({
     ogTitle: 'Our Team - BuildingBloCS 2023',
     ogDescription: 'Ignite your passion in computing',
     ogImage: '/index/hero/img3.png',
-    ogUrl: 'https://new.buildingblocs.sg/team',
+    ogUrl: 'https://buildingblocs.sg/team',
     twitterTitle: 'Our Team - BuildingBloCS 2023',
     twitterDescription: 'Ignite your passion in computing',
     twitterImage: '/index/hero/img3.png',

@@ -221,7 +221,7 @@ useSeoMeta({
     ogTitle: 'Sept Conference - BuildingBloCS 2023',
     ogDescription: 'Ignite your passion in computing',
     ogImage: '/index/hero/img5.jpg',
-    ogUrl: 'https://new.buildingblocs.sg/events/sept',
+    ogUrl: 'https://buildingblocs.sg/events/sept',
     twitterTitle: 'Sept Conference - BuildingBloCS 2023',
     twitterDescription: 'Ignite your passion in computing',
     twitterImage: '/index/hero/img5.jpg',

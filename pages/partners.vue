@@ -51,7 +51,7 @@ useSeoMeta({
     ogTitle: 'Partners - BuildingBloCS 2023',
     ogDescription: 'Ignite your passion in computing',
     ogImage: '/index/hero/img4.png',
-    ogUrl: 'https://new.buildingblocs.sg/partners',
+    ogUrl: 'https://buildingblocs.sg/partners',
     twitterTitle: 'Partners - BuildingBloCS 2023',
     twitterDescription: 'Ignite your passion in computing',
     twitterImage: '/index/hero/img4.png',

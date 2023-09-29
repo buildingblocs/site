@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/color-mode', 'nuxt-swiper', '@nuxt/image', '@nuxtjs/robots', 'nuxt-simple-sitemap', 'nuxt-gtag', 'nuxt-clarity-analytics'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/color-mode', 'nuxt-swiper', '@nuxt/image', '@nuxtjs/robots', 'nuxt-simple-sitemap', 'nuxt-gtag', 'nuxt-clarity-analytics', 'vue3-carousel-nuxt'],
   app: {
     head: {
       link: [{ rel: 'stylesheet', href: 'https://rsms.me/inter/inter.css' }],
