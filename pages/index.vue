@@ -20,7 +20,9 @@
           <IndexRtextLpic :title="RtextLpicTitle2" :desc="RtextLpicDesc2" :img="RtextLpicImg2" />
         </div>
         <IndexTimeline />
-        <EventsCta />
+        <div class="bg-white dark:bg-slate-800">
+          <EventsCta />
+        </div>
         <!-- <IndexCta /> -->
         <Footer />
       </div>
