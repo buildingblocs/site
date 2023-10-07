@@ -60,7 +60,7 @@
                             </div>
 
 
-                            <div class="text-left pb-4 sm:pb-12 max-w-xl mt-12">
+                            <div class="text-left pb-10 sm:pb-12 max-w-xl mt-12">
                                 <h2 class="text-3xl mt-6 font-semibold tracking-tight text-gray-900 dark:text-white">
                                     Find out how the Singathon turned out.</h2>
                                 <div class="mt-8">   

@@ -6,9 +6,9 @@
                 <div class="relative isolate pt-14 lg:px-8">
                     <PatchesLarger />
                     <div class="mx-auto lg:max-w-7xl lg:flex justify-center max-w-lg px-8 sm:px-0">
-                        <div class="text-left sm:pb-8 max-w-xl">
+                        <div class="text-left sm:pb-8 max-w-xl pb-10">
                             <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl dark:text-white">
-                                BBCS x BlahajCTF</h1>
+                                BBCS × BlahajCTF</h1>
                             <h2 class="text-3xl mt-6 font-semibold tracking-tight text-gray-900 dark:text-white">
                                 Key Details</h2>
                             <p class="mt-3 text-lg leading-8 text-gray-600 dark:text-slate-300">
@@ -92,7 +92,6 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { ChevronUpIcon } from '@heroicons/vue/20/solid'
 
-
 function link(text, url) {
     return `<a href="${url}" class="text-orange-500 dark:text-orange-400 hover:underline">${text}</a>`
 }
@@ -145,83 +144,14 @@ const faqs = [
     }
 ];
 
-const timelines = [
-    {
-        date: "3rd Sept",
-        events: [
-            {
-                date: "10am - 11.30am",
-                title: "Intro to Design Thinking and Figma",
-                author: "by Du Yuhan and Cervon Wong",
-                desc: "Less design thinking, more design."
-            },
-            {
-                date: "3pm - 5pm",
-                title: "Intro to HTML/CSS/JS",
-                author: "by Justin Chee, Oon Zheng Kang, Saw Ze Dong and Harry Cheong",
-                desc: "Introduction to the basics of how a website is made."
-            },
-        ],
-    },
-    {
-        date: "4th Sept",
-        events: [
-            {
-                date: "10am - 12pm",
-                title: "Intro to React",
-                author: "by Liu Wenkai and “Peter” Zeyu Yao",
-                desc: "Learn about React’s component-based design and ship a site using it."
-            },
-            {
-                date: "2pm - 3.30pm",
-                title: "Intro to Nuxt.JS and TailwindCSS",
-                author: "by Aung Kaung Myat",
-                desc: "Learn how to build a website for yourself in SPA mode, hosted on Netlify."
-            },
-            {
-                date: "7pm - 8.30pm",
-                title: "Intro to Next.JS",
-                author: "by Vadapalli Dedeep Sai and Raghav Kumar",
-                desc: "Learn about Next components and server side rendering. Host a simple blog webapp using Vercel."
-            },
-        ],
-    },
-    {
-        date: "5th Sept",
-        events: [
-            {
-                date: "10am - 12pm",
-                title: "Intro to Website Deployment",
-                author: "by Mahir Shah and Hugo Maximus Lim",
-                desc: "Learn how to host your website."
-            },
-            {
-                date: "3pm - 5pm",
-                title: "Intro to Flask (and PythonAnywhere)",
-                author: "by Yap Yuan Xi and Neil Bhandari",
-                desc: "Look at how Flask connects your Python code to the internet, and ship a data scraping app using it."
-            },
-        ],
-    },
-    {
-        date: "5th to 7th Sept",
-        events: [
-            {
-                title: "Hackathon",
-                desc: "You are tasked to solve a community need (can be related to Singapore) and submit it by 7 Sept 2359. Along with a website/webapp, you will have to prepare a deck of slides with your creativity process, features of your work and a demo.",
-            },
-        ],
-    },
-];
-
 useSeoMeta({
-    title: 'BBCS x BlahajCTF - BuildingBloCS 2023',
+    title: 'BBCS × BlahajCTF - BuildingBloCS 2023',
     description: 'Ignite your passion in computing',
-    ogTitle: 'BBCS x BlahajCTF - BuildingBloCS 2023',
+    ogTitle: 'BBCS × BlahajCTF - BuildingBloCS 2023',
     ogDescription: 'Ignite your passion in computing',
     ogImage: '/index/hero/img5.jpg',
     ogUrl: 'https://buildingblocs.sg/events/ctf',
-    twitterTitle: 'BBCS x BlahajCTF - BuildingBloCS 2023',
+    twitterTitle: 'BBCS × BlahajCTF - BuildingBloCS 2023',
     twitterDescription: 'Ignite your passion in computing',
     twitterImage: '/index/hero/img5.jpg',
     twitterCard: 'summary_large_image'

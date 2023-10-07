@@ -30,7 +30,7 @@ const events = [
         isright: true,
     },
     {
-        title: "BBCS x FOSSASIA Summit",
+        title: "BBCS × FOSSASIA Summit",
         desc: "The FOSSASIA Summit 2023 is a hybrid event conducted both online and in-person, part of a series of FOSSASIA events held since 2009. Participate to connect with businesses, developers, and tech communities from around the world and learn about the latest developments in open source! BuildingBloCS is proud to be partnering FOSSASIA to present several workshops and talks, as well as our very own exhibition booth at the FOSSASIA Summit 2023.",
         img: '/events/img2.jpg',
         date: '12-13 March 2023',
@@ -63,7 +63,7 @@ const events = [
         ]
     },
     {
-        title: 'BBCS x BlahajCTF',
+        title: 'BBCS × BlahajCTF',
         desc: "The inaugural BlahajCTF is a Capture-the-Flag Competition open to Secondary School and Junior College students aiming to learn basic cybersecurity competencies. This year, BBCS is involved in the organisation of BlahajCTF in collaboration with Team Blahaj.",
         img: '/events/img5.png',
         date: '2 December 2023',

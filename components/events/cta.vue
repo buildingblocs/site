@@ -15,14 +15,14 @@
           </defs>
         </svg>
         <div class="py-24 mx-auto max-w-md text-center lg:mx-auto lg:max-w-4xl lg:text-center">
-          <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Join us at our next September Conference!
+          <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Join us at our next Conference!
           </h2>
           <p class="mt-6 text-lg leading-8 text-gray-300">If you're a secondary school or pre-university student
             interested in Computing, this is for you!</p>
           <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-center">
             <NuxtLink 
               class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
-              The event has ended. Sign up for our next event!
+              No events currently available - join our Discord for updates
               <!-- <span aria-hidden="true"></span> -->
               <!-- href="/events/sept" -->
             </NuxtLink>

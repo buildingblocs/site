@@ -24,7 +24,8 @@
                     :class="[
                       'w-full text-medium leading-5 font-extrabold',
                       'focus:outline-none justify-center',
-                      selected ? 'text-orange-300' : 'text-orange-100 text-opacity-40 hover:text-orange-300 hover:text-opacity-70',
+                      selected ? 'text-orange-700 dark:text-orange-300' :
+                      'text-orange-600 dark:text-orange-100 text-opacity-40 hover:text-orange-300 hover:text-opacity-70',
                       index == 0 ? 'rounded-l-xl' : index == Object.keys(oics).length-1 ? 'rounded-r-xl' : '',
                     ]">
                     {{ category }}

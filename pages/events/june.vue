@@ -69,7 +69,8 @@
                                                 :class="[
                                                     'w-full text-medium leading-5 font-bold',
                                                     'focus:outline-none justify-center',
-                                                    selected ? 'text-orange-300' : 'text-orange-100 text-opacity-40 hover:text-orange-300 hover:text-opacity-70'
+                                                    selected ? 'text-orange-700 dark:text-orange-300' :
+                      'text-orange-600 dark:text-orange-100 text-opacity-40 hover:text-orange-300 hover:text-opacity-70',
                                                 ]">
                                                 {{ category }}
                                             </button>
@@ -164,7 +165,7 @@ const faqs = [
     {
         question: "What if something pops up and I can’t make it?",
         answer: `
-        Email us at ${link('buildingblocs@computing.sg', 'mailto:buildingblocs@computing.sg')}
+        Email us at ${link('hello@buildingblocs.sg', 'mailto:hello@buildingblocs.sg')}
         or approach us on ${link('Discord', 'https://discord.gg/VSHyrbsJFs')} 
         in any appropriate channels and we will update your signup status accordingly.
         `
