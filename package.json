@@ -27,7 +27,6 @@
     "@nuxtjs/robots": "^3.0.0",
     "@vercel/analytics": "^1.1.0",
     "flowbite": "^1.8.1",
-    "nuxt-swiper": "^1.2.2",
-    "vue3-carousel-nuxt": "^1.1.0"
+    "nuxt-swiper": "^1.2.2"
   }
 }
