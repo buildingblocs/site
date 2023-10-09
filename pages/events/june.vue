@@ -172,11 +172,21 @@
                               >
                                 {{ event.title }}
                               </h3>
-                              <p
-                                class="sm:text-lg text-md text-gray-500 dark:text-slate-400"
-                              >
-                                {{ event.author }}
-                              </p>
+                              <div class="flex items-center">
+                                <p
+                                  class="sm:text-md text-md grow text-gray-500 dark:text-slate-400"
+                                >
+                                  <i>{{ event.author }}</i>
+                                </p>
+                                <NuxtLink v-if="event.youtube"
+                                  :href="event.youtube"
+                                  class="text-gray-500 hover:text-gray-900 dark:hover:text-white mx-4"
+                                >
+                                  <IconsYoutube />
+                                </NuxtLink>
+
+                              </div>
+                              
 
                               <nuxt-img
                                 format="webp"
@@ -222,6 +232,7 @@ const images = [
   "/june/img3.jpg",
   "/june/img4.png",
   "/june/dataproc.png",
+  "/june/openai.jpg",
   "/june/dl.jpg",
   "/june/figma.png",
   "/june/flask1.jpg",
@@ -316,6 +327,12 @@ const tracks = [
         date: "Day 2",
         events: [
           {
+            title: "Insights into OpenAI API",
+            author: "by Teh Kim Wee (ASRJC)",
+            image: "/june/openai.jpg",
+            youtube: "https://www.youtube.com/watch?v=gzW6znCRRP4"
+          },
+          {
             title: "Intro to Python (Part 2)",
             author: "by Wayne Ang, Edwin Liew, Wabiba and Zhe Kai (ACJC)",
             image: "/june/img2.jpg",
@@ -324,6 +341,7 @@ const tracks = [
             title: "Introduction to Data Processing",
             author: "by Dhanvine Rameshkumar and Eugene Ang (TJC)",
             image: "/june/img3.jpg",
+            youtube: "https://www.youtube.com/watch?v=7fzau5vKwP4"
           },
           {
             title: "Integrating AI with Python",
@@ -362,10 +380,17 @@ const tracks = [
         date: "Day 2",
         events: [
           {
+            title: "Insights into OpenAI API",
+            author: "by Teh Kim Wee (ASRJC)",
+            image: "/june/openai.jpg",
+            youtube: "https://www.youtube.com/watch?v=gzW6znCRRP4"
+          },
+          {
             title: "Intro to Deep Learning",
             author:
               "by Jed Lim (NUSH), Seth Yong (SP) and Ashwin Lokesh (YIJC)",
             image: "/june/dl.jpg",
+            youtube: "https://www.youtube.com/watch?v=q2UFVLjRnw4",
           },
           {
             title: "Intro to Computer Vision",
@@ -397,6 +422,12 @@ const tracks = [
       {
         date: "Day 2",
         events: [
+          {
+            title: "Insights into OpenAI API",
+            author: "by Teh Kim Wee (ASRJC)",
+            image: "/june/openai.jpg",
+            youtube: "https://www.youtube.com/watch?v=gzW6znCRRP4"
+          },
           {
             title: "Graph Neural Networks",
             author: "by Karimi Zayan and Mahir Shah (NUSH)",
