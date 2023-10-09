@@ -69,6 +69,14 @@
             <ul class="text-lg text-gray-600 dark:text-slate-300">
               <li class="mb-4">
                 <NuxtLink
+                  href="/events/march"
+                  aria-label="March Conference"
+                  class="hover:underline"
+                  >March Conference</NuxtLink
+                >
+              </li>
+              <li class="mb-4">
+                <NuxtLink
                   href="/events/june"
                   aria-label="June Conference"
                   class="hover:underline"

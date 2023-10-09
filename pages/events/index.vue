@@ -28,6 +28,12 @@ const events = [
         img: '/events/img1.png',
         date: '12-13 March 2023',
         isright: true,
+        links: [
+            {
+                title: "Read More about our March Conference!",
+                url: "/events/march"
+            }
+        ]
     },
     {
         title: "BBCS × FOSSASIA Summit",
