@@ -66,13 +66,21 @@
             >
               Events
             </h2>
-            <ul class="text-lg text-gray-600 dark:text-slate-300">
+            <ul class="text-lg text-gray-600 dark:text-slate-300 md:columns-2">
               <li class="mb-4">
                 <NuxtLink
                   href="/events/march"
                   aria-label="March Conference"
                   class="hover:underline"
                   >March Conference</NuxtLink
+                >
+              </li>
+              <li class="mb-4">
+                <NuxtLink
+                  href="/events/foss"
+                  aria-label="BBCS × FOSSASIA Summit"
+                  class="hover:underline"
+                  >BBCS × FOSSASIA Summit</NuxtLink
                 >
               </li>
               <li class="mb-4">

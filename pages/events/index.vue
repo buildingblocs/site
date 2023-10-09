@@ -41,6 +41,12 @@ const events = [
         img: '/events/img2.jpg',
         date: '12-13 March 2023',
         isright: false,
+        links: [
+            {
+                title: "Read More about the FOSSASIA Summit!",
+                url: "/events/foss"
+            }
+        ]
     },
     {
         title: 'June Conference',
