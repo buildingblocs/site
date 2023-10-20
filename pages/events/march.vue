@@ -112,6 +112,18 @@
                                             </li>
                                         </ol>
                                     </div>
+                                    <div>
+                                        <h2 class="text-3xl mt-6 mb-2 font-semibold tracking-tight text-gray-900 dark:text-white">
+                                            Winners</h2>
+                                        <div v-for="(winner, index) in winners" :key="index" class="mt-2 flex items-center justify-between rounded-lg bg-orange-100 px-4 py-2 text-left sm:text-xl text-orange-900 hover:bg-orange-200 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-75 text-md font-semibold tracking-tight w-full">
+                                            <!-- <span class="sm:text-lg text-sm" v-html="`${winner.position}. `" /> -->
+                                            <span class="sm:text-xl text-md ml-1">
+                                                {{ winner.name }}
+                                            </span>
+                                            <span class="grow sm:text-lg text-sm ml-1">({{ winner.school }})</span>
+                                            <span class="sm:text-2xl text-lg" v-html="`${winner.score}`" />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -173,6 +185,7 @@ const faqs = [
         `
     },
 ];
+
 const timelines = [
     {
         date: "12th March",
@@ -215,6 +228,23 @@ const timelines = [
         ],
     },
 ];
+
+const winners = [
+    {
+        position: 1,
+        name: "Isaac Lam Yee Jay",
+        color: "#ffd700",
+        score: 45,
+        school: "ACJC"
+    },
+    {
+        position: 1,
+        name: "Yu Simu",
+        color: "#ffd700",
+        score: 45,
+        school: "NUSH"
+    }
+]
 
 useSeoMeta({
     title: 'March Conference - BuildingBloCS 2023',

@@ -30,7 +30,7 @@ const events = [
         isright: true,
         links: [
             {
-                title: "Read More about our March Conference!",
+                title: "Read More!",
                 url: "/events/march"
             }
         ]
@@ -43,7 +43,7 @@ const events = [
         isright: false,
         links: [
             {
-                title: "Read More about the FOSSASIA Summit!",
+                title: "Read More!",
                 url: "/events/foss"
             }
         ]
@@ -56,7 +56,7 @@ const events = [
         isright: true,
         links: [
             {
-                title: "Read More about our Flagship Conference!",
+                title: "Read More!",
                 url: "/events/june"
             }
         ]
@@ -69,7 +69,7 @@ const events = [
         isright: false,
         links: [
             {
-                title: "Read More about our September Conference!",
+                title: "Read More!",
                 url: "/events/sept"
             }
         ]
@@ -82,7 +82,7 @@ const events = [
         isright: true,
         links: [
             {
-                title: "Read More about our BlahajCTF!",
+                title: "Read More!",
                 url: "/events/ctf"
             }
         ]

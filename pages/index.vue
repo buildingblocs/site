@@ -3,44 +3,21 @@
     <div class="fixed w-full z-30 top-0">
       <Nav />
     </div>
-    <div>
-      <div class="absolute w-full h-full z-10">
-        <Head>
-          <Title>BuildingBloCS 2023</Title>
-        </Head>
-        <IndexHero class="" />
-        <div class="bg-white dark:bg-slate-800">
-          <section id="statement" class="pt-20">
-            <IndexStatement />
-          </section>
-          <IndexLtextRpic
-            :title="LtextRpicTitle1"
-            :desc="LtextRpicDesc1"
-            :img="LtextRpicImg1"
-          />
-          <IndexRtextLpic
-            :title="RtextLpicTitle1"
-            :desc="RtextLpicDesc1"
-            :img="RtextLpicImg1"
-          />
-          <IndexLtextRpic
-            :title="LtextRpicTitle2"
-            :desc="LtextRpicDesc2"
-            :img="LtextRpicImg2"
-          />
-          <IndexRtextLpic
-            :title="RtextLpicTitle2"
-            :desc="RtextLpicDesc2"
-            :img="RtextLpicImg2"
-          />
-        </div>
-        <IndexTimeline />
-        <div class="bg-white dark:bg-slate-800">
-          <EventsCta />
-        </div>
-        <!-- <IndexCta /> -->
-        <Footer />
+    <div class="absolute w-full h-full z-10">
+      <Head>
+        <Title>BuildingBloCS 2023</Title>
+      </Head>
+      <IndexHero />
+      <div class="bg-white dark:bg-slate-800">
+        <IndexStatement class="pt-20" />
+        <IndexTextpic 
+          v-for="picture in pictures" :key="picture.title" :isright="picture.isright"
+          :title="picture.title" :desc="picture.desc" :img="picture.img" />
       </div>
+      <IndexTimeline />
+      <EventsCta class="bg-white dark:bg-slate-800" />
+      <!-- <IndexCta /> -->
+      <Footer />
     </div>
     <!-- Swiper background -->
     <Swiper
@@ -53,60 +30,46 @@
       class="z-0"
     >
       <SwiperSlide v-for="slide in slides" :key="slide">
-        <div
-          class="absolute top-0 left-0 w-full h-full fade from-transparent to-black"
-        ></div>
-        <nuxt-img
-          format="webp"
-          class="object-cover w-full h-full swiper-lazy"
-          :src="slide"
-        />
+        <div class="absolute top-0 left-0 w-full h-full fade from-transparent to-black" />
+        <nuxt-img format="webp" :src="slide"
+          class="object-cover w-full h-full swiper-lazy" />
       </SwiperSlide>
     </Swiper>
   </div>
 </template>
 
-<script>
-import IndexLtextRpic from "/components/index/LtextRpic.vue";
-import IndexRtextLpic from "/components/index/RtextLpic.vue";
-
-export default {
-  components: {
-    IndexLtextRpic,
-    IndexRtextLpic,
-  },
-  data() {
-    return {
-      slides: [
-        "/index/hero/img2.jpg",
-        "/index/hero/img3.jpg",
-        "/index/hero/img4.png",
-        "/index/hero/img5.jpg",
-        "/index/hero/img6.jpg",
-        "/index/hero/img3.png",
-      ],
-      LtextRpicTitle1: "By students, for students.",
-      LtextRpicDesc1:
-        "BuildingBloCS is the largest nationwide “By Student, For Student” Computing Advocacy Program, aimed at teaching students the way of the coder 💻.",
-      LtextRpicImg1: "/index/img1.png",
-      RtextLpicTitle1: "Multi-focused.",
-      RtextLpicDesc1:
-        "We touch base on various topics, like AI, Cybersecurity and Software Development, to varying levels of complexity. It's truly fun for everyone!",
-      RtextLpicImg1: "/index/img4.png",
-      LtextRpicTitle2: "Passionate Speakers.",
-      LtextRpicDesc2:
-        "We give opportunities to various speakers to talk about their work and interests, and we don't shy away from getting into the nitty-gritty.",
-      LtextRpicImg2: "/index/img3.jpg",
-      RtextLpicTitle2: "Events for everyone.",
-      RtextLpicDesc2:
-        "We host events for students from Secondary Schools, JCs, Polys and International Schools. All are welcome!",
-      RtextLpicImg2: "/index/img2.jpg",
-    };
-  },
-};
-</script>
-
 <script setup>
+const slides = [
+  "2.jpg", "3.jpg", "4.png", "5.jpg", "6.jpg", "3.png",
+].map(it => `/index/hero/img${it}`)
+
+const pictures = [
+  {
+    title: "By students, for students.",
+    desc: "BuildingBloCS is the largest nationwide “By Student, For Student” Computing Advocacy Program, aimed at teaching students the way of the coder 💻.",
+    img: "/index/img1.png",
+    isright: true
+  },
+  {
+    title: "Multi-focused.",
+    desc: "We touch base on various topics, like AI, Cybersecurity and Software Development, to varying levels of complexity. It's truly fun for everyone!",
+    img: "/index/img4.png",
+    isright: false
+  },
+  {
+    title: "Passionate Speakers.",
+    desc: "We give opportunities to various speakers to talk about their work and interests, and we don't shy away from getting into the nitty-gritty.",
+    img: "/index/img3.jpg",
+    isright: true
+  },
+  {
+    title: "Events for everyone.",
+    desc: "We host events for students from Secondary Schools, JCs, Polys and International Schools. All are welcome!",
+    img: "/index/img2.jpg",
+    isright: false
+  }
+]
+
 useSeoMeta({
   description: "Ignite your passion in computing",
   ogTitle: "BuildingBloCS 2023",

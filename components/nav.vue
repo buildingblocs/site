@@ -12,7 +12,7 @@
           </NuxtLink>
         </div>
         <div>
-          <div class="pb-2">
+          <!-- <div class="pb-2">
             <NuxtLink
               href="/events/sept"
               class="xl:hidden flex items-center hover:underline rounded-full bg-gray-300 dark:bg-gray-900 bg-opacity-30 dark:bg-opacity-30 px-3 py-1 text-xs sm:text-sm font-semibold text-gray-600 hover:bg-opacity-20 dark:text-slate-200 dark:hover:bg-opacity-50 shadow-sm dark:hover:bg-gray-900 hover:bg-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500"
@@ -20,10 +20,10 @@
               Sept Conference
               <span aria-hidden="true" class="ml-1">&rarr;</span>
             </NuxtLink>
-          </div>
+          </div> -->
           <NuxtLink
             href="/events/ctf"
-            class="xl:hidden flex items-center hover:underline rounded-full bg-gray-300 dark:bg-gray-900 bg-opacity-30 dark:bg-opacity-30 px-3 py-1 text-xs sm:text-sm font-semibold text-gray-600 hover:bg-opacity-20 dark:text-slate-200 dark:hover:bg-opacity-50 shadow-sm dark:hover:bg-gray-900 hover:bg-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500"
+            class="xl:hidden flex items-center rounded-full hover:underline bg-gray-300 dark:bg-gray-900 bg-opacity-30 dark:bg-opacity-30 px-3 py-1 text-xs sm:text-sm font-semibold text-gray-600 hover:bg-opacity-20 dark:text-slate-200 dark:hover:bg-opacity-50 shadow-sm dark:hover:bg-gray-900 hover:bg-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500"
           >
             BBCS × BlahajCTF
             <span aria-hidden="true" class="ml-1">&rarr;</span>
@@ -102,13 +102,13 @@
           >
         </div>
         <div class="hidden xl:flex xl:flex-1 space-x-1 xl:justify-end">
-          <NuxtLink
+          <!-- <NuxtLink
             href="/events/sept"
             class="flex items-center hover:underline rounded-full bg-gray-300 dark:bg-gray-900 bg-opacity-30 dark:bg-opacity-30 px-3 py-1 text-xs 2xl:text-sm font-semibold text-gray-600 hover:bg-opacity-20 dark:text-slate-200 dark:hover:bg-opacity-50 shadow-sm dark:hover:bg-gray-900 hover:bg-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500"
           >
             Sept Conference
             <span aria-hidden="true" class="ml-1">&rarr;</span>
-          </NuxtLink>
+          </NuxtLink> -->
 
           <NuxtLink
             href="/events/ctf"

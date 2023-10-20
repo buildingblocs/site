@@ -237,7 +237,7 @@
         ],
     },
     {
-      location: "Training Room 2-1",
+      location: "Training Room 2-2",
       events: [
             {
               date: "6.30pm-9.45pm", 
