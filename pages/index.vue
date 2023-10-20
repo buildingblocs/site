@@ -19,6 +19,7 @@
       <!-- <IndexCta /> -->
       <Footer />
     </div>
+    
     <!-- Swiper background -->
     <Swiper
       :modules="[SwiperAutoplay, SwiperPagination]"

@@ -78,6 +78,19 @@
               </TabPanels>
             </TabGroup>
           </div>
+          <div class="surface-section px-4 py-8 md:px-6 lg:px-8">
+            <div class="text-700 text-center">
+                <div class="text-900 font-bold text-5xl mb-3 text-gray-900 dark:text-white">Join Our Team</div>
+                <div class="text-700 text-2xl mb-5 text-gray-600 dark:text-gray-400">Be a part of a team of organisers seeking to make an impact!</div>
+                <div class="align-center text-center justify-center flex">
+                  <NuxtLink href="https://go.buildingblocs.sg/organiser/signup" 
+                    class="font-bold px-5 py-3 rounded-3xl w-28 bg-orange-400 hover:bg-orange-500 text-white flex justify-center items-center">
+                    <!-- <IconsDiscord /><span class="ml-2">Join Now</span> -->
+                    Sign Up!
+                  </NuxtLink>
+                </div>
+            </div>
+        </div>
         </div>
         <Footer />
       </div>
