@@ -42,7 +42,7 @@
                         <div class="mx-1 md:mx-7">
                             <div class="mx-1 md:mx-7 max-w-lg">
                                 <div class="mx-1 md:mx-7 max-w-lg">
-                                    <nuxt-img format="webp" src="/events/img5.png" alt=""
+                                    <nuxt-img format="webp" src="/ctf/chair.png" alt=""
                                         class="object-cover object-center w-full max-h-[25rem] lg:max-h-full rounded-xl shadow-xl ring-1 ring-gray-400/10"
                                     />
                                     <!-- <div v-for="timeline in timelines" :key="timeline.date">
