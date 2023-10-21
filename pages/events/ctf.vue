@@ -33,8 +33,8 @@
                                 and BLÅHAJ!
                             </p>
 
-                            <p class="text-center text-sm sm:text-md leading-8 ctf-code font-medium">
-                                <span class="font-extrabold">$</span> PING <a href="https://go.buildingblocs.sg/ctf/discord" class="hover:underline hover:font-extrabold">GO.BUILDINGBLOCS.SG/CTF/DISCORD</a>
+                            <p class="text-center text-sm sm:text-lg leading-8 ctf-code font-medium">
+                                <span class="font-extrabold">$</span> PING <a href="https://go.buildingblocs.sg/ctf" class="hover:underline hover:font-extrabold mr-4">GO.BUILDINGBLOCS.SG/CTF</a>
                             </p>
 
                             <!-- <h2 class="text-3xl mt-6 font-semibold tracking-tight text-gray-900 dark:text-white">
@@ -69,7 +69,10 @@
                         <div class="mx-1 md:mx-7">
                             <div class="mx-1 md:mx-7 max-w-lg">
                                 <div class="mx-1 md:mx-7 max-w-lg">
-                                    <nuxt-img format="webp" src="/ctf/poster.png" alt=""
+                                    <p class="text-sm sm:text-md leading-5 font-bold text-gray-300 dark:text-gray-600">
+                                        Official Poster
+                                    </p>
+                                    <nuxt-img format="webp" src="/ctf/dark_poster.png" alt=""
                                         class="object-cover object-center w-full max-h-[25rem] lg:max-h-full rounded-xl shadow-xl ring-1 ring-gray-400/10"
                                     />
                                 </div>
@@ -88,7 +91,7 @@
                                 For all those interested in Cybersecurity, Fun and Blahaj!
                             </div>
                             <div class="align-center text-center justify-center flex">
-                            <NuxtLink href="https://go.buildingblocs.sg/ctf/discord" 
+                            <NuxtLink href="https://go.buildingblocs.sg/ctf" 
                                 class="font-bold px-5 py-3 rounded-3xl w-36 bg-indigo-500 hover:bg-indigo-600 text-white flex justify-center items-center">
                                 <IconsDiscord /><span class="ml-2">Join Now</span>
                                 <!-- Sign Up! -->
