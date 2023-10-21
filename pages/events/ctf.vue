@@ -138,14 +138,28 @@ const faqs = [
         There are many resources available for learning about CTFs and the different challenge categories. Some good places to start include:
 
         <ul class="list-disc list-outside ml-6">
+            <li>${link('The PortSwigger Website (Web)', 'https://portswigger.net/')}</li>
+            <li>${link('The Cryptohack Website (Crypto)', 'https://cryptohack.org/')}</li>
+            <li>${link('The Cryptopals Website (Crypto)', 'https://cryptopals.com')}</li>
+            <li>${link('The Pwn College Website (Pwn)', 'https://pwn.college/')}</li>
+            <li>${link('The pwnable.kr Website (Pwn)', 'https://pwnable.tw')}</li>
+            <li>${link('The HackTricks Website', 'https://book.hacktricks.xyz/welcome/readme')}</li>
+            <li>${link('The CTF101 Website', 'https://ctf101.org/')}</li>
             <li>${link('The CTF Field Guide', 'https://trailofbits.github.io/ctf')}</li>
             <li>${link('The CTFTime Website', 'https://ctftime.org')}</li>
             <li>${link('The CTF Subreddit', 'https://www.reddit.com/r/ctf')}</li>
-            <li>${link('The pwnable.kr Website', 'https://pwnable.tw')}</li>
-            <li>${link('The Cryptopals Website', 'https://cryptopals.com')}</li>
-            <li>${link('The Web Security Academy', 'https://portswigger.net/web-security')}</li>
+            <li>${link('Your best friend', 'https://youtu.be/o-YBDTqX_ZU')}</li>
+            <li>${link('Google', 'https://www.google.com/')}</li>
         </ul>`,
     },
+
+    // <li>${link('The CTF Field Guide', 'https://trailofbits.github.io/ctf')}</li> included
+    // <li>${link('The CTFTime Website', 'https://ctftime.org')}</li>
+    // <li>${link('The CTF Subreddit', 'https://www.reddit.com/r/ctf')}</li> included
+    // <li>${link('The pwnable.kr Website', 'https://pwnable.tw')}</li> included
+    // <li>${link('The Cryptopals Website', 'https://cryptopals.com')}</li> included
+    // <li>${link('The Web Security Academy', 'https://portswigger.net/web-security')}</li> included
+
     // {
     //     question: "Must I go for all the workshops?",
     //     answer: "No, not at all! The workshops are for beginners, and you are free to pop in and join whichever one you like!",
