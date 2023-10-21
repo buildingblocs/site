@@ -94,7 +94,7 @@
                   :navigation="true"
                   :centeredSlides="true"
                   :autoplay="{ delay: 3000, disableOnInteraction: false }"
-                  class="h-96 rounded-2xl"
+                  class="h-96 rounded-2xl mb-4"
                 >
                   <SwiperSlide v-for="slide in images" :key="slide">
                     <nuxt-img
@@ -109,9 +109,35 @@
             <div class="mx-1 md:mx-7">
               <div class="mx-1 md:mx-7 max-w-lg">
                 <div class="mx-1 md:mx-7 max-w-lg">
-                  <h2
-                    class="text-3xl font-bold my-4 text-gray-900 sm:text-4xl dark:text-white"
-                  >
+                  <p class="text-sm sm:text-md leading-5 font-bold text-gray-300 dark:text-gray-600">
+                      Official Poster
+                  </p>
+                  <!-- <div> -->
+                    <Swiper
+                      :modules="[
+                        SwiperAutoplay,
+                        SwiperPagination,
+                        SwiperNavigation,
+                      ]"
+                        :pagination="{
+                          clickable: true,
+                        }"
+                      :navigation="true"
+                      :centeredSlides="true"
+                      :autoplay="{ delay: 3000, disableOnInteraction: false }"
+                      class="rounded-xl h-[40rem]"
+                    >
+                      <SwiperSlide v-for="poster in posters" :key="poster">
+                        <nuxt-img
+                          format="webp"
+                          class="object-cover object-center w-full h-[40rem] absolute top-0"
+                          :src="poster"
+                        />
+                      </SwiperSlide>
+                    </Swiper>
+                  <!-- </div> -->
+
+                  <h2 class="text-3xl font-bold mt-12 mb-4 text-gray-900 sm:text-4xl dark:text-white">
                     Tracks
                   </h2>
 
@@ -242,6 +268,10 @@ const images = [
   "/june/opencv.png",
   "/june/python.jpg",
 ];
+
+const posters = [
+  1,2,3,4
+].map(it => `/june/poster/${it}.png`)
 
 function link(text, url) {
   return `<a href="${url}" class="text-orange-500 dark:text-orange-400 hover:underline">${text}</a>`;
