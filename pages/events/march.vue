@@ -41,7 +41,7 @@
                                 </p>
                             </div>
 
-                            <div class="pb-10 sm:pb-12 mt-6">
+                            <div class="pb-10 sm:pb-12 my-6">
                                 <Disclosure
                                 v-for="(faq, index) in faqs"
                                 :key="index"
@@ -69,6 +69,33 @@
                         <div class="mx-1 md:mx-7">
                             <div class="mx-1 md:mx-7 max-w-lg">
                                 <div class="mx-1 md:mx-7 max-w-lg">
+                                    <p class="text-sm sm:text-md leading-5 font-bold text-gray-300 dark:text-gray-600">
+                                        Official Poster
+                                    </p>
+                                    <!-- <div> -->
+                                        <Swiper
+                                        :modules="[
+                                            SwiperAutoplay,
+                                            SwiperPagination,
+                                            SwiperNavigation,
+                                        ]"
+                                            :pagination="{
+                                            clickable: true,
+                                            }"
+                                        :navigation="true"
+                                        :centeredSlides="true"
+                                        :autoplay="{ delay: 3000, disableOnInteraction: false }"
+                                        class="rounded-xl h-[40rem] mb-12"
+                                        >
+                                        <SwiperSlide v-for="poster in posters" :key="poster">
+                                            <nuxt-img
+                                            format="webp"
+                                            class="object-cover object-center w-full h-[40rem] absolute top-0"
+                                            :src="poster"
+                                            />
+                                        </SwiperSlide>
+                                        </Swiper>
+                                    <!-- </div> -->
                                     <div v-for="timeline in timelines" :key="timeline.date">
                                         <h1
                                             class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl dark:text-white">
@@ -140,6 +167,11 @@
 <script setup>
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { ChevronUpIcon } from '@heroicons/vue/20/solid'
+
+
+const posters = [
+  1,2,3,4
+].map(it => `/march/${it}.png`)
 
 function link(text, url) {
   return `<a href="${url}" class="text-orange-500 dark:text-orange-400 hover:underline">${text}</a>`;
