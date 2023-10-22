@@ -9,7 +9,7 @@
       </Head>
       <IndexHero />
       <div class="bg-white dark:bg-slate-800">
-        <IndexStatement class="pt-20" />
+        <IndexStatement id="statement" class="pt-20" />
         <IndexTextpic 
           v-for="picture in pictures" :key="picture.title" :isright="picture.isright"
           :title="picture.title" :desc="picture.desc" :img="picture.img" />
