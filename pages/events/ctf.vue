@@ -34,7 +34,7 @@
                             </p>
 
                             <p class="text-center text-sm sm:text-lg leading-8 ctf-code font-medium">
-                                <span class="font-extrabold">$</span> PING <a href="https://go.buildingblocs.sg/ctf" class="hover:underline hover:font-extrabold mr-4">GO.BUILDINGBLOCS.SG/CTF</a>
+                                <span class="font-extrabold">$</span> CURL <a href="https://go.buildingblocs.sg/ctf" class="hover:underline hover:font-extrabold mr-4">GO.BUILDINGBLOCS.SG/CTF</a>
                             </p>
 
                             <!-- <h2 class="text-3xl mt-6 font-semibold tracking-tight text-gray-900 dark:text-white">
