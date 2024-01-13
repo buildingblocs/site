@@ -10,7 +10,7 @@
             </div>
           </div>
         </div>
-        <nuxt-img format="webp" :src="img" :alt="alt" :width="width" :height="height"
+        <nuxt-img provider="cloudflare" format="webp" :src="img" :alt="alt" :width="width" :height="height"
           class="object-cover object-center w-full max-h-[25rem] lg:max-h-full rounded-xl shadow-xl ring-1 ring-gray-400/10"
         />
       </div>
