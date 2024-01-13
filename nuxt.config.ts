@@ -10,9 +10,7 @@ export default defineNuxtConfig({
       meta: [
         { name: 'theme-color', content: '#ffffff', media: '(prefers-color-scheme: light)' },
         { name: 'theme-color', content: '#1e293b', media: '(prefers-color-scheme: dark)' },
-      ],
-      script: [
-      ],
+      ]
     },
     pageTransition: { name: 'page', mode: 'out-in' },
   },
@@ -22,12 +20,14 @@ export default defineNuxtConfig({
   },
   image: {
     inject: true,
-    format: ['webp']
+    format: ['webp'],
+    cloudflare: {
+      baseURL: 'https://site-d4v.pages.dev'
+    }
   },
   css: ['~/assets/css/main.css'],
   devtools: {
     enabled: true,
-
     timeline: {
       enabled: true
     }

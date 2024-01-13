@@ -12,7 +12,8 @@
         <IndexStatement id="statement" class="pt-20" />
         <IndexTextpic 
           v-for="picture in pictures" :key="picture.title" :isright="picture.isright"
-          :title="picture.title" :desc="picture.desc" :img="picture.img" />
+          :title="picture.title" :desc="picture.desc" :img="picture.img" :alt="picture.alt" :width="picture.width"
+          :height="picture.height" />
       </div>
       <IndexTimeline />
       <EventsCta class="bg-white dark:bg-slate-800" />
@@ -49,24 +50,36 @@ const pictures = [
     title: "By students, for students.",
     desc: "BuildingBloCS is the largest nationwide “By Student, For Student” Computing Advocacy Program, aimed at teaching students the way of the coder 💻.",
     img: "/index/img1.webp",
+    alt: "Students at a BuildingBloCS event",
+    width: 718,
+    height: 539,
     isright: true
   },
   {
     title: "Multi-focused.",
     desc: "We touch base on various topics, like AI, Cybersecurity and Software Development, to varying levels of complexity. It's truly fun for everyone!",
     img: "/index/img4.webp",
+    alt: "An organiser speaking at a FOSSASIA event",
+    width: 5457,
+    height: 3638,
     isright: false
   },
   {
     title: "Passionate Speakers.",
     desc: "We give opportunities to various speakers to talk about their work and interests, and we don't shy away from getting into the nitty-gritty.",
     img: "/index/img3.webp",
+    alt: "Two organisers speaking at a FOSSASIA event",
+    width: 6000,
+    height: 4000,
     isright: true
   },
   {
     title: "Events for everyone.",
     desc: "We host events for students from Secondary Schools, JCs, Polys and International Schools. All are welcome!",
     img: "/index/img2.webp",
+    alt: "Students having a group discussion at a BuildingBloCS event",
+    width: 4000,
+    height: 2250,
     isright: false
   }
 ]
@@ -91,7 +104,6 @@ useSeoMeta({
   justify-content: center;
   align-items: center;
   height: 100vh;
-  /* This will make the height of the element 100% of the viewport height */
   z-index: 0;
 }
 
