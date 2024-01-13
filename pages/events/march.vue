@@ -171,7 +171,7 @@ import { ChevronUpIcon } from '@heroicons/vue/20/solid'
 
 const posters = [
   1,2,3,4
-].map(it => `/march/${it}.png`)
+].map(it => `/march/${it}.webp`)
 
 function link(text, url) {
   return `<a href="${url}" class="text-orange-500 dark:text-orange-400 hover:underline">${text}</a>`;
@@ -283,11 +283,11 @@ useSeoMeta({
     description: 'Ignite your passion in computing',
     ogTitle: 'March Conference - BuildingBloCS 2023',
     ogDescription: 'Ignite your passion in computing',
-    ogImage: '/index/hero/img5.jpg',
+    ogImage: '/index/hero/img5.webp',
     ogUrl: 'https://buildingblocs.sg/events/march',
     twitterTitle: 'March Conference - BuildingBloCS 2023',
     twitterDescription: 'Ignite your passion in computing',
-    twitterImage: '/index/hero/img5.jpg',
+    twitterImage: '/index/hero/img5.webp',
     twitterCard: 'summary_large_image'
 })
 </script>

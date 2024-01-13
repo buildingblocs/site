@@ -190,15 +190,15 @@
   } from "@headlessui/vue";
   
   const images = [
-    "/foss/gallery/img1.jpg",
-    "/foss/gallery/img2.jpg",
-    "/foss/gallery/img3.jpg",
-    "/foss/gallery/img4.jpg",
-    "/foss/gallery/img5.jpg",
-    "/foss/gallery/img6.png",
-    "/foss/gallery/img7.jpg",
-    "/foss/gallery/img8.jpg",
-    "/foss/gallery/img9.jpg",
+    "/foss/gallery/img1.webp",
+    "/foss/gallery/img2.webp",
+    "/foss/gallery/img3.webp",
+    "/foss/gallery/img4.webp",
+    "/foss/gallery/img5.webp",
+    "/foss/gallery/img6.webp",
+    "/foss/gallery/img7.webp",
+    "/foss/gallery/img8.webp",
+    "/foss/gallery/img9.webp",
   ];
   
   
@@ -210,13 +210,13 @@
               date: "6.30pm-8.30pm", 
               title: "Data Analysis and Visualization with Python",
               author: "by Dhanvine Rameshkumar and Eugene Ang (TJC)",
-              image: "/foss/data.jpg",
+              image: "/foss/data.webp",
             },
             {
               date: "8.45pm-9.15pm",
               title: "Steganographic Malware Embedding in AI Models",
               author: "by Joey Tang (HCI)",
-              image: "/foss/joey.jpg",
+              image: "/foss/joey.webp",
             },
         ],
     },
@@ -227,7 +227,7 @@
               date: "6.30pm-8.30pm", 
               title: "Artificial Intelligence in Astronomy and Physics",
               author: "by Yap Yuan Xi (NUSH) and Ashwin Lokesh (YIJC)",
-              image: "/foss/astro.png",
+              image: "/foss/astro.webp",
             },
             {
               date: "8.45pm-9.15pm",
@@ -243,7 +243,7 @@
               date: "6.30pm-9.45pm", 
               title: "Unleashing the Power of Graph Neural Networks",
               author: "by Zayan Karimi, Jed Lim, Mahir Shah and Kabir Jain (NUSH)",
-              image: "/foss/gnn.jpg",
+              image: "/foss/gnn.webp",
             },
         ],
     },
@@ -254,11 +254,11 @@
     description: "Ignite your passion in computing",
     ogTitle: "BBCS × FOSSASIA Summit - BuildingBloCS 2023",
     ogDescription: "Ignite your passion in computing",
-    ogImage: "/index/hero/img5.jpg",
+    ogImage: "/index/hero/img5.webp",
     ogUrl: "https://buildingblocs.sg/events/foss",
     twitterTitle: "BBCS × FOSSASIA Summit - BuildingBloCS 2023",
     twitterDescription: "Ignite your passion in computing",
-    twitterImage: "/index/hero/img5.jpg",
+    twitterImage: "/index/hero/img5.webp",
     twitterCard: "summary_large_image",
   });
   </script>

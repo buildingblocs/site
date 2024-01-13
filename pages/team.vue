@@ -108,11 +108,11 @@ useSeoMeta({
     description: 'Ignite your passion in computing',
     ogTitle: 'Our Team - BuildingBloCS 2023',
     ogDescription: 'Ignite your passion in computing',
-    ogImage: '/index/hero/img3.png',
+    ogImage: '/index/hero/img3png.webp',
     ogUrl: 'https://buildingblocs.sg/team',
     twitterTitle: 'Our Team - BuildingBloCS 2023',
     twitterDescription: 'Ignite your passion in computing',
-    twitterImage: '/index/hero/img3.png',
+    twitterImage: '/index/hero/img3png.webp',
     twitterCard: 'summary_large_image'
 })
 

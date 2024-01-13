@@ -41,32 +41,32 @@
 
 <script setup>
 const slides = [
-  "2.jpg", "3.jpg", "4.png", "5.jpg", "6.jpg", "3.png",
+  "2.webp", "3jpg.webp", "4.webp", "5.webp", "6.webp", "3png.webp",
 ].map(it => `/index/hero/img${it}`)
 
 const pictures = [
   {
     title: "By students, for students.",
     desc: "BuildingBloCS is the largest nationwide “By Student, For Student” Computing Advocacy Program, aimed at teaching students the way of the coder 💻.",
-    img: "/index/img1.png",
+    img: "/index/img1.webp",
     isright: true
   },
   {
     title: "Multi-focused.",
     desc: "We touch base on various topics, like AI, Cybersecurity and Software Development, to varying levels of complexity. It's truly fun for everyone!",
-    img: "/index/img4.png",
+    img: "/index/img4.webp",
     isright: false
   },
   {
     title: "Passionate Speakers.",
     desc: "We give opportunities to various speakers to talk about their work and interests, and we don't shy away from getting into the nitty-gritty.",
-    img: "/index/img3.jpg",
+    img: "/index/img3.webp",
     isright: true
   },
   {
     title: "Events for everyone.",
     desc: "We host events for students from Secondary Schools, JCs, Polys and International Schools. All are welcome!",
-    img: "/index/img2.jpg",
+    img: "/index/img2.webp",
     isright: false
   }
 ]
@@ -75,11 +75,11 @@ useSeoMeta({
   description: "Ignite your passion in computing",
   ogTitle: "BuildingBloCS 2023",
   ogDescription: "Ignite your passion in computing",
-  ogImage: "/index/hero/img2.jpg",
+  ogImage: "/index/hero/img2.webp",
   ogUrl: "https://buildingblocs.sg/",
   twitterTitle: "BuildingBloCS 2023",
   twitterDescription: "Ignite your passion in computing",
-  twitterImage: "/index/hero/img2.jpg",
+  twitterImage: "/index/hero/img2.webp",
   twitterCard: "summary_large_image",
 });
 </script>

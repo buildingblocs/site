@@ -253,25 +253,25 @@ import {
 import { ChevronUpIcon } from "@heroicons/vue/20/solid";
 
 const images = [
-  "/june/img1.png",
-  "/june/img2.jpg",
-  "/june/img3.jpg",
-  "/june/img4.png",
-  "/june/dataproc.png",
-  "/june/openai.jpg",
-  "/june/dl.jpg",
-  "/june/figma.png",
-  "/june/flask1.jpg",
-  "/june/gnns.jpg",
-  "/june/intai.jpg",
-  "/june/introai.jpg",
-  "/june/opencv.png",
-  "/june/python.jpg",
+  "/june/img1.webp",
+  "/june/img2.webp",
+  "/june/img3.webp",
+  "/june/img4.webp",
+  "/june/dataproc.webp",
+  "/june/openai.webp",
+  "/june/dl.webp",
+  "/june/figma.webp",
+  "/june/flask1.webp",
+  "/june/gnns.webp",
+  "/june/intai.webp",
+  "/june/introai.webp",
+  "/june/opencv.webp",
+  "/june/python.webp",
 ];
 
 const posters = [
   1,2,3,4
-].map(it => `/june/poster/${it}.png`)
+].map(it => `/june/poster/${it}.webp`)
 
 function link(text, url) {
   return `<a href="${url}" class="text-orange-500 dark:text-orange-400 hover:underline">${text}</a>`;
@@ -339,17 +339,17 @@ const tracks = [
           {
             title: "Basic Introduction to AI",
             author: "by Lam Yik Ting (DHS) and James Tan Dejun (RVHS)",
-            image: "/june/introai.jpg",
+            image: "/june/introai.webp",
           },
           {
             title: "Intro to Python (Part 1)",
             author: "by Wayne Ang, Edwin Liew, Wabiba and Zhe Kai (ACJC)",
-            image: "/june/python.jpg",
+            image: "/june/python.webp",
           },
           {
             title: "Intro to Design Thinking",
             author: "by Du Yuhan (MGS)",
-            image: "/june/figma.png",
+            image: "/june/figma.webp",
           },
         ],
       },
@@ -359,24 +359,24 @@ const tracks = [
           {
             title: "Insights into OpenAI API",
             author: "by Teh Kim Wee (ASRJC)",
-            image: "/june/openai.jpg",
+            image: "/june/openai.webp",
             youtube: "https://www.youtube.com/watch?v=gzW6znCRRP4"
           },
           {
             title: "Intro to Python (Part 2)",
             author: "by Wayne Ang, Edwin Liew, Wabiba and Zhe Kai (ACJC)",
-            image: "/june/img2.jpg",
+            image: "/june/img2.webp",
           },
           {
             title: "Introduction to Data Processing",
             author: "by Dhanvine Rameshkumar and Eugene Ang (TJC)",
-            image: "/june/img3.jpg",
+            image: "/june/img3.webp",
             youtube: "https://www.youtube.com/watch?v=7fzau5vKwP4"
           },
           {
             title: "Integrating AI with Python",
             author: "by Lam Yik Ting (DHS), Yau Le Qi and Eugene Ang (TJC)",
-            image: "/june/intai.jpg",
+            image: "/june/intai.webp",
           },
         ],
       },
@@ -391,18 +391,18 @@ const tracks = [
           {
             title: "Basic Introduction to AI",
             author: "by Lam Yik Ting (DHS) and James Tan Dejun (RVHS)",
-            image: "/june/introai.jpg",
+            image: "/june/introai.webp",
           },
           {
             title: "Intro to Data Processing",
             author: "by Khoo Kai Wen (NUSH) and Ma Jinghong (HCI)",
-            image: "/june/dataproc.png",
+            image: "/june/dataproc.webp",
           },
           {
             title: "Intro to Scikit-Learn",
             author:
               "by Karimi Zayan, Khoo Kai Wen (NUSH) and Ma Jinghong (HCI)",
-            image: "/june/sklearn.jpg",
+            image: "/june/sklearn.webp",
           },
         ],
       },
@@ -412,20 +412,20 @@ const tracks = [
           {
             title: "Insights into OpenAI API",
             author: "by Teh Kim Wee (ASRJC)",
-            image: "/june/openai.jpg",
+            image: "/june/openai.webp",
             youtube: "https://www.youtube.com/watch?v=gzW6znCRRP4"
           },
           {
             title: "Intro to Deep Learning",
             author:
               "by Jed Lim (NUSH), Seth Yong (SP) and Ashwin Lokesh (YIJC)",
-            image: "/june/dl.jpg",
+            image: "/june/dl.webp",
             youtube: "https://www.youtube.com/watch?v=q2UFVLjRnw4",
           },
           {
             title: "Intro to Computer Vision",
             author: "by Ma Weiyi, Saw Zedong and Harry Cheong (DHS)",
-            image: "/june/opencv.png",
+            image: "/june/opencv.webp",
           },
         ],
       },
@@ -440,12 +440,12 @@ const tracks = [
           {
             title: "Integrating AI into a Flask Application (Part 1)",
             author: "by Yap Yuan Xi and Prannaya Gupta (NUSH)",
-            image: "/june/flask1.jpg",
+            image: "/june/flask1.webp",
           },
           {
             title: "Transformers and ViTs",
             author: "by Mahir Shah (NUSH) and Ishneet Singh (TJC)",
-            image: "/june/img4.png",
+            image: "/june/img4.webp",
           },
         ],
       },
@@ -455,13 +455,13 @@ const tracks = [
           {
             title: "Insights into OpenAI API",
             author: "by Teh Kim Wee (ASRJC)",
-            image: "/june/openai.jpg",
+            image: "/june/openai.webp",
             youtube: "https://www.youtube.com/watch?v=gzW6znCRRP4"
           },
           {
             title: "Graph Neural Networks",
             author: "by Karimi Zayan and Mahir Shah (NUSH)",
-            image: "/june/gnns.jpg",
+            image: "/june/gnns.webp",
           },
           {
             title: "Introductory MLOps",
@@ -482,11 +482,11 @@ useSeoMeta({
   description: "Ignite your passion in computing",
   ogTitle: "June Conference - BuildingBloCS 2023",
   ogDescription: "Ignite your passion in computing",
-  ogImage: "/index/hero/img5.jpg",
+  ogImage: "/index/hero/img5.webp",
   ogUrl: "https://buildingblocs.sg/events/june",
   twitterTitle: "June Conference - BuildingBloCS 2023",
   twitterDescription: "Ignite your passion in computing",
-  twitterImage: "/index/hero/img5.jpg",
+  twitterImage: "/index/hero/img5.webp",
   twitterCard: "summary_large_image",
 });
 </script>

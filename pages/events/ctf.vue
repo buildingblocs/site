@@ -72,7 +72,7 @@
                                     <p class="text-sm sm:text-md leading-5 font-bold text-gray-300 dark:text-gray-600">
                                         Official Poster
                                     </p>
-                                    <nuxt-img format="webp" src="/ctf/dark_poster.png" alt=""
+                                    <nuxt-img format="webp" src="/ctf/dark_poster.webp" alt=""
                                         class="object-cover object-center w-full max-h-[25rem] lg:max-h-full rounded-xl shadow-xl ring-1 ring-gray-400/10"
                                     />
                                 </div>
@@ -182,11 +182,11 @@ useSeoMeta({
     description: 'Ignite your passion in computing',
     ogTitle: 'BBCS × BlahajCTF - BuildingBloCS 2023',
     ogDescription: 'Ignite your passion in computing',
-    ogImage: '/index/hero/img5.jpg',
+    ogImage: '/index/hero/img5.webp',
     ogUrl: 'https://buildingblocs.sg/events/ctf',
     twitterTitle: 'BBCS × BlahajCTF - BuildingBloCS 2023',
     twitterDescription: 'Ignite your passion in computing',
-    twitterImage: '/index/hero/img5.jpg',
+    twitterImage: '/index/hero/img5.webp',
     twitterCard: 'summary_large_image'
 })
 </script>
