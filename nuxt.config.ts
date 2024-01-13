@@ -22,7 +22,7 @@ export default defineNuxtConfig({
     inject: true,
     format: ['webp'],
     cloudflare: {
-      baseURL: 'https://site-d4v.pages.dev'
+      baseURL: 'https://buildingblocs.sg'
     }
   },
   css: ['~/assets/css/main.css'],
