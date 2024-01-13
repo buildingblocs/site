@@ -4,12 +4,10 @@
     <div class="pt-32">
       <div class="relative isolate pt-14 lg:px-8">
         <PatchesWhite />
-        
         <PageTitle text="Our Partners" />
-
         <div class="mx-auto max-w-7xl">
           <div class="flex flex-wrap justify-center">
-            <div v-for="item in partners" :key="item.name" class="m-2">
+            <main v-for="item in partners" :key="item.name" class="m-2">
               <div class="max-w-xs border rounded-lg shadow bg-gray-600 border-gray-500" ref="card">
                 <div class="m-2 rounded-t-lg pt-2 flex justify-center">
                   <nuxt-img :src="item.pic" :alt="item.name" class="h-20 object-contain" />
@@ -26,9 +24,8 @@
                   </p>
                 </div>
               </div>
-            </div>
+            </main>
           </div>
-          <EventsCta />
           <Footer />
         </div>
       </div>
@@ -46,13 +43,13 @@ const partners = [
 ]
 
 useSeoMeta({
-    title: 'Partners - BuildingBloCS 2023',
+    title: 'Partners - BuildingBloCS',
     description: 'Ignite your passion in computing',
-    ogTitle: 'Partners - BuildingBloCS 2023',
+    ogTitle: 'Partners - BuildingBloCS',
     ogDescription: 'Ignite your passion in computing',
     ogImage: '/index/hero/img4.webp',
     ogUrl: 'https://buildingblocs.sg/partners',
-    twitterTitle: 'Partners - BuildingBloCS 2023',
+    twitterTitle: 'Partners - BuildingBloCS',
     twitterDescription: 'Ignite your passion in computing',
     twitterImage: '/index/hero/img4.webp',
     twitterCard: 'summary_large_image'

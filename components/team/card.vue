@@ -41,7 +41,7 @@
     <div class="flex flex-col items-center">
       <img
                 class="w-32 h-32 mb-3 rounded-full shadow-lg"
-                  :src="teamMember?.imageSrc ?? '/teams/ppl/blank.jpg'" :alt="teamMember?.name + ' image'" />
+                  :src="teamMember?.imageSrc ?? '/teams/ppl/blank.webp'" :alt="teamMember?.name + ' image'" />
       <h5 class="text-lg font-semibold tracking-tight text-gray-900 sm:text-xl dark:text-white">{{ teamMember?.name }}</h5>
       <p class="text-sm text-gray-600 dark:text-slate-300 text-center mx-6">{{ teamMember?.description }}</p>
     </div>

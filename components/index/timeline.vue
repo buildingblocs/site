@@ -34,34 +34,16 @@ export default defineComponent({
         about: 'An initiative sparked by the Dunman High Infocomm Club and Mr Gi Soong Chee.'
       },
       {
-        date: '2018 - 2022',
+        date: '2018 - 2023',
         title: 'Expansion into other Schools',
-        about: 'We expanded to take organisers from NUSH, TJC, SP and many more institutes around Singapore.'
+        about:
+            'We expanded to take organisers from NUSH, TJC, SP and many more institutes around Singapore, hosting events yearly.'
       },
       {
-        date: '12<sup>th</sup> - 16<sup>th</sup> March 2023',
+        date: 'Coming Soon',
         title: 'Our March Conference',
-        about: 'Our March Conference on Computational Thinking, ending with the completely organiser-created game Starvation.',
-        link: '/events/march'
+        about: 'Our March Conference is in the works!',
       },
-      {
-        date: '29<sup>th</sup> May - 5<sup>th</sup> June 2023',
-        title: 'Our June Conference',
-        about: 'The most important event of this year',
-        link: '/events/june'
-      },
-      {
-        date: '3<sup>rd</sup> Sept - 5<sup>th</sup> Sept 2023',
-        title: 'Our September Conference',
-        about: 'The September Conference has finished. Congratulations to all the winners and participants :)',
-        link: '/events/sept'
-      },
-      {
-        date: '2<sup>nd</sup> December 2023',
-        title: 'BBCS x BlahajCTF 2023',
-        about: 'An upcoming CTF for beginners!',
-        link: '/events/ctf'
-      }
     ]
   })
 })

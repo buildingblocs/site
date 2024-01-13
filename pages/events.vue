@@ -11,7 +11,6 @@
                         :title="item.title" :desc="item.desc" :img="item.img" 
                         :date="item.date" :isright="item.isright" 
                         :links="item.links ?? []" />
-                    <EventsCta />
                     <Footer />
                 </div>
             </div>

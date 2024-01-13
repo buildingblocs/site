@@ -21,13 +21,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        sans: ['Inter Variable', ...defaultTheme.fontFamily.sans],
       },
     },
     darkSelector: '.dark-mode',
   },
-  plugins: [
-    require('flowbite/plugin')
-  ],
   darkMode: 'class',
 }

@@ -2,34 +2,36 @@
   <div class="sticky top-0 z-10">
     <header class="absolute inset-x-0 top-0">
       <nav
-        class="bg-white dark:bg-slate-800 backdrop-filter backdrop-blur-xl bg-opacity-50 dark:bg-opacity-50 border-b border-gray-100 dark:border-slate-800 flex items-center justify-between py-4 px-6 xl:py-3 xl:px-8"
+        class="bg-white dark:bg-slate-800 backdrop-filter backdrop-blur-lg bg-opacity-50 dark:bg-opacity-50 border-b border-gray-100 dark:border-slate-800 flex items-center justify-between py-4 px-6 sm:py-3 sm:px-8"
         aria-label="Global"
       >
-        <div class="flex xl:flex-1">
+        <div class="flex sm:flex-1">
           <NuxtLink class="pt-0" to="/">
             <span class="sr-only">BuildingBloCS</span>
-            <nuxt-img format="webp" class="h-8 w-auto" src="/logo.png" alt="" />
+            <nuxt-img format="webp" class="h-8 w-auto" src="/logo.png" width="100" height="100"
+                      alt="BuildingBloCS Logo" />
           </NuxtLink>
         </div>
         <div>
           <!-- <div class="pb-2">
             <NuxtLink
               href="/events/sept"
-              class="xl:hidden flex items-center hover:underline rounded-full bg-gray-300 dark:bg-gray-900 bg-opacity-30 dark:bg-opacity-30 px-3 py-1 text-xs sm:text-sm font-semibold text-gray-600 hover:bg-opacity-20 dark:text-slate-200 dark:hover:bg-opacity-50 shadow-sm dark:hover:bg-gray-900 hover:bg-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500"
+              class="sm:hidden flex items-center hover:underline rounded-full bg-gray-300 dark:bg-gray-900 bg-opacity-30 dark:bg-opacity-30 px-3 py-1 text-xs sm:text-sm font-semibold text-gray-600 hover:bg-opacity-20 dark:text-slate-200 dark:hover:bg-opacity-50 shadow-sm dark:hover:bg-gray-900 hover:bg-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500"
             >
               Sept Conference
               <span aria-hidden="true" class="ml-1">&rarr;</span>
             </NuxtLink>
           </div> -->
-          <NuxtLink
+          <!-- quick link button for mobile -->
+          <!-- NuxtLink
             href="/events/ctf"
-            class="xl:hidden flex items-center rounded-full hover:underline bg-gray-300 dark:bg-gray-900 bg-opacity-30 dark:bg-opacity-30 px-3 py-1 text-xs sm:text-sm font-semibold text-gray-600 hover:bg-opacity-20 dark:text-slate-200 dark:hover:bg-opacity-50 shadow-sm dark:hover:bg-gray-900 hover:bg-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500"
+            class="sm:hidden flex items-center rounded-full hover:underline bg-gray-300 dark:bg-gray-900 bg-opacity-30 dark:bg-opacity-30 px-3 py-1 text-xs sm:text-sm font-semibold text-gray-600 hover:bg-opacity-20 dark:text-slate-200 dark:hover:bg-opacity-50 shadow-sm dark:hover:bg-gray-900 hover:bg-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500"
           >
             BBCS × BlahajCTF
             <span aria-hidden="true" class="ml-1">&rarr;</span>
-          </NuxtLink>
+          </NuxtLink -->
         </div>
-        <div class="flex xl:hidden">
+        <div class="flex sm:hidden">
           <Menu as="div" class="relative inline-block text-left mt-1">
             <div>
               <MenuButton
@@ -92,7 +94,7 @@
             </transition>
           </Menu>
         </div>
-        <div class="hidden xl:flex xl:gap-x-12">
+        <div class="hidden sm:flex sm:gap-x-12">
           <NuxtLink
             v-for="item in navigation"
             :key="item.name"
@@ -101,22 +103,22 @@
             >{{ item.name }}</NuxtLink
           >
         </div>
-        <div class="hidden xl:flex xl:flex-1 space-x-1 xl:justify-end">
+        <div class="hidden sm:flex sm:flex-1 space-x-1 sm:justify-end">
           <!-- <NuxtLink
             href="/events/sept"
-            class="flex items-center hover:underline rounded-full bg-gray-300 dark:bg-gray-900 bg-opacity-30 dark:bg-opacity-30 px-3 py-1 text-xs 2xl:text-sm font-semibold text-gray-600 hover:bg-opacity-20 dark:text-slate-200 dark:hover:bg-opacity-50 shadow-sm dark:hover:bg-gray-900 hover:bg-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500"
+            class="flex items-center hover:underline rounded-full bg-gray-300 dark:bg-gray-900 bg-opacity-30 dark:bg-opacity-30 px-3 py-1 text-xs sm:text-sm font-semibold text-gray-600 hover:bg-opacity-20 dark:text-slate-200 dark:hover:bg-opacity-50 shadow-sm dark:hover:bg-gray-900 hover:bg-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500"
           >
             Sept Conference
             <span aria-hidden="true" class="ml-1">&rarr;</span>
           </NuxtLink> -->
-
-          <NuxtLink
+          <!-- quick link button for large screen -->
+          <!-- NuxtLink
             href="/events/ctf"
-            class="flex items-center hover:underline rounded-full bg-gray-300 dark:bg-gray-900 bg-opacity-30 dark:bg-opacity-30 px-3 py-1 text-xs 2xl:text-sm font-semibold text-gray-600 hover:bg-opacity-20 dark:text-slate-200 dark:hover:bg-opacity-50 shadow-sm dark:hover:bg-gray-900 hover:bg-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500"
+            class="flex items-center hover:underline rounded-full bg-gray-300 dark:bg-gray-900 bg-opacity-30 dark:bg-opacity-30 px-3 py-1 text-xs sm:text-sm font-semibold text-gray-600 hover:bg-opacity-20 dark:text-slate-200 dark:hover:bg-opacity-50 shadow-sm dark:hover:bg-gray-900 hover:bg-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500"
           >
             BBCS × BlahajCTF
             <span aria-hidden="true" class="ml-1">&rarr;</span>
-          </NuxtLink>
+          </NuxtLink -->
           <Mode />
           <!-- <NuxtLink href="/events/sept"
                         class="hover:underline rounded-md bg-orange-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500">
@@ -135,7 +137,6 @@ import { Bars3Icon } from "@heroicons/vue/24/outline";
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "Events", href: "/events" },
   { name: "Our Team", href: "/team" },
   { name: "Our Partners", href: "/partners/" },
 ];

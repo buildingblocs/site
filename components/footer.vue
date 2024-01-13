@@ -2,7 +2,7 @@
   <footer class="p-4 sm:p-6 dark:bg-slate-800">
     <div class="mx-auto max-w-screen-xl">
       <hr
-        class="my-6 border-1 border-orange-300 sm:mx-auto pb-6 dark:border-gray-700 lg:my-8" />
+        class="my-6 border-1 border-orange-300 sm:mx-auto pb-2 dark:border-gray-700 lg:my-8" />
       <div class="sm:flex">
         <div class="pl-2">
           <div class="mb-8 md:mb-0">
@@ -18,12 +18,14 @@
             <li class="mb-6" v-for="link in links" :key="link.link">
               <NuxtLink 
                 :href="link.link" 
-                :aria-label="link.label ?? ''"
-                :class="link.class" v-html="link.title" />
+                :aria-label="link.title ?? ''"
+                :class="link.class">
+                {{ link.title }}
+              </NuxtLink>
             </li>
           </ul>
         </div>
-        <div class="ml-auto">
+        <!-- div class="ml-auto">
           <div class="ml-2">
             <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
               Events
@@ -36,7 +38,7 @@
               </li>
             </ul>
           </div>
-        </div>
+        </div -->
       </div>
       <div class="sm:flex sm:items-center sm:justify-between pt-3 pb-10 pl-4">
         <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
@@ -74,7 +76,6 @@
   </footer>
 </template>
 <script setup>
-
 const linkStyle = "hover:underline";
 const buttonStyle = "rounded-md bg-orange-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500";
 
@@ -82,26 +83,22 @@ const links = [
   {
     title: 'Home',
     link: '/',
-    class: linkStyle,
-    label: 'Home'
-  },
-  {
-    title: 'Events',
-    link: '/events',
-    class: linkStyle,
-    label: 'Events'
+    class: linkStyle
   },
   {
     title: 'Our Team',
     link: '/team',
-    class: linkStyle,
-    label: 'Our Team'
+    class: linkStyle
   },
   {
     title: 'Our Partners',
     link: '/partners',
-    class: linkStyle,
-    label: 'Our Partners'
+    class: linkStyle
+  },
+  {
+    title: 'Past Years',
+    link: '/default',
+    class: linkStyle
   },
   // {
   //   title: 'Register <span aria-hidden="true">&rarr;</span>',

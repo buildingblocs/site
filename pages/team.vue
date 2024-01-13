@@ -7,7 +7,7 @@
         
         <PageTitle text="Our Team" />
 
-        <div class="px-2">
+        <main class="px-2">
           <!-- OIC Section -->
           <section>
             <div class="px-4 mx-auto max-w-screen-xl text-center lg:px-6">
@@ -91,7 +91,7 @@
                 </div>
             </div>
         </div>
-        </div>
+        </main>
         <Footer />
       </div>
     </div>
@@ -104,13 +104,13 @@ import database from '~/assets/organisers.json'
 
 
 useSeoMeta({
-    title: 'Our Team - BuildingBloCS 2023',
+    title: 'Our Team - BuildingBloCS',
     description: 'Ignite your passion in computing',
-    ogTitle: 'Our Team - BuildingBloCS 2023',
+    ogTitle: 'Our Team - BuildingBloCS',
     ogDescription: 'Ignite your passion in computing',
     ogImage: '/index/hero/img3png.webp',
     ogUrl: 'https://buildingblocs.sg/team',
-    twitterTitle: 'Our Team - BuildingBloCS 2023',
+    twitterTitle: 'Our Team - BuildingBloCS',
     twitterDescription: 'Ignite your passion in computing',
     twitterImage: '/index/hero/img3png.webp',
     twitterCard: 'summary_large_image'
