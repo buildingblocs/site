@@ -28,8 +28,8 @@
     >
       <SwiperSlide v-for="slide in slides" :key="slide">
         <div class="absolute top-0 left-0 w-full h-full fade from-transparent to-black" />
-        <nuxt-img format="webp" :src="slide"
-          class="object-cover w-full h-full swiper-lazy" />
+        <nuxt-img format="webp" :src="`/index/hero/img${slide.src}`" :alt="slide.alt" :width="slide.width" :height="slide.height"
+          class="object-cover w-full h-full swiper-lazy" densities="x1 x2"/>
       </SwiperSlide>
     </Swiper>
   </div>
@@ -37,8 +37,43 @@
 
 <script setup>
 const slides = [
-  "2.webp", "3jpg.webp", "4.webp", "5.webp", "6.webp", "3png.webp",
-].map(it => `/index/hero/img${it}`)
+  {
+    src: "2.webp",
+    alt: "A team image at a FOSSASIA event",
+    width: 4032,
+    height: 2268
+  },
+  {
+    src: "3jpg.webp",
+    alt: "A team image at a FOSSASIA event",
+    width: 4000,
+    height: 3000
+  },
+  {
+    src: "4.webp",
+    alt: "An organiser giving a presentation during the BuildingBloCS 2023 June Conference",
+    width: 3422,
+    height: 2507
+  },
+  {
+    src: "5.webp",
+    alt: "An organiser giving a presentation in a lecture hall during the BuildingBloCS 2023 June Conference",
+    width: 3648,
+    height: 2736
+  },
+  {
+    src: "6.webp",
+    alt: "An organiser giving a presentation in a lecture hall during the BuildingBloCS 2023 June Conference",
+    width: 4032,
+    height: 3024
+  },
+  {
+    src: "3png.webp",
+    alt: "Students at the BuildingBloCS 2023 June Conference",
+    width: 8256,
+    height: 5540
+  },
+]
 
 const pictures = [
   {

@@ -36,8 +36,7 @@ export default defineNuxtConfig({
     classSuffix: ""
   },
   image: {
-    inject: true,
-    format: ["webp"]
+    inject: true
   },
   sitemap: {
     exclude: ['/default', '/events'],

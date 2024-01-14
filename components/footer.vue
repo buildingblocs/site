@@ -7,7 +7,9 @@
         <div class="pl-2">
           <div class="mb-8 md:mb-0">
             <NuxtLink href="/" class="flex items-center md:pb-7">
-              <nuxt-img format="webp" src="/logo.png" class="mr-3 h-8" alt="Our Logo" />
+                <span class="sr-only">BuildingBloCS</span>
+                <nuxt-img format="webp" class="h-8 w-auto mr-3" src="/logo.png" width="100" height="100"
+                          alt="BuildingBloCS Logo" />
               <span
                 class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                 BuildingBloCS
