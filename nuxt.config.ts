@@ -20,10 +20,7 @@ export default defineNuxtConfig({
   },
   image: {
     inject: true,
-    format: ['webp'],
-    cloudflare: {
-      baseURL: 'https://buildingblocs.sg'
-    }
+    format: ['webp']
   },
   css: ['~/assets/css/main.css'],
   devtools: {
