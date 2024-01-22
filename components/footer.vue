@@ -97,11 +97,6 @@ const links = [
     link: '/partners',
     class: linkStyle
   },
-  {
-    title: 'Past Years',
-    link: '/default',
-    class: linkStyle
-  },
   // {
   //   title: 'Register <span aria-hidden="true">&rarr;</span>',
   //   link: '/events/ctf',

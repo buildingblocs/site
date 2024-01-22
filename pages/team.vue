@@ -16,7 +16,7 @@
               </PageHead>
 
               
-            <TabGroup :defaultIndex="Object.keys(oics).indexOf(year)">
+            <TabGroup :defaultIndex="Object.keys(oics).indexOf(year.toString())">
               <TabList class="flex item-center rounded-xl w-96 justify-center mx-auto mb-8">
                 <Tab v-for="(category, index) in Object.keys(oics)"
                   as="template" :key="category" v-slot="{ selected }">
@@ -33,7 +33,7 @@
                 </Tab>
               </TabList>
               <TabPanels class="mt-2">
-                <TabPanel v-for="[year, oic] in Object.entries(oics)" :key="year" v-slot="{ selected }" class="p-3 focus:outline-none">
+                <TabPanel v-for="[year, oic] in Object.entries(oics)" :key="year.toString()" v-slot="{ selected }" class="p-3 focus:outline-none">
                   <div class="flex flex-wrap justify-center">
                     <TeamCard class="m-2" v-for="(teamMember, index) in oic" :key="index" :teamMember="teamMember"></TeamCard>
                   </div>
@@ -46,7 +46,7 @@
           </section>
 
           <div class="pt-24 pb-8 justify-center">
-            <TabGroup :defaultIndex="2">
+            <TabGroup :defaultIndex="nearestMonthIndex">
               <TabList class="flex item-center rounded-xl bg-orange-200 w-96 justify-center mx-auto mb-8">
                 <Tab v-for="(category, index) in sections"
                   as="template" :key="category" v-slot="{ selected }">
@@ -83,7 +83,7 @@
                 <div class="text-900 font-bold text-5xl mb-3 text-gray-900 dark:text-white">Join Our Team</div>
                 <div class="text-700 text-2xl mb-5 text-gray-600 dark:text-gray-400">Be a part of a team of organisers seeking to make an impact!</div>
                 <div class="align-center text-center justify-center flex">
-                  <NuxtLink href="https://go.buildingblocs.sg/organiser/signup" 
+                  <NuxtLink href="https://go.buildingblocs.sg/orgsignup24"
                     class="font-bold px-5 py-3 rounded-3xl w-28 bg-orange-400 hover:bg-orange-500 text-white flex justify-center items-center">
                     <!-- <IconsDiscord /><span class="ml-2">Join Now</span> -->
                     Sign Up!
@@ -104,25 +104,30 @@ import database from '~/assets/organisers.json'
 
 
 useSeoMeta({
-    title: 'Our Team - BuildingBloCS',
-    description: 'Ignite your passion in computing',
-    ogTitle: 'Our Team - BuildingBloCS',
-    ogDescription: 'Ignite your passion in computing',
-    ogImage: '/index/hero/img3png.webp',
-    ogUrl: 'https://buildingblocs.sg/team',
-    twitterTitle: 'Our Team - BuildingBloCS',
-    twitterDescription: 'Ignite your passion in computing',
-    twitterImage: '/index/hero/img3png.webp',
-    twitterCard: 'summary_large_image'
+  title: 'Our Team - BuildingBloCS',
+  description: 'Ignite your passion in computing',
+  ogTitle: 'Our Team - BuildingBloCS',
+  ogDescription: 'Ignite your passion in computing',
+  ogImage: '/index/hero/img3png.webp',
+  ogUrl: 'https://buildingblocs.sg/team',
+  twitterTitle: 'Our Team - BuildingBloCS',
+  twitterDescription: 'Ignite your passion in computing',
+  twitterImage: '/index/hero/img3png.webp',
+  twitterCard: 'summary_large_image'
 })
 
-const sections = ["Mar '23", "Jun '23", "Sep '23", "Dec '23"];
+const sections = ["Mar '24", "Jun '24", "Sep '24", "Dec '24"];
 
 const year = (new Date()).getFullYear();
 
+const nearestMonthIndex = sections.findIndex((month) => {
+  const monthDate = new Date(`${month} ${year}`);
+  return monthDate > new Date();
+});
+
 const oics = {
-  2023: ["oneytlam", "yauleqi", "prannay"].map(it => database[it]),
-  2024: ["duhan", "justinchee", "mahir"].map(it => database[it])
+  2024: ["duhan", "justinchee", "mahir"].map(it => database[it]),
+  2023: ["oneytlam", "yauleqi", "prannay"].map(it => database[it])
 }
 
 
@@ -130,109 +135,115 @@ const teamMembers = [
   { // March
     organisers: {
       "Human Resources": [
-        {name: "suraj", lead: true}, {name: "isaackok", lead: true}, {name: "ozk"}, {name: "eugene"}, {name: "dhanvine"}, {name: "tsk"}, {name: "vinita"}
+        {name: "vinita", lead: true}, {name: "eugene", lead: true}, {name: "jinen", lead: true}, {name: "kabir"}, {name: "johnson"}, {name: "raghavsriram"},
+        {name: "junhan"}, {name: "elston"}, {name: "dhanvine"}, {name: "matthiaskoh"}, {name: "saamiya"}
       ].map(it => ({...(database[it.name]), lead: it.lead || false})),
       "Quality Assurance": [
-        {name: "bryant", lead: true}, {name: "neil"}, {name: "shawn"}, {name: "jamestan"}, {name: "justinwang"}, 
-        {name: "sahana"}, {name: "cervon"}, {name: "vishal"}, {name: "yuanxi"}, {name: "junee"}, 
-        {name: "edwinliew"}, {name: "arthur"}, {name: "kimwee"}
+        {name: "ashley", lead: true}, {name: "neil", lead: true}, {name: "mahit"}, {name: "tpsean"}, {name: "claralee"},
+        {name: "jeffrey"}, {name: "kabir"}, {name: "hugo"}, {name: "tongyu"}, {name: "shivani"}, {name: "vijay"},
+        {name: "matthias"}, {name: "seelun"}, {name: "kashvi"}, {name: "jack"}, {name: "sindya"}
       ].map(it => ({...(database[it.name]), lead: it.lead || false})),
-      "Workshop Admin": [
-        {name: "kaiwen", lead: true}, {name: "zayan", lead: true}, {name: "jinen", lead: true}, {name: "duhan", lead: true},
-        {name: "jiaxuan"}, {name: "leducminh"}, {name: "jack"}, {name: "asha"}, {name: "ashley"}, {name: "kashvi"},
-        {name: "mahamantra"}, {name: "justinchee"}, {name: "ghayathri"}
+      "Adshop": [
+        {name: "dhanvine", lead: true}, {name: "ozk", lead: true}, {name: "weiyi", lead: true}, {name: "harry"}, {name: "zinedine"},
+        {name: "sindya"},{name: "lucius"}, {name: "kaiwen"}, {name: "ayden"}, {name: "sai"}, {name: "cayden"}, {name: "sahil"},
+        {name: "asha"}, {name: "edwinkoon"}, {name: "nikita"}, {name: "alyssa"}, {name: "raghavkumar"}, {name: "alexis"}, {name: "shengxin"}, {name: "kairos"},
       ].map(it => ({...(database[it.name]), lead: it.lead || false})),
-      "Publicity & Design": [
-        {name: "minjia", lead: true}, {name: "renoir", lead: true},
-        {name: "edwinliew"}, {name: "wayne"}, {name: "cervon"}, {name: "claralee"}, {name: "andrel"}, {name: "celine"},
-        {name: "lehan"}, {name: "sophiachua"}
+      "Publicity": [
+        {name: "minjia", lead: true}, {name: "lehan", lead: true},
+        {name: "sophiachua"}, {name: "angelina"}, {name: "trisha"}, {name: "julyan"}, {name: "peter"}, {name: "myat"}, {name: "claraong"}
       ].map(it => ({...(database[it.name]), lead: it.lead || false})),
-      "Team Starvation": [
-        {name: "seth", lead: true}, {name: "wenkai", lead: true}, {name: "yuanxi", lead: true},
-        {name: "kabir"}, {name: "mahir"}, {name: "jed"}, {name: "ishneet"}, {name: "zerui"}, {name: "weiyi"},
-        {name: "zedong"}, {name: "harry"}, {name: "danielchua"}, {name: "jinghong"}
+      "Development": [
+        {name: "myat", lead: true}, {name: "jeffrey"}, {name: "wenkai"},
+        {name: "jerome"}, {name: "yueheng"}, {name: "minghong"}, {name: "dylan"}
+      ].map(it => ({...(database[it.name]), lead: it.lead || false})),
+      "Outreach": [
+        {name: "zedong", lead: true}, {name: "nikita", lead: true},{name: "myat"}, {name: "angelina"}, {name: "kashvi"}
       ].map(it => ({...(database[it.name]), lead: it.lead || false})),
       "Workshop Speakers": [
-        "kaiwen", "zayan", "jinghong", "ian", "ishneet"
+        "shivani", "shengxin", "lucius", "dhanvine", "eugene", "mahit", "sahil", "harry", "zedong", "weiyi"
       ].map(it => database[it])
     }
   },
   { // June
-    exco: ["kaiwen", "zayan", "duhan", "jinen", "suraj", "bryant", "renoir", "seth", "yuanxi"].map(it => database[it]),
+    // exco: ["kaiwen", "zayan", "duhan", "jinen", "suraj", "bryant", "renoir", "seth", "yuanxi"].map(it => database[it]),
+    /*
     organisers: {
-      "Emcees": ["zayan", "mahit", "dhanvine"].map(it => database[it]),
+      // "Emcees": ["zayan", "mahit", "dhanvine"].map(it => database[it]),
       "Human Resources": [
-        {name: "suraj", lead: true}, {name: "isaackok", lead: true}, {name: "ozk"}, {name: "eugene"}, {name: "dhanvine"}, {name: "tsk"}, {name: "vinita"}
+        {name: "vinita", lead: true}, {name: "eugene", lead: true}, {name: "jinen", lead: true}, {name: "kabir"}, {name: "johnson"}, {name: "raghavsriram"},
+        {name: "junhan"}, {name: "elston"}, {name: "dhanvine"}, {name: "matthiaskoh"}, {name: "saamiya"}
       ].map(it => ({...(database[it.name]), lead: it.lead || false})),
       "Quality Assurance": [
-        {name: "bryant", lead: true}, {name: "neil"}, {name: "shawn"}, {name: "jamestan"}, {name: "justinwang"}, 
-        {name: "sahana"}, {name: "hnin"}, {name: "junee"}, 
-        {name: "edwinliew"}, {name: "arthur"}, {name: "mahit"}, {name: "kimwee"}, {name: "xiyuan"}, {name: "hugo"}
+        {name: "ashley", lead: true}, {name: "neil", lead: true}, {name: "mahit"}, {name: "tpsean"}, {name: "claralee"},
+        {name: "jeffrey"}, {name: "kabir"}, {name: "hugo"}, {name: "tongyu"}, {name: "shivani"}, {name: "vijay"},
+        {name: "matthias"}, {name: "seelun"}, {name: "kashvi"}, {name: "jack"}, {name: "sindya"}
       ].map(it => ({...(database[it.name]), lead: it.lead || false})),
-      "Workshop Admin": [
-        {name: "kaiwen", lead: true}, {name: "zayan", lead: true}, {name: "jinen", lead: true}, {name: "duhan", lead: true},
-        {name: "jiaxuan"}, {name: "leducminh"}, {name: "jack"}, {name: "asha"}, {name: "ashley"}, {name: "kashvi"}, {name: "justinchee"}
+      "Adshop": [
+        {name: "dhanvine", lead: true}, {name: "ozk", lead: true}, {name: "weiyi", lead: true}, {name: "harry"}, {name: "zinedine"},
+        {name: "sindya"},{name: "lucius"}, {name: "kaiwen"}, {name: "ayden"}, {name: "sai"}, {name: "cayden"}, {name: "sahil"},
+        {name: "asha"}, {name: "edwinkoon"}, {name: "nikita"}, {name: "alyssa"}, {name: "raghavkumar"}, {name: "alexis"}, {name: "shengxin"}, {name: "kairos"},
       ].map(it => ({...(database[it.name]), lead: it.lead || false})),
-      "Publicity & Design": [
-        {name: "minjia", lead: true}, {name: "renoir", lead: true},
-        {name: "edwinliew"}, {name: "wayne"}, {name: "claralee"}, {name: "andrel"}, {name: "celine"},
-        {name: "lehan"}, {name: "sophiachua"}
-      ].map(it => ({...(database[it.name]), lead: it.lead || false})),
-      "Hackathon": [
-        {name: "kabir", lead: true}, {name: "mahir", lead: true},
-        {name: "ashwin"}, {name: "jed"}, {name: "ishneet"}, {name: "pann"}
+      "Publicity": [
+        {name: "minjia", lead: true}, {name: "lehan", lead: true},
+        {name: "sophiachua"}, {name: "angelina"}, {name: "trisha"}, {name: "julyan"}, {name: "peter"}, {name: "myat"}, {name: "claraong"}
       ].map(it => ({...(database[it.name]), lead: it.lead || false})),
       "Development": [
-        {name: "seth", lead: true}, {name: "jerome"}, {name: "danielchua"}, {name: "peter"},
-        {name: "raymond"}, {name: "jinghong"}, {name: "rajharsh"}
+        {name: "myat", lead: true}, {name: "jeffrey"}, {name: "wenkai"},
+        {name: "shivreshi"}, {name: "jerome"}, {name: "yueheng"}, {name: "minghong"}, {name: "dylan"}
+      ].map(it => ({...(database[it.name]), lead: it.lead || false})),
+      "Outreach": [
+        {name: "zedong", lead: true}, {name: "nikita", lead: true},{name: "myat"}, {name: "angelina"}, {name: "kashvi"}
       ].map(it => ({...(database[it.name]), lead: it.lead || false})),
       "Workshop Speakers": [
-        "jamestan", "wayne", "edwinliew", "duhan", "dhanvine", "eugene", "kaiwen", "jinghong", "zayan", "jed", "seth", "ashwin", "weiyi", "zedong", "harry", "yuanxi", "mahir", "hugo", "wenkai", "ishneet"
+        // TBC
       ].map(it => database[it])
     }
+    */
   },
   { // September
-    exco: ["duhan", "mahir", "justinchee", "kaiwen", "wenkai", "minjia", "zedong"].map(it => database[it]),
+    // exco: ["duhan", "mahir", "justinchee", "kaiwen", "wenkai", "minjia", "zedong"].map(it => database[it]),
+    /*
     organisers: {
       "Human Resources": [
-        {name: "eugene", lead: true}, {name: "vinita", lead: true}, 
-        {name: "johnson"}, {name: "junhan"}, {name: "elston"}, {name: "saamiya"},
-        {name: "dhanvine"}, {name: "raghavsriram"}, {name: "kabir"}
+        {name: "vinita", lead: true}, {name: "eugene", lead: true}, {name: "jinen", lead: true}, {name: "kabir"}, {name: "johnson"}, {name: "raghavsriram"},
+        {name: "junhan"}, {name: "elston"}, {name: "dhanvine"}, {name: "matthiaskoh"}, {name: "saamiya"}
       ].map(it => ({...(database[it.name]), lead: it.lead || false})),
       "Quality Assurance": [
-        {name: "neil", lead: true}, {name: "ashley", lead: true}, 
-        {name: "tpsean"}, {name: "claralee"}, {name: "matthias"},
-        {name: "weiyi"}, {name: "hugo"}, {name: "kabir"}, {name: "tongyu"},
-        {name: "jack"}, {name: "kashvi"}, {name: "shivani"}, {name: "vijay"}, 
-        {name: "jeffrey"}, {name: "seelun"}
+        {name: "ashley", lead: true}, {name: "neil", lead: true}, {name: "mahit"}, {name: "tpsean"}, {name: "claralee"},
+        {name: "jeffrey"}, {name: "kabir"}, {name: "hugo"}, {name: "tongyu"}, {name: "shivani"}, {name: "vijay"},
+        {name: "matthias"}, {name: "seelun"}, {name: "kashvi"}, {name: "jack"}, {name: "sindya"}
       ].map(it => ({...(database[it.name]), lead: it.lead || false})),
-      "Workshop Admin": [
-        {name: "justinchee", lead: true}, {name: "duhan", lead: true}, {name: "kaiwen", lead: true}, {name: "zedong", lead: true},
-        {name: "nikita"}, {name: "shengxin"}, {name: "cayden"},
-        {name: "harry"}, {name: "ozk"}, {name: "kairos"}, {name: "alexis"}, 
-        {name: "ayden"}, {name: "edwinkoon"}, {name: "raghavkumar"}, {name: "sai"},
-        {name: "lucius"}, {name: "dhanvine"}, {name: "alyssa"}, {name: "weiyi"}
+      "Adshop": [
+        {name: "dhanvine", lead: true}, {name: "ozk", lead: true}, {name: "weiyi", lead: true}, {name: "harry"}, {name: "zinedine"},
+        {name: "sindya"},{name: "lucius"}, {name: "kaiwen"}, {name: "ayden"}, {name: "sai"}, {name: "cayden"}, {name: "sahil"},
+        {name: "asha"}, {name: "edwinkoon"}, {name: "nikita"}, {name: "alyssa"}, {name: "raghavkumar"}, {name: "alexis"}, {name: "shengxin"}, {name: "kairos"},
       ].map(it => ({...(database[it.name]), lead: it.lead || false})),
-      "Publicity & Design": [
+      "Publicity": [
         {name: "minjia", lead: true}, {name: "lehan", lead: true},
-        // {name: "julyan"}, {name: "trisha"},
-        {name: "myat"}, {name: "sophiachua"},
-        // {name: "claraong"}, {name: "angelina"},
-        {name: "peter"}, {name: "asha"}
+        {name: "sophiachua"}, {name: "angelina"}, {name: "trisha"}, {name: "julyan"}, {name: "peter"}, {name: "myat"}, {name: "claraong"}
+      ].map(it => ({...(database[it.name]), lead: it.lead || false})),
+      "Development": [
+        {name: "myat", lead: true}, {name: "jeffrey"}, {name: "wenkai"},
+        {name: "shivreshi"}, {name: "jerome"}, {name: "yueheng"}, {name: "minghong"}, {name: "dylan"}
+      ].map(it => ({...(database[it.name]), lead: it.lead || false})),
+      "Outreach": [
+        {name: "zedong", lead: true}, {name: "nikita", lead: true},{name: "myat"}, {name: "angelina"}, {name: "kashvi"}
       ].map(it => ({...(database[it.name]), lead: it.lead || false})),
       "Workshop Speakers": [
-        "duhan", "cervon", "justinchee", "zedong", "ozk", "harry", "wenkai", "bobby", "mayukh", "myat", "sai", "raghavkumar",
-        "mahir", "hugo", "yuanxi", "kabir", "neil"
+        // TBC
       ].map(it => database[it])
     }
+    */
   },
   { // December
     // exco: ["yuanxi", "zerui", "kashvi", "asha"].map(it => database[it]),
+    /*
     organisers: {
       "Challenge Setters": ["yuanxi", "zerui", "junheng", "christian", "jerome", "justinlim"].map(it => database[it]),
       "Infrastructure and Platform": ["vincent", "zerui"].map(it => database[it]),
       "Publicity and Relations": ["kashvi", "asha"].map(it => database[it])
     }
+    */
   }
 ]
 
