@@ -2,7 +2,7 @@
     <div class="bg-white dark:bg-slate-800">
 
         <head>
-            <title>Default - BuildingBlocs 2023</title>
+            <title>Default - BuildingBlocs 2024</title>
         </head>
         <div>
             <Nav />

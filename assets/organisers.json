@@ -25,7 +25,7 @@
         "githubLink": "https://github.com/deadly-nightshade",
         "imageSrc": "/teams/ppl/kaiwen.jpg",
         "name": "Khoo Kai Wen",
-        "description": "Hi, I'm a JC1 Student at NUSH"
+        "description": "hello, i'm a JC2 student from NUSH :) I like coding, reading, and listening to music🐢"
     },
     "zayan": {
         "githubLink": "https://github.com/waffleSheep",
@@ -46,7 +46,7 @@
         "inLink": "https://linkedin.com/in/cher-jin-en-675092235",
         "imageSrc": "/teams/ppl/cherjinen.jpeg",
         "name": "Cher Jin En",
-        "description": "Hi, I listen to MAMAMOO and play Solitaire for fun"
+        "description": "JC2 in TJC. Favourite show is Netflix's Lucifer"
     },
     "suraj": {
         "githubLink": "https://github.com/Tsk78",
@@ -93,7 +93,7 @@
         "inLink": "https://linkedin.com/in/dhanvine-rameshkumar",
         "imageSrc": "/teams/ppl/dhanvine.jpg",
         "name": "Dhanvine Rameshkumar",
-        "description": "Hi I'm Dhanvine, a Sec 4 student from TJC. I like to code AI and learn new things everyday!"
+        "description": "Hi I'm Dhanvine, a J1 student from TJC and an avid programmer working on ai and research "
     },
     "isaackok": {
         "githubLink": "https://github.com/Kweice",
@@ -241,9 +241,9 @@
     },
     "asha": {
         "githubLink": "https://github.com/Ash3926",
-        "imageSrc": "/teams/ppl/asha_solomon.jpg",
+        "imageSrc": "/teams/ppl/asha_solomon.png",
         "name": "Asha Solomon",
-        "description": "I'm Asha from TJC, I like running and crafts. Favorite subjects(at O's) are Maths and Physics :)"
+        "description": "I'm Asha from TJC, I like running and crafts. Favorite subject is Mathematics :)"
     },
     "ashley": {
         "githubLink": "https://github.com/IsoceledAsh",
@@ -256,7 +256,7 @@
         "githubLink": "https://github.com/kat-fly",
         "imageSrc": "/teams/ppl/kashvi_kothari.jpg",
         "name": "Kothari Kashvi Chintan",
-        "description": "I have been a member of Infocomm Club since primary school. I currently take H2 computing."
+        "description": "Hi, I'm Kashvi, a J2 student at TJC and I believe that cats are the best creatures to exist"
     },
     "mahamantra": {
         "githubLink": "https://github.com/mahaachu",
@@ -279,9 +279,9 @@
     },
     "minjia": {
       "githubLink": "https://github.com/MinJiaTse",
-      "imageSrc": "/teams/ppl/tseminjia.jpeg",
+      "imageSrc": "/teams/ppl/minjia.jpg",
       "name": "Tse Min Jia",
-      "description": "Hello, I'm Min Jia :), a Year 5 student in Dunman High School. Nice to meet you! 😁"
+      "description": "Hello, I'm Min Jia :), a Year 6 student in Dunman High School. Nice to meet you! 😁"
     },
     "wayne": {
         "githubLink": "https://github.com/Zernier",
@@ -313,7 +313,7 @@
         "inLink": "https://linkedin.com/in/le-han-yau-5a6187261",
         "imageSrc": "/teams/ppl/blank.jpg",
         "name": "Yau Le Han",
-        "description": "Sec 4 student exploring CS passion, with no experience, eager to learn and gain skills."
+        "description": "JC1 in VJ :()"
     },
     "sophiachua": {
         "githubLink": "https://github.com/TAUVX",
@@ -376,6 +376,8 @@
       },
       "weiyi": {
         "githubLink": "https://github.com/fwyr",
+        "inLink": "https://linkedin.com/in/fwyr",
+        "webLink": "https://brainrot.co/",
         "imageSrc": "/teams/ppl/maweiyi.jpeg",
         "name": "Ma Weiyi",
         "description": "Hello! I'm Weiyi, a DHS student who just happens to like computers."
@@ -383,10 +385,9 @@
       "zedong": {
         "githubLink": "https://github.com/sawzedong",
         "inLink": "https://linkedin.com/in/ze-dong-saw-9b3936242",
-        "webLink": "https://sawzedong.github.io/portfolio/",
         "imageSrc": "/teams/ppl/sawzedong.jpeg",
         "name": "Saw Ze Dong",
-        "description": "Hi, i'm a JC1 student from Dunman High, interested in programming websites, trying out AI and more"
+        "description": "Hello, I'm a JC2 student from Dunman High Infocomm Club!"
       },
       "harry": {
         "githubLink": "https://github.com/Harry-cheong",
@@ -413,9 +414,9 @@
         "githubLink": "https://github.com/cytronicoder",
         "inLink": "https://linkedin.com/in/cytronicoder",
         "webLink": "https://www.cytronicoder.com/",
-        "imageSrc": "/teams/ppl/peter.jpeg",
+        "imageSrc": "/teams/ppl/zeyu_yao.jpeg",
         "name": "Zeyu Yao (Peter)",
-        "description": "I'm a student developer currently studying in Singapore."
+        "description": "I'm a 10th-grade student in Singapore, deeply into research and programming, with a side interest in history that pops up every now and then."
       },
       "raymond": {
         "githubLink": "https://github.com/provsalt",
@@ -522,7 +523,7 @@
         "webLink": "https://icepcp.com/",
         "imageSrc": "/teams/ppl/myat.jpg",
         "name": "Aung Kaung Myat",
-        "description": "Hello, I'm Myat, and I love building simple solutions for big problems, along with design and websites!"
+        "description": "Hi, I'm Myat"
       },
       "johnson": {
         "githubLink": "https://github.com/cpp-johnny",
@@ -562,15 +563,17 @@
       },
       "tongyu": {
         "githubLink": "https://github.com/bucketfish",
+        "inLink": "https://www.linkedin.com/in/jiang-tongyu/",
+        "webLink": "https://tongyu.dev",
         "imageSrc": "/teams/ppl/tongyu.jpg",
         "name": "Jiang Tongyu",
-        "description": "I like making music, crafts, writing, and coding games or websites. Also I am a fish :)"
+        "description": "I'm a JC2 student in Raffles Institution — I like making music, games, and apps."
       },
       "shivani": {
         "githubLink": "https://github.com/Shivaniiiiiiiiiiii",
         "imageSrc": "/teams/ppl/shivani.jpg",
         "name": "Shivani Ramesh Kanna",
-        "description": "I am Shivani, from TJC. I am a really sociable person!"
+        "description": "Hello! I am Shivani from Temasek JC. I am not a computing student :)"
       },
       "vijay": {
         "githubLink": "https://github.com/Vjlantee",
@@ -580,9 +583,10 @@
       },
       "jeffrey": {
         "githubLink": "https://github.com/jeffzy15",
-        "imageSrc": "/teams/ppl/Allen_Jeffrey.PNG",
+        "inLink": "https://sg.linkedin.com/in/allen-jeffrey",
+        "imageSrc": "/teams/ppl/allen_jeffrey.png",
         "name": "Allen Jeffrey",
-        "description": "Hi, I like to develop apps and tinker with new technologies in my free time."
+        "description": "I'm Jeffrey a J1 from VJC and I like to tinker with new technologies in my free time."
       },
       "seelun": {
         "githubLink": "https://github.com/1lluXion",
@@ -594,10 +598,10 @@
         "githubLink": "https://github.com/Coffeediaries",
         "imageSrc": "/teams/ppl/sheng_xin.jpg",
         "name": "Cheah Sheng Xin",
-        "description": "Hello! My area of interest includes solving problems, researching about topics in stem and craft"
+        "description": "Hello! I'm Sheng Xin, a secondary 3 student from AHS. My area of interests are: app dev, competitive programming etc :D"
       },
       "kairos": {
-        "githubLink": "https://github.com/Kairos-T",
+        "githubLink": "https://github.com/kairos-t",
         "inLink": "https://www.linkedin.com/in/kairoshestiatay",
         "webLink": "https://kairostay.com",
         "imageSrc":"/teams/ppl/Kairos_Tay.jpg",
@@ -620,14 +624,15 @@
         "githubLink": "https://github.com/InfernoTower1943",
         "imageSrc": "/teams/ppl/blank.jpg",
         "name": "Edwin Koon",
-        "description": "Most of my hobbies involve computers. I am also (unfortunately?) a grass toucher."
+        "description": "year 6 nus high student"
       },
       "lucius": {
         "githubLink": "https://github.com/czlucius",
         "inLink": "https://www.linkedin.com/in/lucius-chee",
+        "webLink": "https://czlucius.dev",
         "imageSrc": "/teams/ppl/lucius.jpg",
         "name": "Lucius Chee Zihan",
-        "description": "I'm a self-taught student developer, and aspiring software engineer."
+        "description": "Hi there! I'm Lucius, an aspiring self-taught software developer/engineer."
       },
       "alyssa": {
         "githubLink": "https://github.com/AlyssaMohamedIqbal",
@@ -643,8 +648,83 @@
       },
       "nikita": {
         "githubLink": "https://github.com/",
-        "imageSrc": "/teams/ppl/blank.jpg",
+        "imageSrc": "/teams/ppl/Nikita.jpg",
         "name": "Nikita",
-        "description": "Hi, I'm Nikta, a JC1 student from ACJC."
+        "description": "Hi! I am currently an J2 student at ACJC and am interested inthe ethics and regulation of AI. "
+      },
+      "angelina": {
+        "githubLink": "https://github.com/",
+        "imageSrc": "/teams/ppl/angelina.jpg",
+        "name": "Angelina",
+        "description": "A Y5 from DHS who just happen to be a girl in STEM (mostly the S and T)"
+      },
+      "yueheng": {
+        "githubLink": "https://github.com/",
+        "inLink": "https://www.linkedin.com/in/wongyueheng",
+        "imageSrc": "/teams/ppl/YueHeng_Wong.jpeg",
+        "name": "Yue Heng",
+        "description": ""
+      },
+      "minghong": {
+        "githubLink": "https://github.com/mingy123",
+        "imageSrc": "/teams/ppl/MingHong_Hiuk.jpg",
+        "name": "Ming Hong",
+        "description": ""
+      },
+      "dylan": {
+        "githubLink": "https://github.com/ZanyP4nda",
+        "imageSrc": "/teams/ppl/blank.jpg",
+        "name": "Dylan Alden Kusbiyantoro",
+        "description": ""
+      },
+      "trisha": {
+        "githubLink": "https://github.com/matchaprata",
+        "inLink": "https://www.linkedin.com/in/trisha-soon",
+        "imageSrc": "/teams/ppl/trisha.jpg",
+        "name": "Trisha Soon",
+        "description": "freelance zaobao photographer by day, mugging with music by night"
+      },
+      "julyan": {
+        "githubLink": "https://github.com/",
+        "imageSrc": "/teams/ppl/blank.jpg",
+        "name": "Tan Julyan",
+        "description": ""
+      },
+      "qihuan": {
+        "imageSrc": "/teams/ppl/blank.jpg",
+        "name": "Onn Qi Huan",
+        "description": ""
+      },
+      "claraong": {
+        "githubLink": "https://github.com/",
+        "imageSrc": "/teams/ppl/blank.jpg",
+        "name": "Clara Ong",
+        "description": ""
+      },
+      "zinedine": {
+        "githubLink": "https://github.com/",
+        "imageSrc": "/teams/ppl/blank.jpg",
+        "name": "Zinedine Tan",
+        "description": ""
+      },
+      "sindya": {
+        "githubLink": "https://github.com/sssyntax",
+        "imageSrc": "/teams/ppl/blank.jpg",
+        "name": "Sindya",
+        "description": "hi im sindya, im from river valley high school, and i like coding, games and cats. looking forward to working with everyone!"
+      },
+      "sahil": {
+        "githubLink": "https://github.com/sahilmenon",
+        "inLink": "https://www.linkedin.com/in/sahil-menon/",
+        "imageSrc": "/teams/ppl/blank.jpg",
+        "name": "Sahil Menon",
+        "description": ""
+      },
+      "matthiaskoh": {
+        "githubLink": "https://github.com/matt-koh",
+        "inLink": "https://www.linkedin.com/in/matt-koh-400a8a288/",
+        "imageSrc": "/teams/ppl/blank.jpg",
+        "name": "Matthias Koh",
+        "description": "Hi, I'm Matthias, currently a JC student in DHS, I'm very open to learning new things"
       }
 }

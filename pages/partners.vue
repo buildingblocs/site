@@ -46,13 +46,13 @@ const partners = [
 ]
 
 useSeoMeta({
-    title: 'Partners - BuildingBloCS 2023',
+    title: 'Partners - BuildingBloCS 2024',
     description: 'Ignite your passion in computing',
-    ogTitle: 'Partners - BuildingBloCS 2023',
+    ogTitle: 'Partners - BuildingBloCS 2024',
     ogDescription: 'Ignite your passion in computing',
     ogImage: '/index/hero/img4.png',
     ogUrl: 'https://buildingblocs.sg/partners',
-    twitterTitle: 'Partners - BuildingBloCS 2023',
+    twitterTitle: 'Partners - BuildingBloCS 2024',
     twitterDescription: 'Ignite your passion in computing',
     twitterImage: '/index/hero/img4.png',
     twitterCard: 'summary_large_image'

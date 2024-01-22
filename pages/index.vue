@@ -5,7 +5,7 @@
     </div>
     <div class="absolute w-full h-full z-10">
       <Head>
-        <Title>BuildingBloCS 2023</Title>
+        <Title>BuildingBloCS 2024</Title>
       </Head>
       <IndexHero />
       <div class="bg-white dark:bg-slate-800">
@@ -73,11 +73,11 @@ const pictures = [
 
 useSeoMeta({
   description: "Ignite your passion in computing",
-  ogTitle: "BuildingBloCS 2023",
+  ogTitle: "BuildingBloCS 2024",
   ogDescription: "Ignite your passion in computing",
   ogImage: "/index/hero/img2.jpg",
   ogUrl: "https://buildingblocs.sg/",
-  twitterTitle: "BuildingBloCS 2023",
+  twitterTitle: "BuildingBloCS 2024",
   twitterDescription: "Ignite your passion in computing",
   twitterImage: "/index/hero/img2.jpg",
   twitterCard: "summary_large_image",
