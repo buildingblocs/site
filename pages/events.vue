@@ -89,13 +89,13 @@ const events = [
 ]
 
 useSeoMeta({
-    title: 'Events - BuildingBloCS 2023',
+    title: 'Events - BuildingBloCS 2024',
     description: 'Ignite your passion in computing',
-    ogTitle: 'Events - BuildingBloCS 2023',
+    ogTitle: 'Events - BuildingBloCS 2024',
     ogDescription: 'Ignite your passion in computing',
     ogImage: '/index/hero/img3jpg.webp',
     ogUrl: 'https://buildingblocs.sg/events',
-    twitterTitle: 'Events - BuildingBloCS 2023',
+    twitterTitle: 'Events - BuildingBloCS 2024',
     twitterDescription: 'Ignite your passion in computing',
     twitterImage: '/index/hero/img3jpg.webp',
     twitterCard: 'summary_large_image'
