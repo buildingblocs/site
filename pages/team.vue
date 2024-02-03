@@ -1,12 +1,9 @@
 <template>
   <div class="bg-white dark:bg-slate-800">
-    <Nav />
     <div class="pt-16 sm:pt-32">
       <div class="relative isolate pt-14 lg:px-8">
         <PatchesYellow />
-        
         <PageTitle text="Our Team" />
-
         <main class="px-2">
           <!-- OIC Section -->
           <section>
@@ -92,7 +89,6 @@
             </div>
         </div>
         </main>
-        <Footer />
       </div>
     </div>
   </div>

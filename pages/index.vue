@@ -1,8 +1,4 @@
 <template>
-  <div>
-    <div class="fixed w-full z-30 top-0">
-      <Nav />
-    </div>
     <div class="absolute w-full h-full z-10">
       <IndexHero />
       <div class="bg-white dark:bg-slate-800">
@@ -32,7 +28,6 @@
           class="object-cover w-full h-full swiper-lazy" densities="x1 x2"/>
       </SwiperSlide>
     </Swiper>
-  </div>
 </template>
 
 <script setup>
