@@ -1,33 +1,35 @@
 <template>
+  <div>
     <div class="absolute w-full h-full z-10">
       <IndexHero />
       <div class="bg-white dark:bg-slate-800">
         <IndexStatement id="statement" class="pt-20" />
-        <IndexTextpic 
-          v-for="picture in pictures" :key="picture.title" :isright="picture.isright"
-          :title="picture.title" :desc="picture.desc" :img="picture.img" :alt="picture.alt" :width="picture.width"
-          :height="picture.height" />
+        <IndexTextpic
+            v-for="picture in pictures" :key="picture.title" :isright="picture.isright"
+            :title="picture.title" :desc="picture.desc" :img="picture.img" :alt="picture.alt" :width="picture.width"
+            :height="picture.height" />
+        <IndexTimeline />
+        <Footer />
       </div>
-      <IndexTimeline />
-      <Footer />
     </div>
-    
+
     <!-- Swiper background -->
     <Swiper
-      :modules="[SwiperAutoplay, SwiperPagination]"
-      :slides-per-view="1"
-      :loop="true"
-      :pagination="true"
-      :lazyPreloadPrevNext="3"
-      :autoplay="{ delay: 8000, disableOnInteraction: false }"
-      class="z-0"
+        :modules="[SwiperAutoplay, SwiperPagination]"
+        :slides-per-view="1"
+        :loop="true"
+        :pagination="true"
+        :lazyPreloadPrevNext="3"
+        :autoplay="{ delay: 8000, disableOnInteraction: false }"
+        class="z-0"
     >
       <SwiperSlide v-for="slide in slides" :key="slide">
         <div class="absolute top-0 left-0 w-full h-full fade from-transparent to-black" />
         <nuxt-img format="webp" :src="`/index/hero/img${slide.src}`" :alt="slide.alt" :width="slide.width" :height="slide.height"
-          class="object-cover w-full h-full swiper-lazy" densities="x1 x2"/>
+                  class="object-cover w-full h-full swiper-lazy" densities="x1 x2"/>
       </SwiperSlide>
     </Swiper>
+  </div>
 </template>
 
 <script setup>
