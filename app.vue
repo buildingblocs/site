@@ -1,9 +1,5 @@
 <template>
-  <div class="fixed w-full z-30 top-0">
-    <Nav />
-  </div>
   <NuxtPage />
-  <Footer />
 </template>
 
 <style>

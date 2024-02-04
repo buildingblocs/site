@@ -1,5 +1,8 @@
 <template>
   <div class="bg-white dark:bg-slate-800">
+    <div class="fixed w-full z-30 top-0">
+      <Nav />
+    </div>
     <div class="pt-16 sm:pt-32">
       <div class="relative isolate pt-14 lg:px-8">
         <PatchesYellow />
@@ -91,6 +94,7 @@
         </main>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 

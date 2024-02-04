@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div class="fixed w-full z-30 top-0">
+      <Nav />
+    </div>
     <div class="absolute w-full h-full z-10">
       <IndexHero />
       <div class="bg-white dark:bg-slate-800">
