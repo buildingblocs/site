@@ -1,5 +1,4 @@
 <template>
-  <div class="sticky top-0 z-10">
     <header class="absolute inset-x-0 top-0">
       <nav
         class="bg-white dark:bg-slate-800 backdrop-filter backdrop-blur-lg bg-opacity-50 dark:bg-opacity-50 border-b border-gray-100 dark:border-slate-800 flex items-center justify-between py-4 px-6 sm:py-3 sm:px-8"
@@ -128,7 +127,6 @@
         </div>
       </nav>
     </header>
-  </div>
 </template>
 
 <script setup>

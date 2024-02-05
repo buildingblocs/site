@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxtjs/robots",
     "nuxt-simple-sitemap",
+    "@nuxt/content"
   ],
   app: {
     head: {
@@ -34,6 +35,10 @@ export default defineNuxtConfig({
   colorMode: {
     fallback: "dark",
     classSuffix: ""
+  },
+  components: {
+    global: true,
+    dirs: ['~/components']
   },
   image: {
     inject: true

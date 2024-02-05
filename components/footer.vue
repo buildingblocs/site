@@ -1,5 +1,5 @@
 <template>
-  <footer class="p-4 sm:p-6 dark:bg-slate-800">
+  <footer class="p-4 sm:p-6">
     <div class="mx-auto max-w-screen-xl">
       <hr
         class="my-6 border-1 border-orange-300 sm:mx-auto pb-2 dark:border-gray-700 lg:my-8" />
