@@ -26,5 +26,9 @@ module.exports = {
     },
     darkSelector: '.dark-mode',
   },
+  plugins: [
+    require('@tailwindcss/typography'),
+    // ...
+  ],
   darkMode: 'class',
 }

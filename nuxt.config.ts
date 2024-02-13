@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     "nuxt-swiper",
     "@nuxt/image",
     "@nuxtjs/robots",
-    "nuxt-simple-sitemap",
+    "@nuxtjs/sitemap",
     "@nuxt/content"
   ],
   app: {
