@@ -1,6 +1,6 @@
 <template>
   <div class="pb-10 sm:pb-12 my-6">
-    <Disclosure v-for="(faq, index) in faqs.faqs" :key="index" v-slot="{ open }">
+    <Disclosure v-for="(faq, index) in faqs" :key="index" v-slot="{ open }">
       <DisclosureButton class="mt-2 flex items-center justify-between rounded-lg bg-orange-100 px-4 py-2 text-left sm:text-xl text-orange-900 hover:bg-orange-200 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-75 text-md font-semibold tracking-tight w-full">
         <span>{{ faq.question }}</span>
         <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-orange-500"/>
@@ -16,5 +16,5 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { ChevronUpIcon } from '@heroicons/vue/20/solid'
 
-const faqs = defineProps(['faqs'])
+defineProps(['faqs'])
 </script>
