@@ -19,7 +19,7 @@ faqs:
  - question: Must I go for all workshops?
    answer: Not at all! You can choose which workshops you would like to attend.
  - question: Why should I sign up?
-   answer: You can learn from industry professionals and spend your March holidays productively
+   answer: You can learn from industry professionals and spend your March holidays productively!
  - question: Is the event free?
    answer: Yep, thanks to our generous sponsors, it’s completely free!
  - question: Are there prizes?
