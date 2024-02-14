@@ -23,9 +23,9 @@ faqs:
  - question: Is the event free?
    answer: Yep, thanks to our generous sponsors, it’s completely free!
  - question: Are there prizes?
-   answer: Prizes will be revealed at a later date!
+   answer: Yes, prizes will be revealed at a later date!
  - question: How will the hackathon groups be allocated?
-   answer: The hackathon will be carried out in groups of three. You may indicate who you would like to be grouped with (make sure it's mutual) and we'll take that into consideration. We'll fill any empty slots randomly, taking into consideration your school and age to ensure a pleasant collaboration experience!
+   answer: The hackathon will be carried out up to groups of three. You may indicate who you would like to be grouped with (make sure it's mutual) and we'll take that into consideration. We'll fill any empty slots randomly, taking into consideration your school and age to ensure a pleasant collaboration experience!
  - question: What if something pops up and I can't make it?
    answer: Email us at hello@buildingblocs.sg or approach us on Discord in any appropriate channels and we will update your signup status accordingly.
 ---
