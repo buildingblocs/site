@@ -4,7 +4,7 @@ title: 'March Conference'
 
 ::events
 :::EventsContent1
-# {{ $doc.title }} 2024
+# {{ $doc.title }}
 ## Key Details
 * Workshops: 10th - 12th March
 * Hackathon: 13th - 14th March
@@ -32,7 +32,7 @@ faqs:
 ::::
 :::
 :::EventsContent2
-::::EventsSwiper{:images='["https://via.placeholder.com/100", "https://via.placeholder.com/100"]'} 
+::::EventsSwiper{:images='["/events/march/1.png", "/events/march/2.png", "/events/march/3.png", "/events/march/4.png", "/events/march/5.png", "/events/march/6.png", "/events/march/7.png", "/events/march/8.png"]'} 
 ::::
 ::::EventsTimeline
 ---
@@ -63,7 +63,7 @@ timeline:
     title: Data Scraping with FOSSASIA
     author: By Mr Marco A. Gutiérrez
     desc: Special Guest from FOSSASIA to conduct a workshop on data scraping
-- date: 13th March - 14th March
+- date: 13th - 15th March
 - events:
   - time:
     title: Hackathon
@@ -72,3 +72,5 @@ timeline:
 ::::
 :::
 ::
+
+:EventsTempcta
