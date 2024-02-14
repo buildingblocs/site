@@ -7,7 +7,7 @@ title: 'March Conference'
 # {{ $doc.title }}
 ## Key Details
 * Workshops: 10th - 12th March
-* Hackathon: 13th - 14th March
+* Hackathon: 13th - 15th March
 * Venue: Online
 * Email contact for queries: hello@buildingblocs.sg
 
