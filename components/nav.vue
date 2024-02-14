@@ -137,6 +137,7 @@ const navigation = [
   { name: "Home", href: "/" },
   { name: "Our Team", href: "/team" },
   { name: "Our Partners", href: "/partners/" },
+  { name: "March Conference", href: "/events/march"}
 ];
 </script>
 

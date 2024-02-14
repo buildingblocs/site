@@ -97,6 +97,11 @@ const links = [
     link: '/partners',
     class: linkStyle
   },
+  {
+    title: 'March Conference',
+    link: '/events/march',
+    class: linkStyle
+  },
   // {
   //   title: 'Register <span aria-hidden="true">&rarr;</span>',
   //   link: '/events/ctf',

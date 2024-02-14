@@ -12,6 +12,7 @@
             :title="picture.title" :desc="picture.desc" :img="picture.img" :alt="picture.alt" :width="picture.width"
             :height="picture.height" />
         <IndexTimeline />
+        <IndexCta />
         <Footer />
       </div>
     </div>
