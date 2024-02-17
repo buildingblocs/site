@@ -1,0 +1,15 @@
+// See https://containers.dev/implementors/json_reference/ for configuration reference
+{
+	"name": "BBCS devcontainer",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+"remoteUser": "node",
+"features": {
+	"ghcr.io/devcontainers/features/node:1": {
+		"nodeGypDependencies": true,
+		"version": "lts",
+		"nvmVersion": "latest"
+	}
+}
+}

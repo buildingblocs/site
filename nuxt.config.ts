@@ -26,6 +26,11 @@ export default defineNuxtConfig({
     },
     pageTransition: { name: "page", mode: "out-in" },
   },
+  vue: {  
+    compilerOptions: {
+      isCustomElement: (tag) => ['swiper-container'].includes(tag),
+    },
+  },
   devtools: {
     enabled: true,
     timeline: {
