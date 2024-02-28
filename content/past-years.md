@@ -18,18 +18,18 @@ image: /june/img1.webp
 ::pastyear
 ---
 year: 2022
-desc: BuildingBloCS's first March Conference, up alongside an exciting physical June Conference.
+desc: An exciting return to physical events with BuildingBloCS's first March Conference, up alongside the existing June Conference.
 link: https://old.buildingblocs.sg/2022/
-image: /june/img1.webp
+image: /pastyear/2022_BG.jpg
 ---
 ::
 
 ::pastyear
 ---
 year: 2021
-desc: A June Conference on Computational Thinking and AI Education - and the first AIWinpetition.
+desc: Another online June Conference on, this time on Computational Thinking and AI Education.
 link: https://old.buildingblocs.sg/2021/
-image: /june/img1.webp
+image: /pastyear/2021_BG.jpg
 ---
 ::
 
@@ -38,7 +38,7 @@ image: /june/img1.webp
 year: 2020
 desc: BuildingBloCS goes online because of COVID... to teach about Healthy Python.
 link: https://old.buildingblocs.sg/2020/
-image: /june/img1.webp
+image: /pastyear/2020_BG.png
 ---
 ::
 
@@ -47,7 +47,7 @@ image: /june/img1.webp
 year: 2019
 desc: The future is here - learn about the AI-powered Smart Nation for everyone, by everyone.
 link: https://old.buildingblocs.sg/2019/
-image: /june/img1.webp
+image: /pastyear/2019_BG.jpg
 ---
 ::
 
@@ -56,7 +56,7 @@ image: /june/img1.webp
 year: 2018
 desc: Discover the Python-powered web in the June Conference.
 link: https://old.buildingblocs.sg/2018/
-image: /june/img1.webp
+image: /pastyear/2018_BG.jpg
 ---
 ::
 
@@ -66,7 +66,7 @@ image: /june/img1.webp
 year: 2017
 desc: The first year of BuildingBloCS, featuring our first June Conference.
 link: https://old.buildingblocs.sg/2017/
-image: /june/img1.webp
+image: /pastyear/2017_BG.jpg
 ---
 ::
 
