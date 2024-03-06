@@ -5,8 +5,8 @@
         <div class="flex items-center lg:pr-8 lg:pt-4">
           <div class="lg:max-w-lg">
             <div class="h-full flex flex-col justify-center">
-              <h2 class="mt-2">{{ title }}</h2>
-              <p class="mt-2 sm:mt-6 leading-8">{{ desc }}</p>
+              <h2>{{ title }}</h2>
+              <p class="mt-2 leading-7">{{ desc }}</p>
             </div>
           </div>
         </div>
