@@ -51,5 +51,5 @@ export default defineNuxtConfig({
   sitemap: {
     exclude: ['/default', '/events'],
   },
-  css: ["~/assets/css/main.css"],
+  css: ["~/assets/main.css"],
 });
