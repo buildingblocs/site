@@ -102,6 +102,11 @@ const links = [
     link: '/events/march',
     class: linkStyle
   },
+  {
+    title: 'Past Years',
+    link: '/past-years',
+    class: linkStyle
+  },
   // {
   //   title: 'Register <span aria-hidden="true">&rarr;</span>',
   //   link: '/events/ctf',
