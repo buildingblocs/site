@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  h1 {
+    @apply text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl dark:text-white;
+  }
+  h2 {
+    @apply text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white;
+  }
+  h2:is(.statement) {
+    @apply text-gray-600 dark:text-gray-400 text-center mb-3 text-base sm:text-base font-normal tracking-normal
+  }
+  h3 {
+    @apply text-xl font-bold tracking-tight text-gray-900 sm:text-2xl dark:text-white;
+  }
+  p {
+    @apply text-gray-900 dark:text-gray-200;
+  }
+}
+
 html{scroll-behavior:smooth}
 
 /* inter-latin-wght-normal */

@@ -45,7 +45,7 @@
       <div class="sm:flex sm:items-center sm:justify-between pt-3 pb-10 pl-4">
         <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
           <NuxtLink
-            href="https://instagram.com/buildingblocs23"
+            href="https://instagram.com/buildingblocs24"
             class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
             aria-label="Follow our Instagram Page"
           >

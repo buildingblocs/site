@@ -6,7 +6,7 @@
     <div class="pt-16 sm:pt-32">
       <div class="relative isolate pt-14 lg:px-8">
         <PatchesYellow />
-        <PageTitle text="Our Team" />
+        <h1 class="pb-10 sm:pb-24 text-center">Our Team</h1>
         <main class="px-2">
           <!-- OIC Section -->
           <section>
