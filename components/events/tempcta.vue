@@ -15,9 +15,8 @@
           </defs>
         </svg>
         <div class="py-24 mx-auto max-w-md text-center lg:mx-auto lg:max-w-4xl lg:text-center">
-          <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Register for the March Conference!
-          </h2>
-          <p class="mt-6 text-lg leading-8 text-gray-300">If you're a secondary school or pre-university student
+          <h2>Register for the March Conference!</h2>
+          <p class="mt-6">If you're a secondary school or pre-university student
             interested in Computing, this is for you!</p>
           <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-center">
             <NuxtLink to="https://go.buildingblocs.sg/march24signup"

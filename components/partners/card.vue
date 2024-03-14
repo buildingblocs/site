@@ -25,7 +25,7 @@ defineProps({
         <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-100 line-clamp-1">
             {{ title }}
         </h2>
-        <p class="mb-3 font-normal text-gray-200">
+        <p class="mb-3 text-gray-200">
           {{ description }}
         </p>
       </div>
