@@ -98,13 +98,13 @@ const links = [
     class: linkStyle
   },
   {
-    title: 'Past Years',
-    link: '/past-years',
+    title: 'March Conference',
+    link: '/events/march',
     class: linkStyle
   },
   {
-    title: 'March Conference',
-    link: '/events/march',
+    title: 'Past Years',
+    link: '/past-years',
     class: linkStyle
   },
   // {

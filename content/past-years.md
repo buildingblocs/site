@@ -3,8 +3,7 @@ title: 'Past Years'
 ---
 
 <div align="center">Have a look at the events we've held in past years, such as our Conferences, FOSSASIA, and more!</div>
-<br><br>
-
+<br />
 
 ::pastyear
 ---
