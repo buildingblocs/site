@@ -11,8 +11,7 @@ title: June Conference
 * Venue: NUS School of Computing
 * Email contact for queries: hello@buildingblocs.sg
 
-Our flagship event is back! The June Conference will be all about **Artifical Intelligence** (or something... TODO). Mark your calendars - *15 different workshops*, split across three tracks aimed towards different skill levels, will be held from **Monday, 3rd June to Tuesday, 4th June**. Afterwards, strap yourself in for the hackathons where you can apply your newfound knowledge, and get stay tuned for the finals on **Friday, 7th June** - where you can stand to **win prizes**!  
-**Excited for the June Conference?** Sign-ups will open soon, so check back regularly!
+BuildingBloCS’ June Conference is back with a bang to teach participants the **applications of AI**, which has become more prominent in our lives today. We have specially designed *three different tracks* based on prior experience: Beginner, in which we will introduce Python and various beginner-friendly AI libraries; Intermediate, where we will guide you through the ecosystem of AI libraries that are commonly used; and finally Advanced, where we will take a deep dive into theory and also deploying your AI applications. Across the three conference days, we hope that participants will forge friendships, hone their skills, and apply what they've learnt in our very own **hackathon**!
 
 ::::EventsFaq
 ---
@@ -23,13 +22,12 @@ faqs:
    answer: It's a free, fun and easy way to learn new skills about AI and computing! What more could you ask for?
  - question: What if something pops up and I can't make it?
    answer: Email us at hello@buildingblocs.sg or approach us on Discord in any appropriate channels and we will update your signup status accordingly.
- - question: What is a "hackathon"? Is it compulsory? TODO
-   answer: A hackathon is just a competition where you will have to work in teams to create an application, based on the theme we will provide later on. It's a good way to practice your skills, and as such it is compulsory. THIS IS NOT FINAL THIS IS NOT FINAL TODO
+ - question: What is a "hackathon"? Is it compulsory? 
+   answer: A hackathon is a competition where you'll have to work in teams to create an application based on a theme provided. It's a great way to practice your skills, and as such it is compulsory for all participants.
  - question: What are the prizes? When will I get them?
    answer: We can't divulge any information about the prizes, but they will be given out during after the finals, on Friday, 7th June!
- - question: How will the hackathon groups be allocated? TODO
-   answer: I'm not sure THIS IS NOT FINAL THIS IS NOT FINAL TODO
-
+ - question: How will the hackathon groups be allocated? Can I choose my teammates?
+   answer: For this hackathon, we will be allocating the groups for you. However, if you (mutually) indicate someone you'll like to work with, we'll take that into consideration. Any other empty slots will be filled taking into account your school and age. 
 ---
 ::::
 :::
