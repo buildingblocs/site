@@ -21,13 +21,13 @@ faqs:
  - question: Why should I sign up? Is it free?
    answer: It's a free, fun and easy way to learn new skills about AI and computing! What more could you ask for?
  - question: What if something pops up and I can't make it?
-   answer: Email us at hello@buildingblocs.sg or approach us on Discord in any appropriate channels and we will update your signup status accordingly.
+   answer: Please indicate that you are not coming via the lu.ma interface.
  - question: What is a "hackathon"? Is it compulsory? 
    answer: A hackathon is a competition where you'll have to work in teams to create an application based on a theme provided. It's a great way to practice your skills, and as such it is compulsory for all participants.
  - question: What are the prizes? When will I get them?
-   answer: We can't divulge any information about the prizes, but they will be given out during after the finals, on Friday, 7th June!
+   answer: We can't divulge any information about the prizes, but they will be given out after the finals, on Friday, 7th June!
  - question: How will the hackathon groups be allocated? Can I choose my teammates?
-   answer: For this hackathon, we will be allocating the groups for you. However, if you (mutually) indicate someone you'll like to work with, we'll take that into consideration. Any other empty slots will be filled taking into account your school and age. 
+   answer: For this hackathon, we will be allocating the groups for you. However, if you (mutually) indicate someone you'll like to work with, we'll take that into consideration. Any other empty slots will be filled randomly, taking into account your age. 
 ---
 ::::
 :::
