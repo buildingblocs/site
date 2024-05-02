@@ -11,6 +11,8 @@ title: June Conference
 * Venue: NUS School of Computing
 * Email contact for queries: hello@buildingblocs.sg
 
+:register
+
 BuildingBloCS’ June Conference is back with a bang to teach participants the **applications of AI**, which has become more prominent in our lives today. We have specially designed *three different tracks* based on prior experience: Beginner, in which we will introduce Python and various beginner-friendly AI libraries; Intermediate, where we will guide you through the ecosystem of AI libraries that are commonly used; and finally Advanced, where we will take a deep dive into theory and also deploying your AI applications. Across the three conference days, we hope that participants will forge friendships, hone their skills, and apply what they've learnt in our very own **hackathon**!
 
 ::::EventsFaq
@@ -32,7 +34,7 @@ faqs:
 ::::
 :::
 :::EventsContent2
-::::EventsSwiper{:images='["/june/poster/1.webp", "/june/poster/1.webp"]'}
+::::EventsSwiper{:images='["/newjune/1.png", "/newjune/2.png", "/newjune/3.png", "/newjune/4.png", "/newjune/5.png", "/newjune/6.png", "/newjune/7.png", "/newjune/8.png"]'}
 ::::
 ::::EventsTimeline
 <!-- ---
