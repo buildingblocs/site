@@ -8,7 +8,7 @@ title: June Conference
 ## Key Details
 * Workshops: 3rd - 4th June
 * Hackathon Finals: 7th June 
-* Venue: NUS School of Computing
+* Venue: (tbc)
 * Email contact for queries: hello@buildingblocs.sg
 
 :register
