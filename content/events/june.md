@@ -6,9 +6,9 @@ title: June Conference
 :::EventsContent1
 # {{ $doc.title }}
 ## Key Details
-* Workshops: 3rd - 4th June
-* Hackathon Finals: 7th June 
-* Venue: Will be sent to participants via email
+* Workshops: 10th - 11th June
+* Hackathon Finals: 14th June
+* Venue: Singapore Management University
 * Email contact for queries: hello@buildingblocs.sg
 
 :register
