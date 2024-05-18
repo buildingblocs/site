@@ -7,7 +7,7 @@ title: June Conference
 # {{ $doc.title }}
 ## Key Details
 * Workshops: 10th - 11th June
-* Hackathon Finals: 14th June
+* Closing Ceremony: 14th June
 * Venue: Singapore Management University
 * Email contact for queries: hello@buildingblocs.sg
 
@@ -25,7 +25,7 @@ faqs:
  - question: What if something pops up and I can't make it?
    answer: Please indicate that you are not coming via the lu.ma interface.
  - question: What is a "hackathon"? Is it compulsory? 
-   answer: A hackathon is a competition where you'll have to work in teams to create an application based on a theme provided. It's a great way to practice your skills, and as such it is compulsory for all participants.
+   answer: A hackathon is a competition where you'll have to work in teams to create an application based on a theme provided. It's a great way to practice your skills, however, it is not compulsory to encourage everyone to learn and attend.
  - question: What are the prizes? When will I get them?
    answer: We can't divulge any information about the prizes, but they will be given out after the finals, on Friday, 7th June!
  - question: How will the hackathon groups be allocated? Can I choose my teammates?
