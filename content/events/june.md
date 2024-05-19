@@ -34,7 +34,7 @@ faqs:
 ::::
 :::
 :::EventsContent2
-::::EventsSwiper{:images='["/newjune/1.png", "/newjune/2.png", "/newjune/3.png", "/newjune/4.png", "/newjune/5.png", "/newjune/6.png", "/newjune/7.png", "/newjune/8.png"]'}
+::::EventsSwiper{:images='["/newjune/1.svg", "/newjune/2.svg", "/newjune/3.svg", "/newjune/4.svg", "/newjune/5.svg", "/newjune/6.svg", "/newjune/7.svg", "/newjune/8.svg"]'}
 ::::
 ::::EventsTimeline
 <!-- ---
