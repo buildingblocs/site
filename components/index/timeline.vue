@@ -40,9 +40,14 @@ export default defineComponent({
             'We expanded to take organisers from NUSH, TJC, SP and many more institutes around Singapore, hosting events yearly.'
       },
       {
-        date: 'Coming Soon',
+        date: '10 - 15 March',
         title: 'Our March Conference',
-        about: 'Our March Conference is in the works!',
+        about: 'Our March Conference offers beginner workshops on Python tools, a presentation by FOSSASIA on data scraping, and a three-day hackathon with prizes.',
+      },
+      {
+        date: 'Coming Soon',
+        title: 'Our June Conference',
+        about: 'Our June Conference is in the works!',
       },
     ]
   })

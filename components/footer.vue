@@ -103,6 +103,11 @@ const links = [
     class: linkStyle
   },
   {
+    title: 'June Conference',
+    link: '/events/june',
+    class: linkStyle
+  },
+  {
     title: 'Past Years',
     link: '/past-years',
     class: linkStyle

@@ -17,14 +17,14 @@
                 </svg>
                 <div class="mx-auto max-w-xs text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
                     <h2>Join Us</h2>
-                    <p class="mt-6">for the March Conference to learn coding, the best
+                    <p class="mt-6">for the June Conference to learn coding, the best
                         way.
                     </p>
                     <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
-                        <NuxtLink to="https://lu.ma/march-conf"
+                        <NuxtLink to="https://lu.ma/june-conf"
                             class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
                             Register now <span aria-hidden="true"></span></NuxtLink>
-                        <NuxtLink to="/events/march" class="text-sm font-semibold leading-6 text-white">Learn more
+                        <NuxtLink to="/events/june" class="text-sm font-semibold leading-6 text-white">Learn more
                             <span aria-hidden="true">→</span>
                         </NuxtLink>
                     </div>
