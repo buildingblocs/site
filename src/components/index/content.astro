@@ -1,0 +1,37 @@
+---
+import { Image } from "astro:assets";
+const { textleft, img, title, desc, imgalt } = Astro.props;
+---
+
+<div
+    class="flex gap-y-6 gap-x-10 max-w-6xl lg:mx-auto my-16 flex-col md:flex-row mx-4 sm:px-3 md:px-6 lg:px-8 xl:px-0"
+>
+    {
+        textleft ? (
+            <div class="gap-y-3 flex flex-1 flex-col justify-center">
+                <h2>{title}</h2>
+                <p>{desc}</p>
+            </div>
+        ) : (
+            <Image
+                src={img}
+                alt={imgalt}
+                class="md:max-w-md lg:max-w-lg xl:max-w-xl rounded-xl w-full object-cover ring ring-1 ring-slate-800 sm:h-96 h-60"
+            />
+        )
+    }
+    {
+        textleft ? (
+            <Image
+                src={img}
+                alt={imgalt}
+                class="md:max-w-md lg:max-w-lg xl:max-w-xl rounded-xl w-full object-cover ring ring-1 ring-slate-800 sm:h-96 h-60"
+            />
+        ) : (
+            <div class="gap-y-3 flex flex-1 flex-col justify-center">
+                <h2>{title}</h2>
+                <p>{desc}</p>
+            </div>
+        )
+    }
+</div>

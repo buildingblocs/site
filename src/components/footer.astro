@@ -1,0 +1,69 @@
+---
+import { Image } from "astro:assets";
+import logo from "../img/colour_sidetext_dark.svg";
+import { InstagramLogoIcon, GitHubLogoIcon, DiscordLogoIcon } from '@radix-ui/react-icons';
+
+const pages = [
+    {
+        title: "Home",
+        link: "/",
+    },
+    {
+        title: "Our Partners",
+        link: "/partners",
+    },
+    {
+        title: "Archive",
+        link: "/archive",
+    },
+    {
+        title: "March Conference",
+        link: "/events/march",
+    },
+    {
+        title: "June Conference",
+        link: "/events/june",
+    }
+];
+---
+
+<footer class="max-w-6xl mx-auto mb-8 px-5">
+    <hr class="border-white/30" />
+    <a href="/">
+        <Image
+            src={logo}
+            alt="BuildingBloCS's logo"
+            class="h-10 w-auto mt-6 mb-4"
+        />
+    </a>
+    <ul class="flex gap-x-4 ml-2 text-slate-200 flex-col sm:flex-row gap-y-2">
+        {
+            pages.map((page) => (
+                <li>
+                    <a href={page.link} class="hover:underline">
+                        {page.title}
+                    </a>
+                </li>
+            ))
+        }
+    </ul>
+    <div class="flex ml-2 mt-6 gap-x-6">
+        <a
+            aria-label="Our Instagram"
+            href="https://instagram.com/buildingblocs24"
+        >
+            <InstagramLogoIcon className="text-slate-200 hover:text-slate-400 transition w-5 h-5" />
+        </a>
+        <a aria-label="Our GitHub" href="https://github.com/buildingblocs">
+            <GitHubLogoIcon className="text-slate-200 hover:text-slate-400 transition w-5 h-5" />
+        </a>
+        <a aria-label="Our Discord" href="https://discord.gg/VSHyrbsJFs">
+            <DiscordLogoIcon className="text-slate-200 hover:text-slate-400 transition w-5 h-5" />
+        </a>
+        <a aria-label="Our YouTube" href="https://youtube.com/buildingblocssg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="currentColor" class="text-slate-200 hover:text-slate-400 transition w-5 h-5" viewBox="0 0 16 16">
+                <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+              </svg>
+        </a>
+    </div>
+</footer>

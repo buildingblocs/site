@@ -1,0 +1,52 @@
+---
+import Layout from "../layout.astro";
+
+import { Image } from "astro:assets";
+import aisg from "../img/partners/aisg.png";
+import cys from "../img/partners/cys.png";
+import foss from "../img/partners/fossasia-oneliner-red.webp";
+import io from "../img/partners/iofoundation.png";
+import smu from "../img/partners/smu2.png";
+
+const partners = [
+{
+        src: aisg,
+        title: "AI Singapore",
+        desc: "AI Singapore is a government-driven organization dedicated to accelerating the adoption of artificial intelligence in Singapore. They help Singaporeans accustom to our evolving world.",
+    },
+    {
+        src: cys,
+        title: "Cyber Youth Singapore",
+        desc: "Cyber Youth Singapore is a registered charity under the Charities Act. They empower youths with skills and opportunities to become trailblazers of our digital future.",
+    },
+    {
+        src: foss,
+        title: "FOSSASIA",
+        desc: "FOSSASIA aims to provide access to open source technologies, applications and knowledge. It develops open source software applications and hardware from its base in Asia.",
+    },
+    {
+        src: io,
+        title: "The IO Foundation",
+        desc: "The IO Foundation strives to promote Digital Rights, developing programs to bring awareness to such, as well as providing solutions to enforce the defense of it.",
+    },
+    {
+        src: smu,
+        title: "Singapore Management University",
+        desc: "A premier university in Asia, the Singapore Management University (SMU) is internationally recognised for its world-class research and distinguished teaching.",
+    }
+];
+---
+
+<Layout title="Our Partners" showTitle>
+    <main class="flex justify-center flex-wrap mx-5 gap-x-4 mb-20">
+        {
+            partners.map((partner) => (
+                <div class="bg-slate-900 max-w-xs w-full rounded-xl p-5 mt-5">
+                    <Image src={partner.src} alt=`${partner.title}'s logo` loading=eager class="h-20 mx-auto object-contain" />
+                    <h2 class="my-2 text-2xl">{partner.title}</h2>
+                    <p>{partner.desc}</p>
+                </div>
+            ))
+        }
+    </main>
+</Layout>

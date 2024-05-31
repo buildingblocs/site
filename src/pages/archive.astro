@@ -1,0 +1,92 @@
+---
+import Layout from "../layout.astro";
+
+import { Image } from "astro:assets";
+import twentythree from "../img/archive/1.webp";
+import twentytwo from "../img/archive/2022.jpg";
+import twentyone from "../img/archive/2021.jpg";
+import twentytwenty from "../img/archive/2020.png";
+import twentynighteen from "../img/archive/2019.jpg";
+import twentyeighteen from "../img/archive/2018.jpg";
+import twentyseventeen from "../img/archive/2017.jpg";
+
+const events = [
+    {
+        year: 2023,
+        desc: "Jam-packed year with 3 Conferences, FOSSASIA, and a CTF!",
+        link: "https://old.buildingblocs.sg/2023-newnew/",
+        img: twentythree,
+        alt: 'Students at the 2023 BuildingBloCS June Conference'
+    },
+    {
+        year: 2022,
+        desc: "An exciting return to physical events with BuildingBloCS's first March Conference, up alongside the existing June Conference.",
+        link: "https://old.buildingblocs.sg/2022/",
+        img: twentytwo,
+        alt: 'Students at the 2022 BuildingBloCS June Conference'
+    },
+    {
+        year: 2021,
+        desc: "Another online June Conference, this time on Computational Thinking and AI Education.",
+        link: "https://old.buildingblocs.sg/2021/",
+        img: twentyone,
+        alt: 'Students in a Zoom meeting attending the 2021 BuildingBloCS June Conference'
+    },
+    {
+        year: 2020,
+        desc: "BuildingBloCS goes online because of COVID... to teach about Python.",
+        link: "https://old.buildingblocs.sg/2020/",
+        img: twentytwenty,
+        alt: 'A speaker at the 2020 BuildingBloCS June Conference presenting on how to use an educational platform'
+    },
+    {
+        year: 2019,
+        desc: "The future is here - learn about the AI-powered Smart Nation for everyone, by everyone.",
+        link: "https://old.buildingblocs.sg/2019/",
+        img: twentynighteen,
+        alt: 'Students at the 2019 BuildingBloCS June Conference'
+    },
+    {
+        year: 2018,
+        desc: "Discover the Python-powered web in the June Conference.",
+        link: "https://old.buildingblocs.sg/2018/",
+        img: twentyeighteen,
+        alt: 'Organisers registering participants at the 2018 BuildingBloCS June Conference'
+    },
+    {
+        year: 2017,
+        desc: "The first year of BuildingBloCS, featuring our first ever June Conference.",
+        link: "https://old.buildingblocs.sg/2017/",
+        img: twentyseventeen,
+        alt: 'Students at the 2017 BuildingBloCS June Conference'
+    }
+];
+---
+
+<Layout title="Archive" showTitle>
+    <div class="max-w-6xl mx-auto px-2">
+        <p class="text-center mb-10">
+            Have a look at the events we've held in past years, such as our
+            Conferences, FOSSASIA, and more!
+        </p>
+        {
+            events.map((event) => (
+                <a href={event.link} class="relative group">
+                    <div class="h-[30rem] w-full mb-10 overflow-hidden rounded-xl shadow-sm transition relative">
+                        <Image
+                            src={event.img}
+                            alt={event.alt}
+                            loading=eager
+                            class="h-full w-full object-cover transition opacity-90 group-hover:opacity-100 group-hover:scale-105"
+                        />
+                        <div class="absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-b from-transparent via-transparent to-black opacity-50" />
+                        <div class="absolute bottom-5 left-5">
+                            <h2>{event.year}</h2>
+                            <p>{event.desc}</p>
+                        </div>
+                    </div>
+                </a>
+            ))
+        }
+    </div>
+</Layout>
