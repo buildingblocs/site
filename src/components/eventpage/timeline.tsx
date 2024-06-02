@@ -44,7 +44,7 @@ export default function Timeline({ timeline }: { timeline: TimelineType }) {
                   <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-slate-800 bg-slate-700" />
                   <time className="mb-1 text-sm text-slate-400">{ev.time}</time>
                   <h3>{ev.title}</h3>
-                  <p className="text-slate-200 leading-normal my-0.5">{ev.desc}</p>
+                  <p className="text-slate-300 leading-normal my-0.5">{ev.desc}</p>
                   <p className="text-slate-400 text-sm">{ev.author}</p>
                 </li>
               ))}

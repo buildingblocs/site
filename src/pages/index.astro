@@ -12,6 +12,7 @@ import herothree from "../img/index/hero/3.webp";
 import herofour from "../img/index/hero/4.webp";
 import herofive from "../img/index/hero/5.webp";
 import herosix from "../img/index/hero/6.webp";
+import heroseven from "../img/index/hero/IMG_3287.jpg";
 
 import contentone from "../img/index/content/1.webp";
 import contenttwo from "../img/index/content/2.webp";
@@ -56,6 +57,12 @@ const slides = [
         alt: "An organiser giving a presentation in a lecture hall during the 2023 BuildingBloCS June Conference",
         width: 4032,
         height: 3024,
+    },
+    {
+        src: heroseven,
+        alt: "The BuildingBloCS organising team at a bonding event",
+        width: 3532,
+        height: 2650,
     },
 ];
 
@@ -140,7 +147,7 @@ const timeline = [
         }
     </Embla>
     <!-- Content -->
-    <div id="us">
+    <div id="us" class="scroll-mt-24">
         {
             contents.map((content) => (
                 <Content
@@ -165,10 +172,12 @@ const timeline = [
                         <h3>{timeline.title}</h3>
                         <p>{timeline.desc}</p>
                         {timeline.link && 
-                        <Button className="mt-2">
-                            <a href={timeline.link}>Learn More</a>
-                            <ArrowRightIcon className="ml-1" />
-                        </Button>}
+                        <a href={timeline.link}>
+                            <Button className="mt-2">
+                                Learn More
+                                <ArrowRightIcon className="ml-1" />
+                            </Button>
+                        </a>}
                     </li>
                 ))
             }
@@ -193,13 +202,17 @@ const timeline = [
                 <h2>Join Us</h2>
                 <p class="mt-3">for the June Conference to learn coding, the best way.</p>
                 <div class="mt-6 flex items-center justify-center gap-x-6 lg:justify-start">
-                    <Button>
-                        <a href="https://lu.ma/june-conf?utm_source=site-cta">Register now</a>
-                    </Button>
-                    <Button variant="secondary">
-                        <a href="/events/june">Learn more</a>
-                        <ArrowRightIcon className="w-4 ml-1" />
-                    </Button>
+                    <a href="https://lu.ma/june-conf?utm_source=site-cta">
+                        <Button>
+                            Register now
+                        </Button>
+                    </a>
+                    <a href="/events/june">
+                        <Button variant="secondary">
+                            Learn more
+                            <ArrowRightIcon className="w-4 ml-1" />
+                        </Button>
+                    </a>
                 </div>
             </div>
             <div class="pt-7">
