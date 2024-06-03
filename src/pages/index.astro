@@ -1,0 +1,225 @@
+---
+import Layout from "../layout.astro";
+import Embla from "../components/index/embla.astro";
+import Content from "../components/index/content.astro";
+import { Button } from "@/components/ui/button";
+import { ArrowRightIcon } from "@radix-ui/react-icons";
+
+import { Image } from "astro:assets";
+import heroone from "../img/index/hero/1.webp";
+import herotwo from "../img/index/hero/2.webp";
+import herothree from "../img/index/hero/3.webp";
+import herofour from "../img/index/hero/4.webp";
+import herofive from "../img/index/hero/5.webp";
+import herosix from "../img/index/hero/6.webp";
+import heroseven from "../img/index/hero/IMG_3287.jpg";
+
+import contentone from "../img/index/content/1.webp";
+import contenttwo from "../img/index/content/2.webp";
+import contentthree from "../img/index/content/3.webp";
+import contentfour from "../img/index/content/4.webp";
+
+import cta from "../img/index/cta.webp";
+
+const slides = [
+    {
+        src: heroone,
+        alt: "BuildingBloCS team at a FOSSASIA event",
+        width: 4032,
+        height: 2268,
+    },
+    {
+        src: herotwo,
+        alt: "BuildingBloCS team at a FOSSASIA event",
+        width: 4000,
+        height: 3000,
+    },
+    {
+        src: herothree,
+        alt: "Students at the 2023 BuildingBloCS June Conference",
+        width: 8256,
+        height: 5540,
+    },
+    {
+        src: herofour,
+        alt: "An organiser giving a presentation during the 2023 BuildingBloCS June Conference",
+        width: 3422,
+        height: 2507,
+    },
+    {
+        src: herofive,
+        alt: "An organiser giving a presentation in a lecture hall during the 2023 BuildingBloCS June Conference",
+        width: 3648,
+        height: 2736,
+    },
+    {
+        src: herosix,
+        alt: "An organiser giving a presentation in a lecture hall during the 2023 BuildingBloCS June Conference",
+        width: 4032,
+        height: 3024,
+    },
+    {
+        src: heroseven,
+        alt: "The BuildingBloCS organising team at a bonding event",
+        width: 3532,
+        height: 2650,
+    },
+];
+
+const contents = [
+    {
+        textleft: true,
+        img: contentone,
+        imgalt: "Students at a BuildingBloCS event",
+        title: "By students, for students.",
+        desc: "BuildingBloCS is the largest nationwide “By Student, For Student” Computing Advocacy Program, aimed at teaching students the way of the coder 💻.",
+    },
+    {
+        img: contenttwo,
+        imgalt: "An organiser speaking at a FOSSASIA event",
+        title: "Multi-focused.",
+        desc: "We touch base on various topics, like AI, Cybersecurity and Software Development, to varying levels of complexity. It's truly fun for everyone!",
+    },
+    {
+        textleft: true,
+        img: contentthree,
+        imgalt: "Two organisers speaking at a FOSSASIA event",
+        title: "Passionate Speakers.",
+        desc: "We give opportunities to various speakers to talk about their work and interests, and we don't shy away from getting into the nitty-gritty 🚀.",
+    },
+    {
+        img: contentfour,
+        imgalt: "Students having a group discussion at a BuildingBloCS event",
+        title: "Events for everyone.",
+        desc: "We host events for students from Secondary Schools, JCs, Polys and International Schools. All are welcome!",
+    },
+];
+
+const timeline = [
+    {
+        date: 2017,
+        title: "Started as VIA@DHS",
+        desc: "An initiative sparked by the Dunman High Infocomm Club and Mr Gi Soong Chee.",
+    },
+    {
+        date: "2018 - 2023",
+        title: "Expansion into other Schools",
+        desc: "We expanded to take organisers from NUSH, TJC, SP and many more institutes around Singapore, hosting events yearly.",
+    },
+    {
+        date: "10th - 15th March",
+        title: "March Conference",
+        desc: "The March Conference aims to spark an interest in Python and Data Science, with five workshops and a hackathon.",
+        link: "/events/march"
+    },
+    {
+        date: "10th - 14th June",
+        title: "Our June Conference",
+        desc: "Our June Conference is open for registration! Join us for a week of fun and learning.",
+        link: "/events/june"
+    },
+];
+---
+
+<style>
+    .embla__slide {
+        flex: 0 0 100%;
+        display: flex;
+        height: 90vh;
+    }
+</style>
+
+<Layout title="Home">
+    <!-- Embla Carousel -->
+    <Embla>
+        {/* min-h-full is required for safari */}
+        {
+            slides.map((slide) => (
+                <div class="embla__slide">
+                    <Image
+                        src={slide.src}
+                        alt={slide.alt}
+                        class="object-cover min-h-full"
+                        loading=eager
+                    />
+                </div>
+            ))
+        }
+    </Embla>
+    <!-- Content -->
+    <div id="us" class="scroll-mt-24">
+        {
+            contents.map((content) => (
+                <Content
+                    textleft={content.textleft}
+                    img={content.img}
+                    imgalt={content.imgalt}
+                    title={content.title}
+                    desc={content.desc}
+                />
+            ))
+        }
+    </div>
+    <!-- Timeline -->
+    <div class="max-w-2xl mx-auto px-4">
+        <h2>Our History</h2>
+        <ol class="relative border-l border-slate-800 mt-3">
+            {
+                timeline.map((timeline) => (
+                    <li class="ml-4 mt-4">
+                        <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-slate-800 bg-slate-700" />
+                        <time class="mb-1 text-sm text-slate-400">{timeline.date}</time>
+                        <h3>{timeline.title}</h3>
+                        <p>{timeline.desc}</p>
+                        {timeline.link && 
+                        <a href={timeline.link}>
+                            <Button className="mt-2">
+                                Learn More
+                                <ArrowRightIcon className="ml-1" />
+                            </Button>
+                        </a>}
+                    </li>
+                ))
+            }
+        </ol>
+    </div>
+    <!-- CTA -->
+    <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+        <div class="relative isolate overflow-hidden bg-gray-900 dark:bg-slate-900 px-6 pt-16 sm:pt-32 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 xl:gap-x-20 lg:px-24 lg:pt-0">
+            <svg viewBox="0 0 1024 1024"
+                class="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
+                aria-hidden="true">
+                <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)"
+                    fill-opacity="0.7" />
+                <defs>
+                    <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
+                        <stop stop-color="#7775D6" />
+                        <stop offset="1" stop-color="#E935C1" />
+                    </radialGradient>
+                </defs>
+            </svg>
+            <div class="mx-auto max-w-xs text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
+                <h2>Join Us</h2>
+                <p class="mt-3">for the June Conference to learn coding, the best way.</p>
+                <div class="mt-6 flex items-center justify-center gap-x-6 lg:justify-start">
+                    <a href="https://lu.ma/june-conf?utm_source=site-cta">
+                        <Button>
+                            Register now
+                        </Button>
+                    </a>
+                    <a href="/events/june">
+                        <Button variant="secondary">
+                            Learn more
+                            <ArrowRightIcon className="w-4 ml-1" />
+                        </Button>
+                    </a>
+                </div>
+            </div>
+            <div class="pt-7">
+                <div class="lg:absolute bg-white/5 ring-1 lg:rounded-l-lg rounded-t-lg ring-white/10 lg:w-[46rem]">
+                    <Image alt="A lady with a FossAsia lanyard holding a laptop in a auditorium" class="lg:rounded-l-lg rounded-t-lg" src={cta} loading=eager />
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>

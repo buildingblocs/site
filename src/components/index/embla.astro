@@ -1,0 +1,43 @@
+---
+import "@fontsource-variable/playfair-display";
+import { Button } from "@/components/ui/button";
+import { ArrowDownIcon } from "@radix-ui/react-icons";
+---
+
+<style>
+    h1 {
+        font-family: "Playfair Display Variable", serif;
+    }
+</style>
+<div class="h-[90vh] m-3 sm:m-5 relative">
+    <div
+        class="z-10 text-white absolute top-0 left-0 h-full w-full flex flex-col text-center justify-center items-center p-3"
+    >
+        <h1 class="text-4xl sm:text-6xl font-medium">
+            ignite your passion <br class="hidden sm:inline" /> in computing.
+        </h1>
+        <p class="max-w-xl mt-4 mb-2">
+            BuildingBloCS is a year-long outreach programme for students, by
+            students, aimed at promoting more exposure to Computing and CS as a
+            whole to Secondary School, JC and IP students.
+        </p>
+        <a href="#us">
+            <Button variant="ghost">
+                learn more
+                <ArrowDownIcon className="ml-1" />
+            </Button>
+        </a>
+    </div>
+    <div class="embla opacity-50 overflow-hidden rounded-[2rem] flex">
+        <div class="embla__container flex">
+            <slot />
+        </div>
+    </div>
+</div>
+<script>
+    import EmblaCarousel from "embla-carousel";
+    import Autoplay from "embla-carousel-autoplay";
+
+    const emblaNode = document.querySelector(".embla") as HTMLElement;
+    EmblaCarousel(emblaNode, { loop: false }, [Autoplay()]);
+</script>

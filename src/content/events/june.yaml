@@ -1,0 +1,245 @@
+title: June Conference
+luma: evt-FLWhONiYnpt8B3F
+details:
+- 'Workshops: 10th - 11th June'
+- 'Closing Ceremony: 14th June'
+- 'Venue: Singapore Management University'
+- 'Email contact for queries: hello@buildingblocs.sg'
+desc: >-
+  BuildingBloCS’ June Conference is back with a bang to teach participants the <b>applications of AI</b>, 
+  which has become more prominent in our lives today. We have specially designed <i>three different 
+  tracks</i> based on prior experience: Beginner, in which we will introduce Python and various 
+  beginner-friendly AI libraries; Intermediate, where we will guide you through the ecosystem of 
+  AI libraries that are commonly used; and finally Advanced, where we will take a deep dive into 
+  theory and also deploying your AI applications. Across the three conference days, we hope that 
+  participants will forge friendships, hone their skills, and apply what they've learnt in our very own <b>hackathon</b>!
+faq:
+- q: Must I go for all the workshops in my track?
+  a: You are highly encouraged to attend all the workshops, as content from some workshops may build on previous workshops. All skills will be taught progressively, so it may be harder to catch up if you miss one.
+- q: Why should I sign up? Is it free?
+  a: It's a free, fun and easy way to learn new skills about AI and computing! What more could you ask for?
+- q: What if something pops up and I can't make it? 
+  a: Please indicate that you are not coming via the lu.ma interface.
+- q: What is a "hackathon"? Is it compulsory?
+  a: A hackathon is a competition where you'll have to work in teams to create an application based on a theme provided. It's a great way to practice your skills, however, it is not compulsory to encourage everyone to learn and attend.
+- q: What are the prizes? When will I get them?
+  a: We can't divulge any information about the prizes, but they will be given out after the finals, on Friday, 14th June!
+- q: How will the hackathon groups be allocated? Can I choose my teammates?
+  a: For this hackathon, we will be allocating the groups for you. However, if you (mutually) indicate someone you'll like to work with, we'll take that into consideration. Any other empty slots will be filled randomly, taking into account your age.
+prospectus:
+- src: /events/june/1.png
+- src: /events/june/2.png
+- src: /events/june/3.png
+- src: /events/june/4.png
+- src: /events/june/5.png
+- src: /events/june/6.png
+- src: /events/june/7.png
+- src: /events/june/8.png
+timeline:
+- title: Beginner
+  events:
+  - date: 10 June
+    event:
+    - time: 08:30 - 09:00
+      title: Registration
+    - time: 09:00 - 09:30
+      title: Opening Ceremony
+    - time: 09:30 - 11:30
+      title: Python with GitHub Pro
+      desc: Learn the fundamentals of programming with Python syntax, data structures, control flow and more, while leveraging on the guidance GitHub Pro's Copilot can provide. This workshop is suitable even for complete beginners
+      author: by Shivani, Jolynn and Sai
+    - time: 11:30 - 12:00
+      title: Icebreakers
+    - time: 12:00 - 13:00
+      title: Lunch
+    - time: 13:00 - 13:30
+      title: Hackathon Briefing
+    - time: 13:30 - 15:30
+      title: Python with GitHub Pro
+      desc: Learn the fundamentals of programming with Python syntax, data structures, control flow and more, while leveraging on the guidance GitHub Pro's Copilot can provide. This workshop is suitable even for complete beginners
+      author: by Shivani, Jolynn and Sai
+    - time: 15:30 - 16:00
+      title: Break
+    - time: 16:00 - 18:00
+      title: Orange and Pycaret
+      author: by Dhanvine, Eugene and Mahit
+  - date: '11 June'
+    event:
+    - time: 09:00 - 09:30
+      title: Attendance
+    - time: 09:30 - 10:30
+      title: Orange and Pycaret
+      author: by Dhanvine, Eugene and Mahit
+    - time: 10:30 - 11:30
+      title: Sharing by Open Government Products
+      author: by Mr Kee Wei Lam
+    - time: 11:30 - 13:30
+      title: LLM Basics
+      author: by Sahil and Cayden
+    - time: 13:30 - 14:30
+      title: Lunch
+    - time: 14:30 - 17:00
+      title: Orange and Pycaret + Breaks
+      author: by Dhanvine, Eugene and Mahit
+    - time: 17:00 - 18:30
+      title: Hackathon time
+      desc: Time is given for you to work on your hackathon with your teammates
+  - date: '14 June'
+    event:
+    - time: '09:00 - 09:30'
+      title: Attendance
+    - time: '09:30 - 11:30'
+      title: Booths
+      desc: View the wide variety of booths from our partners
+    - time: '11:30 - 12:00'
+      title: Special Activities
+    - time: '12:00 - 13:00'
+      title: Lunch
+    - time: '13:00 - 13:30'
+      title: Speech
+      author: by Cyber Youth Singapore
+    - time: '14:00 - 14:30'
+      title: Fireside Chat and Speech
+      author: by Guest of Honour
+    - time: '14:30 - 16:00'
+      title: Prize Giving
+- title: Intermediate
+  events:
+  - date: 10 June
+    event:
+    - time: 08:30 - 09:00
+      title: Registration
+    - time: 09:00 - 09:30
+      title: Opening Ceremony
+    - time: 09:30 - 11:30
+      title: GitHub and Git Basics
+      desc: Learn the basic essentials of Git for collaborative software development
+      author: by Saumil, Yuhan and Shao Qi
+    - time: 11:30 - 12:00
+      title: Icebreakers
+    - time: 12:00 - 13:00
+      title: Lunch
+    - time: 13:00 - 13:30
+      title: Hackathon Briefing
+    - time: 13:30 - 15:00
+      title: PandasAI
+      desc: Intuitive data analysis through natural language queries and pandas
+      author: by Ayden and Alexis
+    - time: 15:00 - 18:00
+      title: Scikit-learn & Scikit-NN
+      desc: Kickstart the transformation of your theoretical knowledge of machine learning into practical applications using Scikit-learn! Learn to set up the various algorithms, neural networks, and optimise them
+      author: by Ze Dong and Harry
+  - date: '11 June'
+    event:
+    - time: 09:00 - 09:30
+      title: Attendance
+    - time: 09:30 - 10:30
+      title: Scikit-learn & Scikit-NN
+      desc: Kickstart the transformation of your theoretical knowledge of machine learning into practical applications using Scikit-learn! Learn to set up the various algorithms, neural networks, and optimise them
+      author: by Ze Dong and Harry
+    - time: 10:30 - 11:30
+      title: Sharing by Open Government Products
+      author: by Mr Kee Wei Lam
+    - time: 11:30 - 13:30
+      title: LLM Basics and Prompt Engineering
+      author: by Sahil and Cayden
+    - time: 13:30 - 14:30
+      title: Lunch
+    - time: 14:30 - 17:00
+      title: Trailblazing with Streamlit
+      desc: Light up the world with the power of Streamlit! Create blazing data applications in Python that skyrocket from setup to deployment with barely any effort
+      author: by Johnson and Weiyi
+    - time: 17:00 - 18:30
+      title: Pytorch
+      desc: Build a simple Neural Network with PyTorch
+      author: by Lucius, Hugo and Arjun
+  - date: '14 June'
+    event:
+    - time: '09:00 - 09:30'
+      title: Attendance
+    - time: '09:30 - 11:30'
+      title: Booths
+      desc: View the wide variety of booths from our partners
+    - time: '11:30 - 12:00'
+      title: Special Activities
+    - time: '12:00 - 13:00'
+      title: Lunch
+    - time: '13:00 - 13:30'
+      title: Speech
+      author: by Cyber Youth Singapore
+    - time: '14:00 - 14:30'
+      title: Fireside Chat and Speech
+      author: by Guest of Honour
+    - time: '14:30 - 16:00'
+      title: Prize Giving
+- title: Advanced
+  events:
+  - date: 10 June
+    event:
+    - time: 08:30 - 09:00
+      title: Registration
+    - time: 09:00 - 09:30
+      title: Opening Ceremony
+    - time: 09:30 - 11:30
+      title: GitHub and Git Basics
+      desc: Learn the basic essentials of Git for collaborative software development
+      author: by Saumil, Yuhan and Shao Qi
+    - time: 11:30 - 12:00
+      title: Icebreakers
+    - time: 12:00 - 13:00
+      title: Lunch
+    - time: 13:00 - 13:30
+      title: Hackathon Briefing
+    - time: 13:30 - 16:30
+      title: RNNs and Transformers
+      desc: Teach intuitively the structure of RNN and Transformers and then transition to versatility of Transformers
+      author: by Justin, Mahir and Wee Zen
+    - time: 16:30 - 18:00
+      title: Diffusion and GAN
+      desc: Don’t know what GANs and Diffusion are? Learn the system and technologies behind Stable Diffusion
+      author: by Sai, Yue Heng
+  - date: '11 June'
+    event:
+    - time: 09:00 - 09:30
+      title: Attendance
+    - time: 09:30 - 10:30
+      title: Hackathon time
+      desc: Time is given for you to work on your hackathon with your teammates
+    - time: 10:30 - 11:30
+      title: Sharing by Open Government Products
+      author: by Mr Kee Wei Lam
+    - time: 11:30 - 13:30
+      title: MLOps
+      desc: Introduction to a suite of technologies that are used to deploy/maintain/develop AI models
+      author: by Ming Hong
+    - time: 13:30 - 14:30
+      title: Lunch
+    - time: 14:30 - 15:30
+      title: MLOps
+      desc: Introduction to a suite of technologies that are used to deploy/maintain/develop AI models
+      author: by Ming Hong
+    - time: 15:30 - 16:00
+      title: Break
+    - time: 16:00 - 18:00
+      title: Gemini API into Web Development
+      desc: Build an AI-powered chatbot-based weather web-app that gives the forecast of the upcoming weather
+      author: by Myat
+  - date: '14 June'
+    event:
+    - time: '09:00 - 09:30'
+      title: Attendance
+    - time: '09:30 - 11:30'
+      title: Booths
+      desc: View the wide variety of booths from our partners
+    - time: '11:30 - 12:00'
+      title: Special Activities
+    - time: '12:00 - 13:00'
+      title: Lunch
+    - time: '13:00 - 13:30'
+      title: Speech
+      author: by Cyber Youth Singapore
+    - time: '14:00 - 14:30'
+      title: Fireside Chat and Speech
+      author: by Guest of Honour
+    - time: '14:30 - 16:00'
+      title: Prize Giving

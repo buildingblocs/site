@@ -1,0 +1,24 @@
+---
+import "./styles.css";
+import Nav from "./components/nav.tsx";
+import Footer from "./components/footer.astro";
+
+const { title, showTitle } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="sitemap" href="/sitemap-index.xml" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>{title} | BuildingBloCS</title>
+	</head>
+	<body class="bg-slate-950">
+		<Nav client:load />
+		{showTitle && <h1 class="flex justify-center mt-10 mb-5">{title}</h1>}
+		<slot />
+		<Footer />
+	</body>
+</html>
