@@ -5,6 +5,7 @@ details:
 - 'Closing Ceremony: 14th June'
 - 'Venue: Singapore Management University'
 - 'Email contact for queries: hello@buildingblocs.sg'
+excerpt: The June Conference is back with a bang to teach participanta about Artificial Intelligence. Learn new concepts, apply your skills in the hackathon and stand a chance to win prizes
 desc: >-
   BuildingBloCS’ June Conference is back with a bang to teach participants the <b>applications of AI</b>, 
   which has become more prominent in our lives today. We have specially designed <i>three different 
@@ -63,7 +64,7 @@ timeline:
     - time: 16:00 - 18:00
       title: Orange and Pycaret
       author: by Dhanvine, Eugene and Mahit
-  - date: '11 June'
+  - date: 11 June
     event:
     - time: 09:00 - 09:30
       title: Attendance
@@ -84,24 +85,24 @@ timeline:
     - time: 17:00 - 18:30
       title: Hackathon time
       desc: Time is given for you to work on your hackathon with your teammates
-  - date: '14 June'
+  - date: 14 June
     event:
-    - time: '09:00 - 09:30'
+    - time: 09:00 - 09:30
       title: Attendance
-    - time: '09:30 - 11:30'
+    - time: 09:30 - 11:30
       title: Booths
       desc: View the wide variety of booths from our partners
-    - time: '11:30 - 12:00'
+    - time: 11:30 - 12:00
       title: Special Activities
-    - time: '12:00 - 13:00'
+    - time: 12:00 - 13:00
       title: Lunch
-    - time: '13:00 - 13:30'
+    - time: 13:00 - 13:30
       title: Speech
       author: by Cyber Youth Singapore
-    - time: '14:00 - 14:30'
+    - time: 14:00 - 14:30
       title: Fireside Chat and Speech
       author: by Guest of Honour
-    - time: '14:30 - 16:00'
+    - time: 14:30 - 15:15
       title: Prize Giving
 - title: Intermediate
   events:
@@ -129,7 +130,7 @@ timeline:
       title: Scikit-learn & Scikit-NN
       desc: Kickstart the transformation of your theoretical knowledge of machine learning into practical applications using Scikit-learn! Learn to set up the various algorithms, neural networks, and optimise them
       author: by Ze Dong and Harry
-  - date: '11 June'
+  - date: 11 June
     event:
     - time: 09:00 - 09:30
       title: Attendance
@@ -153,24 +154,24 @@ timeline:
       title: Pytorch
       desc: Build a simple Neural Network with PyTorch
       author: by Lucius, Hugo and Arjun
-  - date: '14 June'
+  - date: 14 June
     event:
-    - time: '09:00 - 09:30'
+    - time: 09:00 - 09:30
       title: Attendance
-    - time: '09:30 - 11:30'
+    - time: 09:30 - 11:30
       title: Booths
       desc: View the wide variety of booths from our partners
-    - time: '11:30 - 12:00'
+    - time: 11:30 - 12:00
       title: Special Activities
-    - time: '12:00 - 13:00'
+    - time: 12:00 - 13:00
       title: Lunch
-    - time: '13:00 - 13:30'
+    - time: 13:00 - 13:30
       title: Speech
       author: by Cyber Youth Singapore
-    - time: '14:00 - 14:30'
+    - time: 14:00 - 14:30
       title: Fireside Chat and Speech
       author: by Guest of Honour
-    - time: '14:30 - 16:00'
+    - time: 14:30 - 15:15
       title: Prize Giving
 - title: Advanced
   events:
@@ -198,7 +199,7 @@ timeline:
       title: Diffusion and GAN
       desc: Don’t know what GANs and Diffusion are? Learn the system and technologies behind Stable Diffusion
       author: by Sai, Yue Heng
-  - date: '11 June'
+  - date: 11 June
     event:
     - time: 09:00 - 09:30
       title: Attendance
@@ -224,22 +225,22 @@ timeline:
       title: Gemini API into Web Development
       desc: Build an AI-powered chatbot-based weather web-app that gives the forecast of the upcoming weather
       author: by Myat
-  - date: '14 June'
+  - date: 14 June
     event:
-    - time: '09:00 - 09:30'
+    - time: 09:00 - 09:30
       title: Attendance
-    - time: '09:30 - 11:30'
+    - time: 09:30 - 11:30
       title: Booths
       desc: View the wide variety of booths from our partners
-    - time: '11:30 - 12:00'
+    - time: 11:30 - 12:00
       title: Special Activities
-    - time: '12:00 - 13:00'
+    - time: 12:00 - 13:00
       title: Lunch
-    - time: '13:00 - 13:30'
+    - time: 13:00 - 13:30
       title: Speech
       author: by Cyber Youth Singapore
-    - time: '14:00 - 14:30'
+    - time: 14:00 - 14:30
       title: Fireside Chat and Speech
       author: by Guest of Honour
-    - time: '14:30 - 16:00'
+    - time: 14:30 - 15:15
       title: Prize Giving

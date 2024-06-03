@@ -10,14 +10,15 @@ const eventsData = defineCollection({
     title: z.string(),
     luma: z.string().optional(),
     details: z.string().array(),
-    desc: z.string(),
+    excerpt: z.string(),
+    desc: z.string().optional(),
     faq: z.array(z.object({
       q: z.string(),
       a: z.string(),
     })),
     prospectus: z.object({
       src: z.string()
-    }).array(),
+    }).array().optional(),
     timeline: z.object({
       title: z.string().optional(),
       events: z.object({

@@ -76,7 +76,7 @@ export default function Nav() {
                     </a>
                     <Separator orientation="vertical" className="bg-slate-800" />
                     <Sheet>
-                        <SheetTrigger><HamburgerMenuIcon /></SheetTrigger>
+                        <SheetTrigger aria-label="Navigation Menu"><HamburgerMenuIcon /></SheetTrigger>
                         <SheetContent>
                             <div className="flex flex-col justify-center h-full text-xl gap-y-2 font-medium relative">
                                 <a className="absolute top-5 bg-orange-500 p-3 rounded-xl" href="/events/june">
