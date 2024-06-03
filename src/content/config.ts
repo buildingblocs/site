@@ -8,17 +8,18 @@ const eventsData = defineCollection({
   type: 'data', // v2.5.0 and later
   schema: z.object({
     title: z.string(),
+    status: z.string(),
     luma: z.string().optional(),
     details: z.string().array(),
     excerpt: z.string(),
-    desc: z.string().optional(),
+    desc: z.string(),
     faq: z.array(z.object({
       q: z.string(),
       a: z.string(),
     })),
     prospectus: z.object({
       src: z.string()
-    }).array().optional(),
+    }).array(),
     timeline: z.object({
       title: z.string().optional(),
       events: z.object({

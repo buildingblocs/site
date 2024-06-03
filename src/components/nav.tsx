@@ -63,13 +63,17 @@ export default function Nav() {
                     </div>
                 </div>
                 <a className="h-16 justify-end flex sticky top-0 z-20" href="/events/june">
-                    <div className="pl-6 pr-2.5 rounded-full mt-4 bg-slate-900/50 backdrop-filter backdrop-blur-lg ring ring-1 ring-slate-800 flex items-center gap-x-4">
-                        <p>The June Conference is here.</p>
-                        <div className="bg-orange-500 hover:bg-orange-600 rounded-full py-1 px-3 transition flex gap-x-2 items-center font-semibold"><p className="hidden md:block">Sign Up Now</p><ArrowRightIcon className="w-5 h-5" /></div>
+                    <div className="pl-5 pr-2.5 rounded-full mt-4 bg-slate-900/50 backdrop-filter backdrop-blur-lg ring ring-1 ring-slate-800 flex items-center gap-x-4">
+                        <p className="mt-0.5">June Conference</p>
+                        <div className="bg-orange-500 hover:bg-orange-600 rounded-full p-1 px-1.5 transition flex gap-x-2 items-center font-semibold"><ArrowRightIcon className="w-5 h-5" /></div>
                     </div>
                 </a>
             </div>
             <div className="sm:hidden h-16 justify-end flex sticky top-0 z-20">
+            <div className="px-6 py-2 rounded-full mt-4 mr-4 bg-slate-900/50 backdrop-filter backdrop-blur-lg ring ring-1 ring-slate-800 flex items-center gap-x-4 text-sm">
+                        <p className="mt-0.5">June Conference</p>
+                        <div className="bg-orange-500 hover:bg-orange-600 rounded-full p-1 px-1.5 transition flex gap-x-2 items-center font-semibold"><ArrowRightIcon className="w-5 h-5" /></div>
+                    </div>
                 <div className="px-6 py-2 rounded-full mt-4 mr-4 bg-slate-900/50 backdrop-filter backdrop-blur-lg ring ring-1 ring-slate-800 flex items-center gap-x-4">
                     <a href="/">
                         <img src='/favicon.svg' alt="BuildingBloCS logo" className="w-5 h-5" />
@@ -79,10 +83,6 @@ export default function Nav() {
                         <SheetTrigger aria-label="Navigation Menu"><HamburgerMenuIcon /></SheetTrigger>
                         <SheetContent>
                             <div className="flex flex-col justify-center h-full text-xl gap-y-2 font-medium relative">
-                                <a className="absolute top-5 bg-orange-500 p-3 rounded-xl" href="/events/june">
-                                    <h2 className="text-xl font-semibold text-center">The June Conference is here</h2>
-                                    <p className="flex items-center justify-center gap-x-1 text-sm bg-white rounded-md mt-1 text-black p-1 mt-2">Sign Up Now<ArrowRightIcon /></p>
-                                </a>
                                 {mobileLinks.map((link) => (
                                     <a href={link.href} key={link.title}>{link.title}</a>
                                 ))}

@@ -31,7 +31,7 @@ jobs:
           node-version: 20
           cache: 'pnpm'
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm i
       - name: Build Astro
         run: pnpm build
       - name: Upload Pages Artifact
