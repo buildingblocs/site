@@ -41,6 +41,19 @@ const { entry } = Astro.props;
           </Button>
         </div>
       }
+      {entry.data.directions &&
+        <div>
+          <Button>
+            <a
+              href={entry.data.directions}
+              class="flex items-center gap-x-2"
+            >
+              Directions
+              <ArrowRightIcon />
+            </a>
+          </Button>
+        </div>
+      }
       {entry.data.status !== 'closed' && <p set:html={entry.data.desc} /> }
       {entry.data.status == 'closed' && <p>Registration is closed! To modify your existing registration, please check for emails sent by lu.ma</p>}
       <Faq client:load faq={entry.data.faq} />

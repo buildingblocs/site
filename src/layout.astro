@@ -18,7 +18,7 @@ const { title, showTitle, desc } = Astro.props;
 	</head>
 	<body class="bg-slate-950">
 		<Nav client:load />
-		{showTitle && <h1 class="flex justify-center mt-10 mb-5">{title}</h1>}
+		{showTitle && <h1 class="text-center mt-10 mb-5">{title}</h1>}
 		<slot />
 		<Footer />
 	</body>
