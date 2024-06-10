@@ -64,14 +64,14 @@ export default function Nav() {
                 </div>
                 <a className="h-16 justify-end flex sticky top-0 z-20" href="/events/june">
                     <div className="pl-5 pr-2.5 rounded-full mt-4 bg-slate-900/50 backdrop-filter backdrop-blur-lg ring ring-1 ring-slate-800 flex items-center gap-x-4">
-                        <p className="mt-0.5">June Conference</p>
+                        <p>June Conference</p>
                         <div className="bg-orange-500 hover:bg-orange-600 rounded-full p-1 px-1.5 transition flex gap-x-2 items-center font-semibold"><ArrowRightIcon className="w-5 h-5" /></div>
                     </div>
                 </a>
             </div>
             <div className="sm:hidden h-16 justify-end flex sticky top-0 z-20">
                 <a href="/events/june" className="px-6 py-2 rounded-full mt-4 mr-4 bg-slate-900/50 backdrop-filter backdrop-blur-lg ring ring-1 ring-slate-800 flex items-center gap-x-4 text-sm">
-                    <p className="mt-0.5">June Conference</p>
+                    <p>June Conference</p>
                     <div className="bg-orange-500 hover:bg-orange-600 rounded-full p-1 px-1.5 transition flex gap-x-2 items-center font-semibold"><ArrowRightIcon className="w-5 h-5" /></div>
                 </a>
                 <div className="px-6 py-2 rounded-full mt-4 mr-4 bg-slate-900/50 backdrop-filter backdrop-blur-lg ring ring-1 ring-slate-800 flex items-center gap-x-4">

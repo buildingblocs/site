@@ -27,32 +27,25 @@ const { entry } = Astro.props;
         {entry.data.details.map((detail) => <li set:html={detail} />)}
       </ul>
       {entry.data.luma && entry.data.status !== 'closed' &&
-        <div>
-          <Button>
-            <a
-              href=`https://lu.ma/event/${entry.data.luma}?utm_source=bbcs-site`
-              data-luma-action="checkout"
-              data-luma-event-id={entry.data.luma}
-              class="flex items-center gap-x-2"
-            >
+        <a
+          href=`https://lu.ma/event/${entry.data.luma}?utm_source=bbcs-site`
+          data-luma-action="checkout"
+          data-luma-event-id={entry.data.luma}
+          class="w-max"
+        >
+          <Button className="flex gap-x-2">
               Register for Event
               <ArrowRightIcon />
-            </a>
           </Button>
-        </div>
+        </a>
       }
       {entry.data.directions &&
-        <div>
-          <Button>
-            <a
-              href={entry.data.directions}
-              class="flex items-center gap-x-2"
-            >
+        <a href={entry.data.directions} class="w-max">
+          <Button className="flex gap-x-2">
               Directions
               <ArrowRightIcon />
-            </a>
           </Button>
-        </div>
+        </a>
       }
       {entry.data.status !== 'closed' && <p set:html={entry.data.desc} /> }
       {entry.data.status == 'closed' && <p>Registration is closed! To modify your existing registration, please check for emails sent by lu.ma</p>}

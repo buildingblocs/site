@@ -56,9 +56,9 @@ export default function Timeline({ timeline }: { timeline: TimelineType }) {
   ));
 
   return (
-    <Tabs defaultValue={timeline[0].title || ''}>
-      {timeline[0].title && <TabsList className="w-full">{outerTabs}</TabsList>}
-      {content}
-    </Tabs>
+      <Tabs id="schedule" className="scroll-mt-10" defaultValue={timeline[0].title || ''}>
+        {timeline[0].title && <TabsList className="w-full">{outerTabs}</TabsList>}
+        {content}
+      </Tabs>
   );
 }
