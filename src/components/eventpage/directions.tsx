@@ -287,6 +287,35 @@ export default function DirectionList() {
                     ]
                 }
             ]
+        },
+        {
+            title: "Day 3",
+            tracks: [
+                {
+                    "Beginner": [
+                        methods.BencoolenUsher,
+                        methods.BBUsher,
+                        methods.toBasementSRbyBus,
+                        methods.toBasementSRbyCar
+                    ]
+                },
+                {
+                    "Intermediate": [
+                        methods.toSCIS1byBencoolen,
+                        methods.toSCIS1byBB,
+                        methods.toSCIS1byBus,
+                        methods.toSCIS1byCar
+                    ]
+                },
+                {
+                    "Advanced": [
+                        methods.toSCIS1byBencoolen,
+                        methods.toSCIS1byBB,
+                        methods.toSCIS1byBus,
+                        methods.toSCIS1byCar
+                    ]
+                }
+            ]
         }
     ];    
 
