@@ -26,7 +26,7 @@ const { entry } = Astro.props;
       <ul class="list-disc marker:text-slate-500 ml-4 list-inside">
         {entry.data.details.map((detail) => <li set:html={detail} />)}
       </ul>
-      {entry.data.luma && entry.data.status !== 'closed' &&
+      {entry.data.luma && entry.data.status == 'open' &&
         <a
           href=`https://lu.ma/event/${entry.data.luma}?utm_source=bbcs-site`
           data-luma-action="checkout"
