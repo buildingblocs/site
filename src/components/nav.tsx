@@ -9,7 +9,7 @@ import {
     SheetTrigger,
 } from "@/components/ui/sheet"
 import { Separator } from "@/components/ui/separator"
-import { HamburgerMenuIcon, ArrowRightIcon, ChevronDownIcon } from "@radix-ui/react-icons";
+import { HamburgerMenuIcon, ChevronDownIcon } from "@radix-ui/react-icons";
 
 export default function Nav() {
     const mobileLinks = [
