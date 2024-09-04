@@ -1,0 +1,25 @@
+---
+import blank from "../../img/team/blank.webp";
+import { GitHubLogoIcon, LinkedInLogoIcon, Link2Icon, InstagramLogoIcon } from "@radix-ui/react-icons";
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+const { name, description, githubLink, inLink, webLink, lead, imageSrc, igLink } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/img/team/*.webp');
+const photo = images[imageSrc] ? images[imageSrc]() : blank;
+---
+<div class="border rounded-lg shadow bg-slate-900 border-slate-700 flex flex-col h-80 w-72">
+    <div class="flex h-12">
+        <div class="flex-1">
+            {lead && <span class="ml-4 mt-3 inline-flex items-center rounded-md bg-orange-900 text-orange-300 px-2 py-1 text-xs font-medium ring-1 ring-inset ring-orange-700">Lead</span>}
+        </div>
+        <div class="flex gap-x-3 pt-4 pr-4">
+            {githubLink && <a href={githubLink}><GitHubLogoIcon className="w-5 h-5" /></a>}
+            {inLink && <a href={inLink}><LinkedInLogoIcon className="w-5 h-5" /></a>}
+            {webLink && <a href={webLink}><Link2Icon className="w-5 h-5" /></a>}
+            {igLink && <a href={igLink}><InstagramLogoIcon className="w-5 h-5" /></a>}
+        </div>
+    </div>        
+    <Image src={photo} alt="hi" class="w-32 h-32 mb-3 rounded-full shadow-lg self-center" />
+    <h3 class="text-center font-semibold text-xl">{name}</h3>
+    <p class="text-center leading-5 text-sm mx-4 mt-1 text-slate-300">{description}</p>
+</div>

@@ -35,7 +35,7 @@ const partners = [
     <main class="flex justify-center flex-wrap mx-5 gap-x-4 mb-20">
         {
             partners.map((partner) => (
-                <div class="bg-slate-900 max-w-xs w-full rounded-xl p-5 mt-5">
+                <div class="bg-slate-900 max-w-xs w-full rounded-xl p-5 mt-5 border border-slate-700">
                     <Image src={partner.src} alt=`${partner.title}'s logo` loading=eager class="h-20 mx-auto object-contain" />
                     <h2 class="my-2 text-2xl">{partner.title}</h2>
                     <p>{partner.desc}</p>
