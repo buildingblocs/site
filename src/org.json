@@ -59,7 +59,8 @@
     "angelina": {
         "imageSrc": "/src/img/team/Angelina.webp",
         "name": "Angelina",
-        "description": "A Y5 from DHS who just happen to be a girl in STEM (mostly the S and T)"
+        "description": "Hiya! I'm Angelina, a J1 from DHS who loves all things STEM, especially chem and coding. ",
+        "inLink": "https://www.linkedin.com/in/angelina-wu-6184302b8/"
     },
     "yue": {
         "imageSrc": "/src/img/team/YueHeng_Wong.webp",
@@ -159,9 +160,9 @@
         "githubLink": "https://github.com/kat-fly"
     },
     "cheah": {
-        "imageSrc": "/src/img/team/sheng_xin.webp",
+        "imageSrc": "/src/img/team/Cheah_Sheng_Xin.webp",
         "name": "Cheah Sheng Xin",
-        "description": "Hello! I'm Sheng Xin, a secondary 3 student from AHS. My area of interests are: app dev, competitive programming etc :D",
+        "description": "Hello! I enjoy exploring new fields in tech and I'm constantly trying out new hobbies!",
         "githubLink": "https://github.com/Coffeediaries"
     },
     "allen": {
@@ -277,8 +278,9 @@
         "description": "Hi i'm Zinedine i'm a jc2 student from Dunman High School"
     },
     "sindya": {
+        "imageSrc": "/src/img/team/sindya_yu.webp",
         "name": "sindya",
-        "description": "hi im sindya, im from river valley high school, and i like coding, games and cats. looking forward to working with everyone!",
+        "description": "average river valley student with a gacha game addiction and a passion for coding. and love for cats.",
         "githubLink": "https://github.com/sssyntax"
     },
     "koh": {
@@ -288,7 +290,9 @@
         "inLink": "https://www.linkedin.com/in/matt-koh-400a8a288/"
     },
     "sahil": {
+        "imageSrc": "/src/img/team/Sahil_Menon.webp",
         "name": "Sahil Menon",
+        "description": "Hi! I'm quite interested in programming, and I love tinkering with cool tech.",
         "githubLink": "https://github.com/sahilmenon",
         "inLink": "https://www.linkedin.com/in/sahil-menon/"
     },
@@ -359,6 +363,7 @@
     },
     "yan": {
         "name": "Yan Hai De",
+        "description": "coffee flows through my veins",
         "githubLink": "https://github.com/haidelao"
     },
     "soh": {
@@ -385,6 +390,7 @@
         "inLink": "https://www.linkedin.com/in/cytronicoder/"
     },
     "neo": {
+        "imageSrc": "/src/img/team/Neo Wee Zen.webp",
         "name": "Neo Wee Zen",
         "description": "Hi, I'm Wee Zen and I'm a JC1 student who enjoys learning Chemistry and writing poetry! Oh, and coding sometimes.",
         "githubLink": "https://github.com/nwztest",
