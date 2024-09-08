@@ -315,7 +315,7 @@
     },
     "shao": {
         "name": "Shao Qi Loh",
-        "desc": "Student at Ngee Ann Polytechnic",
+        "description": "Student at Ngee Ann Polytechnic",
         "githubLink": "https://github.com/sethlsq",
         "inLink": "http://www.linkedin.com/in/sethlsq"
     },
@@ -402,8 +402,9 @@
         "githubLink": "https://github.com/AksharaaRamesh02"
     },
     "chua": {
-        "imageSrc": "/src/img/team/Chua Yu Jun, Lucas.webp",
+        "imageSrc": "/src/img/team/Chua_Yu_Jun_Lucas.webp",
         "name": "Lucas Chua",
+        "description": "Hi, I'm a Sec 4 from RVHS. I like playing and developing games🎮, and also play badminton often 🏸",
         "inLink": "https://www.linkedin.com/in/lucas-chua-a444782b7/"
     },
     "ryan": {
@@ -414,6 +415,7 @@
     "tan_3": {
         "imageSrc": "/src/img/team/Tan Jun Wei.webp",
         "name": "Tan Jun Wei",
+        "description": "Hello, I am Jun Wei, a NP Cybersecurity student who enjoys CTFs",
         "githubLink": "https://github.com/Tan-JunWei",
         "inLink": "https://linkedin.com/in/jun-wei-tan"
     },
