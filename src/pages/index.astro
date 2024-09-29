@@ -21,6 +21,13 @@ import contentfour from "../img/index/content/4.webp";
 
 // import cta from "../img/index/cta.webp";
 
+interface Timeline {
+  date: string;
+  title: string;
+  desc: string;
+  link?: string;
+}
+
 const slides = [
     {
         src: heroone,
@@ -95,9 +102,9 @@ const contents = [
     },
 ];
 
-const timeline = [
+const timeline: Timeline[] = [
     {
-        date: 2017,
+        date: "2017",
         title: "Started as VIA@DHS",
         desc: "An initiative sparked by the Dunman High Infocomm Club and Mr Gi Soong Chee.",
     },
@@ -165,19 +172,19 @@ const timeline = [
         <h2>Our History</h2>
         <ol class="relative border-l border-slate-800 mt-3">
             {
-                timeline.map((timeline) => (
-                    <li class="ml-4 mt-4" key={timeline.date} {...{} as any}> {/* TS suppression; should use interface for props */}
+                timeline.map((item) => (
+                <li class="ml-4 mt-4" data-key={item.date.toString()}>
                         <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-slate-800 bg-slate-700" />
-                        <time class="mb-1 text-sm text-slate-400">{timeline.date}</time>
-                        {timeline.link ? (
-                            <a href={timeline.link} class="flex items-center gap-x-2 w-max rounded-md px-2 py-1 -ml-1 bg-slate-800 group">
-                                <h3>{timeline.title}</h3>
+                        <time class="mb-1 text-sm text-slate-400">{item.date}</time>
+                        {item.link ? (
+                            <a href={item.link} class="flex items-center gap-x-2 w-max rounded-md px-2 py-1 -ml-1 bg-slate-800 group">
+                                <h3>{item.title}</h3>
                                 <ArrowRightIcon className="mt-1 group-hover:translate-x-1 group-hover:mr-2 w-[1.2rem] h-[1.2rem] transition" />
                             </a>
                         ) : (
-                                <h3>{timeline.title}</h3>
+                            <h3>{item.title}</h3>
                         )}
-                        <p>{timeline.desc}</p>
+                        <p>{item.desc}</p>
                     </li>
                 ))
             }
