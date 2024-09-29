@@ -380,10 +380,10 @@
         "githubLink": "https://github.com/j0lynN-Y",
         "inLink": "https://linkedin.com/in/jolynn-yeo-7b61a1261"
     },
-    "zeyu": {
-        "imageSrc": "/src/img/team/zeyu_yao.webp",
-        "name": "Zeyu Yao",
-        "description": "I occasionally work on bioinformatics research and lead Hack Club shenanigans.",
+    "peter": {
+        "imageSrc": "/src/img/team/Zeyu_Yao.webp",
+        "name": "Zeyu (Peter) Yao",
+        "description": "Bioinformatics researcher, Hack Club leader of shenanigans, and in-house website breaker",
         "githubLink": "https://github.com/cytronicoder",
         "webLink": "https://www.cytronicoder.com/",
         "igLink": "https://www.instagram.com/cytronical/",
