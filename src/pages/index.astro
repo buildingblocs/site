@@ -2,102 +2,109 @@
 import Layout from "../layout.astro";
 import Embla from "../components/index/embla.astro";
 import Content from "../components/index/content.astro";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 
 import { Image } from "astro:assets";
-import heroone from "../img/index/hero/1.webp";
-import herotwo from "../img/index/hero/2.webp";
-import herothree from "../img/index/hero/3.webp";
-import herofour from "../img/index/hero/4.webp";
-import herofive from "../img/index/hero/5.webp";
-import herosix from "../img/index/hero/6.webp";
-import heroseven from "../img/index/hero/IMG_3287.jpg";
+import heroOne from "../img/index/hero/1.webp";
+import heroTwo from "../img/index/hero/2.webp";
+import heroThree from "../img/index/hero/3.webp";
+import heroFour from "../img/index/hero/4.webp";
+import heroFive from "../img/index/hero/5.webp";
+import heroSix from "../img/index/hero/6.webp";
+import heroseven from "../img/index/hero/7.webp";
 
-import contentone from "../img/index/content/1.webp";
-import contenttwo from "../img/index/content/2.webp";
-import contentthree from "../img/index/content/3.webp";
-import contentfour from "../img/index/content/4.webp";
+import contentOne from "../img/index/content/1.webp";
+import contentTwo from "../img/index/content/2.webp";
+import contentThree from "../img/index/content/3.webp";
+import contentFour from "../img/index/content/4.webp";
 
-import cta from "../img/index/cta.webp";
+// import cta from "../img/index/cta.webp";
+
+interface Timeline {
+  date: string;
+  title: string;
+  desc: string;
+  link?: string;
+}
 
 const slides = [
     {
-        src: heroone,
-        alt: "BuildingBloCS team at a FOSSASIA event",
-        width: 4032,
-        height: 2268,
+        src: heroOne,
+        alt: "Zayan and Prannay doing some shenanigans",
+        width: 6000,
+        height: 4000,
     },
     {
-        src: herotwo,
-        alt: "BuildingBloCS team at a FOSSASIA event",
-        width: 4000,
-        height: 3000,
-    },
-    {
-        src: herothree,
-        alt: "Students at the 2023 BuildingBloCS June Conference",
-        width: 8256,
-        height: 5540,
-    },
-    {
-        src: herofour,
-        alt: "An organiser giving a presentation during the 2023 BuildingBloCS June Conference",
-        width: 3422,
-        height: 2507,
-    },
-    {
-        src: herofive,
-        alt: "An organiser giving a presentation in a lecture hall during the 2023 BuildingBloCS June Conference",
-        width: 3648,
-        height: 2736,
-    },
-    {
-        src: herosix,
-        alt: "An organiser giving a presentation in a lecture hall during the 2023 BuildingBloCS June Conference",
+        src: heroTwo,
+        alt: "BuildingBloCS organising team at FOSSASIA 2022",
         width: 4032,
         height: 3024,
     },
     {
+        src: heroThree,
+        alt: "Student coding with block-based programming languages",
+        width: 4000,
+        height: 2825,
+    },
+    {
+        src: heroFour,
+        alt: "Group of students at a workshop during the 2024 BuildingBloCS June Conference",
+        width: 6000,
+        height: 4000,
+    },
+    {
+        src: heroFive,
+        alt: "An organiser providing assistance during workshop",
+        width: 6000,
+        height: 4000,
+    },
+    {
+        src: heroSix,
+        alt: "Student busy coding using VS Code",
+        width: 4608,
+        height: 3456,
+    },
+    {
         src: heroseven,
-        alt: "The BuildingBloCS organising team at a bonding event",
-        width: 3532,
-        height: 2650,
+        alt: "Group photo after workshop",
+        width: 3888,
+        height: 2592,
     },
 ];
 
 const contents = [
     {
         textleft: true,
-        img: contentone,
+        img: contentOne,
         imgalt: "Students at a BuildingBloCS event",
         title: "By students, for students.",
         desc: "BuildingBloCS is the largest nationwide “By Student, For Student” Computing Advocacy Program, aimed at teaching students the way of the coder 💻",
     },
     {
-        img: contenttwo,
+        img: contentTwo,
         imgalt: "An organiser speaking at a FOSSASIA event",
         title: "Multi-focused.",
         desc: "We touch base on various topics, like AI, Cybersecurity and Software Development, to varying levels of complexity. It's truly fun for everyone!",
     },
     {
         textleft: true,
-        img: contentthree,
+        img: contentThree,
         imgalt: "Two organisers speaking at a FOSSASIA event",
         title: "Passionate Speakers.",
         desc: "We give opportunities to various speakers to talk about their work and interests, and we don't shy away from getting into the nitty-gritty 🚀",
     },
     {
-        img: contentfour,
+        img: contentFour,
         imgalt: "Students having a group discussion at a BuildingBloCS event",
         title: "Events for everyone.",
         desc: "We host events for students from Secondary Schools, JCs, Polys and International Schools. All are welcome!",
     },
 ];
 
-const timeline = [
+const timeline: Timeline[] = [
     {
-        date: 2017,
+        date: "2017",
         title: "Started as VIA@DHS",
         desc: "An initiative sparked by the Dunman High Infocomm Club and Mr Gi Soong Chee.",
     },
@@ -126,6 +133,7 @@ const timeline = [
         flex: 0 0 100%;
         display: flex;
         height: 90vh;
+        opacity: 0.5;
     }
 </style>
 
@@ -165,19 +173,19 @@ const timeline = [
         <h2>Our History</h2>
         <ol class="relative border-l border-slate-800 mt-3">
             {
-                timeline.map((timeline) => (
-                    <li class="ml-4 mt-4">
-                        <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-slate-800 bg-slate-700" />
-                        <time class="mb-1 text-sm text-slate-400">{timeline.date}</time>
-                        {timeline.link ? (
-                            <a href={timeline.link} class="flex items-center gap-x-2 w-max rounded-md px-2 py-1 -ml-1 bg-slate-800 group">
-                                <h3>{timeline.title}</h3>
+                timeline.map((item) => (
+                <li class="ml-4 mt-4" data-key={item.date.toString()}>
+                        <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-slate-800 bg-slate-700" />
+                        <time class="mb-1 text-sm text-slate-400">{item.date}</time>
+                        {item.link ? (
+                            <a href={item.link} class="flex items-center gap-x-2 w-max rounded-md px-2 py-1 -ml-1 bg-slate-800 group">
+                                <h3>{item.title}</h3>
                                 <ArrowRightIcon className="mt-1 group-hover:translate-x-1 group-hover:mr-2 w-[1.2rem] h-[1.2rem] transition" />
                             </a>
                         ) : (
-                                <h3>{timeline.title}</h3>
+                            <h3>{item.title}</h3>
                         )}
-                        <p>{timeline.desc}</p>
+                        <p>{item.desc}</p>
                     </li>
                 ))
             }

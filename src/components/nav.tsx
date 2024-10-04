@@ -43,7 +43,7 @@ export default function Nav() {
         <>
             <div className="justify-center h-16 sm:flex hidden sticky top-0 z-20 gap-x-4">
                 <div className="h-16 justify-end flex sticky top-0 z-20">
-                    <div className="px-6 rounded-full mt-4 bg-slate-900/50 backdrop-filter backdrop-blur-lg ring ring-1 ring-slate-800 flex items-center gap-x-2">
+                    <div className="px-6 rounded-full mt-4 bg-slate-900/50 backdrop-filter backdrop-blur-lg ring-1 ring-slate-800 flex items-center gap-x-2">
                         <a href='/'>
                             <img src='/favicon.svg' alt="BuildingBloCS logo" className="w-5 h-5 mr-1" />
                         </a>
@@ -57,7 +57,7 @@ export default function Nav() {
                             <PopoverTrigger className="translate-y-0 translate-x-0 text-sm font-medium rounded-md px-2 flex items-center gap-x-1 outline-0 group transition hover:bg-white hover:text-black data-[state=open]:bg-slate-700">Events<ChevronDownIcon className="transition group-data-[state=open]:rotate-180 group-data-[state=open]:mt-0.5" /></PopoverTrigger>
                             <PopoverContent className="max-w-xs p-2 flex flex-col mt-5 bg-slate-900 border-slate-700 text-white">
                                 {events.map((event) => (
-                                    <a href={event.href} className="font-semibold hover:bg-slate-800 p-2 rounded-md text-sm">
+                                    <a href={event.href} className="font-semibold hover:bg-slate-800 p-2 rounded-md text-sm" key={event.title}>
                                         {event.title}
                                         <p className="font-normal">{event.desc}</p>
                                     </a>

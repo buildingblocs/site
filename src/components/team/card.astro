@@ -1,10 +1,26 @@
 ---
 import blank from "../../img/team/blank.webp";
-import { GitHubLogoIcon, LinkedInLogoIcon, Link2Icon, InstagramLogoIcon } from "@radix-ui/react-icons";
-import type { ImageMetadata } from 'astro';
-import { Image } from 'astro:assets';
-const { name, description, githubLink, inLink, webLink, lead, imageSrc, igLink } = Astro.props;
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/img/team/*.webp');
+import {
+  GitHubLogoIcon,
+  LinkedInLogoIcon,
+  Link2Icon,
+  InstagramLogoIcon,
+} from "@radix-ui/react-icons";
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+const {
+  name,
+  description,
+  githubLink,
+  inLink,
+  webLink,
+  lead,
+  imageSrc,
+  igLink,
+} = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/img/team/*.webp"
+);
 const photo = images[imageSrc] ? images[imageSrc]() : blank;
 ---
 <div class="border rounded-lg shadow bg-slate-900 border-slate-700 flex flex-col h-80 w-72">

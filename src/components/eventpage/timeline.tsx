@@ -41,7 +41,7 @@ export default function Timeline({ timeline }: { timeline: TimelineType }) {
             <ol className="relative border-l border-slate-800">
               {dateEvent.event.map((ev, eventIndex) => (
                 <li key={`${dateEvent.date}-${eventIndex}`} className="ml-4 mt-2">
-                  <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-slate-800 bg-slate-700" />
+                  <div className="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-slate-800 bg-slate-700" />
                   <time className="mb-1 text-sm text-slate-400">{ev.time}</time>
                   <h3>{ev.title}</h3>
                   <p className="text-slate-300 leading-normal my-0.5">{ev.desc}</p>
