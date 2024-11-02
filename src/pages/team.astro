@@ -4,55 +4,199 @@ import org from "../org.json";
 import Card from "../components/team/card.astro";
 
 type TeamMember = {
-    githubLink?: string;
-    inLink?: string;
-    imageSrc?: string;
-    name: string;
-    description?: string;
-    webLink?: string;
+  githubLink?: string;
+  inLink?: string;
+  imageSrc?: string;
+  name: string;
+  description?: string;
+  webLink?: string;
+  lead?: boolean;
 };
 
 type Team = {
-    [key: string]: TeamMember;
+  [key: string]: TeamMember;
 };
 
-type Category = "Admin" | "Outreach" | "Quality Assurance" | "Design" | "Dev" | "Human Resources" | "OIC";
+type Category =
+  | "Admin"
+  | "Outreach"
+  | "Quality Assurance"
+  | "Design"
+  | "Dev"
+  | "Human Resources"
+  | "OIC";
 
 const orgData = org as Team;
 
-const members = {
-    "June": {
-        "OIC": ["duhan", "justin", "mahir"].map(a => orgData[a]),
-        "Admin": [{name: "rameshkumar", lead: true}, {name: "oon", lead: true}, {name: "ma", lead: true}, {name: "alexis"}, {name: "alyssa"}, {name: "asha"}, {name: "ayden"}, {name: "cayden"}, {name: "cheah"}, {name: "christopher"}, {name: "edwin_2"}, {name: "harry"}, {name: "kairos"}, {name: "khoo"}, {name: "shao"}, {name: "lucius"}, {name: "mahit"}, {name: "nguyen"}, {name: "nikita"}, {name: "por"}, {name: "sahil"}, {name: "saumil"}, {name: "saw"}, {name: "sindya"}, {name: "tan_2"}, {name: "dedeep"}, {name: "zhuo"}, {name: "zinedine"}].map(it => ({...(orgData[it.name]), lead: it.lead || false})),
-        "Outreach": [{name: "saw", lead: true}, {name: "nikita", lead: true}, {name: "soh"}, {name: "angelina"}, {name: "asha"}, {name: "aung"}, {name: "clara"}, {name: "yan"}, {name: "tongyu"}, {name: "jolynn"}, {name: "onn"}, {name: "kashvi"}, {name: "saumil"}, {name: "shivani"}, {name: "tan_2"}, {name: "tan"}, {name: "trisha"}, {name: "dedeep"}, {name: "velan"}].map(it => ({...(orgData[it.name]), lead: it.lead || false})),
-        "Quality Assurance": [{name: "ashley", lead: true}, {name: "neil", lead: true}, {name: "allen"}, {name: "clara_2"}, {name: "hugo"}, {name: "tongyu"}, {name: "kabir"}, {name: "kashvi"}, {name: "lim"}, {name: "matthias"}, {name: "ong"}, {name: "mahit"}, {name: "sean"}, {name: "shivani"}, {name: "sindya"}, {name: "ramanathan"}, {name: "trisha"}, {name: "dedeep"}, {name: "velan"}].map(it => ({...(orgData[it.name]), lead: it.lead || false})),
-        "Design": [{name: "tse", lead: true}, {name: "yau", lead: true}, {name: "vinita"}, {name: "soh"}, {name: "angelina"}, {name: "aung"}, {name: "clara"}, {name: "kayden"}, {name: "trisha"}].map(it => ({...(orgData[it.name]), lead: it.lead || false})),
-        "Dev": [{name: "aung", lead: true}, {name: "allen"}, {name: "dylan"}, {name: "ming"}, {name: "jerome"}, {name: "liu"}, {name: "yue"}].map(it => ({...(orgData[it.name]), lead: it.lead || false})),
-        "Human Resources": [{name: "vinita", lead: true}, {name: "eugene", lead: true}, {name: "jin", lead: true}, {name: "rameshkumar"}, {name: "elston"}, {name: "kabir"}, {name: "matthias"}, {name: "johnson"}, {name: "junhan"}, {name: "raghavsriram"}, {name: "saamiya"}, {name: "saumil"}].map(it => ({...(orgData[it.name]), lead: it.lead || false}))
+const sortMembers = (members: TeamMember[]) => {
+  /* Nifty function to sort the members so that leads appear first, 
+  followed by other members, all sorted alphabetically by name */
+  return members.sort((a, b) => {
+    if (a.lead === b.lead) {
+      return a.name.localeCompare(b.name);
     }
-}
+    return a.lead ? -1 : 1;
+  });
+};
+
+const members = {
+  June: {
+    OIC: ["duhan", "justin", "mahir"].map((a) => orgData[a]),
+    Admin: sortMembers(
+      [
+        { name: "rameshkumar", lead: true },
+        { name: "oon", lead: true },
+        { name: "ma", lead: true },
+        { name: "alexis" },
+        { name: "alyssa" },
+        { name: "asha" },
+        { name: "ayden" },
+        { name: "cayden" },
+        { name: "cheah" },
+        { name: "christopher" },
+        { name: "edwin_2" },
+        { name: "harry" },
+        { name: "kairos" },
+        { name: "khoo" },
+        { name: "shao" },
+        { name: "lucius" },
+        { name: "mahit" },
+        { name: "nguyen" },
+        { name: "nikita" },
+        { name: "por" },
+        { name: "sahil" },
+        { name: "saumil" },
+        { name: "saw" },
+        { name: "sindya" },
+        { name: "tan_2" },
+        { name: "dedeep" },
+        { name: "zhuo" },
+        { name: "zinedine" },
+      ].map((it) => ({ ...orgData[it.name], lead: it.lead || false }))
+    ),
+    Outreach: sortMembers(
+      [
+        { name: "saw", lead: true },
+        { name: "nikita", lead: true },
+        { name: "soh" },
+        { name: "angelina" },
+        { name: "asha" },
+        { name: "aung" },
+        { name: "clara" },
+        { name: "yan" },
+        { name: "tongyu" },
+        { name: "jolynn" },
+        { name: "onn" },
+        { name: "kashvi" },
+        { name: "saumil" },
+        { name: "peter" },
+        { name: "shivani" },
+        { name: "tan_2" },
+        { name: "tan" },
+        { name: "trisha" },
+        { name: "dedeep" },
+        { name: "velan" },
+      ].map((it) => ({ ...orgData[it.name], lead: it.lead || false }))
+    ),
+    "Quality Assurance": sortMembers(
+      [
+        { name: "ashley", lead: true },
+        { name: "neil", lead: true },
+        { name: "allen" },
+        { name: "clara_2" },
+        { name: "hugo" },
+        { name: "tongyu" },
+        { name: "kabir" },
+        { name: "kashvi" },
+        { name: "lim" },
+        { name: "matthias" },
+        { name: "ong" },
+        { name: "mahit" },
+        { name: "sean" },
+        { name: "shivani" },
+        { name: "sindya" },
+        { name: "ramanathan" },
+        { name: "trisha" },
+        { name: "dedeep" },
+        { name: "velan" },
+      ].map((it) => ({ ...orgData[it.name], lead: it.lead || false }))
+    ),
+    Design: sortMembers(
+      [
+        { name: "tse", lead: true },
+        { name: "yau", lead: true },
+        { name: "vinita" },
+        { name: "soh" },
+        { name: "angelina" },
+        { name: "aung" },
+        { name: "clara" },
+        { name: "kayden" },
+        { name: "trisha" },
+        { name: "peter" },
+      ].map((it) => ({ ...orgData[it.name], lead: it.lead || false }))
+    ),
+    Dev: sortMembers(
+      [
+        { name: "aung", lead: true },
+        { name: "allen" },
+        { name: "dylan" },
+        { name: "ming" },
+        { name: "jerome" },
+        { name: "liu" },
+        { name: "yue" },
+      ].map((it) => ({ ...orgData[it.name], lead: it.lead || false }))
+    ),
+    "Human Resources": sortMembers(
+      [
+        { name: "vinita", lead: true },
+        { name: "eugene", lead: true },
+        { name: "jin", lead: true },
+        { name: "rameshkumar" },
+        { name: "elston" },
+        { name: "kabir" },
+        { name: "matthias" },
+        { name: "johnson" },
+        { name: "junhan" },
+        { name: "raghavsriram" },
+        { name: "saamiya" },
+        { name: "saumil" },
+      ].map((it) => ({ ...orgData[it.name], lead: it.lead || false }))
+    ),
+  },
+};
 ---
 
 <Layout title="Our Team" desc="The team running BuildingBloCS!" showTitle>
-    <div class="max-w-7xl mx-auto px-4">
-        <h2 class="">Our OICs</h2>
-        <p class="text-slate-300 my-3">BuildingBloCS 2024 is led by a set of <s>charismatic</s> passionate overall ICs who overlook various departments within the organisation. Having worked together on organising BuildingBloCS 2023 last year, the organisers aim to help make BuildingBloCS 2024 even bigger and more far-reaching than ever before.</p>
-        <div class="flex flex-wrap justify-center gap-4 my-5">
-            {members.June.OIC.map(member => (
-                <Card {...member} />
-            ))}
-        </div>
-        <h2 class="">Our Organisers</h2>
-        <p class="text-slate-300 my-3">Without our organizers, we wouldn't be able to organize much of BuildingBloCS, hence this serves as a <i>thank-you</i> note to all of them for their willingness to help and make BuildingBloCS possible!</p>
-        {Object.keys(members.June).filter(category => category !== "OIC").map(category => (
-        <>
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="">Our OICs</h2>
+    <p class="text-slate-300 my-3">
+      BuildingBloCS 2024 is led by a set of <s>charismatic</s> passionate overall
+      ICs who overlook various departments within the organisation. Having worked
+      together on organising BuildingBloCS 2023 last year, the organisers aim to
+      help make BuildingBloCS 2024 even bigger and more far-reaching than ever before.
+    </p>
+    <div class="flex flex-wrap justify-center gap-4 my-5">
+      {members.June.OIC.map((member) => <Card {...member} />)}
+    </div>
+    <h2 class="">Our Organisers</h2>
+    <p class="text-slate-300 my-3">
+      Without our organizers, we wouldn't be able to organize much of
+      BuildingBloCS, hence this serves as a <i>thank-you</i> note to all of them
+      for their willingness to help and make BuildingBloCS possible!
+    </p>
+    {
+      Object.keys(members.June)
+        .filter((category) => category !== "OIC")
+        .map((category) => (
+          <>
             <h3 class="text-2xl">{category}</h3>
             <div class="flex flex-wrap justify-center gap-4 my-5">
-                {members.June[category as Category].map((member: any) => (
-                    <Card {...member} />
-                ))}
+              {members.June[category as Category].map((member: any) => (
+                <Card {...member} />
+              ))}
             </div>
-        </>
-    ))}
-    </div>
+          </>
+        ))
+    }
+  </div>
 </Layout>
