@@ -1,0 +1,68 @@
+title: December Conference
+status: open
+luma: evt-9aBLj41PweaHNnh
+details:
+- 'Workshops: 16th - 18th December'
+- 'Award Ceremony: 20th December'
+- 'Venue: Singapore Management University*'
+- 'Email contact for queries: hello@buildingblocs.sg'
+excerpt: BuildingBloCS is back with our final conference for the year, the December Conference, to teach about Web Development! Learn new concepts from 6 different workshops and stand to win prizes!
+desc: >-
+  BuildingBloCS is back with our final conference for 2024! The theme is <b>Web Development</b>, 
+  an important skill to bring websites and applications to life. We have specially curated 6
+  workshops: UI/UX on Figma, Git & Github, HTML & CSS, Javascript, Databases, React & Next.js. 
+  You will have the choice to pick which workshops you would like to attend. Across the three 
+  conference days, we hope that you will build a better understanding of web development, forge 
+  new friendships, and apply what you’ve learnt in a hackathon!
+  <br><br>
+  *In the case of oversubscription, online access will be offered through livestream.
+faq:
+- q: Must I go for all the workshops in my track?
+  a: You are highly encouraged to attend all the workshops, as content from some workshops may build on previous workshops. All skills will be taught progressively, so it may be harder to catch up if you miss one.
+- q: Why should I sign up? Is it free?
+  a: It's a free, fun and easy way to learn new skills about many new topics related to computing! What more could you ask for?
+- q: What if something pops up and I can't make it? 
+  a: Please indicate that you are not coming via the lu.ma interface.
+- q: What is a "hackathon"? Is it compulsory?
+  a: A hackathon is a competition where you'll have to work in teams to create an application based on a theme provided. It's a great way to practice your skills, however, it is not compulsory to encourage everyone to learn and attend.
+- q: What are the prizes? When will I get them?
+  a: We can't divulge any information about the prizes, but they will be shipped out after the finals, on Friday, 20th December!
+- q: How will the hackathon groups be allocated? Can I choose my teammates?
+  a: For this hackathon, we will be allocating the groups for you. However, if you (mutually) indicate someone you'll like to work with, we'll take that into consideration. Any other empty slots will be filled randomly, taking into account your age.
+timeline:
+- events:
+  - date: 16 Dec
+    event:
+    - title: Hackathon
+      desc: Start discussing with your team solutions for the problem statement throughout the week
+    - time: 9:00 AM - 11:30 AM
+      title: UI/UX with Figma
+      author: by Yuhan and Sheng Xin
+    - time: 1:00 PM - 4:00 PM
+      title: Git & Github
+      desc: Learn the basic essentials of Git for collaborative software development.
+      author: by Saumil, Brayden and Yuhan
+  - date: 17 Dec
+    event:
+    - time: 9:00 AM - 12:30 PM
+      title: HTML & CSS
+      desc: An introduction to the bare skeleton of web development (HTML) and how to decorate it (CSS).
+      author: by Wee Zen, Sindya and Aksharaa
+    - time: 2:00 PM - 4:30 PM
+      title: Javascript
+      desc: A peek into the language that has an identity crisis with `this`.
+      author: by Angelina, Eason and Amanda
+  - date: 18 Mar
+    event:
+    - time: 9:00 AM - 12:00 PM
+      title: Databases
+      desc: An introduction for beginners looking to connect their website to a database through SQL (SQLite).
+      author: by Hai De and Sindya
+    - time: 2:00 PM - 4:00 PM
+      title: React & Next.js
+      desc: An introduction to jsx (react) and next.js
+      author: by Sai and Arjun
+  - date: 20 Dec
+    event:
+    - title: Award Ceremony
+      desc: Join us for the award ceremony held online!

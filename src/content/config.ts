@@ -20,7 +20,7 @@ const eventsData = defineCollection({
     })),
     prospectus: z.object({
       src: z.string()
-    }).array(),
+    }).array().optional(),
     timeline: z.object({
       title: z.string().optional(),
       events: z.object({

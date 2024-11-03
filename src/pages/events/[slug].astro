@@ -52,7 +52,7 @@ const { entry } = Astro.props;
       <Faq client:load faq={entry.data.faq} />
     </div>
     <div class="flex-1 gap-y-4 flex flex-col">
-      {entry.data.status !== 'closed' &&
+      {entry.data.status !== 'closed' && entry.data.prospectus &&
         <div class="embla w-4/5 mx-auto relative">
           <p class="text-slate-300 font-medium">Official Prospectus</p>
           <div class="embla__viewport overflow-hidden rounded-xl">

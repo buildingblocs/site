@@ -29,6 +29,11 @@ export default function Nav() {
 
     const events = [
         {
+            title: "December Conference",
+            href: "/events/december",
+            desc: "The last conference of the year, with 6 different workshops."
+        },
+        {
             title: "June Conference",
             href: "/events/june",
             desc: "Our flagship conference, featuring workshops, talks, and more."
@@ -37,8 +42,15 @@ export default function Nav() {
             title: "March Conference",
             href: "/events/march",
             desc: "The March Conference aims to spark an interest in Python and Data Science."
+        },
+        {
+            title: "Looking for older events?",
+            href: "/archive"
         }
     ]
+
+    const mobileEvents = events.slice(0, -1);
+
     return (
         <>
             <div className="justify-center h-16 sm:flex hidden sticky top-0 z-20 gap-x-4">
@@ -59,7 +71,7 @@ export default function Nav() {
                                 {events.map((event) => (
                                     <a href={event.href} className="font-semibold hover:bg-slate-800 p-2 rounded-md text-sm" key={event.title}>
                                         {event.title}
-                                        <p className="font-normal">{event.desc}</p>
+                                        {event.desc && <p className="font-normal">{event.desc}</p>}
                                     </a>
                                 ))}
                             </PopoverContent>
@@ -90,7 +102,7 @@ export default function Nav() {
                                 {mobileLinks.map((link) => (
                                     <a href={link.href} key={link.title}>{link.title}</a>
                                 ))}
-                                {events.map((event) => (
+                                {mobileEvents.map((event) => (
                                     <a href={event.href} key={event.title}>{event.title}</a>
                                 ))}
                             </div>
