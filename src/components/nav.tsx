@@ -31,7 +31,7 @@ export default function Nav() {
         {
             title: "December Conference",
             href: "/events/december",
-            desc: "The last conference of the year, with 6 different workshops."
+            desc: "The last conference of the year, with the theme of Web Dev."
         },
         {
             title: "June Conference",
@@ -69,7 +69,7 @@ export default function Nav() {
                             <PopoverTrigger className="translate-y-0 translate-x-0 text-sm font-medium rounded-md px-2 flex items-center gap-x-1 outline-0 group transition hover:bg-white hover:text-black data-[state=open]:bg-slate-700">Events<ChevronDownIcon className="transition group-data-[state=open]:rotate-180 group-data-[state=open]:mt-0.5" /></PopoverTrigger>
                             <PopoverContent className="max-w-xs p-2 flex flex-col mt-5 bg-slate-900 border-slate-700 text-white">
                                 {events.map((event) => (
-                                    <a href={event.href} className="font-semibold hover:bg-slate-800 p-2 rounded-md text-sm" key={event.title}>
+                                    <a href={event.href} className="font-semibold hover:bg-slate-800 p-2 rounded-md text-sm transition" key={event.title}>
                                         {event.title}
                                         {event.desc && <p className="font-normal">{event.desc}</p>}
                                     </a>
