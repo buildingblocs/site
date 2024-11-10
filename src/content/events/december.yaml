@@ -29,6 +29,12 @@ faq:
   a: We can't divulge any information about the prizes, but they will be shipped out after the finals, on Friday, 20th December!
 - q: How will the hackathon groups be allocated? Can I choose my teammates?
   a: For this hackathon, we will be allocating the groups for you. However, if you (mutually) indicate someone you'll like to work with, we'll take that into consideration. Any other empty slots will be filled randomly, taking into account your age.
+prospectus:
+- src: /events/december/1.png
+- src: /events/december/2.png
+- src: /events/december/3.png
+- src: /events/december/4.png
+- src: /events/december/5.png
 timeline:
 - events:
   - date: 16 Dec
