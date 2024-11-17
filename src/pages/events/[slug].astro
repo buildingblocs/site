@@ -16,12 +16,15 @@ export async function getStaticPaths() {
 }
 // 2. For your template, you can get the entry directly from the prop
 const { entry } = Astro.props;
+
+let title = entry.data.title;
+let formattedTitle = title.replace(" ", "<br>");
 ---
 
 <Layout title={entry.data.title} desc={entry.data.excerpt}>
   <div class="max-w-6xl flex mx-auto mb-10 gap-x-6 md:flex-row flex-col p-4 sm:p-10 gap-y-10">
     <div class="flex-1 gap-y-4 flex flex-col">
-      <h1 class="text-5xl">{entry.data.title}</h1>
+      <h1 class="text-5xl" set:html={formattedTitle}>{entry.data.title}</h1>
       <h2>Key Details</h2>
       <ul class="list-disc marker:text-slate-500 ml-4 list-inside">
         {entry.data.details.map((detail) => <li set:html={detail} />)}

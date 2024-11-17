@@ -44,6 +44,7 @@ timeline:
       desc: Start discussing with your team solutions for the problem statement throughout the week
     - time: 9:00 AM - 11:30 AM
       title: UI/UX with Figma
+      desc: Bring your designs to life with Figma! Learn how to make visually appealing mockups without code.
       author: by Yuhan and Sheng Xin
     - time: 1:00 PM - 4:00 PM
       title: Git & Github
