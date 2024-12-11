@@ -1,5 +1,5 @@
 title: December Conference
-status: open
+status: closed
 luma: evt-kz4gB77dKlYBNZW
 details:
 - 'Workshops: 16th - 18th December'
@@ -45,7 +45,7 @@ timeline:
     - time: 9:00 AM - 11:30 AM
       title: UI/UX with Figma
       desc: Bring your designs to life with Figma! Learn how to make visually appealing mockups without code.
-      author: by Yuhan and Sheng Xin
+      author: by Yuhan, Brayden and Sheng Xin
     - time: 1:00 PM - 4:00 PM
       title: Git & Github
       desc: Learn the basic essentials of Git for collaborative software development.
