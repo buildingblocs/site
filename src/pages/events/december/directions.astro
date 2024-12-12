@@ -1,0 +1,10 @@
+---
+import Layout from "../../../layout.astro";
+import DirectionList from "../../../components/eventpage/decDirections";
+---
+<Layout title="Directions to December Conference" showTitle desc="">
+    <main class="max-w-2xl mx-auto px-4">
+        <p class="text-center">Select the day, track and the method of arrival to see directions</p>
+        <DirectionList client:load />
+    </main>
+</Layout>
