@@ -1,74 +1,85 @@
 {
     "lim": {
-        "imageSrc":"/src/img/team/Lim_Bo_An.JPG",
+        "imageSrc":"/src/img/team/Lim_Bo_An.webp",
         "name": "Lim Bo An",
         "description": "Hi, im Bo An, currently extremely addicted to competitive programming rn",
         "githubLink": "https://github.com/Lyphonerd",
         "webLink": "https://codeforces.com/profile/Lypho"
     },
     "li": {
-        "imageSrc":"",
+        "imageSrc":"/src/img/team/yueyi.webp",
         "name": "Li Yueyi",
         "description": "They call me big man",
         "githubLink": "https://github.com/yeayii",
         "webLink": "https://www.instagram.com/yeayi._/"
     },
     "neo": {
+        "imageSrc":"/src/img/team/wee zen.webp",
         "name": "Neo Wee Zen",
         "description": "hi I'm wee zen and idk what I am anymore",
         "githubLink": "https://github.com/nwztest",
         "inLink": "https://www.linkedin.com/in/wee-zen-neo-5ab41b266/"
     },
     "ma": {
+        "imageSrc":"/src/img/team/weiyi.webp",
         "name": "Ma Weiyi",
         "description": "",
         "githubLink": "https://github.com/fwyr",
         "inLink": "https://www.linkedin.com/in/fwyr"
     },
     "khoo": {
+        "imageSrc":"/src/img/team/Ze Qin.webp",
         "name": "Khoo Ze Qin",
         "description": "Hi! I am Ze Qin and I look forward to explore new things in life!",
         "githubLink": "https://github.com/ZeQinK"
     },
     "aksharaa": {
+        "imageSrc":"/src/img/team/Aksharaa Ramesh.webp",
         "name": "Aksharaa Ramesh",
         "description": "Aksharaa Ramesh, a Machine Learning Enthusiast, acting older than I really am since 2009",
         "githubLink": "https://github.com/scikit-star"
     },
     "angelina": {
+        "imageSrc":"/src/img/team/Angelina.webp",
         "name": "Angelina Wu Jing En",
         "description": "hiya!! I'm angelina, a J2 in DHS who loves all things STEM, especially chem and coding",
         "githubLink": "https://github.com/angelanglez"
     },
     "saumil": {
+        "imageSrc":"/src/img/team/Saumil_anand.webp",
         "name": "Saumil Anand",
         "description": "I like Swift. Also occasionally a Sec 4 student at BBSS",
         "githubLink": "https://github.com/saumilthecode",
         "inLink": "https://www.linkedin.com/in/saumil707/"
     },
     "khin": {
+        "imageSrc":"/src/img/team/Khin_Myat_Myat_Min.webp",
         "name": "Khin Myat Myat Min",
         "description": "I am Khin, a Computer Engineering student from SP. I love Coding.",
         "githubLink": "https://github.com/Khin-mmm"
     },
     "akshara": {
+        "imageSrc":"/src/img/team/Akshara Arunkumar.webp",
         "name": "Akshara Arunkumar",
         "description": "I'm Akshara! When I'm not debugging and banging out a new language for a project, you can find me on 3D software.",
         "githubLink": "https://github.com/typical927"
     },
     "gulati": {
+        "imageSrc":"/src/img/team/purugulati.webp",
         "name": "Gulati Puru Raj",
         "description": "Hi I am Puru, I am a Year 1 Cybersecurity Student at NP, I like to play CTFs and listen to hip hop.",
         "githubLink": "https://github.com/Bruh4t9t",
         "inLink": "https://www.linkedin.com/in/puru-gulati-9975862a4/"
     },
     "shivani": {
+        "imageSrc":"/src/img/team/shivani.webp",
         "name": "Shivani Ramesh Kanna",
         "description": "hey, im shivani :)",
         "githubLink": "https://github.com/shivaniiiiiiiiiiii (13 i in total)",
         "inLink": "http://www.linkedin.com/in/shivani-ramesh-kanna-587b2524a"
     },
     "zulfaqar": {
+        "imageSrc":"",
         "name": "Zulfaqar Dhiyaulhaq Bin Jamal ",
         "description": "Student Leadership | EC-Council CCT x Edusave Scholarship (x2) | CTF Player, Coder \\n Hi, I'm Zulfaqar Aspiring Cybersecurity and Coder. Tech enthusiast in many domains ",
         "githubLink": "https://github.com/ZulTheDev",
@@ -80,57 +91,67 @@
         "githubLink": "https://github.com/RyanJohnJames"
     },
     "theophilus": {
+        "imageSrc":"/src/img/team/Theophilus_Lee_Khong_Yoon.webp",
         "name": "Theophilus Lee Khong Yoon",
         "description": "Hi I'm theo. JC2 nushie and victim of the AI hype train",
         "githubLink": "https://github.com/picokatx"
     },
     "nguyen": {
+        "imageSrc":"/src/img/team/kien.webp",
         "name": "Nguyen Chi Kien",
         "description": "Yo, I'm just into indie hip hop.",
         "githubLink": "https://github.com/lukaspenn"
     },
     "jatin": {
+        "imageSrc":"/src/img/team/Jatin.webp",
         "name": "Jatin Rakesh",
         "description": "BBCS helps programmers to hone their skills for free!",
         "githubLink": "https://github.com/JatinRakesh"
     },
     "leo": {
+        "imageSrc":"/src/img/team/Leo Edwards.webp",
         "name": "Leo Edwards",
         "description": "As a high school student with little knowledge in the realm of Computer Science, entering the tech scene has been eyeopening and inspiring. I want to bring this to students all over Singapore.",
         "githubLink": "https://github.com/true-Grand",
         "webLink": "https://www.linkedin.com/in/truegrand?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
     },
     "soh": {
+        "imageSrc":"/src/img/team/amanda.webp",
         "name": "Soh Ying Amanda",
         "description": "hi! i'm Amanda, a DHS student who loves math (and tech)",
         "githubLink": "https://github.com/limmer-foxy",
         "inLink": "www.linkedin.com/in/soh-ying-amanda"
     },
     "jolynn": {
+        "imageSrc":"/src/img/team/jolynn.webp",
         "name": "Jolynn Yeo Yi Xuan",
         "description": "hello! I am Jolynn from RI, I love everything tech and crochet!",
         "githubLink": "https://github.com/j0lynN-Y",
         "inLink": "https://linkedin.com/in/jolynn-yeo-7b61a1261"
     },
     "lai": {
+        "imageSrc":"/src/img/team/Calvin_Lai.webp",
         "name": "Lai Kai Wen Calvin",
         "description": "",
         "githubLink": "https://github.com/Mystichunterz",
         "inLink": "https://www.linkedin.com/in/calvin-lai-1865b9279/"
     },
     "tan": {
+        "imageSrc":"/src/img/team/Tan-Eason.webp",
         "name": "Tan Eason",
         "description": "hey i'm eason! i do a bunch of reading, music and webdev",
         "githubLink": "https://github.com/manystarsapart",
         "inLink": "https://www.linkedin.com/in/eason-tan-443a6a2b5"
     },
     "chua": {
+        "imageSrc":"/src/img/team/ChuaYuJunLucas.webp",
         "name": "Chua Yu Jun, Lucas",
         "description": "\"I have played these games before\"",
         "githubLink": "https://github.com/LucasCYJ",
         "inLink": "https://www.linkedin.com/in/lucas-chua-a444782b7"
     },
     "sim": {
+        "imageSrc":"/src/img/team/Brayden.webp",
         "name": "Sim Yu Bin Brayden",
         "description": "",
         "githubLink": "https://github.com/brayden-sim",
@@ -142,17 +163,20 @@
         "githubLink": "https://github.com/sethlsq"
     },
     "yu": {
+        "imageSrc":"/src/img/team/sindya.webp",
         "name": "Yu Chengxin Sindya ",
         "description": "your average river valley student with a crippling gambling addiction and a passion for coding and cybersecurity. :3",
         "githubLink": "https://github.com/sssyntax",
         "inLink": "linkedin.com/in/sindya-yu-180184327"
     },
     "daivik": {
+        "imageSrc":"",
         "name": "Daivik Rajesh",
         "description": "Motorsports/Aviation enjoyer, well versed in swift and proffesional gamer",
         "githubLink": "https://github.com/GZ56"
     },
     "cheah": {
+        "imageSrc":"/src/img/team/Sheng Xin_.webp",
         "name": "Cheah Sheng Xin",
         "description": "Picking up new hobbies while reading Ann Liang's latest books and listening to kpop \ud83c\udfa7",
         "githubLink": "https://github.com/Coffeediaries/impotato"
@@ -180,30 +204,33 @@
         "githubLink": "https://github.com/Tan-JunWei"
     },
     "rayner": {
+        "imageSrc":"",
         "name": "Rayner Ng Zheng Hao",
         "description": "average sleep deprived student",
         "githubLink": "https://github.com/LinelyQwert"
     },
     "pak": {
+        "imageSrc":"/src/img/team/rayner.webp",
         "name": "Pak Tze Bin Bryan",
         "description": "RI Class of 2024, currently debugging life and developing the most optimal algorithm for success!",
         "githubLink": "https://github.com/BryanBustion",
         "inLink": "https://www.linkedin.com/in/paktzebinbryan/"
     },
     "divit": {
+        "imageSrc":"",
         "name": "Divit Singhal",
         "description": "I know c++",
         "githubLink": "https://github.com/LitzXBG"
     },
     "duhan": {
+        "imageSrc": "/src/img/team/Du_Yuhan.webp",
         "githubLink": "https://github.com/TwelvePenguins",
         "inLink": "https://linkedin.com/in/yuhan-du-12p3ngu5",
-        "imageSrc": "/src/img/team/Du_Yuhan.jpg",
         "name": "Du Yuhan",
         "description": "Your average workaholic penguin and Red Dead Redemption 2 enjoyer."
     },
     "sahil": {
-        "imageSrc": "/src/img/team/Sahil_Menon.png",
+        "imageSrc": "/src/img/team/Sahil_Menon.webp",
         "name": "Sahil Menon",
         "description": "Hi! I'm quite interested in programming, and I love tinkering with cool tech.",
         "githubLink": "https://github.com/sahilmenon",
