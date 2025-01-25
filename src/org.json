@@ -78,7 +78,7 @@
         "inLink": "http://www.linkedin.com/in/shivani-ramesh-kanna-587b2524a"
     },
     "zulfaqar": {
-        "imageSrc":"",
+        "imageSrc":"/src/img/team/Zulfaqar Dhiyaulhaq Bin Jamal .webp",
         "name": "Zulfaqar Dhiyaulhaq Bin Jamal ",
         "description": "Student Leadership | EC-Council CCT x Edusave Scholarship (x2) | CTF Player, Coder \\n Hi, I'm Zulfaqar Aspiring Cybersecurity and Coder. Tech enthusiast in many domains ",
         "githubLink": "https://github.com/ZulTheDev",
@@ -214,7 +214,7 @@
         "inLink": "https://www.linkedin.com/in/paktzebinbryan/"
     },
     "divit": {
-        "imageSrc":"",
+        "imageSrc":"/src/img/team/DIVIT.webp",
         "name": "Divit Singhal",
         "description": "I know c++",
         "githubLink": "https://github.com/LitzXBG"
