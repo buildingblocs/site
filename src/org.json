@@ -75,12 +75,13 @@
         "imageSrc":"/src/img/team/shivani.webp",
         "name": "Shivani Ramesh Kanna",
         "description": "hey, im shivani :)",
-        "inLink": "http://www.linkedin.com/in/shivani-ramesh-kanna-587b2524a"
+        "inLink": "http://www.linkedin.com/in/shivani-ramesh-kanna-587b2524a",
+        "githubLink":"https://github.com/shivaniiiiiiiiiiii"
     },
     "zulfaqar": {
         "imageSrc":"/src/img/team/Zulfaqar Dhiyaulhaq Bin Jamal .webp",
         "name": "Zulfaqar Dhiyaulhaq Bin Jamal ",
-        "description": "Student Leadership | EC-Council CCT x Edusave Scholarship (x2) | CTF Player, Coder \\n Hi, I'm Zulfaqar Aspiring Cybersecurity and Coder. Tech enthusiast in many domains ",
+        "description": "Student Leadership | EC-Council CCT x Edusave Scholarship (x2) | CTF Player, Coder. Hi, I'm Zulfaqar Aspiring Cybersecurity and Coder. Tech enthusiast in many domains ",
         "githubLink": "https://github.com/ZulTheDev",
         "webLink": "https://zulfaqar.me"
     },
@@ -112,7 +113,7 @@
         "name": "Leo Edwards",
         "description": "As a high school student with little knowledge in the realm of Computer Science, entering the tech scene has been eyeopening and inspiring. I want to bring this to students all over Singapore.",
         "githubLink": "https://github.com/true-Grand",
-        "webLink": "https://www.linkedin.com/in/truegrand?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+        "inLink": "https://www.linkedin.com/in/truegrand?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
     },
     "soh": {
         "imageSrc":"/src/img/team/amanda.webp",
@@ -131,7 +132,7 @@
     "lai": {
         "imageSrc":"/src/img/team/Calvin_Lai.webp",
         "name": "Lai Kai Wen Calvin",
-        "description": "",
+        "description": "Rytsas! I'm fluent in High Valyrian. I also specialize in working with cloud services such as AWS Cloud and Microsoft Azure.",
         "githubLink": "https://github.com/Mystichunterz",
         "inLink": "https://www.linkedin.com/in/calvin-lai-1865b9279/"
     },
@@ -177,7 +178,8 @@
     "cheah": {
         "imageSrc":"/src/img/team/Sheng Xin_.webp",
         "name": "Cheah Sheng Xin",
-        "description": "Picking up new hobbies while reading Ann Liang's latest books and listening to kpop \ud83c\udfa7"
+        "description": "Picking up new hobbies while reading Ann Liang's latest books and listening to kpop \ud83c\udfa7",
+        "githubLink":"https://github.com/Coffeediaries/"
     },
     "rameshkumar": {
         "name": "Rameshkumar Dhanvine",
@@ -201,7 +203,7 @@
         "githubLink": "https://github.com/Tan-JunWei"
     },
     "rayner": {
-        "imageSrc":"",
+        "imageSrc":"/src/img/team/rayner.webp",
         "name": "Rayner Ng Zheng Hao",
         "description": "average sleep deprived student",
         "githubLink": "https://github.com/LinelyQwert"
