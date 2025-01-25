@@ -75,7 +75,6 @@
         "imageSrc":"/src/img/team/shivani.webp",
         "name": "Shivani Ramesh Kanna",
         "description": "hey, im shivani :)",
-        "githubLink": "https://github.com/shivaniiiiiiiiiiii (13 i in total)",
         "inLink": "http://www.linkedin.com/in/shivani-ramesh-kanna-587b2524a"
     },
     "zulfaqar": {
@@ -119,8 +118,8 @@
         "imageSrc":"/src/img/team/amanda.webp",
         "name": "Soh Ying Amanda",
         "description": "hi! i'm Amanda, a DHS student who loves math (and tech)",
-        "githubLink": "https://github.com/limmer-foxy",
-        "inLink": "www.linkedin.com/in/soh-ying-amanda"
+        "githubLink": "https://github.com/Limmer-Foxy",
+        "inLink": "https://www.linkedin.com/in/soh-ying-amanda/"
     },
     "jolynn": {
         "imageSrc":"/src/img/team/jolynn.webp",
@@ -167,7 +166,7 @@
         "name": "Yu Chengxin Sindya ",
         "description": "your average river valley student with a crippling gambling addiction and a passion for coding and cybersecurity. :3",
         "githubLink": "https://github.com/sssyntax",
-        "inLink": "linkedin.com/in/sindya-yu-180184327"
+        "inLink": "https://www.linkedin.com/in/sindya-yu-180184327/"
     },
     "daivik": {
         "imageSrc":"",
@@ -178,13 +177,11 @@
     "cheah": {
         "imageSrc":"/src/img/team/Sheng Xin_.webp",
         "name": "Cheah Sheng Xin",
-        "description": "Picking up new hobbies while reading Ann Liang's latest books and listening to kpop \ud83c\udfa7",
-        "githubLink": "https://github.com/Coffeediaries"
+        "description": "Picking up new hobbies while reading Ann Liang's latest books and listening to kpop \ud83c\udfa7"
     },
     "rameshkumar": {
         "name": "Rameshkumar Dhanvine",
         "description": "JC2 student who loves AI, Math and Physics",
-        "githubLink": "https://github.com/rdhanvine321@gmail.com",
         "inLink": "http://www.linkedin.com/in/dhanvine-rameshkumar"
     },
     "yau": {
