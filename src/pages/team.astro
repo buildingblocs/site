@@ -11,6 +11,7 @@ type TeamMember = {
   description?: string;
   webLink?: string;
   lead?: boolean;
+  igLink?: string;
 };
 
 type Team = {
@@ -19,9 +20,8 @@ type Team = {
 
 type Category =
   | "Admin"
-  | "Outreach"
   | "Quality Assurance"
-  | "Design"
+  | "Media"
   | "Dev"
   | "Human Resources"
   | "OIC";
@@ -40,126 +40,104 @@ const sortMembers = (members: TeamMember[]) => {
 };
 
 const members = {
-  June: {
-    OIC: ["duhan", "justin", "mahir"].map((a) => orgData[a]),
+  March: {
+    OIC: ["duhan", "jolynn", "sahil"].map((a) => orgData[a]),
     Admin: sortMembers(
       [
-        { name: "rameshkumar", lead: true },
-        { name: "oon", lead: true },
-        { name: "ma", lead: true },
-        { name: "alexis" },
-        { name: "alyssa" },
-        { name: "asha" },
-        { name: "ayden" },
-        { name: "cayden" },
-        { name: "cheah" },
-        { name: "christopher" },
-        { name: "edwin_2" },
-        { name: "harry" },
-        { name: "kairos" },
-        { name: "khoo" },
-        { name: "shao" },
-        { name: "lucius" },
-        { name: "mahit" },
-        { name: "nguyen" },
-        { name: "nikita" },
-        { name: "por" },
-        { name: "sahil" },
-        { name: "saumil" },
-        { name: "saw" },
-        { name: "sindya" },
-        { name: "tan_2" },
-        { name: "dedeep" },
-        { name: "zhuo" },
-        { name: "zinedine" },
-      ].map((it) => ({ ...orgData[it.name], lead: it.lead || false }))
-    ),
-    Outreach: sortMembers(
-      [
-        { name: "saw", lead: true },
-        { name: "nikita", lead: true },
-        { name: "soh" },
-        { name: "angelina" },
-        { name: "asha" },
-        { name: "aung" },
-        { name: "clara" },
-        { name: "yan" },
-        { name: "tongyu" },
-        { name: "jolynn" },
-        { name: "onn" },
-        { name: "kashvi" },
-        { name: "saumil" },
-        { name: "peter" },
+        { name: "aksharaa", lead: true },
+        { name: "yau" },
         { name: "shivani" },
-        { name: "tan_2" },
+        { name: "lim" },
+        { name: "neo" },
+        { name: "ma" },
+        { name: "khoo" },
+        { name: "saumil" },
+        { name: "khin" },
+        { name: "akshara" },
+        { name: "zulfaqar" },
+        { name: "ryan" },
+        { name: "nguyen" },
+        { name: "jatin" },
+        { name: "leo" },
+        { name: "soh" },
+        { name: "lai" },
         { name: "tan" },
-        { name: "trisha" },
-        { name: "dedeep" },
-        { name: "velan" },
+        { name: "chua" },
+        { name: "sim" },
+        { name: "yu" },
+        { name: "cheah" },
+        { name: "rameshkumar" },
+        { name: "tan_2" },
+        { name: "rayner" },
+        { name: "pak" },
       ].map((it) => ({ ...orgData[it.name], lead: it.lead || false }))
     ),
     "Quality Assurance": sortMembers(
       [
-        { name: "ashley", lead: true },
-        { name: "neil", lead: true },
-        { name: "allen" },
-        { name: "clara_2" },
-        { name: "hugo" },
-        { name: "tongyu" },
-        { name: "kabir" },
-        { name: "kashvi" },
-        { name: "lim" },
-        { name: "matthias" },
-        { name: "ong" },
-        { name: "mahit" },
-        { name: "sean" },
-        { name: "shivani" },
-        { name: "sindya" },
-        { name: "ramanathan" },
-        { name: "trisha" },
-        { name: "dedeep" },
-        { name: "velan" },
+        { name: "shivani", lead: true },
+        { name: "li"},
+        { name: "neo" },
+        { name: "ma" },
+        { name: "saumil" },
+        { name: "khin" },
+        { name: "gulati" },
+        { name: "zulfaqar" },
+        { name: "ryan" },
+        { name: "theophilus" },
+        { name: "jatin" },
+        { name: "lai" },
+        { name: "sim" },
+        { name: "loh" },
+        { name: "yu" },
+        { name: "daivik" },
+        { name: "rayner" },
+        { name: "divit" },
       ].map((it) => ({ ...orgData[it.name], lead: it.lead || false }))
     ),
-    Design: sortMembers(
+    Media: sortMembers(
       [
-        { name: "tse", lead: true },
         { name: "yau", lead: true },
-        { name: "vinita" },
-        { name: "soh" },
         { name: "angelina" },
-        { name: "aung" },
-        { name: "clara" },
-        { name: "kayden" },
-        { name: "trisha" },
-        { name: "peter" },
+        { name: "lim" },
+        { name: "li" },
+        { name: "neo" },
+        { name: "khoo" },
+        { name: "akshara" },
+        { name: "zulfaqar" },
+        { name: "theophilus" },
+        { name: "nguyen" },
+        { name: "leo" },
+        { name: "soh" },
+        { name: "loh" },
+        { name: "cheah" },
       ].map((it) => ({ ...orgData[it.name], lead: it.lead || false }))
     ),
     Dev: sortMembers(
       [
-        { name: "aung", lead: true },
-        { name: "allen" },
-        { name: "dylan" },
-        { name: "ming" },
-        { name: "jerome" },
-        { name: "liu" },
-        { name: "yue" },
+        { name: "neo", lead: true },
+        { name: "yu" },
+        { name: "theophilus" },
+        { name: "rayner" },
       ].map((it) => ({ ...orgData[it.name], lead: it.lead || false }))
     ),
     "Human Resources": sortMembers(
       [
-        { name: "vinita", lead: true },
-        { name: "eugene", lead: true },
-        { name: "jin", lead: true },
-        { name: "rameshkumar" },
-        { name: "elston" },
-        { name: "kabir" },
-        { name: "matthias" },
-        { name: "johnson" },
-        { name: "junhan" },
-        { name: "raghavsriram" },
-        { name: "saamiya" },
+        { name: "angelina", lead: true },
+        { name: "aksharaa" },
+        { name: "shivani" },
+        { name: "lim" },
         { name: "saumil" },
+        { name: "gulati" },
+        { name: "nguyen" },
+        { name: "jatin" },
+        { name: "leo" },
+        { name: "soh" },
+        { name: "lai" },
+        { name: "chua" },
+        { name: "daivik" },
+        { name: "yan" },
+        { name: "rayner" },
+        { name: "pak" },
       ].map((it) => ({ ...orgData[it.name], lead: it.lead || false }))
     ),
   },
@@ -176,7 +154,7 @@ const members = {
       help make BuildingBloCS 2024 even bigger and more far-reaching than ever before.
     </p>
     <div class="flex flex-wrap justify-center gap-4 my-5">
-      {members.June.OIC.map((member) => <Card {...member} />)}
+      {members.March.OIC.map((member) => <Card {...member} />)}
     </div>
     <h2 class="">Our Organisers</h2>
     <p class="text-slate-300 my-3">
@@ -185,13 +163,13 @@ const members = {
       for their willingness to help and make BuildingBloCS possible!
     </p>
     {
-      Object.keys(members.June)
+      Object.keys(members.March)
         .filter((category) => category !== "OIC")
         .map((category) => (
           <>
             <h3 class="text-2xl">{category}</h3>
             <div class="flex flex-wrap justify-center gap-4 my-5">
-              {members.June[category as Category].map((member: any) => (
+              {members.March[category as Category].map((member: any) => (
                 <Card {...member} />
               ))}
             </div>
