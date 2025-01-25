@@ -1,12 +1,13 @@
 {
     "lim": {
-        "imageSrc":"",
+        "imageSrc":"/src/img/team/Lim_Bo_An.JPG",
         "name": "Lim Bo An",
         "description": "Hi, im Bo An, currently extremely addicted to competitive programming rn",
         "githubLink": "https://github.com/Lyphonerd",
         "webLink": "https://codeforces.com/profile/Lypho"
     },
     "li": {
+        "imageSrc":"",
         "name": "Li Yueyi",
         "description": "They call me big man",
         "githubLink": "https://github.com/yeayii",
@@ -197,7 +198,7 @@
     "duhan": {
         "githubLink": "https://github.com/TwelvePenguins",
         "inLink": "https://linkedin.com/in/yuhan-du-12p3ngu5",
-        "imageSrc": "/src/img/team/duyuhan.webp",
+        "imageSrc": "/src/img/team/Du_Yuhan.jpg",
         "name": "Du Yuhan",
         "description": "Your average workaholic penguin and Red Dead Redemption 2 enjoyer."
     },
