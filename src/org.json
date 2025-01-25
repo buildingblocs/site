@@ -173,7 +173,8 @@
         "imageSrc":"/src/img/team/daivik.webp",
         "name": "Daivik Rajesh",
         "description": "Motorsports/Aviation enjoyer, well versed in swift and proffesional gamer",
-        "githubLink": "https://github.com/GZ56"
+        "githubLink": "https://github.com/GZ56",
+        "webLink": "https://www.youtube.com/@realgz56yt2"
     },
     "cheah": {
         "imageSrc":"/src/img/team/Sheng Xin_.webp",
@@ -191,11 +192,6 @@
         "description": "JC2 in VJ, comms open :)",
         "githubLink": "https://github.com/lh00000",
         "inLink": "http://www.linkedin.com/in/le-han-yau-5a6187261"
-    },
-    "yan": {
-        "name": "Yan Hai De",
-        "description": "hi :>",
-        "githubLink": "https://github.com/haidelao"
     },
     "tan_2": {
         "name": "Tan Jun Wei",
