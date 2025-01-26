@@ -7,8 +7,22 @@ import figma from "../img/partners/figma.svg";
 import github from "../img/partners/github.svg";
 import smu from "../img/partners/smu.png";
 import xyz from "../img/partners/xyz.svg";
+import okx from "../img/partners/okx.svg";
+import revenuecat from "../img/partners/revenuecat.svg";
 
-const partners = [
+const curr_partners = [
+    {
+        src: okx,
+        title: "OKX",
+        desc: "OKX is a Seychelles-based cryptocurrency exchange. As of Jan 2025, OKX is the 4th largest cryptocurrency exchange in the world according to CoinMarketCap.",
+    },
+    {
+        src: revenuecat,
+        title: "RevenueCat",
+        desc: "RevenueCat is a mobile subscription service. They provide a comprehensive toolset for developers to implement and manage in-app purchases and subscriptions.",
+    },
+]
+const prev_partners = [
     {
         src: cys,
         title: "Cyber Youth Singapore",
@@ -36,11 +50,23 @@ const partners = [
     }
 ];
 ---
-
 <Layout title="Our Partners" desc="BuildingBloCS is only possible with the help of our partners" showTitle>
+    <h2 class="">Current Partners</h2>
     <main class="flex justify-center flex-wrap mx-5 gap-x-4 mb-20">
         {
-            partners.map((partner) => (
+            curr_partners.map((partner) => (
+                <div class="bg-slate-900 max-w-xs w-full rounded-xl p-5 mt-5 border border-slate-700">
+                    <Image src={partner.src} alt=`${partner.title}'s logo` loading=eager class="h-20 mx-auto object-contain" />
+                    <h2 class="my-2 text-2xl">{partner.title}</h2>
+                    <p>{partner.desc}</p>
+                </div>
+            ))
+        }
+    </main>
+    <h2 class="">Previous Partners</h2>
+    <main class="flex justify-center flex-wrap mx-5 gap-x-4 mb-20">
+        {
+            prev_partners.map((partner) => (
                 <div class="bg-slate-900 max-w-xs w-full rounded-xl p-5 mt-5 border border-slate-700">
                     <Image src={partner.src} alt=`${partner.title}'s logo` loading=eager class="h-20 mx-auto object-contain" />
                     <h2 class="my-2 text-2xl">{partner.title}</h2>
