@@ -7,41 +7,79 @@ import figma from "../img/partners/figma.svg";
 import github from "../img/partners/github.svg";
 import smu from "../img/partners/smu.png";
 import xyz from "../img/partners/xyz.svg";
+import okx from "../img/partners/okx.svg";
+import revenuecat from "../img/partners/revenuecat.svg";
+import {
+  ExternalLinkIcon
+} from "@radix-ui/react-icons";
 
-const partners = [
+const curr_partners = [
+    {
+        src: okx,
+        title: "OKX",
+        desc: "OKX is a Seychelles-based cryptocurrency exchange. As of Jan 2025, OKX is the 4th largest cryptocurrency exchange in the world according to CoinMarketCap.",
+        website: "https://www.okx.com/"
+    },
+    {
+        src: revenuecat,
+        title: "RevenueCat",
+        desc: "RevenueCat is a mobile subscription service. They provide a comprehensive toolset for developers to implement and manage in-app purchases and subscriptions.",
+        website: "https://www.revenuecat.com/"
+    },
+]
+const prev_partners = [
     {
         src: cys,
         title: "Cyber Youth Singapore",
         desc: "Cyber Youth Singapore is a registered charity under the Charities Act. They empower youths with skills and opportunities to become trailblazers of our digital future.",
+        website: "https://www.cyberyouth.sg/"
     },
     {
         src: figma,
         title: "Figma",
         desc: "Figma is the leading collaborative design tool for building meaningful products. Focusing on user interface and user experience design, it provides a variety of vector graphics editor and prototyping tools.",
+        website: "https://www.figma.com/"
     },
     {
         src: github,
         title: "GitHub",
         desc: "GitHub is where you can store, share, and work together with others to write code. It provides distributed version control of access control, and more, for every project.",
+        website: "https://github.com/"
     },
     {
         src: smu,
         title: "Singapore Management University",
         desc: "A premier university in Asia, the Singapore Management University (SMU) is internationally recognised for its world-class research and distinguished teaching.",
+        website: "https://www.smu.edu.sg/"
     },
     {
         src: xyz,
         title: ".xyz",
         desc: ".xyz is a popular low-cost domain ending for everyone. With more than 1.5M domains registered in more than 230 countries, it is a very popular option for choosing a domain.",
+        website: "https://gen.xyz/"
     }
 ];
 ---
-
 <Layout title="Our Partners" desc="BuildingBloCS is only possible with the help of our partners" showTitle>
+    <h2 class="flex justify-center flex-wrap pt-4 text-2xl">Current Partners</h2>
+    <main class="flex justify-center flex-wrap mx-5 gap-x-4 mb-4">
+        {
+            curr_partners.map((partner) => (
+                <div class="bg-slate-900 max-w-xs w-full rounded-xl p-5 mt-5 border border-slate-700">
+                    <a class="float-right" href={partner.website}><ExternalLinkIcon className="w-5 h-5" /></a>
+                    <Image src={partner.src} alt=`${partner.title}'s logo` loading=eager class="h-20 mx-auto object-contain" />
+                    <h2 class="my-2 text-2xl">{partner.title}</h2>
+                    <p>{partner.desc}</p>
+                </div>
+            ))
+        }
+    </main>
+    <h2 class="flex justify-center flex-wrap pt-4 text-2xl">Previous Partners</h2>
     <main class="flex justify-center flex-wrap mx-5 gap-x-4 mb-20">
         {
-            partners.map((partner) => (
+            prev_partners.map((partner) => (
                 <div class="bg-slate-900 max-w-xs w-full rounded-xl p-5 mt-5 border border-slate-700">
+                    <a class="float-right" href={partner.website}><ExternalLinkIcon className="w-5 h-5" /></a>
                     <Image src={partner.src} alt=`${partner.title}'s logo` loading=eager class="h-20 mx-auto object-contain" />
                     <h2 class="my-2 text-2xl">{partner.title}</h2>
                     <p>{partner.desc}</p>
