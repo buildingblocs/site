@@ -29,9 +29,9 @@ export default function Nav() {
 
     const events = [
         {
-            title: "No events as of now",
-            href: "https://discord.gg/VSHyrbsJFs",
-            desc: "Join our Discord to stay tuned"
+            title: "March Conference",
+            href: "/events/march",
+            desc: "The March Conference aims to introduce beginners to Python and Data Science"
         },
         {
             title: "Looking for older events?",

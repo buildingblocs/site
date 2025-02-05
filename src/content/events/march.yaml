@@ -32,6 +32,7 @@ prospectus:  # to wait for media
 - src: /events/march/6.png
 - src: /events/march/7.png
 - src: /events/march/8.png
+- src: /events/march/9.png
 timeline:
 - events:
   - date: 17 Mar
@@ -56,7 +57,7 @@ timeline:
     - time: 3:00 PM - 6:00 PM
       title: Streamlit
       desc: Produce stunning data displays with a few lines of code! Create blazing data applications in Python that skyrocket from setup to deployment with barely any effort. 
-      author: by Ryan, Wee Zen and Theophilus
+      author: by Ryan and Theophilus
   - date: 19 Mar
     event:
     - time: 1:00 PM - 4:00 PM
