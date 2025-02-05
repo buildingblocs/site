@@ -1,21 +1,20 @@
 title: March Conference
-status: over
+status: open  # over open closed
 details:
-- 'Workshops: 10th - 12th March'
-- 'Hackathon: 13th - 15th March'
+- 'Workshops: 17th - 19th March'
+- 'Hackathon: 17th - 21st March'
 - 'Venue: Online'
 - 'Email contact for queries: hello@buildingblocs.sg'
-excerpt: Our March Conference aims to ignite an interest in Python, with many interesting workshops, such as NumPy, Pandas and even Matplotlib! Learn about data scraping and compete with others in a three-day hackathon
+excerpt: Our March Conference aims to ignite an interest in Python, with many interesting workshops, such as NumPy, Pandas and even Matplotlib! Learn about data analytics and compete with others in a five-day hackathon
 desc: >-
   BuildingBloCS’ virtual March Conference aims to spark an interest in Python and Data Science by introducing 
-  three beginner-level workshops on NumPy, Pandas and Matplotlib. We also have a special sharing by FOSSASIA, 
-  the premier open source organisation in Asia, about data scraping! To put your learning to the test, a 
+  three beginner-level workshops on NumPy, Pandas and Matplotlib. We also have a lesson on Data Structures and Algorithms, providing the opportunity for participants to delve in the world of competitive programming! To put your learning to the test, a 
   three-day hackathon has been organised with attractive prizes to be won!
 faq:
 - q: Must I go for all workshops?
   a: Not at all! You can choose which workshops you would like to attend.
 - q: Why should I sign up?
-  a: You can learn from industry professionals and spend your March holidays productively!
+  a: You can learn from fellow students and spend your March holidays productively!
 - q: Is the event free?
   a: Yep, thanks to our generous sponsors, it’s completely free!
 - q: Are there prizes?
@@ -24,7 +23,7 @@ faq:
   a: The hackathon will be carried out up to groups of three. You may indicate who you would like to be grouped with (make sure it's mutual) and we'll take that into consideration. We'll fill any empty slots randomly, taking into consideration your school and age to ensure a pleasant collaboration experience!
 - q: What if something pops up and I can't make it?
   a: Email us at hello@buildingblocs.sg or approach us on Discord in any appropriate channels and we will update your signup status accordingly.
-prospectus:
+prospectus:  # to wait for media
 - src: /events/march/1.png
 - src: /events/march/2.png
 - src: /events/march/3.png
@@ -33,35 +32,40 @@ prospectus:
 - src: /events/march/6.png
 - src: /events/march/7.png
 - src: /events/march/8.png
+- src: /events/march/9.png
 timeline:
 - events:
-  - date: 10 Mar
+  - date: 17 Mar
     event:
-    - time: 2:00 PM - 4:30 PM
-      title: Foundations of Python for Data Science
+    - time: 8:00 AM
+      title: Hackathon Announcement
+      desc: Let your imagination run wild! Create unique and innovative solutions for the problem statement we provide.
+    - time: 10:00 AM - 1:00 PM
+      title: Introduction to Python
       desc: The curriculum includes proper indentation, data types, variable assignment as well as control structures like loops and conditionals. Finally, the workshop also introduces them to libraries as a lead-up to the subsequent workshops.
-      author: by ACJC Students
-  - date: 11 Mar
+      author: by Ze Qin and Rayner
+    - time: 3:00 PM - 6:00 PM
+      title: Data Manipulation - Numpy and Pandas
+      desc: Unlock the power of NumPy and Pandas to boost your data analytics skills. Learn how NumPy provides a faster, more memory efficient alternative to Python Lists. Explore how Pandas make data manipulation more efficient through merging data frames and connecting with other Python packages. With 2 hands-on mini-project, you’ll reinforce your knowledge and enhance your ability to process data with Python!
+      author: by Shivani and Sheng Xin
+  - date: 18 Mar
     event:
-    - time: 10:00 AM - 11:30 AM
-      title: Data Manipulation - NumPy
-      desc: Explore the efficiency of NumPy, a faster and memory-efficient substitute for Python Lists. From basic syntax to advanced features like broadcasting, you can gain a comprehensive understanding of NumPy.
-      author: by Shivani, Sheng Xin and Lucius
-    - time: 3:00 PM - 5:00 PM
-      title: Data Manipulation - Pandas
-      desc: Explore the use of Pandas, a more efficient way of editing your excel sheets. From basic features like merging DataFrames together, to more advanced features, with connectivity to other Python Packages, become a pro at handling data in Python!
-      author: by Dhanvine, Eugene and Mahit
-  - date: 12 Mar
+    - time: 10:00 AM - 1:00 PM
+      title: Data Visualisation with Seaborn and Matplotlib
+      desc: Learn to create data visualisations in Python. Make your visualisations fast with Seaborn, and personalised with Matplotlib.
+      author: by Wee Zen and Sindya
+    - time: 3:00 PM - 6:00 PM
+      title: Streamlit
+      desc: Produce stunning data displays with a few lines of code! Create blazing data applications in Python that skyrocket from setup to deployment with barely any effort. 
+      author: by Ryan and Theophilus
+  - date: 19 Mar
     event:
-    - time: 10:00 AM - 12:00 PM
-      title: Data Visualisation with Matplotlib and Seaborn
-      desc: Explore the fundamentals of data visualisation in Python. Gain practical insights into creating clear and effective plots as you learn to wield Matplotlib and Seaborn with minimal effort!
-      author: by Sahil, Harry, Ze Dong and Weiyi
-    - time: 5:00 PM - 7:00 PM
-      title: Data Scraping with FOSSASIA
-      desc: Special Guest from FOSSASIA to conduct a workshop on data scraping
-      author: by Mr Marco A. Gutiérrez
-  - date: 13 - 15 Mar
+    - time: 1:00 PM - 4:00 PM
+      title: Data Structures and Algorithms
+      desc: Delve into the world of competitive programming (CP)! This workshop is designed to teach foundational algorithmic thinking and essential data structures for solving CP challenges. You’ll also get the chance to learn a new algorithm that will enhance your CP skills and boost your problem solving abilities!
+      author: by Bo An, Sheng Xin, Chi Kien and Lucius
+  - date: 17 - 21 Mar
     event:
-    - title: Hackathon
+    - time: 8:00 AM - 11:59 PM
+      title: Hackathon
       desc: Let your imagination run wild! Create unique and innovative solutions for the problem statement we provide.
