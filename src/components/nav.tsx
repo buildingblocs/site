@@ -29,9 +29,9 @@ export default function Nav() {
 
     const events = [
         {
-            title: "March Conference",
-            href: "/events/march",
-            desc: "The March Conference aims to introduce beginners to Python and Data Science"
+            title: "No events as of now",
+            href: "https://discord.gg/VSHyrbsJFs",
+            desc: "Join our Discord to stay tuned"
         },
         {
             title: "Looking for older events?",
@@ -68,18 +68,18 @@ export default function Nav() {
                         </Popover>
                     </div>
                 </div>
-                {<a className="h-16 justify-end flex sticky top-0 z-20" href="/events/march">
+                {/* <a className="h-16 justify-end flex sticky top-0 z-20" href="/events/december">
                     <div className="pl-5 pr-2.5 rounded-full mt-4 bg-slate-900/50 backdrop-filter backdrop-blur-lg ring-1 ring-slate-800 flex items-center gap-x-4">
-                        <p>March Conference</p>
+                        <p>December Conference</p>
                         <div className="bg-orange-500 hover:bg-orange-600 rounded-full p-1 px-1.5 transition flex gap-x-2 items-center font-semibold"><ArrowRightIcon className="w-5 h-5" /></div>
                     </div>
-                </a>}
+                </a> */}
             </div>
             <div className="sm:hidden h-16 justify-end flex sticky top-0 z-20">
-                {<a href="/events/march" className="px-6 py-2 rounded-full mt-4 mr-4 bg-slate-900/50 backdrop-filter backdrop-blur-lg ring-1 ring-slate-800 flex items-center gap-x-4 text-sm">
-                    <p>March Conference</p>
+                {/* <a href="/events/december" className="px-6 py-2 rounded-full mt-4 mr-4 bg-slate-900/50 backdrop-filter backdrop-blur-lg ring-1 ring-slate-800 flex items-center gap-x-4 text-sm">
+                    <p>Dec Conference</p>
                     <div className="bg-orange-500 hover:bg-orange-600 rounded-full p-1 px-1.5 transition flex gap-x-2 items-center font-semibold"><ArrowRightIcon className="w-5 h-5" /></div>
-                </a>}
+                </a> */}
                 <div className="px-6 py-2 rounded-full mt-4 mr-4 bg-slate-900/50 backdrop-filter backdrop-blur-lg ring-1 ring-slate-800 flex items-center gap-x-4">
                     <a href="/">
                         <img src='/favicon.svg' alt="BuildingBloCS logo" className="w-5 h-5" />
