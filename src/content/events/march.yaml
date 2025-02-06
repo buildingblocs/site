@@ -20,7 +20,7 @@ faq:
 - q: Are there prizes?
   a: Yes, prizes will be revealed at a later date!
 - q: How will the hackathon groups be allocated? Can I choose my teammates?
-  a: The hackathon will be carried out up to groups of three. You may indicate who you would like to be grouped with (make sure it's mutual) and we'll take that into consideration. We'll fill any empty slots randomly, taking into consideration your school and age to ensure a pleasant collaboration experience!
+  a: The hackathon will be carried out up to groups of 4. You may indicate who you would like to be grouped with (make sure it's mutual) and we'll take that into consideration. We'll fill any empty slots randomly, taking into consideration your school and age to ensure a pleasant collaboration experience!
 - q: What if something pops up and I can't make it?
   a: Email us at hello@buildingblocs.sg or approach us on Discord in any appropriate channels and we will update your signup status accordingly.
 prospectus:  # to wait for media
@@ -37,9 +37,6 @@ timeline:
 - events:
   - date: 17 Mar
     event:
-    - time: 8:00 AM
-      title: Hackathon Announcement
-      desc: Let your imagination run wild! Create unique and innovative solutions for the problem statement we provide.
     - time: 10:00 AM - 1:00 PM
       title: Introduction to Python
       desc: The curriculum includes proper indentation, data types, variable assignment as well as control structures like loops and conditionals. Finally, the workshop also introduces them to libraries as a lead-up to the subsequent workshops.
@@ -66,6 +63,6 @@ timeline:
       author: by Bo An, Sheng Xin, Chi Kien and Lucius
   - date: 17 - 21 Mar
     event:
-    - time: 8:00 AM - 11:59 PM
+    - time: 17 Mar - 21 Mar
       title: Hackathon
       desc: Let your imagination run wild! Create unique and innovative solutions for the problem statement we provide.
