@@ -53,15 +53,15 @@ timeline:
       desc: Learn to create data visualisations in Python. Make your visualisations fast with Seaborn, and personalised with Matplotlib.
       author: by Wee Zen and Sindya
     - time: 3:00 PM - 6:00 PM
-      title: Streamlit
-      desc: Produce stunning data displays with a few lines of code! Create blazing data applications in Python that skyrocket from setup to deployment with barely any effort. 
-      author: by Ryan and Theophilus
-  - date: 19 Mar
-    event:
-    - time: 1:00 PM - 4:00 PM
       title: Data Structures and Algorithms
       desc: Delve into the world of competitive programming (CP)! This workshop is designed to teach foundational algorithmic thinking and essential data structures for solving CP challenges. You’ll also get the chance to learn a new algorithm that will enhance your CP skills and boost your problem solving abilities!
       author: by Bo An, Sheng Xin, Chi Kien and Lucius
+  - date: 19 Mar
+    event:
+    - time: 1:00 PM - 4:00 PM
+      title: Streamlit
+      desc: Produce stunning data displays with a few lines of code! Create blazing data applications in Python that skyrocket from setup to deployment with barely any effort. 
+      author: by Ryan and Theophilus
   - date: 17 - 21 Mar
     event:
     - time: 17 Mar - 21 Mar
