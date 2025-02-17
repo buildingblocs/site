@@ -1,9 +1,10 @@
 ---
 import Layout from "../../layout.astro";
 import { Button } from "@/components/ui/button";
-import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
+import { ArrowLeftIcon, ArrowRightIcon, InfoCircledIcon } from "@radix-ui/react-icons";
 import Faq from "@/components/eventpage/accordion";
 import Timeline from "@/components/eventpage/timeline";
+
 
 import { getCollection } from "astro:content";
 // 1. Generate a new path for every collection entry
@@ -42,6 +43,14 @@ let formattedTitle = title.replace(" ", "<br>");
           </Button>
         </a>
       }
+
+      <!-- march conference only: change in DSA timings -->
+      <div class="bg-yellow-900 text-yellow-500 rounded-md p-3 flex flex-row items-center space-x-3">
+        <InfoCircledIcon className="w-5 h-5 flex-none"></InfoCircledIcon>
+        <p>Note: the timings for Data Structures & Algorithms and Streamlit has been swapped, please refer below for the updated timings.</p>
+      </div>
+
+
       {entry.data.directions &&
         <a href={entry.data.directions} class="w-max">
           <Button className="flex gap-x-2">
