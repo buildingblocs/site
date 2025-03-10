@@ -60,7 +60,7 @@ let formattedTitle = title.replace(" ", "<br>");
         </a>
       }
       {entry.data.status !== 'closed' && <p set:html={entry.data.desc} /> }
-      {entry.data.status == 'closed' && <p>Registration is closed! To modify your existing registration, please check for emails sent by lu.ma</p>}
+      {entry.data.status == 'closed' && <p>Registration is closed! To modify your existing registration, please email us at hello@buildingblocs.sg</p>}
       <Faq client:load faq={entry.data.faq} />
     </div>
     <div class="flex-1 gap-y-4 flex flex-col">
