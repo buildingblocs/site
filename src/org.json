@@ -30,7 +30,7 @@
     "khoo": {
         "imageSrc":"/src/img/team/Ze Qin.webp",
         "name": "Khoo Ze Qin",
-        "description": "Hi! I am Ze Qin and I look forward to explore new things in life!",
+        "description": "Hey there!  I am Ze Qin, nice to meet you! ",
         "githubLink": "https://github.com/ZeQinK"
     },
     "aksharaa": {
@@ -230,5 +230,49 @@
         "description": "Hi! I'm quite interested in programming, and I love tinkering with cool tech.",
         "githubLink": "https://github.com/sahilmenon",
         "inLink": "https://www.linkedin.com/in/sahil-menon/"
+    },
+
+
+    "lucius": {
+        "imageSrc":"/src/img/team/lucius.webp",
+        "name": "Lucius Chee Zihan ",
+        "description": "Hi👋! I'm Lucius, a self-directed computer engineer, and an avid cybersecurity enthusiast.",
+        "githubLink": "https://github.com/czlucius",
+        "webLink": "https://czlucius.dev"
+    },
+    "jiang": {
+        "name": "Jiang Chuantai",
+        "description": "Hi, I'm Chuantai (CT) from NUSH and I'd love to learn more about CS :)",
+        "githubLink": "https://github.com/gonbginb1"
+    },
+    "ted": {
+        "imageSrc":"/src/img/team/ted.webp",
+        "name": "Ted Tan",
+        "description": "Tree appreciator",
+        "githubLink": "https://github.com/28tedtan",
+        "inLink": "https://www.linkedin.com/in/ted-tan-410bb028a/"
+    },
+    "hong": {
+        "name": "Hong Chengyue",
+        "description": "hi i'm chengyue. i like everything tech-related. i'm currently trying to cut down on my screen time.",
+        "githubLink": "https://github.com/em4zzz"
+    },
+    "ethan": {
+        "name": "Ethan Dalgado ",
+        "description": "I love sleeping and games",
+        "githubLink": "https://github.com/ethandal"
+    },
+    "dhanvin": {
+        "imageSrc":"/src/img/team/dhanvin.webp",
+        "name": "Dhanvin Mohan Ram",
+        "description": "Official SST Geek",
+        "githubLink": "https://github.com/NoobGrinder420",
+        "inLink": "https://www.linkedin.com/in/dhanvin-rm/"
+    },
+    "vijai": {
+        "name": "Vijai Adithya Dinesh Babu",
+        "description": "Hello people, this is Vijai. I'm into cybersecurity and blowing up places with my excellent electronic skills.",
+        "githubLink": "https://github.com/VJ2408",
+        "inLink": "https://www.linkedin.com/in/vijai-adithya-3175972b2/"
     }
 }
