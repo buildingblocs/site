@@ -231,8 +231,6 @@
         "githubLink": "https://github.com/sahilmenon",
         "inLink": "https://www.linkedin.com/in/sahil-menon/"
     },
-
-
     "lucius": {
         "imageSrc":"/src/img/team/lucius.webp",
         "name": "Lucius Chee Zihan ",
@@ -241,6 +239,7 @@
         "webLink": "https://czlucius.dev"
     },
     "jiang": {
+        "imageSrc":"/src/img/team/jiang.webp",
         "name": "Jiang Chuantai",
         "description": "Hi, I'm Chuantai (CT) from NUSH and I'd love to learn more about CS :)",
         "githubLink": "https://github.com/gonbginb1"
