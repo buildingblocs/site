@@ -11,6 +11,7 @@ const eventsData = defineCollection({
     status: z.string(),
     directions: z.string().optional(),
     luma: z.string().optional(),
+    signupLink: z.string().optional(),
     details: z.string().array(),
     excerpt: z.string(),
     desc: z.string(),

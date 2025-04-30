@@ -44,6 +44,16 @@ let formattedTitle = title.replace(" ", "<br>");
         </a>
       }
 
+      <!-- New signup link button -->
+      {signupLink && entry.data.status == "open" && (
+        <a href={signupLink} target="_blank" rel="noopener noreferrer">
+          <Button className="flex gap-x-2">
+            Register
+            <ArrowRightIcon />
+          </Button>
+        </a>
+      )}
+
       <!-- march conference only: change in DSA timings
       <div class="bg-yellow-900 text-yellow-500 rounded-md p-3 flex flex-row items-center space-x-3">
         <InfoCircledIcon className="w-5 h-5 flex-none"></InfoCircledIcon>
