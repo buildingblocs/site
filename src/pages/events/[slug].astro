@@ -1,125 +1,105 @@
 ---
-import Layout from "../../layout.astro";
-import { Button } from "@/components/ui/button";
-import { ArrowLeftIcon, ArrowRightIcon, InfoCircledIcon } from "@radix-ui/react-icons";
-import Faq from "@/components/eventpage/accordion";
-import Timeline from "@/components/eventpage/timeline";
+import { getEntryBySlug, getCollection } from 'astro:content';
+import { format } from 'date-fns';
+import Layout from '../../layout.astro';
+import Timeline from '../../components/eventpage/timeline';
+import Faq from '../../components/eventpage/accordion';
+import { Button } from '../../components/ui/button';
 
-
-import { getCollection } from "astro:content";
-// 1. Generate a new path for every collection entry
-export async function getStaticPaths() {
-  const eventEntries = await getCollection("events");
-  return eventEntries.map((entry) => ({
-    params: { slug: entry.id },
-    props: { entry },
-  }));
-}
-// 2. For your template, you can get the entry directly from the prop
-const { entry } = Astro.props;
-
-let title = entry.data.title;
-let formattedTitle = title.replace(" ", "<br>");
+const { slug } = Astro.params;
+const event = await getEntryBySlug('events', slug);
+const events = await getCollection('events');
+const upcomingEvents = events.filter((e) => e.data.status === 'open');
+const pastEvents = events.filter((e) => e.data.status === 'over');
+const currentEvent = event.data;
+const { title, status, directions, luma, signupLink, details, excerpt, desc, faq, prospectus, timeline } = currentEvent;
 ---
 
-<Layout title={entry.data.title} desc={entry.data.excerpt}>
-  <div class="max-w-6xl flex mx-auto mb-10 gap-x-6 md:flex-row flex-col p-4 sm:p-10 gap-y-10">
-    <div class="flex-1 gap-y-4 flex flex-col">
-      <h1 class="text-5xl" set:html={formattedTitle}>{entry.data.title}</h1>
-      <h2>Key Details</h2>
-      <ul class="list-disc marker:text-slate-500 ml-4 list-inside">
-        {entry.data.details.map((detail) => <li set:html={detail} />)}
-      </ul>
-      {entry.data.luma && entry.data.status == 'open' &&
-        <a
-          href=`https://lu.ma/event/${entry.data.luma}?utm_source=bbcs-site`
-          data-luma-action="checkout"
-          data-luma-event-id={entry.data.luma}
-          class="w-max"
-        >
-          <Button className="flex gap-x-2">
-              Register for Event
-              <ArrowRightIcon />
-          </Button>
-        </a>
-      }
-
-      <!-- march conference only: change in DSA timings
-      <div class="bg-yellow-900 text-yellow-500 rounded-md p-3 flex flex-row items-center space-x-3">
-        <InfoCircledIcon className="w-5 h-5 flex-none"></InfoCircledIcon>
-        <p>Note: the timings for Data Structures & Algorithms and Streamlit has been swapped, please refer below for the updated timings.</p>
-      </div> -->
-
-
-      {entry.data.directions &&
-        <a href={entry.data.directions} class="w-max">
-          <Button className="flex gap-x-2">
-              Directions
-              <ArrowRightIcon />
-          </Button>
-        </a>
-      }
-      {entry.data.status !== 'closed' && <p set:html={entry.data.desc} /> }
-      {entry.data.status == 'closed' && <p>Registration is closed! To modify your existing registration, please email us at hello@buildingblocs.sg</p>}
-      <Faq client:load faq={entry.data.faq} />
-    </div>
-    <div class="flex-1 gap-y-4 flex flex-col">
-      {entry.data.status !== 'closed' && entry.data.prospectus &&
-        <div class="embla w-4/5 mx-auto relative">
-          <p class="text-slate-300 font-medium">Official Prospectus</p>
-          <div class="embla__viewport overflow-hidden rounded-xl">
-            <div class="embla__container flex">
-              {
-                entry.data.prospectus?.map((slide) => (
-                  <div class="embla__slide">
-                    <img
-                      src={slide.src}
-                      alt='Prospectus Slides'
-                      class="object-contain mx-auto"
-                    />
-                  </div>
-                ))
-              }
+<Layout title={title} showTitle={false} desc={excerpt}>
+    <main class="max-w-2xl mx-auto px-4">
+        <h1 class="text-3xl font-bold mb-4">{title}</h1>
+        <p class="text-slate-400 mb-4">{desc}</p>
+        <ul class="list-disc list-inside mb-4">
+            {details.map((detail) => (
+                <li>{detail}</li>
+            ))}
+        </ul>
+        {luma && (
+            <div class="mb-4">
+                <a href={`https://lu.ma/${luma}`} target="_blank" rel="noopener noreferrer">
+                    <Button variant="secondary" class="w-full">
+                        Register on Luma
+                    </Button>
+                </a>
             </div>
-          </div>
-          <Button
-            className="embla__prev absolute md:-left-12 -left-10 top-1/2 transform -translate-y-1/2 rounded-full px-0 h-8 w-8"
-          >
-            <ArrowLeftIcon className="w-5 h-5" />
-            <span class="sr-only">Previous slide</span>
-          </Button>
-          <Button
-            className="embla__next absolute md:-right-12 -right-10 top-1/2 transform -translate-y-1/2 rounded-full px-0 h-8 w-8"
-          >
-            <ArrowRightIcon className="w-5 h-5" />
-            <span class="sr-only">Next slide</span>
-          </Button>
-        </div>
-      }
-      <Timeline timeline={entry.data.timeline} client:load />
-    </div>
-  </div>
-  <script is:inline id="luma-checkout" src="https://embed.lu.ma/checkout-button.js" />
+        )}
+        {signupLink && (
+            <div class="mb-4">
+                <a href={signupLink} target="_blank" rel="noopener noreferrer">
+                    <Button variant="secondary" class="w-full">
+                        Sign Up
+                    </Button>
+                </a>
+            </div>
+        )}
+        {directions && (
+            <div class="mb-4">
+                <a href={directions} target="_blank" rel="noopener noreferrer">
+                    <Button variant="secondary" class="w-full">
+                        View Directions
+                    </Button>
+                </a>
+            </div>
+        )}
+        {prospectus && (
+            <div class="mb-4">
+                <h2 class="text-2xl font-bold mb-2">Prospectus</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {prospectus.map((item) => (
+                        <img src={item.src} alt="Prospectus" class="rounded-lg border border-slate-700" />
+                    ))}
+                </div>
+            </div>
+        )}
+        {timeline && (
+            <div class="mb-4">
+                <h2 class="text-2xl font-bold mb-2">Timeline</h2>
+                <Timeline timeline={timeline} />
+            </div>
+        )}
+        {faq && (
+            <div class="mb-4">
+                <h2 class="text-2xl font-bold mb-2">FAQ</h2>
+                <Faq faq={faq} />
+            </div>
+        )}
+        {status === 'open' && (
+            <div class="mb-4">
+                <h2 class="text-2xl font-bold mb-2">Upcoming Events</h2>
+                <ul class="list-disc list-inside">
+                    {upcomingEvents.map((event) => (
+                        <li>
+                            <a href={`/events/${event.slug}`} class="text-blue-500 hover:underline">
+                                {event.data.title} - {format(new Date(event.data.date), 'MMMM d, yyyy')}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        )}
+        {status === 'over' && (
+            <div class="mb-4">
+                <h2 class="text-2xl font-bold mb-2">Past Events</h2>
+                <ul class="list-disc list-inside">
+                    {pastEvents.map((event) => (
+                        <li>
+                            <a href={`/events/${event.slug}`} class="text-blue-500 hover:underline">
+                                {event.data.title} - {format(new Date(event.data.date), 'MMMM d, yyyy')}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        )}
+    </main>
 </Layout>
-<script>
-  import EmblaCarousel from "embla-carousel";
-  import Autoplay from "embla-carousel-autoplay";
-
-  const emblaNode = document.querySelector(".embla__viewport") as HTMLElement;
-
-  // Initialize Embla Carousel
-  const embla = EmblaCarousel(emblaNode, { loop: false }, [Autoplay()]);
-
-  // Event listeners for previous and next buttons
-  const prevButtonNode = document.querySelector(".embla__prev") as HTMLElement;
-  const nextButtonNode = document.querySelector(".embla__next") as HTMLElement;
-
-  prevButtonNode.addEventListener("click", () => embla.scrollPrev(), false);
-  nextButtonNode.addEventListener("click", () => embla.scrollNext(), false);
-</script>
-<style>
-  .embla__slide {
-    flex: 0 0 100%;
-    display: flex;
-  }
-</style>

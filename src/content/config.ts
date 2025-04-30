@@ -5,12 +5,13 @@ import { z, defineCollection } from 'astro:content';
 
 // 2. Define a `type` and `schema` for each collection
 const eventsData = defineCollection({
-  type: 'data', // v2.5.0 and later
+  type: 'data',
   schema: z.object({
     title: z.string(),
     status: z.string(),
     directions: z.string().optional(),
     luma: z.string().optional(),
+    signupLink: z.string().optional(),
     details: z.string().array(),
     excerpt: z.string(),
     desc: z.string(),
