@@ -31,7 +31,12 @@ export default function Nav() {
         {
             title: "June Conference",
             href: "/events/june",
-            desc: "The June Conference foo bar baz",
+            desc: "The June Conference is an AI-centered conference designed for everyone",
+        },
+        {
+            title: "March Conference",
+            href: "/events/march",
+            desc: "The March Conference aims to introduce beginners to Python and Data Science"
         },
         {
             title: "Looking for older events?",

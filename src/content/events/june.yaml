@@ -1,248 +1,183 @@
 title: June Conference
 status: open
-signupLink: https://archlinux.org/
-directions: /events/june/directions
+signupLink: https://form.buildingblocs.sg/67f12bd590f7c3b87bf3854a
+# directions: /events/june/directions
+partners: curr_partners
 details:
 - 'Workshops: 10th - 11th June'
 - 'Closing Ceremony: 14th June'
-- 'Venue: Singapore Management University'
+- 'Venue: Singapore University of Technology and Design'
 - 'Email contact for queries: hello@buildingblocs.sg'
-excerpt: The June Conference is back with a bang to teach participants about Artificial Intelligence. Learn new concepts, apply your skills in the hackathon and stand a chance to win prizes
+excerpt: The June Conference, centered around AI, teaches everything from Python basics to creating machine learning models. Whether you're new to AI or a seasoned developer, there's plenty to explore and learn!
 desc: >-
-  BuildingBloCS’ June Conference is back with a bang to teach participants the <b>applications of AI</b>, 
-  which has become more prominent in our lives today. We have specially designed <i>three different 
-  tracks</i> based on prior experience: Beginner, in which we will introduce Python and various 
-  beginner-friendly AI libraries; Intermediate, where we will guide you through the ecosystem of 
-  AI libraries that are commonly used; and finally Advanced, where we will take a deep dive into 
-  theory and also deploying your AI applications. Across the three conference days, we hope that 
-  participants will forge friendships, hone their skills, and apply what they've learnt in our very own <b>hackathon</b>!
+  Centered around AI, our June Conference aims to teach all participants interesting concepts related to using and 
+  programming AI. From a quick introduction to python, to making full fledge machine learning models, we have 
+  something for everyone! Whether you're looking to learn more about AI/Computing, or a seasoned professional 
+  looking to learn more, we welcome everyone with open arms! Feel free to browse our stunning lineup of workshops 
+  that'll help you in your computer science journey.
 faq:
 - q: Must I go for all the workshops in my track?
   a: You are highly encouraged to attend all the workshops, as content from some workshops may build on previous workshops. All skills will be taught progressively, so it may be harder to catch up if you miss one.
 - q: Why should I sign up? Is it free?
   a: It's a free, fun and easy way to learn new skills about AI and computing! What more could you ask for?
 - q: What if something pops up and I can't make it? 
-  a: Please indicate that you are not coming via the lu.ma interface.
+  a: Please open a ticket in the BuildingBloCS server so we can update your registration status
 - q: What is a "hackathon"? Is it compulsory?
   a: A hackathon is a competition where you'll have to work in teams to create an application based on a theme provided. It's a great way to practice your skills, however, it is not compulsory to encourage everyone to learn and attend.
 - q: What are the prizes? When will I get them?
-  a: We can't divulge any information about the prizes, but they will be given out after the finals, on Friday, 14th June!
+  a: We can't divulge any information about the prizes, but they will be given out after the finals, on 14th June
 - q: How will the hackathon groups be allocated? Can I choose my teammates?
   a: For this hackathon, we will be allocating the groups for you. However, if you (mutually) indicate someone you'll like to work with, we'll take that into consideration. Any other empty slots will be filled randomly, taking into account your age.
 prospectus:
-- src: /events/june/1.png
-- src: /events/june/2.png
-- src: /events/june/3.png
-- src: /events/june/4.png
-- src: /events/june/5.png
-- src: /events/june/6.png
-- src: /events/june/7.png
-- src: /events/june/8.png
+- src: /events/june/1.webp
+- src: /events/june/2.webp
+- src: /events/june/3.webp
+- src: /events/june/4.webp
+- src: /events/june/5.webp
+- src: /events/june/6.webp
+- src: /events/june/7.webp
+- src: /events/june/8.webp
+- src: /events/june/9.webp
+- src: /events/june/10.webp
+- src: /events/june/11.webp
+- src: /events/june/12.webp
+- src: /events/june/13.webp
+- src: /events/june/14.webp
+- src: /events/june/15.webp
 timeline:
 - title: Beginner
   events:
   - date: 10 June
     event:
-    - time: 08:30 - 09:00
+    - time: 08:00 - 08:30
       title: Registration
-    - time: 09:00 - 09:30
+    - time: 08:30 - 09:00
       title: Opening Ceremony
-    - time: 09:30 - 11:30
-      title: Python with GitHub Pro
-      desc: Learn the fundamentals of programming with Python syntax, data structures, control flow and more, while leveraging on the guidance GitHub Pro's Copilot can provide. This workshop is suitable even for complete beginners
-      author: by Shivani, Jolynn and Sai
-    - time: 11:30 - 12:00
-      title: Icebreakers
-    - time: 12:00 - 13:00
+    - time: 09:00 - 11:30
+      title: Introduction to Python
+      desc: Welcome to our intro to python workshop! In this workshop, you will get to learn the basics of python, so that you can tackle greater things using this incredibly versatile language
+      author: by Bo An
+    - time: 11:30 - 12:30
       title: Lunch
-    - time: 13:00 - 13:30
+    - time: 12:30 - 14:00
+      title: Introduction to Python
+      desc: Welcome to our intro to python workshop! In this workshop, you will get to learn the basics of python, so that you can tackle greater things using this incredibly versatile language
+      author: by Bo An
+    - time: 14:00 - 15:00
+      title: Bonding
+    - time: 15:00 - 18:00
+      title: Introduction to Machine Learning
+      desc: The theory behind Artificial Intelligence and peek into tensorflow and pycaret!
+      author: by Shivani
+    - time: 18:00 - 18:30
       title: Hackathon Briefing
-    - time: 13:30 - 15:30
-      title: Python with GitHub Pro
-      desc: Learn the fundamentals of programming with Python syntax, data structures, control flow and more, while leveraging on the guidance GitHub Pro's Copilot can provide. This workshop is suitable even for complete beginners
-      author: by Shivani, Jolynn and Sai
-    - time: 15:30 - 16:00
-      title: Break
-    - time: 16:00 - 18:00
-      title: Orange and Pycaret
-      author: by Dhanvine, Eugene and Mahit
   - date: 11 June
     event:
-    - time: 09:00 - 09:30
-      title: Attendance
-    - time: 09:30 - 10:30
-      title: Orange and Pycaret
-      author: by Dhanvine, Eugene and Mahit
-    - time: 10:30 - 11:30
-      title: Sharing by Open Government Products
-      author: by Mr Kee Wei Lam
-    - time: 11:30 - 13:30
-      title: LLM Basics
-      author: by Sahil and Cayden
-    - time: 13:30 - 14:30
+    - time: 08:30 - 09:00
+      title: Registration
+    - time: 09:00 - 13:00
+      title: Introduction to Data Processing
+      desc: Master the crucials of how to use NumPy, Pandas and Matplotlib for processing the data that we use in Machine Learning! 
+      author: by Shivani
+    - time: 13:00 - 14:00
       title: Lunch
-    - time: 14:30 - 17:00
-      title: Orange and Pycaret + Breaks
-      author: by Dhanvine, Eugene and Mahit
-    - time: 17:00 - 18:30
-      title: Hackathon time
-      desc: Time is given for you to work on your hackathon with your teammates
+    - time: 14:00 - 15:00
+      title: Hackathon Time
+    - time: 15:00 - 17:00
+      title: Introduction to Deep Learning
+      desc: This workshop aims to teach beginners comprehensively about deep learning, with concepts like activation functions and loss.
+      author: by Akshara
   - date: 14 June
     event:
-    - time: 09:00 - 09:30
-      title: Attendance
-    - time: 09:30 - 11:30
-      title: Booths
-      desc: View the wide variety of booths from our partners
-    - time: 11:30 - 12:00
-      title: Special Activities
-    - time: 12:00 - 13:00
-      title: Lunch
-    - time: 13:00 - 13:30
-      title: Speech
-      author: by Cyber Youth Singapore
-    - time: 14:00 - 14:30
-      title: Fireside Chat and Speech
-      author: by Guest of Honour
-    - time: 14:30 - 15:15
-      title: Prize Giving
+    - time: 08:30 - 18:00
+      title: Judging, Closing Ceremony, Booths
 - title: Intermediate
   events:
   - date: 10 June
     event:
-    - time: 08:30 - 09:00
+    - time: 08:00 - 08:30
       title: Registration
-    - time: 09:00 - 09:30
+    - time: 08:30 - 09:00
       title: Opening Ceremony
-    - time: 09:30 - 11:30
-      title: GitHub and Git Basics
-      desc: Learn the basic essentials of Git for collaborative software development
-      author: by Saumil, Yuhan and Shao Qi
-    - time: 11:30 - 12:00
-      title: Icebreakers
-    - time: 12:00 - 13:00
+    - time: 09:00 - 12:30
+      title: Gemini with Streamlit
+      desc: Learn how to use Gemini with Streamlit. Includes a guided project to build your own tutor bot.
+      author: by Dhanvin and Ethan
+    - time: 12:30 - 13:30
       title: Lunch
-    - time: 13:00 - 13:30
+    - time: 13:30 - 14:30
+      title: Bonding
+    - time: 14:30 - 15:00
       title: Hackathon Briefing
-    - time: 13:30 - 15:00
-      title: PandasAI
-      desc: Intuitive data analysis through natural language queries and pandas
-      author: by Ayden and Alexis
     - time: 15:00 - 18:00
-      title: Scikit-learn & Scikit-NN
-      desc: Kickstart the transformation of your theoretical knowledge of machine learning into practical applications using Scikit-learn! Learn to set up the various algorithms, neural networks, and optimise them
-      author: by Ze Dong and Harry
+      title: Introduction to Machine Learning
+      desc: The theory behind Artificial Intelligence and peek into tensorflow and pycaret!
+      author: by Shivani
+    - time: 18:00 - 19:00
+      title: PyTorch
+      desc: Learn to work with tensors, build custom neural networks, and train models. Additionally, create an Iris Flower Classification Model using PyTorch pipeline.
+      author: by Divit and Vijai
   - date: 11 June
     event:
-    - time: 09:00 - 09:30
-      title: Attendance
-    - time: 09:30 - 10:30
-      title: Scikit-learn & Scikit-NN
-      desc: Kickstart the transformation of your theoretical knowledge of machine learning into practical applications using Scikit-learn! Learn to set up the various algorithms, neural networks, and optimise them
-      author: by Ze Dong and Harry
-    - time: 10:30 - 11:30
-      title: Sharing by Open Government Products
-      author: by Mr Kee Wei Lam
-    - time: 11:30 - 13:30
-      title: LLM Basics and Prompt Engineering
-      author: by Sahil and Cayden
-    - time: 13:30 - 14:30
-      title: Lunch
-    - time: 14:30 - 17:00
-      title: Trailblazing with Streamlit
-      desc: Light up the world with the power of Streamlit! Create blazing data applications in Python that skyrocket from setup to deployment with barely any effort
-      author: by Johnson and Weiyi
-    - time: 17:00 - 18:30
-      title: Pytorch
-      desc: Build a simple Neural Network with PyTorch
-      author: by Lucius, Hugo and Arjun
-  - date: 14 June
-    event:
-    - time: 09:00 - 09:30
-      title: Attendance
-    - time: 09:30 - 11:30
-      title: Booths
-      desc: View the wide variety of booths from our partners
-    - time: 11:30 - 12:00
-      title: Special Activities
+    - time: 08:30 - 09:00
+      title: Registration
+    - time: 09:00 - 12:00
+      title: PyTorch
+      desc: Learn to work with tensors, build custom neural networks, and train models. Additionally, create an Iris Flower Classification Model using PyTorch pipeline.
+      author: by Divit and Vijai
     - time: 12:00 - 13:00
       title: Lunch
-    - time: 13:00 - 13:30
-      title: Speech
-      author: by Cyber Youth Singapore
-    - time: 14:00 - 14:30
-      title: Fireside Chat and Speech
-      author: by Guest of Honour
-    - time: 14:30 - 15:15
-      title: Prize Giving
+    - time: 13:00 - 15:00
+      title: SciKit-Learn
+      desc: Learn how to use Scikitlearn, one of the most used Machine Learning libraries, through a series of exciting spy-themed challenges! 
+      author: by Aksharaa
+    - time: 15:00 - 17:00
+      title: Introduction to Deep Learning
+      desc: This workshop aims to teach beginners comprehensively about deep learning, with concepts like activation functions and loss.
+      author: by Akshara
+    - time: 17:00 - 19:00
+      title: SciKit-Learn
+      desc: Learn how to use Scikitlearn, one of the most used Machine Learning libraries, through a series of exciting spy-themed challenges! 
+      author: by Aksharaa
+  - date: 14 June
+    event:
+    - time: 08:30 - 18:00
+      title: Judging, Closing Ceremony, Booths
 - title: Advanced
   events:
   - date: 10 June
     event:
-    - time: 08:30 - 09:00
+    - time: 08:00 - 08:30
       title: Registration
-    - time: 09:00 - 09:30
+    - time: 08:30 - 09:00
       title: Opening Ceremony
-    - time: 09:30 - 11:30
-      title: GitHub and Git Basics
-      desc: Learn the basic essentials of Git for collaborative software development
-      author: by Saumil, Yuhan and Shao Qi
-    - time: 11:30 - 12:00
-      title: Icebreakers
-    - time: 12:00 - 13:00
+    - time: 09:00 - 12:30
+      title: Gemini with Streamlit
+      desc: Learn how to use Gemini with Streamlit. Includes a guided project to build your own tutor bot.
+      author: by Dhanvin and Ethan
+    - time: 12:30 - 13:30
       title: Lunch
-    - time: 13:00 - 13:30
+    - time: 13:30 - 14:30
+      title: Bonding
+    - time: 14:30 - 15:00
       title: Hackathon Briefing
-    - time: 13:30 - 16:30
-      title: RNNs and Transformers
-      desc: Teach intuitively the structure of RNN and Transformers and then transition to versatility of Transformers
-      author: by Justin, Mahir and Wee Zen
-    - time: 16:30 - 18:00
-      title: Diffusion and GAN
-      desc: Don’t know what GANs and Diffusion are? Learn the system and technologies behind Stable Diffusion
-      author: by Sai, Yue Heng
+    - time: 15:00 - 18:30
+      title: Graph Neural Networks
+      desc: Hands-on Intro to GNNs and their Real-world applications
+      author: by Kien
   - date: 11 June
     event:
-    - time: 09:00 - 09:30
-      title: Attendance
-    - time: 09:30 - 10:30
-      title: Hackathon time
-      desc: Time is given for you to work on your hackathon with your teammates
-    - time: 10:30 - 11:30
-      title: Sharing by Open Government Products
-      author: by Mr Kee Wei Lam
-    - time: 11:30 - 13:30
-      title: MLOps
-      desc: Introduction to a suite of technologies that are used to deploy/maintain/develop AI models
-      author: by Ming Hong
+    - time: 08:30 - 09:00
+      title: Registration
+    - time: 09:00 - 13:00
+      title: Introduction to Deep Learning for Vision & NLP
+      desc: Understand the theory and code behind ChatGPT and Tesla auto-driving.
+      author: by Sahil and Wee Zen
     - time: 13:30 - 14:30
       title: Lunch
-    - time: 14:30 - 15:30
-      title: MLOps
-      desc: Introduction to a suite of technologies that are used to deploy/maintain/develop AI models
-      author: by Ming Hong
-    - time: 15:30 - 16:00
-      title: Break
-    - time: 16:00 - 18:00
-      title: Gemini API into Web Development
-      desc: Build an AI-powered chatbot-based weather web-app that gives the forecast of the upcoming weather
-      author: by Myat
+    - time: 15:00 - 17:00
+      title: Hackathon Time
   - date: 14 June
     event:
-    - time: 09:00 - 09:30
-      title: Attendance
-    - time: 09:30 - 11:30
-      title: Booths
-      desc: View the wide variety of booths from our partners
-    - time: 11:30 - 12:00
-      title: Special Activities
-    - time: 12:00 - 13:00
-      title: Lunch
-    - time: 13:00 - 13:30
-      title: Speech
-      author: by Cyber Youth Singapore
-    - time: 14:00 - 14:30
-      title: Fireside Chat and Speech
-      author: by Guest of Honour
-    - time: 14:30 - 15:15
-      title: Prize Giving
+    - time: 08:30 - 18:00
+      title: Judging, Closing Ceremony, Booths

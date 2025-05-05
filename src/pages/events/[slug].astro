@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeftIcon, ArrowRightIcon, InfoCircledIcon } from "@radix-ui/react-icons";
 import Faq from "@/components/eventpage/accordion";
 import Timeline from "@/components/eventpage/timeline";
-
+import { Image } from "astro:assets";
+import { partnerMap } from "@/partners"
 
 import { getCollection } from "astro:content";
 // 1. Generate a new path for every collection entry
@@ -18,6 +19,9 @@ export async function getStaticPaths() {
 // 2. For your template, you can get the entry directly from the prop
 const { entry } = Astro.props;
 
+const partners = entry.data.partners
+  ? partnerMap[entry.data.partners as keyof typeof partnerMap]
+  : undefined;
 let title = entry.data.title;
 let formattedTitle = title.replace(" ", "<br>");
 ---
@@ -26,49 +30,69 @@ let formattedTitle = title.replace(" ", "<br>");
   <div class="max-w-6xl flex mx-auto mb-10 gap-x-6 md:flex-row flex-col p-4 sm:p-10 gap-y-10">
     <div class="flex-1 gap-y-4 flex flex-col">
       <h1 class="text-5xl" set:html={formattedTitle}>{entry.data.title}</h1>
+
+      {partners && 
+        <div class="bg-slate-900 max-w-sm rounded-xl p-3 mt-2 border border-slate-700 w-full">
+          <div class="flex">
+            {partners.map((partner) => (
+              <div class="flex-1 flex justify-center items-center">
+                <Image 
+                  src={partner.src} 
+                  alt={`${partner.title}'s logo`} 
+                  class="h-10 object-contain max-w-full" 
+                  loading="lazy" 
+                />
+              </div>
+            ))}
+          </div>
+          <p class="text-xs mt-3 text-center">
+            Proudly supported by {partners.map((partner, index) => partner.title).join(', ').replace(/,([^,]*)$/, ' and$1')}
+          </p>
+        </div>
+      }        
+
       <h2>Key Details</h2>
       <ul class="list-disc marker:text-slate-500 ml-4 list-inside">
         {entry.data.details.map((detail) => <li set:html={detail} />)}
       </ul>
-      {entry.data.luma && entry.data.status == 'open' &&
-        <a
-          href=`https://lu.ma/event/${entry.data.luma}?utm_source=bbcs-site`
-          data-luma-action="checkout"
-          data-luma-event-id={entry.data.luma}
-          class="w-max"
-        >
-          <Button className="flex gap-x-2">
+
+      <div class="flex gap-x-3">
+        {entry.data.luma && entry.data.status == 'open' &&
+          <a
+            href=`https://lu.ma/event/${entry.data.luma}?utm_source=bbcs-site`
+            data-luma-action="checkout"
+            data-luma-event-id={entry.data.luma}
+            class="w-max"
+          >
+            <Button className="flex gap-x-2">
+                Register for Event
+                <ArrowRightIcon />
+            </Button>
+          </a>
+        }
+        {entry.data.signupLink && entry.data.status == "open" && (
+          <a href={entry.data.signupLink} target="_blank" rel="noopener noreferrer">
+            <Button className="flex gap-x-2">
               Register for Event
               <ArrowRightIcon />
-          </Button>
-        </a>
-      }
-
-      <!-- New signup link button -->
-      {entry.data.signupLink && entry.data.status == "open" && (
-        <a href={entry.data.signupLink} target="_blank" rel="noopener noreferrer">
-          <Button className="flex gap-x-2">
-            Register for Event
-            <ArrowRightIcon />
-          </Button>
-        </a>
-      )}
+            </Button>
+          </a>
+        )}
+        {entry.data.directions &&
+          <a href={entry.data.directions} class="w-max">
+            <Button className="flex gap-x-2">
+                Directions
+                <ArrowRightIcon />
+            </Button>
+          </a>
+        }
+      </div>
 
       <!-- march conference only: change in DSA timings
       <div class="bg-yellow-900 text-yellow-500 rounded-md p-3 flex flex-row items-center space-x-3">
         <InfoCircledIcon className="w-5 h-5 flex-none"></InfoCircledIcon>
         <p>Note: the timings for Data Structures & Algorithms and Streamlit has been swapped, please refer below for the updated timings.</p>
       </div> -->
-
-
-      {entry.data.directions &&
-        <a href={entry.data.directions} class="w-max">
-          <Button className="flex gap-x-2">
-              Directions
-              <ArrowRightIcon />
-          </Button>
-        </a>
-      }
       {entry.data.status !== 'closed' && <p set:html={entry.data.desc} /> }
       {entry.data.status == 'closed' && <p>Registration is closed! To modify your existing registration, please email us at hello@buildingblocs.sg</p>}
       <Faq client:load faq={entry.data.faq} />

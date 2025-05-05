@@ -9,6 +9,7 @@ const eventsData = defineCollection({
   schema: z.object({
     title: z.string(),
     status: z.string(),
+    partners: z.string().optional(),
     directions: z.string().optional(),
     luma: z.string().optional(),
     signupLink: z.string().optional(),
