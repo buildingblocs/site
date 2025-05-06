@@ -75,8 +75,13 @@ let formattedTitle = title.replace(" ", "<br>");
       {entry.data.status !== 'closed' && <p set:html={entry.data.desc} /> }
       {entry.data.status == 'closed' && <p>Registration is closed! To modify your existing registration, please email us at hello@buildingblocs.sg</p>}
 
+      <Faq client:load faq={entry.data.faq} />
+
       {partners && 
-        <div class="bg-slate-900 max-w-sm rounded-xl p-3 mt-2 border border-slate-700 w-full">
+        <div class="bg-slate-900 rounded-xl px-3 pb-4 pt-2 mt-2 border border-slate-700 w-full">
+          <p class="text-xs mb-3">
+            Proudly supported by:
+          </p>
           <div class="flex">
             {partners.map((partner) => (
               <div class="flex-1 flex justify-center items-center">
@@ -89,13 +94,8 @@ let formattedTitle = title.replace(" ", "<br>");
               </div>
             ))}
           </div>
-          <p class="text-xs mt-3 text-center">
-            Proudly supported by {partners.map((partner, index) => partner.title).join(', ').replace(/, ([^,]*)$/, ', and $1')}
-          </p>
         </div>
       }        
-
-      <Faq client:load faq={entry.data.faq} />
     </div>
     <div class="flex-1 gap-y-4 flex flex-col">
       {entry.data.status !== 'closed' && entry.data.prospectus &&
