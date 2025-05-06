@@ -7,7 +7,7 @@ details:
 - 'Workshops: 10th - 11th June'
 - 'Closing Ceremony: 14th June'
 - 'Venue: Singapore University of Technology and Design'
-- 'Email contact for queries: hello@buildingblocs.sg'
+- 'Queries? Read the FAQ'
 excerpt: The June Conference, centered around AI, teaches everything from Python basics to creating machine learning models. Whether you're new to AI or a seasoned developer, there's plenty to explore and learn!
 desc: >-
   Centered around AI, our June Conference aims to teach all participants interesting concepts related to using and 
@@ -28,6 +28,8 @@ faq:
   a: The prizes will be announced closer to the event dates on Discord. Rest assured, there are plenty to be won!
 - q: How will the hackathon groups be allocated? Can I choose my teammates?
   a: For this hackathon, we will be allocating the groups for you. However, if you (mutually) indicate someone you'll like to work with, we'll take that into consideration. Any other empty slots will be filled randomly, taking into account your age.
+- q: I still have questions! Who can I contact?
+  a: The fastest way to reach us is to open a ticket on our Discord server, which you can join at <a href="https://go.buildingblocs.sg/discord">go.buildingblocs.sg/discord</a> <br> However, if you are unable to use Discord, you may also shoot us an email at <a href="mailto:hello@buildingblocs.sg">hello@buildingblocs.sg</a>
 prospectus:
 - src: /events/june/1.webp
 - src: /events/june/2.webp

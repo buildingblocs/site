@@ -30,27 +30,6 @@ let formattedTitle = title.replace(" ", "<br>");
   <div class="max-w-6xl flex mx-auto mb-10 gap-x-6 md:flex-row flex-col p-4 sm:p-10 gap-y-10">
     <div class="flex-1 gap-y-4 flex flex-col">
       <h1 class="text-5xl" set:html={formattedTitle}>{entry.data.title}</h1>
-
-      {partners && 
-        <div class="bg-slate-900 max-w-sm rounded-xl p-3 mt-2 border border-slate-700 w-full">
-          <div class="flex">
-            {partners.map((partner) => (
-              <div class="flex-1 flex justify-center items-center">
-                <Image 
-                  src={partner.src} 
-                  alt={`${partner.title}'s logo`} 
-                  class="h-10 object-contain max-w-full" 
-                  loading="lazy" 
-                />
-              </div>
-            ))}
-          </div>
-          <p class="text-xs mt-3 text-center">
-            Proudly supported by {partners.map((partner, index) => partner.title).join(', ').replace(/,([^,]*)$/, ' and$1')}
-          </p>
-        </div>
-      }        
-
       <h2>Key Details</h2>
       <ul class="list-disc marker:text-slate-500 ml-4 list-inside">
         {entry.data.details.map((detail) => <li set:html={detail} />)}
@@ -95,6 +74,27 @@ let formattedTitle = title.replace(" ", "<br>");
       </div> -->
       {entry.data.status !== 'closed' && <p set:html={entry.data.desc} /> }
       {entry.data.status == 'closed' && <p>Registration is closed! To modify your existing registration, please email us at hello@buildingblocs.sg</p>}
+
+      {partners && 
+        <div class="bg-slate-900 max-w-sm rounded-xl p-3 mt-2 border border-slate-700 w-full">
+          <div class="flex">
+            {partners.map((partner) => (
+              <div class="flex-1 flex justify-center items-center">
+                <Image 
+                  src={partner.src} 
+                  alt={`${partner.title}'s logo`} 
+                  class="h-10 object-contain max-w-full" 
+                  loading="lazy" 
+                />
+              </div>
+            ))}
+          </div>
+          <p class="text-xs mt-3 text-center">
+            Proudly supported by {partners.map((partner, index) => partner.title).join(', ').replace(/, ([^,]*)$/, ', and $1')}
+          </p>
+        </div>
+      }        
+
       <Faq client:load faq={entry.data.faq} />
     </div>
     <div class="flex-1 gap-y-4 flex flex-col">
