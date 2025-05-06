@@ -256,10 +256,16 @@
         "description": "hi i'm chengyue. i like everything tech-related. i'm currently trying to cut down on my screen time.",
         "githubLink": "https://github.com/em4zzz"
     },
-    "ethan": {
-        "name": "Ethan Dalgado ",
+    "ethan_d": {
+        "name": "Ethan Dalgado",
         "description": "I love sleeping and games",
         "githubLink": "https://github.com/ethandal"
+    },
+    "ethan_l": {
+        "imageSrc":"/src/img/team/ethan_l.webp",
+        "name": "Ethan Lim",
+        "description": "Electronic & Computer Engineering student; diehard engineer & diecast enjoyer",
+        "githubLink": "https://github.com/ethanetExplorer"
     },
     "dhanvin": {
         "imageSrc":"/src/img/team/dhanvin.webp",

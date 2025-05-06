@@ -2,73 +2,10 @@
 import Layout from "../layout.astro";
 
 import { Image } from "astro:assets";
-import cys from "../img/partners/cys.png";
-import figma from "../img/partners/figma.svg";
-import github from "../img/partners/github.svg";
-import smu from "../img/partners/smu.png";
-import xyz from "../img/partners/xyz.svg";
-import okx from "../img/partners/okx.svg";
-import revenuecat from "../img/partners/revenuecat.svg";
-import moetext from "../img/partners/moetext.svg";
+import { curr_partners, prev_partners } from "../partners";
 import {
   ExternalLinkIcon
 } from "@radix-ui/react-icons";
-
-const curr_partners = [
-    // uncomment these two in june conf
-
-    // {
-    //     src: okx,
-    //     title: "OKX",
-    //     desc: "OKX is a Seychelles-based cryptocurrency exchange. As of Jan 2025, OKX is the 4th largest cryptocurrency exchange in the world according to CoinMarketCap.",
-    //     website: "https://www.okx.com/join-us"
-    // },
-    // {
-    //     src: revenuecat,
-    //     title: "RevenueCat",
-    //     desc: "RevenueCat is a mobile subscription service. They provide a comprehensive toolset for developers to implement and manage in-app purchases and subscriptions.",
-    //     website: "https://www.revenuecat.com/"
-    // },
-    {
-        src: cys,
-        title: "Cyber Youth Singapore",
-        desc: "Cyber Youth Singapore is a registered charity under the Charities Act. They empower youths with skills and opportunities to become trailblazers of our digital future.",
-        website: "https://www.cyberyouth.sg/"
-        
-    },
-    {
-        src: github,
-        title: "GitHub",
-        desc: "GitHub is where you can store, share, and work together with others to write code. It provides distributed version control of access control, and more, for every project.",
-        website: "https://github.com/"
-    },
-    {
-        src: moetext,
-        title: "Ministry of Education",
-        desc: "The Ministry of Education (MOE) of Singapore formulates and implements education policies on education structure, curriculum, pedagogy, and assessment.",
-        website: "https://www.moe.gov.sg/"
-    },
-]
-const prev_partners = [
-    {
-        src: figma,
-        title: "Figma",
-        desc: "Figma is the leading collaborative design tool for building meaningful products. Focusing on user interface and user experience design, it provides a variety of vector graphics editor and prototyping tools.",
-        website: "https://www.figma.com/"
-    },
-    {
-        src: smu,
-        title: "Singapore Management University",
-        desc: "A premier university in Asia, the Singapore Management University (SMU) is internationally recognised for its world-class research and distinguished teaching.",
-        website: "https://www.smu.edu.sg/"
-    },
-    {
-        src: xyz,
-        title: ".xyz",
-        desc: ".xyz is a popular low-cost domain ending for everyone. With more than 1.5M domains registered in more than 230 countries, it is a very popular option for choosing a domain.",
-        website: "https://gen.xyz/"
-    }
-];
 ---
 <Layout title="Our Partners" desc="BuildingBloCS is only possible with the help of our partners" showTitle>
     <h2 class="flex justify-center flex-wrap pt-4 text-2xl">Current Partners</h2>
