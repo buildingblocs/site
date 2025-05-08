@@ -77,33 +77,25 @@ let formattedTitle = title.replace(" ", "<br>");
 
       <Faq client:load faq={entry.data.faq} />
 
-      {partners && (
+      {partners && 
         <div class="bg-slate-900 rounded-xl px-3 pb-4 pt-2 mt-2 border border-slate-700 w-full">
-          <p class="text-xs mb-3">Proudly supported by:</p>
-
-          {Array.from(
-            partners.reduce((acc, partner) => {
-              const pos = partner.position || 1;
-              if (!acc.has(pos)) acc.set(pos, []);
-              acc.get(pos).push(partner);
-              return acc;
-            }, new Map())
-          ).map(([position, group]) => (
-            <div key={position} class="flex flex-wrap mb-3">
-              {group.map((partner) => (
-                <div key={partner.title} class="flex-1 flex justify-center items-center min-w-[120px]">
-                  <Image 
-                    src={partner.src} 
-                    alt={`${partner.title}'s logo`} 
-                    class="h-10 object-contain max-w-full" 
-                    loading="lazy" 
-                  />
-                </div>
-              ))}
-            </div>
-          ))}
+          <p class="text-xs mb-3">
+            Proudly supported by:
+          </p>
+          <div class="flex">
+            {partners.map((partner) => (
+              <div class="flex-1 flex justify-center items-center">
+                <Image 
+                  src={partner.src} 
+                  alt={`${partner.title}'s logo`} 
+                  class="h-10 object-contain max-w-full" 
+                  loading="lazy" 
+                />
+              </div>
+            ))}
+          </div>
         </div>
-      )}
+      }        
     </div>
     <div class="flex-1 gap-y-4 flex flex-col">
       {entry.data.status !== 'closed' && entry.data.prospectus &&

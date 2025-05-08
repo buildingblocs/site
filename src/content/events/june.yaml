@@ -46,6 +46,7 @@ prospectus:
 - src: /events/june/13.webp
 - src: /events/june/14.webp
 - src: /events/june/15.webp
+- src: /events/june/16.webp
 timeline:
 - title: Beginner
   events:
@@ -175,10 +176,12 @@ timeline:
       title: Introduction to Deep Learning for Vision & NLP
       desc: Understand the theory and code behind ChatGPT and Tesla auto-driving.
       author: by Sahil and Wee Zen
-    - time: 13:30 - 14:30
+    - time: 13:00 - 14:00
       title: Lunch
-    - time: 15:00 - 17:00
-      title: Hackathon Time
+    - time: 14:00 - 16:00
+      title: Training Smart Agents with Reinforcement Learning
+      desc: This is an introductory theoretical and hands-on crash course to Reinforcement Learning that goes through Q-Learning all the way to Proximal Policy Optimization,  Actor Critic Networks and walking through the implementation of a Deep Q Network to train a smart agent on Farama Foundation’s LunarLander environment.
+      author: by Elston and Jovan
   - date: 14 June
     event:
     - time: 08:30 - 18:00
