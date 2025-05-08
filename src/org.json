@@ -279,5 +279,11 @@
         "description": "Hello people, this is Vijai. I'm into cybersecurity and blowing up places with my excellent electronic skills.",
         "githubLink": "https://github.com/VJ2408",
         "inLink": "https://www.linkedin.com/in/vijai-adithya-3175972b2/"
+    },
+    "thetpai": {
+        "imageSrc": "/src/img/team/PhyoThetPai.webp",
+        "name": "Phyo Thet Pai",
+        "description": "heyyy! I'm Thet Pai, a student developer. I like making apps and games.",
+        "githubLink": "https://github.com/PhyoTP"
     }
 }
