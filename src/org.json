@@ -279,5 +279,11 @@
         "description": "Hello people, this is Vijai. I'm into cybersecurity and blowing up places with my excellent electronic skills.",
         "githubLink": "https://github.com/VJ2408",
         "inLink": "https://www.linkedin.com/in/vijai-adithya-3175972b2/"
+    },
+    "zixi": {
+        "imageSrc":"/src/img/team/Zixi.webp",
+        "name": "Qin Zixi",
+        "description": "i use arch btw; python person; robotics; forced to do web dev 😢",
+        "githubLink": "https://github.com/frosetrain"
     }
 }
