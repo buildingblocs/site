@@ -10,7 +10,7 @@ import {
     ArrowRightIcon,
     ChevronDownIcon,
 } from "@radix-ui/react-icons";
-
+import {Modal, ModalHeader, ModalBody, ModalFooter } from 'free-astro-components'
 export default function Nav() {
     const mobileLinks = [
         {
@@ -70,6 +70,13 @@ export default function Nav() {
                         >
                             Our Team
                         </a>
+                        <button
+                            data-modal-trigger="modal-contact"
+                            className="text-sm font-medium rounded-md px-2 transition hover:bg-white hover:text-black"
+                        >
+                            Contact us!
+                        </button>
+                        
                         <Popover>
                             <PopoverTrigger className="translate-y-0 translate-x-0 text-sm font-medium rounded-md px-2 flex items-center gap-x-1 outline-0 group transition hover:bg-white hover:text-black data-[state=open]:bg-slate-700">
                                 Events
@@ -153,6 +160,7 @@ export default function Nav() {
                     </Sheet>
                 </div>
             </div>
+            
         </>
     );
 }
