@@ -25,6 +25,10 @@ export default function Nav() {
             title: "Our Team",
             href: "/team",
         },
+        {
+            title: "Contact us!",
+            href: "/contact",
+        }
     ];
 
     const events = [
