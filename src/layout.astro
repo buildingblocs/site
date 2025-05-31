@@ -3,7 +3,8 @@ import "./styles.css";
 import Nav from "./components/nav.tsx";
 import Footer from "./components/footer.astro";
 
-import { Button } from "@/components/ui/button";
+import {Modal, ModalHeader, ModalBody, ModalFooter } from 'free-astro-components'
+// import { Button } from "@/components/ui/button";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { Image } from "astro:assets";
 import cta from "./img/index/cta.webp";
@@ -23,6 +24,7 @@ const { title, showTitle, desc } = Astro.props;
 	</head>
 	<body class="bg-slate-950">
 		<Nav client:load />
+
 		{showTitle && <h1 class="text-center mt-10 mb-5 mx-5">{title}</h1>}
 		<slot />
 		{/* title != "December Conference" && 		<div class="mx-auto max-w-7xl py-12 sm:px-6 lg:px-8">
@@ -59,5 +61,17 @@ const { title, showTitle, desc } = Astro.props;
 			</div>
 		</div> */}
 		<Footer />
+		<Modal id="modal-contact" class="contact-modal">
+			<ModalHeader class="contact-modal-header">
+				<h2>Contact us!</h2>
+			</ModalHeader>
+			<ModalBody>
+				<div>
+					<p>Email: <a href="mailto:hello@buildingblocs.sg">hello@buildingblocs.sg</a></p>
+					<p>Instagram: <a href="https://www.instagram.com/buildingblocs25">@buildingblocs25</a></p>
+					<p><a href="https://go.buildingblocs.sg/discord" rel="noopener noreferrer" target="_blank">Join our Discord!</a></p>
+				</div>
+			</ModalBody>
+		</Modal>
 	</body>
 </html>
