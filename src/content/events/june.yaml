@@ -57,13 +57,13 @@ timeline:
     - time: 08:30 - 09:00
       title: Opening Ceremony
     - time: 09:00 - 11:30
-      title: Introduction to Python
+      title: Introduction to Python (Part 1)
       desc: Welcome to our intro to python workshop! In this workshop, you will get to learn the basics of python, so that you can tackle greater things using this incredibly versatile language
       author: by Bo An
     - time: 11:30 - 12:30
       title: Lunch
     - time: 12:30 - 14:00
-      title: Introduction to Python
+      title: Introduction to Python (Part 2)
       desc: Welcome to our intro to python workshop! In this workshop, you will get to learn the basics of python, so that you can tackle greater things using this incredibly versatile language
       author: by Bo An
     - time: 14:00 - 15:00
@@ -117,7 +117,7 @@ timeline:
       desc: The theory behind Artificial Intelligence and peek into tensorflow and pycaret!
       author: by Shivani
     - time: 18:00 - 19:00
-      title: PyTorch
+      title: PyTorch (Part 1)
       desc: Learn to work with tensors, build custom neural networks, and train models. Additionally, create an Iris Flower Classification Model using PyTorch pipeline.
       author: by Divit and Vijai
   - date: 11 June
@@ -125,13 +125,13 @@ timeline:
     - time: 08:30 - 09:00
       title: Registration
     - time: 09:00 - 12:00
-      title: PyTorch
+      title: PyTorch (Part 2)
       desc: Learn to work with tensors, build custom neural networks, and train models. Additionally, create an Iris Flower Classification Model using PyTorch pipeline.
       author: by Divit and Vijai
     - time: 12:00 - 13:00
       title: Lunch
     - time: 13:00 - 15:00
-      title: SciKit-Learn
+      title: SciKit-Learn (Part 1)
       desc: Learn how to use Scikitlearn, one of the most used Machine Learning libraries, through a series of exciting spy-themed challenges! 
       author: by Aksharaa
     - time: 15:00 - 17:00
@@ -139,7 +139,7 @@ timeline:
       desc: This workshop aims to teach beginners comprehensively about deep learning, with concepts like activation functions and loss.
       author: by Akshara
     - time: 17:00 - 19:00
-      title: SciKit-Learn
+      title: SciKit-Learn (Part 2)
       desc: Learn how to use Scikitlearn, one of the most used Machine Learning libraries, through a series of exciting spy-themed challenges! 
       author: by Aksharaa
   - date: 14 June
@@ -178,7 +178,7 @@ timeline:
       author: by Sahil and Wee Zen
     - time: 13:00 - 14:00
       title: Lunch
-    - time: 14:00 - 16:00
+    - time: 14:00 - 16:30
       title: Training Smart Agents with Reinforcement Learning
       desc: This is an introductory theoretical and hands-on crash course to Reinforcement Learning that goes through Q-Learning all the way to Proximal Policy Optimization,  Actor Critic Networks and walking through the implementation of a Deep Q Network to train a smart agent on Farama Foundation’s LunarLander environment.
       author: by Elston and Jovan
