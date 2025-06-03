@@ -3,13 +3,17 @@ import { Button } from "@/components/ui/button";
 import confetti from 'canvas-confetti';
 
 export default function DirectionList() {
-    const methods = {
+    const methods = { // added bold_method and hyperlink functionality, filler.png
             toSUTDbyUChangi: {
                 title: "Upper Changi MRT",
                 directions: [
                     {
-                        method: "Exit via Exit E, turn right and you will see an usher to direct you",
-                        img: "/events/june/directions/mrtSUTDbusstop.webp"
+                        method: "Exit via Exit E, and you will see an usher.",
+                        img: "/events/june/directions/mrtSUTDexite.png" // replace with exit e img
+                    },
+                    {
+                        method: "The usher will then direct you forwards and right",
+                        img: "/events/june/directions/mrtSUTDbusstop.png"
                     },
                 ]
             },
@@ -17,8 +21,12 @@ export default function DirectionList() {
                 title: "Bus 2/2B/5/24",
                 directions: [
                     {
-                        method: "Take a bus to Upp Changi Stn (96049), enter SUTD, turn right and you will see an usher to direct you",
-                        img: "/events/june/directions/mrtSUTDbusstop.webp"
+                        method: "Take a bus to Upp Changi Stn (96049), there will be an usher at the bus stop to direct you to the corridor below.",
+                        img: "/events/june/directions/SUTDbusstop.png"
+                    },
+                    {
+                        method: "Then another usher will guide you down the corridor where u will make a right at the end!",
+                        img: "/events/june/directions/mrtSUTDbusstop.png"
                     },
                 ]
             },
@@ -26,28 +34,42 @@ export default function DirectionList() {
                 title: "Bus 20/20A",
                 directions: [
                     {
-                        method: "Take a bus to SUTD (96449), walk towards a horizontal SUTD sign, and you will see an usher to guide you",
+                        method:"",
+                        bold_method: "Scroll down for the bus stop opposite SUTD",
+                        img: "/events/june/directions/filler.png"
+                    },
+                    {
+                        method: "Take a bus to SUTD (96449)*, walk along this path until you see an usher at the horizontal SUTD sign",
                         img: "/events/june/directions/20SUTDbusstop1.webp"
                     },
                     {
                         method: "Turn right after this SUTD sign",
-                        img: "/events/june/directions/20SUTDbusstop2.webp"
+                        img: "/events/june/directions/20SUTDbusstop2.png"
                     },
                     {
-                        method: "Walk straight in and turn left",
-                        img: "/events/june/directions/20SUTDbusstop3.webp"
+                        method: "Walk straight in and turn left before the glass windows. There will be an usher at the SUTD sign as seen below",
+                        img: "/events/june/directions/20SUTDbusstop3.png"
                     },
                     {
-                        method: "If you take to Opp SUTD (96441), you will see an usher to guide you",
+                        method: "Walk on the path left of this sign until the DBS ATM, and you will see an usher to guide you left",
+                        img: "/events/june/directions/Librarydropoff2.png"
+                    },
+                    {
+                        method: "",
+                        bold_method: "For the bus stop opposite SUTD",
+                        img: "/events/june/directions/filler.png"
+                    },
+                    {
+                        method: "Alight at Opp SUTD (96441)*, you will see an usher to guide you",
                         img: "/events/june/directions/oppSUTDbusstop1.webp"
                     },
                     {
-                        method: "Cross the road and walk through this path",
+                        method: "Cross the road at the traffic light in the first picture, and walk through this path",
                         img: "/events/june/directions/oppSUTDbusstop2.webp"
                     },
                     {
-                        method: "Turn right and you will see Albert Hong LT",
-                        img: "/events/june/directions/oppSUTDbusstop3.webp"
+                        method: "Turn right and you will see Albert Hong LT1",
+                        img: "/events/june/directions/oppSUTDbusstop3.png"
                     },
                 ]
             },
@@ -55,12 +77,13 @@ export default function DirectionList() {
                 title: "Drop-off by Car",
                 directions: [
                     {
-                        method: "Drop off here outside SUTD Library",
+                        method: "Drop off here outside SUTD Library and you will see an usher",
+                        hyperlink:"https://maps.app.goo.gl/ehavaopu27PSkWX49", // use for car spots or weird spots labelled on gmaps
                         img: "/events/june/directions/Librarydropoff1.webp"
                     },
                     {
-                        method: "Walk on the path left of this sign until the DBS ATM, and you will see 2 ushers to guide you",
-                        img: "/events/june/directions/Librarydropoff2.webp"
+                        method: "Walk on the path left of this sign until the DBS ATM, and you will see an usher to guide you left",
+                        img: "/events/june/directions/Librarydropoff2.png"
                     },
                 ]
             },
@@ -80,65 +103,69 @@ export default function DirectionList() {
             ]
         },
         {
-            title: "Day 2",
+            title: "Day 2 & 3",
             tracks: [
                 {
-                    "Beginner": [
-                        methods.toSUTDbyUChangi,
-                        methods.toSUTDbyBus,
-                        methods.toSUTDby20,
-                        methods.toSUTDbyCar
+                    "Under Construction": [
+                    
                     ]
                 },
-                {
-                    "Intermediate": [
-                        methods.toSUTDbyUChangi,
-                        methods.toSUTDbyBus,
-                        methods.toSUTDby20,
-                        methods.toSUTDbyCar
-                    ]
-                },
-                {
-                    "Advanced": [
-                        methods.toSUTDbyUChangi,
-                        methods.toSUTDbyBus,
-                        methods.toSUTDby20,
-                        methods.toSUTDbyCar
-                    ]
-                }
+                // {
+                //     "Beginner": [
+                //         methods.toSUTDbyUChangi,
+                //         methods.toSUTDbyBus,
+                //         methods.toSUTDby20,
+                //         methods.toSUTDbyCar
+                //     ]
+                // },
+                // {
+                //     "Intermediate": [
+                //         methods.toSUTDbyUChangi,
+                //         methods.toSUTDbyBus,
+                //         methods.toSUTDby20,
+                //         methods.toSUTDbyCar
+                //     ]
+                // },
+                // {
+                //     "Advanced": [
+                //         methods.toSUTDbyUChangi,
+                //         methods.toSUTDbyBus,
+                //         methods.toSUTDby20,
+                //         methods.toSUTDbyCar
+                //     ]
+                // }
             ]
         },
-        {
-            title: "Day 3",
-            tracks: [
-                {
-                    "Beginner": [
-                        methods.toSUTDbyUChangi,
-                        methods.toSUTDbyBus,
-                        methods.toSUTDby20,
-                        methods.toSUTDbyCar
-                    ]
-                },
-                {
-                    "Intermediate": [
-                        methods.toSUTDbyUChangi,
-                        methods.toSUTDbyBus,
-                        methods.toSUTDby20,
-                        methods.toSUTDbyCar
-                    ]
-                },
-                {
-                    "Advanced": [
-                        methods.toSUTDbyUChangi,
-                        methods.toSUTDbyBus,
-                        methods.toSUTDby20,
-                        methods.toSUTDbyCar
-                    ]
-                }
-            ]
-        }
-    ];    
-
+        // {
+        //     title: "Day 3",
+        //     tracks: [
+        //         {
+        //             "Beginner": [
+        //                 methods.toSUTDbyUChangi,
+        //                 methods.toSUTDbyBus,
+        //                 methods.toSUTDby20,
+        //                 methods.toSUTDbyCar
+        //             ]
+        //         },
+        //         {
+        //             "Intermediate": [
+        //                 methods.toSUTDbyUChangi,
+        //                 methods.toSUTDbyBus,
+        //                 methods.toSUTDby20,
+        //                 methods.toSUTDbyCar
+        //             ]
+        //         },
+        //         {
+        //             "Advanced": [
+        //                 methods.toSUTDbyUChangi,
+        //                 methods.toSUTDbyBus,
+        //                 methods.toSUTDby20,
+        //                 methods.toSUTDbyCar
+        //             ]
+        //         }
+        //     ]
+        // }
+    ]; 
     return (
         <Tabs className="my-5">
             <TabsList className="w-full">
@@ -175,8 +202,32 @@ export default function DirectionList() {
                                                 <TabsContent value={f.title} key={f.title}>
                                                     {f.directions.map((g, index) => (
                                                         <div key={g.method}>
-                                                            <img src={g.img} alt={g.method} className="rounded-xl ring ring-1 ring-slate-800 mt-6" />
-                                                            <p className="text-center mt-3 mx-10"><span className="font-semibold">{index + 1}.</span> {g.method}</p>
+                                                            <>
+                                                            {!g.method && (
+                                                                <div>
+                                                                    <img src={g.img} alt={g.method} className="rounded-xl ring ring-1 ring-slate-800 mt-6" />
+                                                                    <p className="text-center mt-3 mx-10 font-bold underline"><span className="font-semibold">{index + 1}.</span> {g.bold_method}</p>
+                                                                    {g.hyperlink && (
+                                                                        <div className="flex justify-center">
+                                                                            <a className="text-center mt-3 mx-10 underline text-blue-500" href={g.hyperlink}>Location on Google Maps</a>
+                                                                        </div>)
+                                                                    }
+                                                                </div>
+                                                            )}
+                                                            </>
+                                                            <>
+                                                            {g.method && (
+                                                                <div>
+                                                                    <img src={g.img} alt={g.method} className="rounded-xl ring ring-1 ring-slate-800 mt-6" />
+                                                                    <p className="text-center mt-3 mx-10"><span className="font-semibold">{index + 1}.</span> {g.method}</p>
+                                                                    {g.hyperlink && (
+                                                                        <div className="flex justify-center">
+                                                                            <a className="text-center mt-3 mx-10 underline text-blue-500" href={g.hyperlink}>Location on Google Maps</a>
+                                                                        </div>)
+                                                                    }
+                                                                </div>
+                                                            )}
+                                                            </>
                                                         </div>
                                                     ))}
                                                     <div className="bg-slate-900 mt-7 mb-10 p-5 rounded-xl flex flex-col items-center">
