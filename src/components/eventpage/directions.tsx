@@ -3,17 +3,17 @@ import { Button } from "@/components/ui/button";
 import confetti from 'canvas-confetti';
 
 export default function DirectionList() {
-    const methods = { // added bold_method and hyperlink functionality, filler.png
+    const methods = { // added bold_method and hyperlink functionality, filler.webp
             toSUTDbyUChangi: {
                 title: "Upper Changi MRT",
                 directions: [
                     {
                         method: "Exit via Exit E, and you will see an usher.",
-                        img: "/events/june/directions/mrtSUTDexite.png" // replace with exit e img
+                        img: "/events/june/directions/mrtSUTDexite.webp" // replace with exit e img
                     },
                     {
                         method: "The usher will then direct you forwards and right",
-                        img: "/events/june/directions/mrtSUTDbusstop.png"
+                        img: "/events/june/directions/mrtSUTDbusstop.webp"
                     },
                 ]
             },
@@ -22,11 +22,11 @@ export default function DirectionList() {
                 directions: [
                     {
                         method: "Take a bus to Upp Changi Stn (96049), there will be an usher at the bus stop to direct you to the corridor below.",
-                        img: "/events/june/directions/SUTDbusstop.png"
+                        img: "/events/june/directions/SUTDbusstop.webp"
                     },
                     {
                         method: "Then another usher will guide you down the corridor where u will make a right at the end!",
-                        img: "/events/june/directions/mrtSUTDbusstop.png"
+                        img: "/events/june/directions/mrtSUTDbusstop.webp"
                     },
                 ]
             },
@@ -36,7 +36,7 @@ export default function DirectionList() {
                     {
                         method:"",
                         bold_method: "Scroll down for the bus stop opposite SUTD",
-                        img: "/events/june/directions/filler.png"
+                        img: "/events/june/directions/filler.webp"
                     },
                     {
                         method: "Take a bus to SUTD (96449)*, walk along this path until you see an usher at the horizontal SUTD sign",
@@ -44,20 +44,20 @@ export default function DirectionList() {
                     },
                     {
                         method: "Turn right after this SUTD sign",
-                        img: "/events/june/directions/20SUTDbusstop2.png"
+                        img: "/events/june/directions/20SUTDbusstop2.webp"
                     },
                     {
                         method: "Walk straight in and turn left before the glass windows. There will be an usher at the SUTD sign as seen below",
-                        img: "/events/june/directions/20SUTDbusstop3.png"
+                        img: "/events/june/directions/20SUTDbusstop3.webp"
                     },
                     {
                         method: "Walk on the path left of this sign until the DBS ATM, and you will see an usher to guide you left",
-                        img: "/events/june/directions/Librarydropoff2.png"
+                        img: "/events/june/directions/Librarydropoff2.webp"
                     },
                     {
                         method: "",
                         bold_method: "For the bus stop opposite SUTD",
-                        img: "/events/june/directions/filler.png"
+                        img: "/events/june/directions/filler.webp"
                     },
                     {
                         method: "Alight at Opp SUTD (96441)*, you will see an usher to guide you",
@@ -69,7 +69,7 @@ export default function DirectionList() {
                     },
                     {
                         method: "Turn right and you will see Albert Hong LT1",
-                        img: "/events/june/directions/oppSUTDbusstop3.png"
+                        img: "/events/june/directions/oppSUTDbusstop3.webp"
                     },
                 ]
             },
