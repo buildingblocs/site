@@ -3,247 +3,90 @@ import { Button } from "@/components/ui/button";
 import confetti from 'canvas-confetti';
 
 export default function DirectionList() {
-    const methods = {
-            toNAKAbyBencoolen: {
-                title: "Bencoolen MRT",
+    const methods = { // added bold_method and hyperlink functionality, filler.webp
+            toSUTDbyUChangi: {
+                title: "Upper Changi MRT",
                 directions: [
                     {
-                        method: "Exit via Exit C",
-                        img: "/events/june/directions/Bencoolen_Exit C(Coming Out).webp"
+                        method: "Exit via Exit E, and you will see an usher",
+                        img: "/events/june/directions/mrtSUTDexite.webp" // replace with exit e img
                     },
                     {
-                        method: "Turn left and walk along this walkway",
-                        img: "/events/june/directions/Bencoolen_Exit C.webp"
+                        method: "The usher will then direct you forwards and right",
+                        img: "/events/june/directions/mrtSUTDbusstop.webp"
                     },
-                    {
-                        method: "Continue along this walkway",
-                        img: "/events/june/directions/Walkway From Bras Basah Exit C _ Bencoolen Exit C.webp"
-                    },
-                    {
-                        method: "Turn right and go up the escalator",
-                        img: "/events/june/directions/End of Walkway 1.webp"
-                    },
-                    {
-                        method: "Walk along this walkway",
-                        img: "/events/june/directions/Start of Walkway 2.webp"
-                    },
-                    {
-                        method: "Continue along this walkway",
-                        img: "/events/june/directions/Walkway 2 Continued.webp"
-                    },
-                    {
-                        method: "Turn right at the dead end and exit",
-                        img: "/events/june/directions/End of walkway 2_ Before Escalator to NAKA.webp"
-                    },
-                    {
-                        method: "Go up the escalator and turn right",
-                        img: "/events/june/directions/Escalator to NAKA.webp"
-                    },
-                    {
-                        method: "Enter and go to Level 2",
-                        img: "/events/june/directions/SOA_Security.webp"
-                    }
                 ]
             },
-            toNAKAbyBB: {
-                title: "Bras Basah MRT",
+            toSUTDbyBus: {
+                title: "Bus 2/2B/5/24",
                 directions: [
                     {
-                        method: "Exit via Exit B and turn right",
-                        img: "/events/june/directions/Bras Basah_Exit B.webp"
+                        method: "Take a bus to Upp Changi Stn (96049), there will be an usher at the bus stop to direct you to the corridor below",
+                        img: "/events/june/directions/SUTDbusstop.webp"
                     },
                     {
-                        method: "Turn left and go up the escalator",
-                        img: "/events/june/directions/End of Walkway 1.webp"
+                        method: "Then another usher will guide you down the corridor where you will make a right at the end!",
+                        img: "/events/june/directions/mrtSUTDbusstop.webp"
                     },
-                    {
-                        method: "Walk along this walkway",
-                        img: "/events/june/directions/Start of Walkway 2.webp"
-                    },
-                    {
-                        method: "Continue along this walkway",
-                        img: "/events/june/directions/Walkway 2 Continued.webp"
-                    },
-                    {
-                        method: "Turn right at the dead end and exit",
-                        img: "/events/june/directions/End of walkway 2_ Before Escalator to NAKA.webp"
-                    },
-                    {
-                        method: "Go up the escalator and turn right",
-                        img: "/events/june/directions/Escalator to NAKA.webp"
-                    },
-                    {
-                        method: "Enter and go to Level 2",
-                        img: "/events/june/directions/SOA_Security.webp"
-                    }
                 ]
             },
-            toNAKAbyBus: {
-                title: "Bus",
+            toSUTDby20: {
+                title: "Bus 20/20A",
                 directions: [
                     {
-                        method: "Take a bus to the SMU (4) bus stop (04121)",
-                        img: "/events/june/directions/04121 Busstop.webp"
+                        method:"",
+                        bold_method: "Scroll down for the bus stop opposite SUTD",
+                        img: "/events/june/directions/filler.webp"
                     },
                     {
-                        method: "Go straight and turn left",
-                        img: "/events/june/directions/To NAKA from Bus Stop_ Lib pick up.webp"
+                        method: "Take a bus to SUTD (96449), walk along this path until you see an usher at the horizontal SUTD sign",
+                        img: "/events/june/directions/20SUTDbusstop1.webp"
                     },
                     {
-                        method: "Enter and go to Level 2",
-                        img: "/events/june/directions/SOA_Security.webp"
-                    }
+                        method: "Turn right after this SUTD sign",
+                        img: "/events/june/directions/20SUTDbusstop2.webp"
+                    },
+                    {
+                        method: "Walk straight in and turn left before the glass windows. There will be an usher at the SUTD sign as seen below",
+                        img: "/events/june/directions/20SUTDbusstop3.webp"
+                    },
+                    {
+                        method: "Walk on the path left of this sign until the DBS ATM, and you will see an usher to guide you left",
+                        img: "/events/june/directions/Librarydropoff2.webp"
+                    },
+                    {
+                        method: "",
+                        bold_method: "For the bus stop opposite SUTD",
+                        img: "/events/june/directions/filler.webp"
+                    },
+                    {
+                        method: "Alight at Opp SUTD (96441), you will see an usher to guide you",
+                        img: "/events/june/directions/oppSUTDbusstop1.webp"
+                    },
+                    {
+                        method: "Cross the road at the traffic light in the first picture, and walk through this path",
+                        img: "/events/june/directions/oppSUTDbusstop2.webp"
+                    },
+                    {
+                        method: "9. Turn right and enter the building. Walk straight until you see Albert Hong LT1 on your left",
+                        img: "/events/june/directions/oppSUTDbusstop3.webp"
+                    },
                 ]
             },
-            toNAKAbyCar: {
+            toSUTDbyCar: {
                 title: "Drop-off by Car",
                 directions: [
                     {
-                        method: "Drop off here at Li Ka Shing Library",
-                        img: "/events/june/directions/Library_Pick Up.webp"
+                        method: "Drop off here outside SUTD Library and you will see an usher",
+                        hyperlink:"https://maps.app.goo.gl/ehavaopu27PSkWX49", // use for car spots or weird spots labelled on gmaps
+                        img: "/events/june/directions/Librarydropoff1.webp"
                     },
                     {
-                        method: "Walk straight along the walkway",
-                        img: "/events/june/directions/Library pickup to NAKA_1.webp"
-                    },
-                    {
-                        method: "Turn left and go to the crossing and cross the road",
-                        img: "/events/june/directions/Library pickup to NAKA_2.webp"
-                    },
-                    {
-                        method: "After crossing, enter from from the bus stop and turn left",
-                        img: "/events/june/directions/To NAKA from Bus Stop_ Lib pick up.webp"
-                    },
-                    {
-                        method: "Enter and go to Level 2",
-                        img: "/events/june/directions/SOA_Security.webp"
-                    }
-                ]
-            },
-            toSCIS1byBB: {
-                title: "Bras Basah MRT",
-                directions: [
-                    {
-                        method: "Get out from Exit E and walk towards the road",
-                        img: "/events/june/directions/Bras Basah Exit E to SCIS 1/Bras Basah_Exit E w arrow.webp"
-                    },
-                    {
-                        method: "Cross the road at the traffic light",
-                        img: "/events/june/directions/Bras Basah Exit E to SCIS 1/Bras Basah_Exit E Traffic Light w arrow.webp"
-                    },
-                    {
-                        method: "Walk along the path",
-                        img: "/events/june/directions/Bras Basah Exit E to SCIS 1/Bras Bash_Exit E After Traffic Light w arrow.webp"
-                    },
-                    {
-                        method: "Turn left towards security at the end",
-                        img: "/events/june/directions/Bras Basah Exit E to SCIS 1/SCIS 1 corner w arrow.webp"
-                    },
-                    {
-                        method: "Enter and go to Level 3",
-                        img: "/events/june/directions/SOA_Security.webp"
-                    }
-                ]
-            },
-            toSCIS1byBencoolen: {
-                title: "Bencoolen MRT",
-                directions: [
-                    {
-                        method: "Exit from Exit B of Bencoolen MRT and turn left",
-                        img: "/events/june/directions/Bencoolen Exit B to SCIS 1/Bencoolen_Exit B.webp"
-                    },
-                    {
-                        method: "Cross at the traffic lights to SCIS 1",
-                        img: "/events/june/directions/Bencoolen Exit B to SCIS 1/Bencoolen_Exit B_Traffic Lights w arrow.webp"
-                    },
-                    {
-                        method: "Walk towards the drop-off point",
-                        img: "/events/june/directions/Bencoolen Exit B to SCIS 1/Bencoolen_Exit_B_Junction End w arrow.webp"
-                    },
-                    {
-                        method: "Enter and go to Level 3",
-                        img: "/events/june/directions/SOA_Security.webp"
-                    }
-                ]
-            },
-            toSCIS1byBus: {
-                title: "Bus",
-                directions: [
-                    {
-                        method: "Arrive at Bencoolen Stn Exit B Bus Stop (08069). Turn right from the bus stop to the traffic intersection. Cross at the traffic lights to SCIS 1 and walk towards the drop-off point.",
-                        img: "/events/june/directions/Bencoolen Bus to SCIS 1.webp"
-                    },
-                    {
-                        method: "Enter and go to Level 3",
-                        img: "/events/june/directions/SOA_Security.webp"
-                    }
-                ]
-            },
-            toSCIS1byCar: {
-                title: "Drop-off by Car",
-                directions: [
-                    {
-                        method: "Drop off at School of Computing and Information Systems 1 pick up point. Enter and go to Level 3",
-                        img: "/events/june/directions/SOA_Security.webp"
-                    }
-                ]
-            },
-            toBasementSRbyBus: {
-                title: "Bus",
-                directions: [
-                    {
-                        method: "Arrive at Bencoolen Stn Exit B Bus Stop (08069)",
-                        img: "/events/june/directions/Bencoolen Bus Stop to Exit C/Bencoolen Stn Exit B Bus Stop (08069).webp"
-                    },
-                    {
-                        method: "Turn left and head down towards Bencoolen MRT",
-                        img: "/events/june/directions/Bencoolen Bus Stop to Exit C/Bencoolen MRT Underpass.webp"
-                    },
-                    {
-                        method: "U-turn towards Exit C, Singapore Management University",
-                        img: "/events/june/directions/Bencoolen Bus Stop to Exit C/Bencoolen MRT Underpass Underground.webp"
-                    },
-                    {
-                        method: "You will see an usher who will direct you",
-                        img: "/events/june/directions/Bencoolen_Exit C(Coming Out).webp"
-                    }
-                ]
-            },
-            toBasementSRbyCar: {
-                title: "Drop-off by Car",
-                directions: [
-                    {
-                        method: "Drop off at School of Computing and Information Systems 2 pick up point. Head towards the basement via the escalator",
-                        img: "/events/june/directions/Basement SR Car Dropoff/SCIS2 Drop-off.webp"
-                    },
-                    {
-                        method: "Go through the door on the right",
-                        img: "/events/june/directions/Basement SR Car Dropoff/Doors of choice.webp"
-                    },
-                    {
-                        method: "Once you are out of the door, turn left towards the seminar rooms",
-                        img: "/events/june/directions/Basement SR Car Dropoff/Walkway to SR.webp"
+                        method: "Walk on the path left of this sign until the DBS ATM, and you will see an usher to guide you left",
+                        img: "/events/june/directions/Librarydropoff2.webp"
                     },
                 ]
             },
-            BBUsher: {
-                title: "Bras Basah MRT",
-                directions: [
-                    {
-                        method: "Exit via Exit C, turn right and walk straight. You will see an usher at Bencoolen MRT who will direct you",
-                        img: "/events/june/directions/Brash Basah_Exit C.webp"
-                    },
-                ]
-            },
-            BencoolenUsher: {
-                title: "Bencoolen MRT",
-                directions: [
-                    {
-                        method: "Exit via Exit C and turn right. You will see an usher who will direct you",
-                        img: "/events/june/directions/Bencoolen_Exit C(Coming Out).webp"
-                    }
-                ]
-            }
         }
     const directions = [
         {
@@ -251,74 +94,78 @@ export default function DirectionList() {
             tracks: [
                 {
                     "All Tracks": [
-                        methods.toNAKAbyBencoolen,
-                        methods.toNAKAbyBB,
-                        methods.toNAKAbyBus,
-                        methods.toNAKAbyCar
+                        methods.toSUTDbyUChangi,
+                        methods.toSUTDbyBus,
+                        methods.toSUTDby20,
+                        methods.toSUTDbyCar
                     ]
                 }
             ]
         },
         {
-            title: "Day 2",
+            title: "Day 2 & 3",
             tracks: [
                 {
-                    "Beginner": [
-                        methods.BencoolenUsher,
-                        methods.BBUsher,
-                        methods.toBasementSRbyBus,
-                        methods.toBasementSRbyCar
+                    "Under Construction": [
+                    
                     ]
                 },
-                {
-                    "Intermediate": [
-                        methods.toSCIS1byBencoolen,
-                        methods.toSCIS1byBB,
-                        methods.toSCIS1byBus,
-                        methods.toSCIS1byCar
-                    ]
-                },
-                {
-                    "Advanced": [
-                        methods.toSCIS1byBencoolen,
-                        methods.toSCIS1byBB,
-                        methods.toSCIS1byBus,
-                        methods.toSCIS1byCar
-                    ]
-                }
+                // {
+                //     "Beginner": [
+                //         methods.toSUTDbyUChangi,
+                //         methods.toSUTDbyBus,
+                //         methods.toSUTDby20,
+                //         methods.toSUTDbyCar
+                //     ]
+                // },
+                // {
+                //     "Intermediate": [
+                //         methods.toSUTDbyUChangi,
+                //         methods.toSUTDbyBus,
+                //         methods.toSUTDby20,
+                //         methods.toSUTDbyCar
+                //     ]
+                // },
+                // {
+                //     "Advanced": [
+                //         methods.toSUTDbyUChangi,
+                //         methods.toSUTDbyBus,
+                //         methods.toSUTDby20,
+                //         methods.toSUTDbyCar
+                //     ]
+                // }
             ]
         },
-        {
-            title: "Day 3",
-            tracks: [
-                {
-                    "Beginner": [
-                        methods.BencoolenUsher,
-                        methods.BBUsher,
-                        methods.toBasementSRbyBus,
-                        methods.toBasementSRbyCar
-                    ]
-                },
-                {
-                    "Intermediate": [
-                        methods.toSCIS1byBencoolen,
-                        methods.toSCIS1byBB,
-                        methods.toSCIS1byBus,
-                        methods.toSCIS1byCar
-                    ]
-                },
-                {
-                    "Advanced": [
-                        methods.toSCIS1byBencoolen,
-                        methods.toSCIS1byBB,
-                        methods.toSCIS1byBus,
-                        methods.toSCIS1byCar
-                    ]
-                }
-            ]
-        }
-    ];    
-
+        // {
+        //     title: "Day 3",
+        //     tracks: [
+        //         {
+        //             "Beginner": [
+        //                 methods.toSUTDbyUChangi,
+        //                 methods.toSUTDbyBus,
+        //                 methods.toSUTDby20,
+        //                 methods.toSUTDbyCar
+        //             ]
+        //         },
+        //         {
+        //             "Intermediate": [
+        //                 methods.toSUTDbyUChangi,
+        //                 methods.toSUTDbyBus,
+        //                 methods.toSUTDby20,
+        //                 methods.toSUTDbyCar
+        //             ]
+        //         },
+        //         {
+        //             "Advanced": [
+        //                 methods.toSUTDbyUChangi,
+        //                 methods.toSUTDbyBus,
+        //                 methods.toSUTDby20,
+        //                 methods.toSUTDbyCar
+        //             ]
+        //         }
+        //     ]
+        // }
+    ]; 
     return (
         <Tabs className="my-5">
             <TabsList className="w-full">
@@ -353,10 +200,64 @@ export default function DirectionList() {
                                             </TabsList>
                                             {Object.values(e)[0].map((f: { title: string; directions: any[]; }) => (
                                                 <TabsContent value={f.title} key={f.title}>
-                                                    {f.directions.map((g, index) => (
+                                                    {!(f.title == "Bus 20/20A") && f.directions.map((g, index) => (
                                                         <div key={g.method}>
-                                                            <img src={g.img} alt={g.method} className="rounded-xl ring ring-1 ring-slate-800 mt-6" />
-                                                            <p className="text-center mt-3 mx-10"><span className="font-semibold">{index + 1}.</span> {g.method}</p>
+                                                            <>
+                                                            {!g.method && (
+                                                                <div>
+                                                                    <img src={g.img} alt={g.method} className="rounded-xl ring-slate-800 mt-6" />
+                                                                    <p className="text-center mt-3 mx-10 font-bold underline"><span className="font-semibold">{index + 1}.</span> {g.bold_method}</p>
+                                                                    {g.hyperlink && (
+                                                                        <div className="flex justify-center">
+                                                                            <a className="text-center mt-3 mx-10 underline text-blue-500" href={g.hyperlink}>Location on Google Maps</a>
+                                                                        </div>)
+                                                                    }
+                                                                </div>
+                                                            )}
+                                                            </>
+                                                            <>
+                                                            {g.method && (
+                                                                <div>
+                                                                    <img src={g.img} alt={g.method} className="rounded-xl ring ring-1 ring-slate-800 mt-6" />
+                                                                    <p className="text-center mt-3 mx-10"><span className="font-semibold">{index + 1}.</span> {g.method}</p>
+                                                                    {g.hyperlink && (
+                                                                        <div className="flex justify-center">
+                                                                            <a className="text-center mt-3 mx-10 underline text-blue-500" href={g.hyperlink}>Location on Google Maps</a>
+                                                                        </div>)
+                                                                    }
+                                                                </div>
+                                                            )}
+                                                            </>
+                                                        </div>
+                                                    ))}
+                                                    {(f.title == "Bus 20/20A") && f.directions.map((g, index) => ( // goofy solution to remove enumeration just for this tab, remove for future conferences
+                                                        <div key={g.method}>
+                                                            <>
+                                                            {!g.method && (
+                                                                <div>
+                                                                    <img src={g.img} alt={g.method} className="rounded-xl ring-slate-800 mt-6" />
+                                                                    <p className="text-center mt-3 mx-10 font-bold underline">{g.bold_method}</p>
+                                                                    {g.hyperlink && (
+                                                                        <div className="flex justify-center">
+                                                                            <a className="text-center mt-3 mx-10 underline text-blue-500" href={g.hyperlink}>Location on Google Maps</a>
+                                                                        </div>)
+                                                                    }
+                                                                </div>
+                                                            )}
+                                                            </>
+                                                            <>
+                                                            {g.method && (
+                                                                <div>
+                                                                    <img src={g.img} alt={g.method} className="rounded-xl ring ring-1 ring-slate-800 mt-6" />
+                                                                    <p className="text-center mt-3 mx-10">{g.method}</p>
+                                                                    {g.hyperlink && (
+                                                                        <div className="flex justify-center">
+                                                                            <a className="text-center mt-3 mx-10 underline text-blue-500" href={g.hyperlink}>Location on Google Maps</a>
+                                                                        </div>)
+                                                                    }
+                                                                </div>
+                                                            )}
+                                                            </>
                                                         </div>
                                                     ))}
                                                     <div className="bg-slate-900 mt-7 mb-10 p-5 rounded-xl flex flex-col items-center">
