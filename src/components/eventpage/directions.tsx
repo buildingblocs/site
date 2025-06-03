@@ -83,7 +83,7 @@ export default function DirectionList() {
                     },
                     {
                         method: "Walk on the path left of this sign until the DBS ATM, and you will see an usher to guide you left",
-                        img: "/events/june/directions/Librarydropoff2.png"
+                        img: "/events/june/directions/Librarydropoff2.webp"
                     },
                 ]
             },
