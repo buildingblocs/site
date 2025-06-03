@@ -8,7 +8,7 @@ export default function DirectionList() {
                 title: "Upper Changi MRT",
                 directions: [
                     {
-                        method: "Exit via Exit E, and you will see an usher.",
+                        method: "Exit via Exit E, and you will see an usher",
                         img: "/events/june/directions/mrtSUTDexite.webp" // replace with exit e img
                     },
                     {
@@ -21,11 +21,11 @@ export default function DirectionList() {
                 title: "Bus 2/2B/5/24",
                 directions: [
                     {
-                        method: "Take a bus to Upp Changi Stn (96049), there will be an usher at the bus stop to direct you to the corridor below.",
+                        method: "Take a bus to Upp Changi Stn (96049), there will be an usher at the bus stop to direct you to the corridor below",
                         img: "/events/june/directions/SUTDbusstop.webp"
                     },
                     {
-                        method: "Then another usher will guide you down the corridor where u will make a right at the end!",
+                        method: "Then another usher will guide you down the corridor where you will make a right at the end!",
                         img: "/events/june/directions/mrtSUTDbusstop.webp"
                     },
                 ]
@@ -39,7 +39,7 @@ export default function DirectionList() {
                         img: "/events/june/directions/filler.webp"
                     },
                     {
-                        method: "Take a bus to SUTD (96449)*, walk along this path until you see an usher at the horizontal SUTD sign",
+                        method: "Take a bus to SUTD (96449), walk along this path until you see an usher at the horizontal SUTD sign",
                         img: "/events/june/directions/20SUTDbusstop1.webp"
                     },
                     {
@@ -60,7 +60,7 @@ export default function DirectionList() {
                         img: "/events/june/directions/filler.webp"
                     },
                     {
-                        method: "Alight at Opp SUTD (96441)*, you will see an usher to guide you",
+                        method: "Alight at Opp SUTD (96441), you will see an usher to guide you",
                         img: "/events/june/directions/oppSUTDbusstop1.webp"
                     },
                     {
@@ -68,7 +68,7 @@ export default function DirectionList() {
                         img: "/events/june/directions/oppSUTDbusstop2.webp"
                     },
                     {
-                        method: "Turn right and you will see Albert Hong LT1",
+                        method: "9. Turn right and enter the building. Walk straight until you see Albert Hong LT1 on your left",
                         img: "/events/june/directions/oppSUTDbusstop3.webp"
                     },
                 ]
@@ -200,12 +200,12 @@ export default function DirectionList() {
                                             </TabsList>
                                             {Object.values(e)[0].map((f: { title: string; directions: any[]; }) => (
                                                 <TabsContent value={f.title} key={f.title}>
-                                                    {f.directions.map((g, index) => (
+                                                    {!(f.title == "Bus 20/20A") && f.directions.map((g, index) => (
                                                         <div key={g.method}>
                                                             <>
                                                             {!g.method && (
                                                                 <div>
-                                                                    <img src={g.img} alt={g.method} className="rounded-xl ring ring-1 ring-slate-800 mt-6" />
+                                                                    <img src={g.img} alt={g.method} className="rounded-xl ring-slate-800 mt-6" />
                                                                     <p className="text-center mt-3 mx-10 font-bold underline"><span className="font-semibold">{index + 1}.</span> {g.bold_method}</p>
                                                                     {g.hyperlink && (
                                                                         <div className="flex justify-center">
@@ -220,6 +220,36 @@ export default function DirectionList() {
                                                                 <div>
                                                                     <img src={g.img} alt={g.method} className="rounded-xl ring ring-1 ring-slate-800 mt-6" />
                                                                     <p className="text-center mt-3 mx-10"><span className="font-semibold">{index + 1}.</span> {g.method}</p>
+                                                                    {g.hyperlink && (
+                                                                        <div className="flex justify-center">
+                                                                            <a className="text-center mt-3 mx-10 underline text-blue-500" href={g.hyperlink}>Location on Google Maps</a>
+                                                                        </div>)
+                                                                    }
+                                                                </div>
+                                                            )}
+                                                            </>
+                                                        </div>
+                                                    ))}
+                                                    {(f.title == "Bus 20/20A") && f.directions.map((g, index) => ( // goofy solution to remove enumeration just for this tab, remove for future conferences
+                                                        <div key={g.method}>
+                                                            <>
+                                                            {!g.method && (
+                                                                <div>
+                                                                    <img src={g.img} alt={g.method} className="rounded-xl ring-slate-800 mt-6" />
+                                                                    <p className="text-center mt-3 mx-10 font-bold underline">{g.bold_method}</p>
+                                                                    {g.hyperlink && (
+                                                                        <div className="flex justify-center">
+                                                                            <a className="text-center mt-3 mx-10 underline text-blue-500" href={g.hyperlink}>Location on Google Maps</a>
+                                                                        </div>)
+                                                                    }
+                                                                </div>
+                                                            )}
+                                                            </>
+                                                            <>
+                                                            {g.method && (
+                                                                <div>
+                                                                    <img src={g.img} alt={g.method} className="rounded-xl ring ring-1 ring-slate-800 mt-6" />
+                                                                    <p className="text-center mt-3 mx-10">{g.method}</p>
                                                                     {g.hyperlink && (
                                                                         <div className="flex justify-center">
                                                                             <a className="text-center mt-3 mx-10 underline text-blue-500" href={g.hyperlink}>Location on Google Maps</a>
