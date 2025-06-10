@@ -82,28 +82,18 @@ let formattedTitle = title.replace(" ", "<br>");
           <p class="text-xs mb-3">
             Proudly supported by:
           </p>
-            <div class="flex flex-col gap-y-4">
-              {Object.entries(
-                partners.reduce((acc, partner) => {
-                  acc[partner.position] = acc[partner.position] || [];
-                  acc[partner.position].push(partner);
-                  return acc;
-                }, {})
-              ).map(([position, group]) => (
-                <div class="flex justify-center gap-x-4">
-                  {group.map((partner) => (
-                    <div class="flex justify-center items-center flex-1">
-                      <Image 
-                        src={partner.src} 
-                        alt={`${partner.title}'s logo`} 
-                        class="min-h-10 max-h-16 object-contain max-w-full" 
-                        loading="lazy" 
-                      />
-                    </div>
-                  ))}
-                </div>
-              ))}
-            </div>
+          <div class="flex">
+            {partners.map((partner) => (
+              <div class="flex-1 flex justify-center items-center">
+                <Image 
+                  src={partner.src} 
+                  alt={`${partner.title}'s logo`} 
+                  class="h-10 object-contain max-w-full" 
+                  loading="lazy" 
+                />
+              </div>
+            ))}
+          </div>
         </div>
       }        
     </div>
