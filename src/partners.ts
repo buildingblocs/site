@@ -4,10 +4,19 @@ import moetext from "./img/partners/moetext.svg";
 import sutd from "./img/partners/sutd.webp";
 import okx from "./img/partners/okx.svg";
 import revenuecat from "./img/partners/revenuecat.svg";
-import yubico from "./img/partners/yubico.svg"
-import nie from "./img/partners/nie.webp"
+import yubico from "./img/partners/yubico.svg";
+import nie from "./img/partners/nie.webp";
+import type { ImageMetadata } from "astro";
 
-export const curr_partners = [
+export interface Partner {
+  src: ImageMetadata;
+  title: string;
+  desc: string;
+  website: string;
+  position?: number;
+}
+
+export const curr_partners: Partner[] = [
     {
         src: sutd,
         title: "Singapore University of Technology and Design",
@@ -59,7 +68,7 @@ export const curr_partners = [
     },
 ];
 
-export const prev_partners = [
+export const prev_partners: Partner[] = [
     {
         src: github,
         title: "GitHub",
@@ -87,7 +96,7 @@ export const prev_partners = [
     },
 ];
 
-export const partnerMap = {
-    curr_partners,
-    prev_partners,
+export const partnerMap: Record<"curr_partners" | "prev_partners", Partner[]> = {
+  curr_partners,
+  prev_partners,
 };

@@ -6,6 +6,7 @@ import Faq from "@/components/eventpage/accordion";
 import Timeline from "@/components/eventpage/timeline";
 import { Image } from "astro:assets";
 import { partnerMap } from "@/partners"
+import type { Partner } from "@/partners";
 
 import { getCollection } from "astro:content";
 // 1. Generate a new path for every collection entry
@@ -19,9 +20,17 @@ export async function getStaticPaths() {
 // 2. For your template, you can get the entry directly from the prop
 const { entry } = Astro.props;
 
-const partners = entry.data.partners
+const partners: Partner[] | undefined = entry.data.partners
   ? partnerMap[entry.data.partners as keyof typeof partnerMap]
   : undefined;
+const groupedPartners: Record<number, Partner[]> = partners
+  ? partners.reduce<Record<number, Partner[]>>((acc, partner) => {
+      const pos = partner.position ?? 0;
+      acc[pos] = acc[pos] || [];
+      acc[pos].push(partner);
+      return acc;
+    }, {})
+  : {};
 let title = entry.data.title;
 let formattedTitle = title.replace(" ", "<br>");
 ---
@@ -83,13 +92,7 @@ let formattedTitle = title.replace(" ", "<br>");
             Proudly supported by:
           </p>
             <div class="flex flex-col gap-y-4">
-              {Object.entries(
-                partners.reduce((acc, partner) => {
-                  acc[partner.position] = acc[partner.position] || [];
-                  acc[partner.position].push(partner);
-                  return acc;
-                }, {})
-              ).map(([position, group]) => (
+              {Object.entries(groupedPartners).map(([position, group]) => (
                 <div class="flex justify-center gap-x-4">
                   {group.map((partner) => (
                     <div class="flex justify-center items-center flex-1">
