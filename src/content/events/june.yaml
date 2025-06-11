@@ -62,12 +62,12 @@ timeline:
       author: by Bo An
     - time: 11:30 - 12:30
       title: Lunch
-    - time: 12:30 - 14:00
+    - time: 12:30 - 13:30
+      title: Bonding
+    - time: 13:30 - 15:00
       title: Introduction to Python (Part 2)
       desc: Welcome to our intro to python workshop! In this workshop, you will get to learn the basics of python, so that you can tackle greater things using this incredibly versatile language
       author: by Bo An
-    - time: 14:00 - 15:00
-      title: Bonding
     - time: 15:00 - 18:00
       title: Introduction to Machine Learning
       desc: The theory behind Artificial Intelligence and peek into tensorflow and pycaret!
@@ -92,8 +92,13 @@ timeline:
       author: by Akshara
   - date: 14 June
     event:
-    - time: 08:30 - 18:00
-      title: Judging, Closing Ceremony, Booths
+    - time: 08:30 - 09:00
+      title: Reporting & Attendance
+    - time: 09:00 - 14:30
+      title: Judging, Booths, Campus Tours
+      desc: Your faciliator will bring you to the correct areas
+    - time: 14:30 - 16:00
+      title: Closing Ceremony
 - title: Intermediate
   events:
   - date: 10 June
@@ -144,8 +149,13 @@ timeline:
       author: by Aksharaa
   - date: 14 June
     event:
-    - time: 08:30 - 18:00
-      title: Judging, Closing Ceremony, Booths
+    - time: 08:30 - 09:00
+      title: Reporting & Attendance
+    - time: 09:00 - 14:30
+      title: Judging, Booths, Campus Tours
+      desc: Your faciliator will bring you to the correct areas
+    - time: 14:30 - 16:00
+      title: Closing Ceremony
 - title: Advanced
   events:
   - date: 10 June
@@ -184,5 +194,10 @@ timeline:
       author: by Elston and Jovan
   - date: 14 June
     event:
-    - time: 08:30 - 18:00
-      title: Judging, Closing Ceremony, Booths
+    - time: 08:30 - 09:00
+      title: Reporting & Attendance
+    - time: 09:00 - 14:30
+      title: Judging, Booths, Campus Tours
+      desc: Your faciliator will bring you to the correct areas
+    - time: 14:30 - 16:00
+      title: Closing Ceremony
