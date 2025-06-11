@@ -90,7 +90,7 @@ export default function DirectionList() {
         }
     const directions = [
         {
-            title: "Day 1",
+            title: "Day 1 & 3",
             tracks: [
                 {
                     "All Tracks": [
@@ -102,40 +102,40 @@ export default function DirectionList() {
                 }
             ]
         },
-        {
-            title: "Day 2 & 3",
-            tracks: [
-                {
-                    "Under Construction": [
+        // {
+        //     title: "Day 2 & 3",
+        //     tracks: [
+        //         {
+        //             "Under Construction": [
                     
-                    ]
-                },
-                // {
-                //     "Beginner": [
-                //         methods.toSUTDbyUChangi,
-                //         methods.toSUTDbyBus,
-                //         methods.toSUTDby20,
-                //         methods.toSUTDbyCar
-                //     ]
-                // },
-                // {
-                //     "Intermediate": [
-                //         methods.toSUTDbyUChangi,
-                //         methods.toSUTDbyBus,
-                //         methods.toSUTDby20,
-                //         methods.toSUTDbyCar
-                //     ]
-                // },
-                // {
-                //     "Advanced": [
-                //         methods.toSUTDbyUChangi,
-                //         methods.toSUTDbyBus,
-                //         methods.toSUTDby20,
-                //         methods.toSUTDbyCar
-                //     ]
-                // }
-            ]
-        },
+        //             ]
+        //         },
+        //         // {
+        //         //     "Beginner": [
+        //         //         methods.toSUTDbyUChangi,
+        //         //         methods.toSUTDbyBus,
+        //         //         methods.toSUTDby20,
+        //         //         methods.toSUTDbyCar
+        //         //     ]
+        //         // },
+        //         // {
+        //         //     "Intermediate": [
+        //         //         methods.toSUTDbyUChangi,
+        //         //         methods.toSUTDbyBus,
+        //         //         methods.toSUTDby20,
+        //         //         methods.toSUTDbyCar
+        //         //     ]
+        //         // },
+        //         // {
+        //         //     "Advanced": [
+        //         //         methods.toSUTDbyUChangi,
+        //         //         methods.toSUTDbyBus,
+        //         //         methods.toSUTDby20,
+        //         //         methods.toSUTDbyCar
+        //         //     ]
+        //         // }
+        //     ]
+        // },
         // {
         //     title: "Day 3",
         //     tracks: [
