@@ -285,5 +285,12 @@
         "name": "Qin Zixi",
         "description": "i use arch btw; python person; robotics; forced to do web dev 😢",
         "githubLink": "https://github.com/frosetrain"
+    },
+    "thetpai": {
+        "imageSrc": "/src/img/team/thetpai.webp",
+        "name": "Phyo Thet Pai",
+        "description": "i make stuff like apps and websites and games ig",
+        "githubLink": "https://github.com/PhyoTP",
+        "webLink": "https://phyotp.dev/"
     }
 }
