@@ -298,13 +298,6 @@
         "description": "Hi I'm Christine, a person interested in music, tech, chem... Anything interesting :)",
         "githubLink": "https://github.com/Hiya123 "
     },
-    "phyo": {
-        "imageSrc":"/src/img/team/Phyo Thet Pai.webp",
-        "name": "Phyo Thet Pai",
-        "description": "I can\u2019t remember bro",
-        "githubLink": "https://github.com/PhyoTP",
-        "webLink": "phyotp.dev"
-    },
     "jasim": {
         "name": "Jasim Mohammed Ahmed Sahi ",
         "description": "Hi interested in Cybersecurity ",
@@ -391,5 +384,12 @@
         "description": "-",
         "githubLink": "https://github.com/https://github.com/StudyBeeTutoring",
         "webLink": "https://sites.google.com/view/jerriels-projects/home"
+    },
+    "thetpai": {
+        "imageSrc": "/src/img/team/thetpai.webp",
+        "name": "Phyo Thet Pai",
+        "description": "i make stuff like apps and websites and games ig",
+        "githubLink": "https://github.com/PhyoTP",
+        "webLink": "https://phyotp.dev/"
     }
 }
