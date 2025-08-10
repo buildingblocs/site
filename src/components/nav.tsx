@@ -26,7 +26,7 @@ export default function Nav() {
             href: "/team",
         },
         {
-            title: "Join us",
+            title: "Join Us",
             href: "/joinus",
         },
     ];
@@ -73,6 +73,12 @@ export default function Nav() {
                             className="text-sm font-medium rounded-md px-2 transition hover:bg-white hover:text-black"
                         >
                             Our Team
+                        </a>
+                        <a
+                            href="/joinus"
+                            className="text-sm font-medium rounded-md px-2 transition hover:bg-white hover:text-black"
+                        >
+                            Join Us
                         </a>
                         
                         <Popover>

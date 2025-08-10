@@ -386,5 +386,39 @@
         "description": "i make stuff like apps and websites and games ig",
         "githubLink": "https://github.com/PhyoTP",
         "webLink": "https://phyotp.dev/"
+    },
+    "hrithik": {
+        "imageSrc": "/src/img/team/Hrithik.webp",
+        "name": "Hrithik Ram Ganesh Kumar",
+        "description": "Hi I am Hrithik and I am probably breaking my bones by building robots or losing hair over ctfs.",
+        "githubLink": "https://github.com/Hrithikram101",
+        "inLink": "https://www.linkedin.com/in/hrithik-ram-ganesh-kumar-7752b0261/"
+    },
+    "goh": {
+        "name": "Goh Seng Woon Jayden",
+        "description": "i make stuff like apps and websites and games ig"
+    },
+    "htet": {
+        "imageSrc": "/src/img/team/Htet_Wai_Yan.webp",
+        "name": "Htet Wai Yan",
+        "description": "E = MC^2 + AI (I = 0)",
+        "githubLink": "https://github.com/day-dreamin"
+    },
+    "timothy": {
+        "imageSrc": "/src/img/team/Timothy.webp",
+        "name": "Timothy Hui Jun Xiang",
+        "description": "Hi I am Timothy, a JC1 student from JPJC. I take PXME and I love computing and AI. Currently working on an AI project!",
+        "inLink": "https://www.linkedin.com/in/timothy-hui-9024b7320"
+    },
+    "rayyan": {
+        "name": "Rayyan Wong",
+        "description": "Hello! I am Rayyan. "
+    },
+    "yang": {
+        "imageSrc": "/src/img/team/yay.webp",
+        "name": "Yang An Yi",
+        "description": "i play ctfs and code sometimes",
+        "githubLink": "https://github.com/yanganyi",
+        "inLink": "https://www.linkedin.com/in/yang-an-yi-814b9b250/"
     }
 }
