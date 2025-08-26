@@ -1,0 +1,11 @@
+---
+import Layout from "../layout.astro";
+const redirectUrl = `https://old.buildingblocs.sg/${Astro.url.pathname}`;
+---
+<Layout title="Redirecting..." showTitle>
+  <p class="mx-10 text-center mb-20">Redirecting to <a href={redirectUrl}>{redirectUrl}</a>.</p>
+  <head>
+    <meta http-equiv="refresh" content=`0; url=${redirectUrl}` />
+    <title>Redirecting...</title>
+  </head>
+</Layout>
