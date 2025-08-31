@@ -25,10 +25,10 @@ export default function Nav() {
             title: "Our Team",
             href: "/team",
         },
-        {
-            title: "Join Us",
-            href: "/joinus",
-        },
+        // {
+        //     title: "Join Us",
+        //     href: "/joinus",
+        // },
     ];
 
     const events = [

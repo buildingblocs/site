@@ -1,6 +1,114 @@
 <!-- ---
 import Layout from "../layout.astro";
+import { Accordion, AccordionItem, Icon } from "free-astro-components";
 ---
-<Layout title="Join Us!" desc="We need YOU!!" showTitle>
-    <h2 class="flex justify-center flex-wrap pt-4 text-2xl">We need YOU!!</h2>
+<Layout title="Join us!" desc="We need YOU!!">
+    <section id="joinus"> 
+        <h2 style="text-align: center; padding: 20px;">We need YOU!!</h2>
+        image here -->
+        <!-- <div style="text-align: center; padding: 20px; font-size: 20px;">
+            BuildingBloCS is a Singapore student-led, year-long outreach computing programme, providing workshops and competitions - by students, for students - to encourage the learning of computer science. By joining us, <b>YOU</b> can meet like-minded individuals who are passionate about technology too! But if you don't know coding, that's fine too! Anybody is free to join us as long as you're passionate in contributing to BBCS!
+        </div>
+    </section>
+    <section id="depts">
+        <h2 style="text-align: justify; padding: 20px;">Here are the various departments that you can join!</h2>
+        <div>
+            <img src="">
+        </div>
+    </section>
+    <section id="common-queries">
+        <div>
+            <h2 style="text-align: justify; padding: 20px;">Common Queries</h2>
+            <Accordion variant="splitted" class="common-queries-accordion">
+                <AccordionItem title="How do I sign up?" class="common-query-item">
+                    <div>
+                    You can sign up by clicking the button below! We will schedule a short call
+                    with you to confirm your roles.
+                    </div>
+                </AccordionItem>
+                <AccordionItem title="Do I work alone or do I have a team?" class="common-query-item">
+                    <div>
+                        You will be working with a team formed with organisers from other schools.
+                    </div>
+                </AccordionItem>
+                <AccordionItem title="What is commitment like?" class="common-query-item">
+                    <div>
+                        There is no set commitment for each role, and it is dependent on the tasks you take on. We try to accommodate your availability to the best of our abilities. Overall, we hope that you can commit some time and effort to the tasks you take on, especially if you hope to progress on to leadership roles in BBCS.
+                    </div>
+                </AccordionItem>
+                <AccordionItem title="What are the peak periods?" class="common-query-item">
+                    <div>
+                        The peak periods for our event are February to start-March, May to start-June, mainly before our conferences. However, you need not definitely commit during those periods. Simply indicate your general availability as you sign up and drop the OICs and your Leads a message when you’re about to be inactive.
+                    </div> 
+                </AccordionItem>
+                <AccordionItem title="What age must I be to be eligible?" class="common-query-item">
+                    <div>
+                        We welcome organisers from Sec 2 up to University students, including NSF. 
+                    </div> 
+                </AccordionItem>
+                <AccordionItem title="How is communication?" class="common-query-item">
+                    <div>
+                        We usually communicate online through Discord and hold weekly meetings through Discord. There may be a few occasional physical meetings although most planning will be done virtually. Do note that for dry runs (especially for workshops) nearer to the conference, there will be more physical meetings. 
+                    </div> 
+                </AccordionItem>  
+                <AccordionItem title="Must I do tasks related to coding?" class="common-query-item">
+                    <div>
+                        No! In fact, a lot of our organisers not proficient in coding have helped out in tasks outside of development, such as design and admin.
+                    </div> 
+                </AccordionItem>
+                <AccordionItem title="How heavily are teachers involved in your planning" class="common-query-item">
+                    <div>
+                        The most you'll have to do is to contact your computing teacher to get help during organising such as reaching out to participants and obtaining VIA hours. Other than that, we are mostly student-driven in terms of planning and execution of the conference.
+                    </div> 
+                </AccordionItem>
+                <AccordionItem title="What if I am unsure of my skills?" class="common-query-item">
+                    <div>
+                        We have experienced organisers who can guide you along to learn the ropes. Furthermore, we have a series of guides which will provide you with some help in completing tasks. Ultimately, experiment and learn along the way!
+                    </div> 
+                </AccordionItem>
+                <AccordionItem title="How will roles be chosen?" class="common-query-item">
+                    <div>
+                        We will usually opt for roles based on a few criteria: Availability in the teams and your interests - which is why, please indicate your options and skills in the organiser signup form so we can match you accordingly with other organisers!
+                    </div> 
+                </AccordionItem>
+                <AccordionItem title="Still unsure if you want to join?" class="common-query-item">
+                    <div>
+                        If you are still not sure whether you’d like to join us in BuildingBloCS, simply fill up the organiser signup form and indicate your queries. We will be glad to address your concerns and you may try being an organiser for a period of time to see whether this suits you!
+
+                    </div> 
+                </AccordionItem>            
+            </Accordion>
+            
+        </div>
+    </section>
+    <section id="testimonials">
+        <h2 style="text-align: justify; padding: 20px; ">Testimonials</h2>
+        <Accordion variant="bordered" class="testimonial-accordion">
+            <AccordionItem title="Jin En, TJC" class="testimonial-item" open>
+                <div>
+                     I express eternal gratitude for the BBCS community, where individuals have crafted an environment that is not only secure and welcoming but also empowering for non-coders like myself. Within the BBCS community, I have discovered a platform to learn and grow alongside numerous talented, interesting, and inspiring individuals, forging meaningful connections and friendships that contribute significantly to the organisation's noble cause. BBCS has afforded me leadership opportunities that would have been otherwise inaccessible in a traditional academic setting, and it has enabled my participation in events that I might not have discovered without the organisation's guidance. Through BBCS, I have forged connections with individuals within Singapore and from diverse corners of the globe, facilitated by engaging events such as FOSSASIA and BBCS' various conferences.
+                </div>
+            </AccordionItem>
+            <AccordionItem title="Myat, BVSS" class="testimonial-item">
+                <div>
+                    Joining BuildingBloCS has taught me important skills such as teamwork, leadership and working with people out of my comfort zone. When I first joined in Sec 2, I was kind of nervous, however the friendly OICs and organizers guided me around what to do and what I could expect volunteering/working (?) in BBCS. BBCS has helped me in widening my social and presentation skills, and I hope that everyone gets a chance to experience an environment like this.
+                </div>
+            </AccordionItem>
+            <AccordionItem title="Zayan, NUSH" class="testimonial-item">
+                <div>
+                    BuildingBloCS has been a transformative journey, connecting students with computing concepts not covered in secondary schools or tertiary institutes. Witnessing the spark of curiosity ignite in each participant is immensely rewarding. With the hackathon, this conference goes beyond teaching; it fosters a community where ideas flourish, and future innovators emerge. BuildingBloCS was a uniquely rewarding experience and I hope many more volunteer to contribute.
+                </div>
+            </AccordionItem>
+        </Accordion>
+    </section>
+    <section id="sign-up">
+        <h2 class="flex justify-center flex-wrap">So what are you waiting for?</h2>
+        <div class="outer_border" style="display: flex; justify-content: center;">
+            <div class="inner_border" style="display: inline-block; width: fit-content; padding: 20px; text-align: center; background-color: #FFA216">
+            <form action="https://forms.gle/YtysiBrYqWTDZvgG6">
+                <input type="submit" style="font-weight: bold; font-size: 20px;" value="SIGN UP NOW!" id="submitbutton"/>
+            </form>
+            </div>
+        </div>
+    </section>
 </Layout> -->
