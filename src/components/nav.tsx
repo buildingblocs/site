@@ -33,15 +33,20 @@ export default function Nav() {
 
     const events = [
         {
-            title: "June Conference",
-            href: "/events/june",
-            desc: "The June Conference is an AI-centered conference designed for everyone",
-        },
-        {
-            title: "March Conference",
-            href: "/events/march",
-            desc: "The March Conference aims to introduce beginners to Python and Data Science"
-        },
+            title: "December Conference",
+            href: "", // "/events/december",
+            desc: "Under Construction! Check back later."
+        }, 
+        //{
+        //     title: "June Conference",
+        //     href: "/events/june",
+        //     desc: "The June Conference is an AI-centered conference designed for everyone",
+        // },
+        // {
+        //     title: "March Conference",
+        //     href: "/events/march",
+        //     desc: "The March Conference aims to introduce beginners to Python and Data Science"
+        // },
         {
             title: "Looking for older events?",
             href: "/archive",
@@ -119,13 +124,14 @@ export default function Nav() {
                     </a>
                 }
             </div>
-            <div className="sm:hidden h-16 justify-end flex sticky top-0 z-20">
+            {/* Mobile Nav */}
+            <div className="sm:hidden h-16 justify-end flex sticky top-0 z-20"> 
                 {
                     <a
-                        href="/events/june"
+                        href="/events/december"
                         className="px-6 py-2 rounded-full mt-4 mr-4 bg-slate-900/50 backdrop-filter backdrop-blur-lg ring-1 ring-slate-800 flex items-center gap-x-4 text-sm"
                     >
-                        <p>June Conference</p>
+                        <p>December Conference</p>
                         <div className="bg-orange-500 hover:bg-orange-600 rounded-full p-1 px-1.5 transition flex gap-x-2 items-center font-semibold">
                             <ArrowRightIcon className="w-5 h-5" />
                         </div>
