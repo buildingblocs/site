@@ -34,7 +34,7 @@ export default function Nav() {
     const events = [
         {
             title: "December Conference",
-            href: "/", // "/events/december",
+            href: "/events/december",
             desc: "Under Construction! Check back later."
         }, 
         {

@@ -1,21 +1,21 @@
 title: December Conference
-status: over
+status: open  # over open closed
 directions: /events/december/directions
 luma: evt-kz4gB77dKlYBNZW
 details:
-- 'Workshops: 16th - 18th December'
-- 'Award Ceremony: 23th December'
+- 'Workshops: 8th - 10th December'
+- 'Award Ceremony: 15th December'
 - 'Venue: Singapore Management University*'
 - 'Email contact for queries: hello@buildingblocs.sg'
-excerpt: BuildingBloCS is back with our final conference for the year, the December Conference, to teach about Web Development! Learn new concepts from 6 different workshops and stand to win prizes!
+excerpt: BuildingBloCS is back with our final conference for the year, the December Conference, to teach about Web Development! Learn new concepts from 8 different workshops and stand to win prizes!
 desc: >-
-  BuildingBloCS is back with our final conference for 2024! The theme is <b>Web Development</b>, 
-  an important skill to bring websites and applications to life. We have specially curated 6
-  workshops: UI/UX on Figma, Git & Github, HTML & CSS, Javascript, Databases, React & Next.js. 
-  You will have the choice to pick which workshops you would like to attend. Across the three 
-  conference days, we hope that you will build a better understanding of web development, forge 
-  new friendships, and apply what you’ve learnt in a hackathon! Sign up now, before registration
-  closes on 1st December
+  BuildingBloCS is back with our final conference for 2025! The theme is <b>Web Development</b>, 
+  an important skill to bring websites and applications to life. We have specially curated 8 
+  workshops: UI/UX on Figma, Git & Github, HTML & CSS, Tailwind CSS, Javascript, React & Next.js,
+  Databases and Anime.js. You will have the choice to pick which workshops you would like to
+  attend. Across the three conference days, we hope that you will build a better understanding 
+  of web development, forge new friendships, and apply what you’ve learnt in a hackathon! Sign
+  up now, before registration closes on 1st December
   <br><br>
   *In the case of oversubscription, online access will be offered through livestream.
 faq:
@@ -24,13 +24,15 @@ faq:
 - q: Why should I sign up? Is it free?
   a: It's a free, fun and easy way to learn new skills about many new topics related to computing! What more could you ask for?
 - q: What if something pops up and I can't make it? 
-  a: Please indicate that you are not coming via the lu.ma interface.
+  a: Please open a ticket in the BuildingBloCS server so we can update your registration status.
 - q: What is a "hackathon"? Is it compulsory?
   a: A hackathon is a competition where you'll have to work in teams to create an application based on a theme provided. It's a great way to practice your skills, however, it is not compulsory to encourage everyone to learn and attend.
 - q: What are the prizes? When will I get them?
-  a: We can't divulge any information about the prizes, but they will be shipped out after the finals, on Monday, 23th December!
+  a: We can't divulge any information about the prizes, but they will be shipped out after the finals, on Monday, 15th December!
 - q: How will the hackathon groups be allocated? Can I choose my teammates?
   a: For this hackathon, we will be allocating the groups for you. However, if you (mutually) indicate someone you'll like to work with, we'll take that into consideration. Any other empty slots will be filled randomly, taking into account your age.
+- q: I still have questions! Who can I contact?
+  a: The fastest way to reach us is to open a ticket on our Discord server, which you can join at <a href="https://go.buildingblocs.sg/discord">go.buildingblocs.sg/discord</a> <br> However, if you are unable to use Discord, you may also shoot us an email at <a href="mailto:hello@buildingblocs.sg">hello@buildingblocs.sg</a>
 prospectus:
 - src: /events/december/1.png
 - src: /events/december/2.png
@@ -39,7 +41,7 @@ prospectus:
 - src: /events/december/5.png
 timeline:
 - events:
-  - date: 16 Dec
+  - date: 8 Dec
     event:
     - title: Hackathon
       desc: Start discussing with your team solutions for the problem statement throughout the week
@@ -51,7 +53,7 @@ timeline:
       title: Git & Github
       desc: Learn the basic essentials of Git for collaborative software development.
       author: by Saumil, Brayden and Yuhan
-  - date: 17 Dec
+  - date: 9 Dec
     event:
     - time: 9:00 AM - 12:30 PM
       title: HTML & CSS
@@ -61,7 +63,7 @@ timeline:
       title: Javascript
       desc: A peek into the language that has an identity crisis with `this`.
       author: by Angelina, Eason and Amanda
-  - date: 18 Dec
+  - date: 10 Dec
     event:
     - time: 9:00 AM - 12:00 PM
       title: Databases
@@ -71,7 +73,7 @@ timeline:
       title: React & Next.js
       desc: An introduction to jsx (react) and next.js
       author: by Sai and Arjun
-  - date: 23 Dec
+  - date: 15 Dec
     event:
     - title: Award Ceremony
       desc: Join us for the award ceremony held online!
