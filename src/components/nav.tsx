@@ -34,7 +34,7 @@ export default function Nav() {
     const events = [
         {
             title: "December Conference",
-            href: "/events/december",
+            href: "", // "/events/december",
             desc: "Under Construction! Check back later."
         }, 
         {
@@ -79,12 +79,12 @@ export default function Nav() {
                         >
                             Our Team
                         </a>
-                        <a
+                        {/* <a
                             href="/joinus"
                             className="text-sm font-medium rounded-md px-2 transition hover:bg-white hover:text-black"
                         >
                             Join Us
-                        </a>
+                        </a> */}
                         
                         <Popover>
                             <PopoverTrigger className="translate-y-0 translate-x-0 text-sm font-medium rounded-md px-2 flex items-center gap-x-1 outline-0 group transition hover:bg-white hover:text-black data-[state=open]:bg-slate-700">
