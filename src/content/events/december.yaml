@@ -9,15 +9,14 @@ details:
 - 'Email contact for queries: hello@buildingblocs.sg'
 excerpt: BuildingBloCS is back with our final conference for the year, the December Conference, to teach about Web Development! Learn new concepts from 8 different workshops and stand to win prizes!
 desc: >-
-  BuildingBloCS is back with our final conference for 2025! The theme is <b>Web Development</b>, 
-  an important skill to bring websites and applications to life. We have specially curated 8 
-  workshops: UI/UX on Figma, Git & Github, HTML & CSS, Tailwind CSS, Javascript, React & Next.js,
-  Databases and Anime.js. You will have the choice to pick which workshops you would like to
-  attend. Across the three conference days, we hope that you will build a better understanding 
-  of web development, forge new friendships, and apply what you’ve learnt in a hackathon! Sign
-  up now, before registration closes on 1st December
-  <br><br>
-  *In the case of oversubscription, online access will be offered through livestream.
+  BuildingBloCS is back with our final conference for 2025! The theme is <b>Web Development</b>.
+  You will learn how to create websites and applications through 8 specially curated workshops:
+  UI/UX on Figma, Git & Github, HTML & CSS, Javascript, Databases, Tailwind CSS, React & Next.js,
+  and Anime.js. Across the three conference days, we hope that you will build a better 
+  understanding of web development, forge new friendships, and apply what you’ve learnt in a 
+  hackathon! Sign up now, before registration closes on 1st December!
+
+  <br>*In the case of oversubscription, online access will be offered through livestream.</br>
 faq:
 - q: Must I go for all the workshops?
   a: You can pick which workshops you would like to attend, although you are highly encouraged to attend all workshops as they are all essential skills to Web Development.
@@ -31,6 +30,8 @@ faq:
   a: We can't divulge any information about the prizes, but they will be shipped out after the finals, on Monday, 15th December!
 - q: How will the hackathon groups be allocated? Can I choose my teammates?
   a: For this hackathon, we will be allocating the groups for you. However, if you (mutually) indicate someone you'll like to work with, we'll take that into consideration. Any other empty slots will be filled randomly, taking into account your age.
+- q: Am I allowed to use AI during the hackathon?
+  a: While <b>we do permit the use of AI during the competition</b>, we hope that you will not overuse it, as being able to code on your own is extremely beneficial to your own learning.
 - q: I still have questions! Who can I contact?
   a: The fastest way to reach us is to open a ticket on our Discord server, which you can join at <a href="https://go.buildingblocs.sg/discord">go.buildingblocs.sg/discord</a> <br> However, if you are unable to use Discord, you may also shoot us an email at <a href="mailto:hello@buildingblocs.sg">hello@buildingblocs.sg</a>
 prospectus:
@@ -40,40 +41,95 @@ prospectus:
 - src: /events/december/4.png
 - src: /events/december/5.png
 timeline:
-- events:
-  - date: 8 Dec
+- title: Group 1
+  events:
+  - date: 8th December
     event:
-    - title: Hackathon
-      desc: Start discussing with your team solutions for the problem statement throughout the week
-    - time: 9:00 AM - 11:30 AM
-      title: UI/UX with Figma
-      desc: Bring your designs to life with Figma! Learn how to make visually appealing mockups without code.
-      author: by Yuhan, Brayden and Sheng Xin
-    - time: 1:00 PM - 4:00 PM
+    - time: 09:00 - 12:00
       title: Git & Github
-      desc: Learn the basic essentials of Git for collaborative software development.
-      author: by Saumil, Brayden and Yuhan
-  - date: 9 Dec
-    event:
-    - time: 9:00 AM - 12:30 PM
+      desc: Experiment with code, collaborate on projects, and launch a live website.
+      author: by Vijai and Jerriel
+    - time: 12:00 - 13:00
+      title: Lunch
+    - time: 13:00 - 16:00
       title: HTML & CSS
-      desc: An introduction to the bare skeleton of web development (HTML) and how to decorate it (CSS).
-      author: by Wee Zen, Sindya and Aksharaa
-    - time: 2:00 PM - 4:30 PM
-      title: Javascript
-      desc: A peek into the language that has an identity crisis with `this`.
-      author: by Angelina, Eason and Amanda
-  - date: 10 Dec
+      desc: Learn the backbone of web development; how to do up basic HTML and format it with CSS.
+      author: By Sindya
+    - time: 16:00 - 18:30
+      title: UI/UX with Figma
+      desc: An introduction to UI/UX and Figma, and everything that comes with designing user interfaces. 
+      author: by Yueyi
+  - date: 9th December
     event:
-    - time: 9:00 AM - 12:00 PM
-      title: Databases
-      desc: An introduction for beginners looking to connect their website to a database through SQL (SQLite).
-      author: by Hai De and Sindya
-    - time: 2:00 PM - 4:00 PM
+    - time: 09:00 - 12:30
+      title: Javascript for Webdev
+      desc: Add interactive features to your website in this hands-on workshop!
+      author: by Bryan
+    - time: 12:30 - 13:30
+      title: Lunch
+    - time: 13:30 - 16:30
+      title: SQL Databases
+      desc: Get to know the basics to reading and writing to SQL databases, and apply it to an actual web app!
+      author: by Wee Zen and Bryan
+    - time: 16:30 - 18:30
+      title: Tailwind CSS
+      desc: Style your websites faster and simpler.
+      author: by Zul and Wee Zen
+  - date: 10th December
+    event:
+    - time: 09:00 - 12:00
       title: React & Next.js
-      desc: An introduction to jsx (react) and next.js
-      author: by Sai and Arjun
-  - date: 15 Dec
+      desc: A crash course on React basics and getting your Next.js app deployed on Vercel.
+      author: by Thet Pai
+    - time: 12:00 - 13:00
+      title: Lunch
+    - time: 13:00 - 16:00
+      title: Anime.js
+      desc: Learn how to use Anime.js to make your website more intuitive, engaging and juicy.
+      author: by Chris and Zixi
+- title: Group 2
+  events:
+  - date: 8th December
     event:
-    - title: Award Ceremony
-      desc: Join us for the award ceremony held online!
+    - time: 09:00 - 12:00
+      title: HTML & CSS
+      desc: Learn the backbone of web development; how to do up basic HTML and format it with CSS.
+      author: by Sindya
+    - time: 12:00 - 13:00
+      title: Lunch
+    - time: 13:00 - 16:30
+      title: Javascript for Webdev
+      desc: Add interactive features to your website in this hands-on workshop!
+      author: by Bryan
+    - time: 16:30 - 18:30
+      title: Tailwind CSS
+      desc: Style your websites faster and simpler.
+      author: by Zul and Wee Zen
+  - date: 9th December
+    event:
+    - time: 09:00 - 12:00
+      title: SQL Databases
+      desc: Get to know the basics to reading and writing to SQL databases, and apply it to an actual web app!
+      author: by Wee Zen and Bryan
+    - time: 12:00 - 13:00
+      title: Lunch
+    - time: 13:00 - 16:00
+      title: Anime.js
+      desc: Learn how to use Anime.js to make your website more intuitive, engaging and juicy.
+      author: by Chris and Zixi
+    - time: 16:00 - 18:30
+      title: UI/UX with Figma
+      desc: An introduction to UI/UX and Figma, and everything that comes with designing user interfaces. 
+      author: by Yueyi
+  - date: 10th December
+    event:
+    - time: 09:00 - 12:00
+      title: Git & GitHub
+      desc: Experiment with code, collaborate on projects, and launch a live website.
+      author: by Vijai and Jerriel
+    - time: 12:00 - 13:00
+      title: Lunch
+    - time: 13:00 - 16:00
+      title: React & Next.js
+      desc: A crash course on React basics and getting your Next.js app deployed on Vercel.
+      author: by Thet Pai
