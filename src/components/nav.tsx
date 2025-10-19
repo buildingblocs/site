@@ -115,7 +115,7 @@ export default function Nav() {
                         </Popover>
                     </div>
                 </div>
-                {/* {
+                {
                     <a
                         className="h-16 justify-end flex sticky top-0 z-20"
                         href="/events/december"
@@ -127,7 +127,7 @@ export default function Nav() {
                             </div>
                         </div>
                     </a>
-                } */}
+                }
             </div>
             {/* Mobile Nav */}
             <div className="sm:hidden h-16 justify-end flex sticky top-0 z-20">
