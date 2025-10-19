@@ -10,7 +10,12 @@ import {
     ArrowRightIcon,
     ChevronDownIcon,
 } from "@radix-ui/react-icons";
-import {Modal, ModalHeader, ModalBody, ModalFooter } from 'free-astro-components'
+import {
+    Modal,
+    ModalHeader,
+    ModalBody,
+    ModalFooter,
+} from "free-astro-components";
 export default function Nav() {
     const mobileLinks = [
         {
@@ -34,9 +39,9 @@ export default function Nav() {
     const events = [
         {
             title: "December Conference",
-            href: "", // "/events/december",
-            desc: "Under Construction! Check back later."
-        }, 
+            href: "/events/december",
+            desc: "BuildingBloCS is back with our final conference for 2025 on Web Dev!",
+        },
         {
             title: "June Conference",
             href: "/events/june",
@@ -45,7 +50,7 @@ export default function Nav() {
         {
             title: "March Conference",
             href: "/events/march",
-            desc: "The March Conference aims to introduce beginners to Python and Data Science"
+            desc: "The March Conference aims to introduce beginners to Python and Data Science",
         },
         {
             title: "Looking for older events?",
@@ -85,7 +90,7 @@ export default function Nav() {
                         >
                             Join Us
                         </a> */}
-                        
+
                         <Popover>
                             <PopoverTrigger className="translate-y-0 translate-x-0 text-sm font-medium rounded-md px-2 flex items-center gap-x-1 outline-0 group transition hover:bg-white hover:text-black data-[state=open]:bg-slate-700">
                                 Events
@@ -125,7 +130,7 @@ export default function Nav() {
                 } */}
             </div>
             {/* Mobile Nav */}
-            <div className="sm:hidden h-16 justify-end flex sticky top-0 z-20"> 
+            <div className="sm:hidden h-16 justify-end flex sticky top-0 z-20">
                 {/* {
                     <a
                         href="/events/december"
@@ -170,7 +175,6 @@ export default function Nav() {
                     </Sheet>
                 </div>
             </div>
-            
         </>
     );
 }
