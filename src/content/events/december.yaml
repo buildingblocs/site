@@ -54,13 +54,13 @@ timeline:
             event:
                 - time: 09:00 - 11:30
                   title: Git & Github
-                  desc: Experiment with code, collaborate on projects, and launch a live website.
+                  desc: Master a pro Git workflow; learn about branching, pull requests and deploying live websites.
                   author: by Vijai and Jerriel
                 - time: 11:30 - 12:30
                   title: Lunch
                 - time: 12:30 - 15:30
                   title: HTML & CSS
-                  desc: Learn the backbone of web development; how to do up basic HTML and format it with CSS.
+                  desc: Learn how to create a basic HTML website and format it with CSS.
                   author: By An Yi and Sindya
                 - time: 15:30 - 18:00
                   title: UI/UX with Figma
@@ -100,7 +100,7 @@ timeline:
             event:
                 - time: 09:00 - 12:00
                   title: HTML & CSS
-                  desc: Learn the backbone of web development; how to do up basic HTML and format it with CSS.
+                  desc: Learn how to create a basic HTML website and format it with CSS.
                   author: by An Yi and Sindya
                 - time: 12:00 - 13:00
                   title: Lunch
@@ -126,7 +126,7 @@ timeline:
                   author: by Thet Pai
                 - time: 16:00 - 18:30
                   title: Git & GitHub
-                  desc: Experiment with code, collaborate on projects, and launch a live website.
+                  desc: Master a pro Git workflow; learn about branching, pull requests and deploying live websites.
                   author: by Vijai and Jerriel
           - date: 10th December
             event:
