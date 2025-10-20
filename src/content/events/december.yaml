@@ -52,20 +52,20 @@ timeline:
       events:
           - date: 8th December
             event:
-                - time: 09:00 - 12:00
+                - time: 09:00 -
                   title: Git & Github
                   desc: Experiment with code, collaborate on projects, and launch a live website.
                   author: by Vijai and Jerriel
-                - time: 12:00 - 13:00
+                - time: 11:30 -
                   title: Lunch
-                - time: 13:00 - 16:00
+                - time: 12:30 - 15:30
                   title: HTML & CSS
                   desc: Learn the backbone of web development; how to do up basic HTML and format it with CSS.
-                  author: By Sindya
-                - time: 16:00 - 18:30
+                  author: By An Yi and Sindya
+                - time: 15:30 - 18:00
                   title: UI/UX with Figma
                   desc: An introduction to UI/UX and Figma, and everything that comes with designing user interfaces.
-                  author: by Yueyi
+                  author: by Yueyi and Bo An
           - date: 9th December
             event:
                 - time: 09:00 - 12:30
@@ -77,11 +77,11 @@ timeline:
                 - time: 13:30 - 16:30
                   title: SQL Databases
                   desc: Get to know the basics to reading and writing to SQL databases, and apply it to an actual web app!
-                  author: by Wee Zen and Bryan
+                  author: by Bryan and Wee Zen
                 - time: 16:30 - 18:30
                   title: Tailwind CSS
                   desc: Style your websites faster and simpler.
-                  author: by Zul and Wee Zen
+                  author: by Wee Zen
           - date: 10th December
             event:
                 - time: 09:00 - 12:00
@@ -93,7 +93,7 @@ timeline:
                 - time: 13:00 - 16:00
                   title: Anime.js
                   desc: Learn how to use Anime.js to make your website more intuitive, engaging and juicy.
-                  author: by Chris and Zixi
+                  author: by Zixi and Chris
     - title: Group 2
       events:
           - date: 8th December
@@ -101,7 +101,7 @@ timeline:
                 - time: 09:00 - 12:00
                   title: HTML & CSS
                   desc: Learn the backbone of web development; how to do up basic HTML and format it with CSS.
-                  author: by Sindya
+                  author: by An Yi and Sindya
                 - time: 12:00 - 13:00
                   title: Lunch
                 - time: 13:00 - 16:30
@@ -111,32 +111,32 @@ timeline:
                 - time: 16:30 - 18:30
                   title: Tailwind CSS
                   desc: Style your websites faster and simpler.
-                  author: by Zul and Wee Zen
+                  author: by Wee Zen
           - date: 9th December
             event:
                 - time: 09:00 - 12:00
                   title: SQL Databases
                   desc: Get to know the basics to reading and writing to SQL databases, and apply it to an actual web app!
-                  author: by Wee Zen and Bryan
-                - time: 12:00 - 13:00
-                  title: Lunch
-                - time: 13:00 - 16:00
-                  title: Anime.js
-                  desc: Learn how to use Anime.js to make your website more intuitive, engaging and juicy.
-                  author: by Chris and Zixi
-                - time: 16:00 - 18:30
-                  title: UI/UX with Figma
-                  desc: An introduction to UI/UX and Figma, and everything that comes with designing user interfaces.
-                  author: by Yueyi
-          - date: 10th December
-            event:
-                - time: 09:00 - 12:00
-                  title: Git & GitHub
-                  desc: Experiment with code, collaborate on projects, and launch a live website.
-                  author: by Vijai and Jerriel
+                  author: by Bryan and Wee Zen
                 - time: 12:00 - 13:00
                   title: Lunch
                 - time: 13:00 - 16:00
                   title: React & Next.js
                   desc: A crash course on React basics and getting your Next.js app deployed on Vercel.
                   author: by Thet Pai
+                - time: 16:00 - 18:30
+                  title: Git & GitHub
+                  desc: Experiment with code, collaborate on projects, and launch a live website.
+                  author: by Vijai and Jerriel
+          - date: 10th December
+            event:
+                - time: 09:00 - 12:00
+                  title: Anime.js
+                  desc: Learn how to use Anime.js to make your website more intuitive, engaging and juicy.
+                  author: by Zixi and Chris
+                - time: 12:00 - 13:00
+                  title: Lunch
+                - time: 13:00 - 15:30
+                  title: UI/UX with Figma
+                  desc: An introduction to UI/UX and Figma, and everything that comes with designing user interfaces.
+                  author: by Yueyi and Bo An
