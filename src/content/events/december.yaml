@@ -52,11 +52,11 @@ timeline:
       events:
           - date: 8th December
             event:
-                - time: 09:00 -
+                - time: 09:00 - 11:30
                   title: Git & Github
                   desc: Experiment with code, collaborate on projects, and launch a live website.
                   author: by Vijai and Jerriel
-                - time: 11:30 -
+                - time: 11:30 - 12:30
                   title: Lunch
                 - time: 12:30 - 15:30
                   title: HTML & CSS
