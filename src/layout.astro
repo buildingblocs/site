@@ -4,7 +4,7 @@ import Nav from "./components/nav.tsx";
 import Footer from "./components/footer.astro";
 
 import {Modal, ModalHeader, ModalBody, ModalFooter } from 'free-astro-components'
-// import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { Image } from "astro:assets";
 import cta from "./img/index/cta.webp";
@@ -27,7 +27,7 @@ const { title, showTitle, desc } = Astro.props;
 
 		{showTitle && <h1 class="text-center mt-10 mb-5 mx-5">{title}</h1>}
 		<slot />
-		{/* title != "December Conference" && 		<div class="mx-auto max-w-7xl py-12 sm:px-6 lg:px-8">
+		{title != "December Conference" && 		<div class="mx-auto max-w-7xl py-12 sm:px-6 lg:px-8">
 			<div class="relative isolate overflow-hidden bg-gray-900 dark:bg-slate-900 px-6 pt-16 sm:pt-32 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 xl:gap-x-20 lg:px-24 lg:pt-0">
 				<svg viewBox="0 0 1024 1024"
 					class="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
@@ -42,7 +42,7 @@ const { title, showTitle, desc } = Astro.props;
 					</defs>
 				</svg>
 				<div class="mx-auto max-w-xs text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
-					<h2>Join Us</h2>
+					<h2>Join us!</h2>
 					<p class="mt-3">for the December Conference to learn coding, the best way.</p>
 					<div class="mt-6 flex items-center justify-center gap-x-6 lg:justify-start">
 						<a href="/events/december">
@@ -59,7 +59,8 @@ const { title, showTitle, desc } = Astro.props;
 					</div>
 				</div>
 			</div>
-		</div> */}
+		</div>}
+
 		<Footer />
 		<Modal id="modal-contact" class="contact-modal">
 			<ModalHeader class="contact-modal-header">
