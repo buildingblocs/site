@@ -142,14 +142,21 @@ let formattedTitle = title.replace(" ", "<br>");
   const emblaNode = document.querySelector(".embla__viewport") as HTMLElement;
 
   // Initialize Embla Carousel
-  const embla = EmblaCarousel(emblaNode, { loop: false }, [Autoplay()]);
+  const autoplay = Autoplay()
+  const embla = EmblaCarousel(emblaNode, { loop: false }, [autoplay]);
 
   // Event listeners for previous and next buttons
   const prevButtonNode = document.querySelector(".embla__prev") as HTMLElement;
   const nextButtonNode = document.querySelector(".embla__next") as HTMLElement;
 
-  prevButtonNode.addEventListener("click", () => embla.scrollPrev(), false);
-  nextButtonNode.addEventListener("click", () => embla.scrollNext(), false);
+  prevButtonNode.addEventListener("click", () => {
+    embla.scrollPrev()
+    autoplay.stop()
+  }, false);
+  nextButtonNode.addEventListener("click", () => {
+    embla.scrollNext()
+    autoplay.stop()
+  }, false);
 </script>
 <style>
   .embla__slide {
