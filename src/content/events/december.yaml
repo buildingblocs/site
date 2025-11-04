@@ -1,6 +1,6 @@
 title: December Conference
 status: open # over open closed
-# directions: /events/december/directions
+directions: /events/december/directions
 signupLink: https://form.buildingblocs.sg/68f64250873814efac8efd09
 details:
     - "Workshops: 8th - 10th December"
@@ -20,6 +20,8 @@ desc: >-
 faq:
     - q: Must I go for all the workshops?
       a: Yes! The workshops are designed to build on each other, so attending all of them will help you get the most out of the conference. A participation certificate will only be given to those who attend <b>at least 2 days</b> of workshops.
+    - q: Who can come for the conference?
+      a: This conference is for students, ranging from secondary to university-level students. We aim to target beginner developers, so don't worry if you've got no experience—just come in with an open mind and a passion to learn!
     - q: Why should I sign up? Is it free?
       a: It's a free, fun and easy way to learn new skills about many new topics related to computing! What more could you ask for?
     - q: What if something pops up and I can't make it?
@@ -53,7 +55,7 @@ timeline:
           - date: 8th December
             event:
                 - time: 09:00 - 11:30
-                  title: Git & Github
+                  title: Git & GitHub
                   desc: Master a pro Git workflow; learn about branching, pull requests and deploying live websites.
                   author: by Vijai and Jerriel
                 - time: 11:30 - 12:30
@@ -69,7 +71,7 @@ timeline:
           - date: 9th December
             event:
                 - time: 09:00 - 12:30
-                  title: Javascript for Webdev
+                  title: JavaScript for Web Dev
                   desc: Add interactive features to your website in this hands-on workshop!
                   author: by Bryan
                 - time: 12:30 - 13:30
@@ -105,7 +107,7 @@ timeline:
                 - time: 12:00 - 13:00
                   title: Lunch
                 - time: 13:00 - 16:30
-                  title: Javascript for Webdev
+                  title: JavaScript for Web Dev
                   desc: Add interactive features to your website in this hands-on workshop!
                   author: by Bryan
                 - time: 16:30 - 18:30

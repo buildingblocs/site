@@ -5,243 +5,111 @@ import confetti from "canvas-confetti";
 export default function DirectionList() {
     // in public folder
     const methods = {
-        toNAKAbyBencoolen: {
+        toSMUbyCityHallDhobyGhaut: {
+            title: "From City Hall, Dhoby Ghaut",
+            directions: [
+                {
+                    method: "Navigate to the School of Computing and Information Systems above ground and head to the glass enclosure with an escalator.",
+                    img: "/events/december/directions/CityHallDhobyGhaut1.png",
+                },
+                {
+                    method: "Go down the escalator, and turn left.",
+                    img: "/events/december/directions/CityHallDhobyGhaut2.png",
+                },
+                {
+                    method: "Follow the corridor and turn left.",
+                    img: "/events/december/directions/CityHallDhobyGhaut3.png",
+                },
+                {
+                    method: "Walk straight ahead, until you see the seminar rooms on your right.",
+                    img: "/events/december/directions/CityHallDhobyGhaut4.png",
+                },
+                {
+                    method: "You've arrived!",
+                    img: "/events/december/directions/CityHallDhobyGhaut5.png",
+                },
+            ],
+        },
+        toSMUbyBencoolen: {
             title: "Bencoolen MRT",
             directions: [
                 {
-                    method: "Exit via Exit C",
-                    img: "/events/june/directions/Bencoolen_Exit C(Coming Out).webp",
+                    method: "Exit via Exit C and turn right, walking straight ahead.",
+                    img: "/events/december/directions/Bencoolen1.png",
                 },
                 {
-                    method: "Turn left and walk along this walkway",
-                    img: "/events/june/directions/Bencoolen_Exit C.webp",
+                    method: "Turn to your right into the hallway as indicated by the arrow.",
+                    img: "/events/december/directions/Bencoolen2.png",
                 },
                 {
-                    method: "Continue along this walkway",
-                    img: "/events/june/directions/Walkway From Bras Basah Exit C _ Bencoolen Exit C.webp",
+                    method: "Walk straight, where the nearest toilet from the conference room can be located. Turn left again down a smaller corridor.",
+                    img: "/events/december/directions/Bencoolen3.png",
                 },
                 {
-                    method: "Turn right and go up the escalator",
-                    img: "/events/june/directions/End of Walkway 1.webp",
+                    method: "Walk straight ahead until you see the seminar rooms to your left.",
+                    img: "/events/december/directions/Bencoolen4.png",
                 },
                 {
-                    method: "Walk along this walkway",
-                    img: "/events/june/directions/Start of Walkway 2.webp",
-                },
-                {
-                    method: "Continue along this walkway",
-                    img: "/events/june/directions/Walkway 2 Continued.webp",
-                },
-                {
-                    method: "Turn right at the dead end and exit",
-                    img: "/events/june/directions/End of walkway 2_ Before Escalator to NAKA.webp",
-                },
-                {
-                    method: "Go up the escalator and turn right",
-                    img: "/events/june/directions/Escalator to NAKA.webp",
-                },
-                {
-                    method: "Enter and go to Level 2",
-                    img: "/events/june/directions/SOA_Security.webp",
+                    method: "You've arrived!",
+                    img: "/events/december/directions/Bencoolen5.png",
                 },
             ],
         },
-        toNAKAbyBB: {
+        toSMUbyBrasBasah: {
             title: "Bras Basah MRT",
             directions: [
                 {
-                    method: "Exit via Exit B and turn right",
-                    img: "/events/june/directions/Bras Basah_Exit B.webp",
+                    method: "Exit via Exit C, turn right and walk straight ahead.",
+                    img: "/events/december/directions/BrasBasah1.png",
                 },
                 {
-                    method: "Turn left and go up the escalator",
-                    img: "/events/june/directions/End of Walkway 1.webp",
+                    method: "Follow the corridor, turning right.",
+                    img: "/events/december/directions/BrasBasah2.png",
                 },
                 {
-                    method: "Walk along this walkway",
-                    img: "/events/june/directions/Start of Walkway 2.webp",
+                    method: "Walk past the Starbucks, and keep navigating ahead.",
+                    img: "/events/december/directions/BrasBasah3.png",
                 },
                 {
-                    method: "Continue along this walkway",
-                    img: "/events/june/directions/Walkway 2 Continued.webp",
+                    method: "Walk straight down along the corridor, passing by Bencoolen MRT.",
+                    img: "/events/december/directions/BrasBasah4.png",
                 },
                 {
-                    method: "Turn right at the dead end and exit",
-                    img: "/events/june/directions/End of walkway 2_ Before Escalator to NAKA.webp",
+                    method: "Turn to your right into the hallway as indicated by the arrow.",
+                    img: "/events/december/directions/BrasBasah5.png",
                 },
                 {
-                    method: "Go up the escalator and turn right",
-                    img: "/events/june/directions/Escalator to NAKA.webp",
+                    method: "Walk straight, where the nearest toilet from the conference room can be located. Turn left again down a smaller corridor.",
+                    img: "/events/december/directions/BrasBasah6.png",
                 },
                 {
-                    method: "Enter and go to Level 2",
-                    img: "/events/june/directions/SOA_Security.webp",
+                    method: "Walk straight ahead until you see the seminar rooms to your left.",
+                    img: "/events/december/directions/BrasBasah7.png",
+                },
+                {
+                    method: "You've arrived!",
+                    img: "/events/december/directions/BrasBasah8.png",
                 },
             ],
         },
-        toNAKAbyBus: {
-            title: "Bus",
-            directions: [
-                {
-                    method: "Take a bus to the SMU (4) bus stop (04121)",
-                    img: "/events/june/directions/04121 Busstop.webp",
-                },
-                {
-                    method: "Go straight and turn left",
-                    img: "/events/june/directions/To NAKA from Bus Stop_ Lib pick up.webp",
-                },
-                {
-                    method: "Enter and go to Level 2",
-                    img: "/events/june/directions/SOA_Security.webp",
-                },
-            ],
-        },
-        toNAKAbyCar: {
+        toSMUbyCar: {
             title: "Drop-off by Car",
             directions: [
                 {
-                    method: "Drop off here at Li Ka Shing Library",
-                    img: "/events/june/directions/Library_Pick Up.webp",
+                    method: "Drop off at School of Computing and Information Systems 2 pick-up point. Head towards the basement via the escalator.",
+                    img: "/events/december/directions/dropoff1.png",
                 },
                 {
-                    method: "Walk straight along the walkway",
-                    img: "/events/june/directions/Library pickup to NAKA_1.webp",
+                    method: "Go through the door on your right.",
+                    img: "/events/december/directions/dropoff2.png",
                 },
                 {
-                    method: "Turn left and go to the crossing and cross the road",
-                    img: "/events/june/directions/Library pickup to NAKA_2.webp",
+                    method: "Once you are out of the door, turn left and head straight towards the seminar rooms, which will be on your left.",
+                    img: "/events/december/directions/dropoff3.png",
                 },
                 {
-                    method: "After crossing, enter from from the bus stop and turn left",
-                    img: "/events/june/directions/To NAKA from Bus Stop_ Lib pick up.webp",
-                },
-                {
-                    method: "Enter and go to Level 2",
-                    img: "/events/june/directions/SOA_Security.webp",
-                },
-            ],
-        },
-        toSCIS1byBB: {
-            title: "Bras Basah MRT",
-            directions: [
-                {
-                    method: "Get out from Exit E and walk towards the road",
-                    img: "/events/june/directions/Bras Basah Exit E to SCIS 1/Bras Basah_Exit E w arrow.webp",
-                },
-                {
-                    method: "Cross the road at the traffic light",
-                    img: "/events/june/directions/Bras Basah Exit E to SCIS 1/Bras Basah_Exit E Traffic Light w arrow.webp",
-                },
-                {
-                    method: "Walk along the path",
-                    img: "/events/june/directions/Bras Basah Exit E to SCIS 1/Bras Bash_Exit E After Traffic Light w arrow.webp",
-                },
-                {
-                    method: "Turn left towards security at the end",
-                    img: "/events/june/directions/Bras Basah Exit E to SCIS 1/SCIS 1 corner w arrow.webp",
-                },
-                {
-                    method: "Enter and go to Level 3",
-                    img: "/events/june/directions/SOA_Security.webp",
-                },
-            ],
-        },
-        toSCIS1byBencoolen: {
-            title: "Bencoolen MRT",
-            directions: [
-                {
-                    method: "Exit from Exit B of Bencoolen MRT and turn left",
-                    img: "/events/june/directions/Bencoolen Exit B to SCIS 1/Bencoolen_Exit B.webp",
-                },
-                {
-                    method: "Cross at the traffic lights to SCIS 1",
-                    img: "/events/june/directions/Bencoolen Exit B to SCIS 1/Bencoolen_Exit B_Traffic Lights w arrow.webp",
-                },
-                {
-                    method: "Walk towards the drop-off point",
-                    img: "/events/june/directions/Bencoolen Exit B to SCIS 1/Bencoolen_Exit_B_Junction End w arrow.webp",
-                },
-                {
-                    method: "Enter and go to Level 3",
-                    img: "/events/june/directions/SOA_Security.webp",
-                },
-            ],
-        },
-        toSCIS1byBus: {
-            title: "Bus",
-            directions: [
-                {
-                    method: "Arrive at Bencoolen Stn Exit B Bus Stop (08069). Turn right from the bus stop to the traffic intersection. Cross at the traffic lights to SCIS 1 and walk towards the drop-off point.",
-                    img: "/events/june/directions/Bencoolen Bus to SCIS 1.webp",
-                },
-                {
-                    method: "Enter and go to Level 3",
-                    img: "/events/june/directions/SOA_Security.webp",
-                },
-            ],
-        },
-        toSCIS1byCar: {
-            title: "Drop-off by Car",
-            directions: [
-                {
-                    method: "Drop off at School of Computing and Information Systems 1 pick up point. Enter and go to Level 3",
-                    img: "/events/june/directions/SOA_Security.webp",
-                },
-            ],
-        },
-        toBasementSRbyBus: {
-            title: "Bus",
-            directions: [
-                {
-                    method: "Arrive at Bencoolen Stn Exit B Bus Stop (08069)",
-                    img: "/events/june/directions/Bencoolen Bus Stop to Exit C/Bencoolen Stn Exit B Bus Stop (08069).webp",
-                },
-                {
-                    method: "Turn left and head down towards Bencoolen MRT",
-                    img: "/events/june/directions/Bencoolen Bus Stop to Exit C/Bencoolen MRT Underpass.webp",
-                },
-                {
-                    method: "U-turn towards Exit C, Singapore Management University",
-                    img: "/events/june/directions/Bencoolen Bus Stop to Exit C/Bencoolen MRT Underpass Underground.webp",
-                },
-                {
-                    method: "You will see an usher who will direct you",
-                    img: "/events/june/directions/Bencoolen_Exit C(Coming Out).webp",
-                },
-            ],
-        },
-        toBasementSRbyCar: {
-            title: "Drop-off by Car",
-            directions: [
-                {
-                    method: "Drop off at School of Computing and Information Systems 2 pick up point. Head towards the basement via the escalator",
-                    img: "/events/june/directions/Basement SR Car Dropoff/SCIS2 Drop-off.webp",
-                },
-                {
-                    method: "Go through the door on the right",
-                    img: "/events/june/directions/Basement SR Car Dropoff/Doors of choice.webp",
-                },
-                {
-                    method: "Once you are out of the door, turn left towards the seminar rooms",
-                    img: "/events/june/directions/Basement SR Car Dropoff/Walkway to SR.webp",
-                },
-            ],
-        },
-        BBUsher: {
-            title: "Bras Basah MRT",
-            directions: [
-                {
-                    method: "Exit via Exit C, turn right and walk straight. You will see an usher at Bencoolen MRT who will direct you",
-                    img: "/events/june/directions/Brash Basah_Exit C.webp",
-                },
-            ],
-        },
-        BencoolenUsher: {
-            title: "Bencoolen MRT",
-            directions: [
-                {
-                    method: "Exit via Exit C and turn right. You will see an usher who will direct you",
-                    img: "/events/june/directions/Bencoolen_Exit C(Coming Out).webp",
+                    method: "You've arrived!",
+                    img: "/events/december/directions/dropoff4.png",
                 },
             ],
         },
@@ -252,10 +120,10 @@ export default function DirectionList() {
             tracks: [
                 {
                     "All Tracks": [
-                        methods.BencoolenUsher,
-                        methods.BBUsher,
-                        methods.toBasementSRbyBus,
-                        methods.toBasementSRbyCar,
+                        methods.toSMUbyCityHallDhobyGhaut,
+                        methods.toSMUbyBencoolen,
+                        methods.toSMUbyBrasBasah,
+                        methods.toSMUbyCar,
                     ],
                 },
             ],
