@@ -15,7 +15,7 @@ desc: >-
     and Anime.js. Across the three conference days, we hope that you will build a better 
     understanding of web development, forge new friendships, and apply what you’ve learnt in a 
     hackathon! Sign up now, before registration closes on 23rd November!
-
+    <br></br>
     <br>*In the case of oversubscription, online access will be offered through livestream.</br>
 faq:
     - q: Must I go for all the workshops?
@@ -27,7 +27,7 @@ faq:
     - q: What if something pops up and I can't make it?
       a: Please open a ticket in the BuildingBloCS server so we can update your registration status.
     - q: What is a "hackathon"? Is it compulsory?
-      a: A hackathon is a competition where you'll have to work in teams to create an application based on a theme provided. It's a great way to practice your skills, however, it is not compulsory to encourage everyone to learn and attend.
+      a: A hackathon is a competition where you'll have to work in teams of 3-4 to create an application based on a theme provided. It's a great way to practice your skills, however, it is not compulsory to encourage everyone to learn and attend.
     - q: What are the prizes? When will I get them?
       a: We can't divulge any information about the prizes, but they will be shipped out after the finals, on Monday, 15th December!
     - q: How will the hackathon groups be allocated? Can I choose my teammates?
