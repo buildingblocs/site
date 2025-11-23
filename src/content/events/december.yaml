@@ -79,7 +79,7 @@ timeline:
                 - time: 13:30 - 16:30
                   title: SQL Databases
                   desc: Get to know the basics to reading and writing to SQL databases, and apply it to an actual web app!
-                  author: by Bryan and Wee Zen
+                  author: by Bryan
                 - time: 16:30 - 18:30
                   title: Tailwind CSS
                   desc: Style your websites faster and simpler.
@@ -119,7 +119,7 @@ timeline:
                 - time: 09:00 - 12:00
                   title: SQL Databases
                   desc: Get to know the basics to reading and writing to SQL databases, and apply it to an actual web app!
-                  author: by Bryan and Wee Zen
+                  author: by Wee Zen
                 - time: 12:00 - 13:00
                   title: Lunch
                 - time: 13:00 - 16:00
