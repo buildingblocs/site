@@ -117,15 +117,15 @@ timeline:
           - date: 9th December
             event:
                 - time: 09:00 - 12:00
-                  title: SQL Databases
-                  desc: Get to know the basics to reading and writing to SQL databases, and apply it to an actual web app!
-                  author: by Wee Zen
-                - time: 12:00 - 13:00
-                  title: Lunch
-                - time: 13:00 - 16:00
                   title: React & Next.js
                   desc: A crash course on React basics and getting your Next.js app deployed on Vercel.
                   author: by Thet Pai
+                - time: 12:00 - 13:00
+                  title: Lunch
+                - time: 13:00 - 16:00
+                  title: SQL Databases
+                  desc: Get to know the basics to reading and writing to SQL databases, and apply it to an actual web app!
+                  author: by Wee Zen
                 - time: 16:00 - 18:30
                   title: Git & GitHub
                   desc: Master a pro Git workflow; learn about branching, pull requests and deploying live websites.
@@ -141,4 +141,4 @@ timeline:
                 - time: 13:00 - 15:30
                   title: UI/UX with Figma
                   desc: An introduction to UI/UX and Figma, and everything that comes with designing user interfaces.
-                  author: by Yueyi and Bo An
+                  author: by Yueyi
