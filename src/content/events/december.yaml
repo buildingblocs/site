@@ -50,7 +50,7 @@ prospectus:
     - src: /events/december/11.png
     - src: /events/december/12.png
 timeline:
-    - title: Group 1
+    - title: Room 1
       events:
           - date: 8th December
             event:
@@ -96,7 +96,7 @@ timeline:
                   title: Anime.js
                   desc: Learn how to use Anime.js to make your website more intuitive, engaging and juicy.
                   author: by Zixi and Chris
-    - title: Group 2
+    - title: Room 2
       events:
           - date: 8th December
             event:

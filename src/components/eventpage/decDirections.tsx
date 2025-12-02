@@ -119,7 +119,7 @@ export default function DirectionList() {
             title: "All Days",
             tracks: [
                 {
-                    "All Tracks": [
+                    "All Rooms": [
                         methods.toSMUbyCityHallDhobyGhaut,
                         methods.toSMUbyBencoolen,
                         methods.toSMUbyBrasBasah,
