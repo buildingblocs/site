@@ -57,7 +57,7 @@ timeline:
                 - time: 09:00 - 11:30
                   title: Git & GitHub
                   desc: Master a pro Git workflow; learn about branching, pull requests and deploying live websites.
-                  author: by Vijai and Jerriel
+                  author: by Vijai
                 - time: 11:30 - 12:30
                   title: Lunch
                 - time: 12:30 - 15:30
@@ -129,7 +129,7 @@ timeline:
                 - time: 16:00 - 18:30
                   title: Git & GitHub
                   desc: Master a pro Git workflow; learn about branching, pull requests and deploying live websites.
-                  author: by Vijai and Jerriel
+                  author: by Vijai
           - date: 10th December
             event:
                 - time: 09:00 - 12:00
