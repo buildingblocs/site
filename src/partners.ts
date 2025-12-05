@@ -13,13 +13,7 @@ import ddas from "./img/partners/ddas.png";
 import espressif from "./img/partners/espressif.png";
 import wizardzines from "./img/partners/wizardzines.png";
 import singaprinting from "./img/partners/singaprinting.png";
-export const curr_partners = [
-    {
-        src: smu,
-        title: "Singapore Management University",
-        desc: "A premier university in Asia, the Singapore Management University (SMU) is internationally recognised for its world-class research and distinguished teaching.",
-        website: "https://smu.edu.sg",
-    },
+export const curr_partners = [    
     {
         src: htx,
         title: "HTX",
@@ -37,6 +31,12 @@ export const curr_partners = [
         title: "DDAS",
         desc: "The Digital Defence Alliance Singapore (DDAS) is dedicated to strengthening Singapore's Digital Defence pillar by empowering enterprises and individuals with digital readiness and cyber resilience capabilities.",
         website: "https://www.ddas.sg/",
+    },
+    {
+        src: smu,
+        title: "Singapore Management University",
+        desc: "A premier university in Asia, the Singapore Management University (SMU) is internationally recognised for its world-class research and distinguished teaching.",
+        website: "https://smu.edu.sg",
     },
     {
         src: github,
