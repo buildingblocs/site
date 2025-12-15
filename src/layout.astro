@@ -3,7 +3,12 @@ import "./styles.css";
 import Nav from "./components/nav.tsx";
 import Footer from "./components/footer.astro";
 
-import {Modal, ModalHeader, ModalBody, ModalFooter } from 'free-astro-components'
+import {
+    Modal,
+    ModalHeader,
+    ModalBody,
+    ModalFooter,
+} from "free-astro-components";
 import { Button } from "@/components/ui/button";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { Image } from "astro:assets";
@@ -13,21 +18,21 @@ const { title, showTitle, desc } = Astro.props;
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content={desc} />
-		<link rel="sitemap" href="/sitemap-index.xml" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>{title} | BuildingBloCS</title>
-	</head>
-	<body class="bg-slate-950">
-		<Nav client:load />
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <meta name="description" content={desc} />
+        <link rel="sitemap" href="/sitemap-index.xml" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <title>{title} | BuildingBloCS</title>
+    </head>
+    <body class="bg-slate-950">
+        <Nav client:load />
 
-		{showTitle && <h1 class="text-center mt-10 mb-5 mx-5">{title}</h1>}
-		<slot />
-		{title != "December Conference" && 		<div class="mx-auto max-w-7xl py-12 sm:px-6 lg:px-8">
+        {showTitle && <h1 class="text-center mt-10 mb-5 mx-5">{title}</h1>}
+        <slot />
+        <!-- {title != "December Conference" && 		<div class="mx-auto max-w-7xl py-12 sm:px-6 lg:px-8">
 			<div class="relative isolate overflow-hidden bg-gray-900 dark:bg-slate-900 px-6 pt-16 sm:pt-32 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 xl:gap-x-20 lg:px-24 lg:pt-0">
 				<svg viewBox="0 0 1024 1024"
 					class="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
@@ -59,20 +64,32 @@ const { title, showTitle, desc } = Astro.props;
 					</div>
 				</div>
 			</div>
-		</div>}
+		</div>} -->
 
-		<Footer />
-		<Modal id="modal-contact" class="contact-modal">
-			<ModalHeader class="contact-modal-header">
-				<h2>Contact us!</h2>
-			</ModalHeader>
-			<ModalBody>
-				<div>
-					<p>Email: <a href="mailto:hello@buildingblocs.sg">hello@buildingblocs.sg</a></p>
-					<p>Instagram: <a href="https://www.instagram.com/buildingblocs25">@buildingblocs25</a></p>
-					<p><a href="https://go.buildingblocs.sg/discord" rel="noopener noreferrer" target="_blank">Join our Discord!</a></p>
-				</div>
-			</ModalBody>
-		</Modal>
-	</body>
+        <Footer />
+        <Modal id="modal-contact" class="contact-modal">
+            <ModalHeader class="contact-modal-header">
+                <h2>Contact us!</h2>
+            </ModalHeader>
+            <ModalBody>
+                <div>
+                    <p>
+                        Email: <a href="mailto:hello@buildingblocs.sg"
+                            >hello@buildingblocs.sg</a>
+                    </p>
+                    <p>
+                        Instagram: <a
+                            href="https://www.instagram.com/buildingblocs25"
+                            >@buildingblocs25</a>
+                    </p>
+                    <p>
+                        <a
+                            href="https://go.buildingblocs.sg/discord"
+                            rel="noopener noreferrer"
+                            target="_blank">Join our Discord!</a>
+                    </p>
+                </div>
+            </ModalBody>
+        </Modal>
+    </body>
 </html>
