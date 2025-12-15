@@ -115,7 +115,7 @@ export default function Nav() {
                         </Popover>
                     </div>
                 </div>
-                {
+                {/* {
                     <a
                         className="h-16 justify-end flex sticky top-0 z-20"
                         href="/events/december"
@@ -127,11 +127,11 @@ export default function Nav() {
                             </div>
                         </div>
                     </a>
-                }
+                } */}
             </div>
             {/* Mobile Nav */}
             <div className="sm:hidden h-16 justify-end flex sticky top-0 z-20">
-                {
+                {/* {
                     <a
                         href="/events/december"
                         className="px-6 py-2 rounded-full mt-4 mr-4 bg-slate-900/50 backdrop-filter backdrop-blur-lg ring-1 ring-slate-800 flex items-center gap-x-4 text-sm"
@@ -141,7 +141,7 @@ export default function Nav() {
                             <ArrowRightIcon className="w-5 h-5" />
                         </div>
                     </a>
-                }
+                } */}
                 <div className="px-6 py-2 rounded-full mt-4 mr-4 bg-slate-900/50 backdrop-filter backdrop-blur-lg ring-1 ring-slate-800 flex items-center gap-x-4">
                     <a href="/">
                         <img
