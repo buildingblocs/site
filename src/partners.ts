@@ -13,6 +13,8 @@ import ddas from "./img/partners/ddas.png";
 import espressif from "./img/partners/espressif.png";
 import wizardzines from "./img/partners/wizardzines.png";
 import singaprinting from "./img/partners/singaprinting.png";
+import exabytes from "./img/partners/exabytes.svg"
+
 export const curr_partners = [    
     {
         src: htx,
@@ -49,6 +51,12 @@ export const curr_partners = [
         title: "Espressif",
         desc: "Espressif Systems is a multinational, fabless semiconductor company that develops low-power Wi-Fi and Bluetooth chips and modules for the Internet of Things (IoT).",
         website: "https://www.espressif.com/",
+    },
+    {
+        src: exabytes,
+        title: "Exabytes",
+        desc: "Exabytes is Singapore's top hosting provider that provides web hosting services & domain name registration at affordable prices, powering over 160,000 customers globally.",
+        website: "https://exabytes.sg/",
     },
     {
         src: wizardzines,
