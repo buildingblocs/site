@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+const { img, title, date, desc, imgalt, link } = Astro.props;
+import { ArrowRightIcon } from "@radix-ui/react-icons";
+---
+
+<div class="flex flex-col">
+  <!-- Poster -->
+  <div class="overflow-hidden rounded-xl">
+    <Image
+        src={img}
+        alt={imgalt}
+        class="w-full object-cover"
+        width={1587}
+        height={2245}
+    />
+  </div>
+
+  <!-- Text -->
+  <div class="mt-6 text-white">
+    <h3 class="text-xl font-semibold">
+      {title}
+    </h3>
+
+    <p class="mt-1 text-sm text-gray-400">
+      {date}
+    </p>
+
+    <p class="mt-4 text-sm text-gray-300 leading-relaxed">
+      {desc}
+    </p>
+
+    <a href={link} class="flex items-center gap-x-2 w-max rounded-md px-2 py-1 -ml-1 bg-slate-800 group">
+        <h3>Learn more</h3>
+        <ArrowRightIcon className="mt-1 group-hover:translate-x-1 group-hover:mr-2 w-[1.2rem] h-[1.2rem] transition" />
+    </a>
+  </div>
+</div>

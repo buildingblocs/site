@@ -18,6 +18,7 @@ import contentOne from "../img/index/content/1.webp";
 import contentTwo from "../img/index/content/2.webp";
 import contentThree from "../img/index/content/3.webp";
 import contentFour from "../img/index/content/4.webp";
+import Conference from "../components/index/conference.astro";
 
 interface Timeline {
   date: string;
@@ -111,23 +112,21 @@ const timeline: Timeline[] = [
         title: "Expansion into other Schools",
         desc: "We expanded to take organisers from NUSH, TJC, SP and many more institutes around Singapore, hosting events yearly.",
     },
-    {
-        date: "17th - 21st March",
-        title: "March Conference",
-        desc: "The March Conference aims to spark an interest in Python and Data Science, with five workshops and a hackathon.",
-        link: "/events/march"
-    },
+];
+const conferences = [ // img, title, date, desc, imgalt, link
     {
         date: "10th - 14th June",
         title: "June Conference",
         desc: "Our annual flagship Conference is back! Register now and delve into the realms of AI.    ",
-        link: "/events/june"
+        link: "/events/june",
+        img: "/events/june/1.webp"
     },
     {
         date: "8th - 15th December",
         title: "December Conference",
         desc: "The last conference of the year, December Conference, contains eight different workshops teaching about web development.",
-        link: "/events/december"
+        link: "/events/december",
+        img: "/events/december/1.png"
     },
 ];
 ---
@@ -195,4 +194,23 @@ const timeline: Timeline[] = [
             }
         </ol>
     </div>
+    <!-- Conferences -->
+    <div class="mx-auto max-w-6xl px-6 py-6">
+        <h2 class="mb-12 text-3xl font-semibold text-white">
+            Conferences
+        </h2>
+
+        <div class="grid gap-8 md:grid-cols-2">
+            {conferences.map((conference) => (
+                    <Conference
+                        img={conference.img}
+                        imgalt={conference.title + " poster"}
+                        title={conference.title}
+                        desc={conference.desc}
+                        link={conference.link}
+                        date={conference.date}
+                    />
+            ))}
+        </div>
+  </div>
 </Layout>
