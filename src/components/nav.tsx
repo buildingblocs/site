@@ -10,7 +10,12 @@ import {
     ArrowRightIcon,
     ChevronDownIcon,
 } from "@radix-ui/react-icons";
-import {Modal, ModalHeader, ModalBody, ModalFooter } from 'free-astro-components'
+import {
+    Modal,
+    ModalHeader,
+    ModalBody,
+    ModalFooter,
+} from "free-astro-components";
 export default function Nav() {
     const mobileLinks = [
         {
@@ -25,9 +30,18 @@ export default function Nav() {
             title: "Our Team",
             href: "/team",
         },
+        // {
+        //     title: "Join Us",
+        //     href: "/joinus",
+        // },
     ];
 
     const events = [
+        {
+            title: "December Conference",
+            href: "/events/december",
+            desc: "BuildingBloCS is back with our final conference for 2025 on Web Dev!",
+        },
         {
             title: "June Conference",
             href: "/events/june",
@@ -36,7 +50,7 @@ export default function Nav() {
         {
             title: "March Conference",
             href: "/events/march",
-            desc: "The March Conference aims to introduce beginners to Python and Data Science"
+            desc: "The March Conference aims to introduce beginners to Python and Data Science",
         },
         {
             title: "Looking for older events?",
@@ -70,7 +84,13 @@ export default function Nav() {
                         >
                             Our Team
                         </a>
-                        
+                        {/* <a
+                            href="/joinus"
+                            className="text-sm font-medium rounded-md px-2 transition hover:bg-white hover:text-black"
+                        >
+                            Join Us
+                        </a> */}
+
                         <Popover>
                             <PopoverTrigger className="translate-y-0 translate-x-0 text-sm font-medium rounded-md px-2 flex items-center gap-x-1 outline-0 group transition hover:bg-white hover:text-black data-[state=open]:bg-slate-700">
                                 Events
@@ -95,32 +115,33 @@ export default function Nav() {
                         </Popover>
                     </div>
                 </div>
-                {
+                {/* {
                     <a
                         className="h-16 justify-end flex sticky top-0 z-20"
-                        href="/events/june"
+                        href="/events/december"
                     >
                         <div className="pl-5 pr-2.5 rounded-full mt-4 bg-slate-900/50 backdrop-filter backdrop-blur-lg ring-1 ring-slate-800 flex items-center gap-x-4">
-                            <p>June Conference</p>
+                            <p>December Conference</p>
                             <div className="bg-orange-500 hover:bg-orange-600 rounded-full p-1 px-1.5 transition flex gap-x-2 items-center font-semibold">
                                 <ArrowRightIcon className="w-5 h-5" />
                             </div>
                         </div>
                     </a>
-                }
+                } */}
             </div>
+            {/* Mobile Nav */}
             <div className="sm:hidden h-16 justify-end flex sticky top-0 z-20">
-                {
+                {/* {
                     <a
-                        href="/events/june"
+                        href="/events/december"
                         className="px-6 py-2 rounded-full mt-4 mr-4 bg-slate-900/50 backdrop-filter backdrop-blur-lg ring-1 ring-slate-800 flex items-center gap-x-4 text-sm"
                     >
-                        <p>June Conference</p>
+                        <p>December Conference</p>
                         <div className="bg-orange-500 hover:bg-orange-600 rounded-full p-1 px-1.5 transition flex gap-x-2 items-center font-semibold">
                             <ArrowRightIcon className="w-5 h-5" />
                         </div>
                     </a>
-                }
+                } */}
                 <div className="px-6 py-2 rounded-full mt-4 mr-4 bg-slate-900/50 backdrop-filter backdrop-blur-lg ring-1 ring-slate-800 flex items-center gap-x-4">
                     <a href="/">
                         <img
@@ -154,7 +175,6 @@ export default function Nav() {
                     </Sheet>
                 </div>
             </div>
-            
         </>
     );
 }

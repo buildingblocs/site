@@ -2,6 +2,77 @@ html {
   scroll-behavior: smooth;
   scrollbar-width: none;
 }
+.outer_border {
+  padding: 20px; 
+  font-size: 18px;
+}
+.inner_border {
+  border: 1px solid #FFA216; 
+  border-radius: 10px; 
+  background-color: #040C2F; 
+  width: 80%; 
+  display: inline-block;
+}
+/* common queries accordion */
+.common-queries-accordion {
+  --ac-accordion-background-color: #040C2F;
+  --ac-accordion-border-color: #FFA216;
+  width:fit-content;
+}
+.common-queries-accordion .common-query-item summary {
+  color: white;           
+  align-items: justify; 
+  list-style: none;
+}
+.common-queries-accordion .common-query-item summary:hover {
+  background: none !important;
+  color: #FFA216 !important;
+}
+.common-queries-accordion .common-query-item summary:active {
+  color: #FFA216 !important;
+  background: none !important;
+}
+/* focus (after click/tab) */
+.common-queries-accordion .common-query-item summary:focus {
+  color: #FFA216 !important;
+  outline: none;
+}
+.common-queries-accordion .common-query-item[open] summary {
+  color: #FFA216 !important;
+}
+/*end common queries accordion */
+/*join us button*/
+input:hover{
+  color: #98671c;
+}
+/*testimonials accordion*/
+.testimonial-accordion {
+  --ac-accordion-background-color: #040C2F;
+  --ac-accordion-border-color: #FFA216;
+  width:fit-content;
+}
+.testimonial-accordion .testimonial-item summary {
+  color: white;           
+  align-items: justify; 
+  list-style: none;
+}
+.testimonial-accordion .testimonial-item summary:hover {
+  background: none !important;
+  color: #FFA216 !important;
+}
+.testimonial-accordion .testimonial-item summary:active {
+  color: #FFA216 !important;
+  background: none !important;
+}
+/* focus (after click/tab) */
+.testimonial-accordion .testimonial-item summary:focus {
+  color: #FFA216 !important;
+  outline: none;
+}
+.testimonial-accordion .testimonial-item[open] summary {
+  color: #FFA216 !important;
+}
+/*end testimonial accordion */
 .contact-modal{
   --ac-modal-backdrop-filter: blur(4px);
   --ac-modal-background-color: rgb(2 6 23);

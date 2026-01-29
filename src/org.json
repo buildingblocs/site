@@ -86,6 +86,7 @@
         "webLink": "https://zulfaqar.me"
     },
     "ryan": {
+        "imageSrc":"/src/img/team/RyanTan.webp",
         "name": "Ryan Tan Jia Jun",
         "description": "Game, code, sleep, repeat.",
         "githubLink": "https://github.com/RyanJohnJames"
@@ -108,33 +109,12 @@
         "description": "BBCS helps programmers to hone their skills for free!",
         "githubLink": "https://github.com/JatinRakesh"
     },
-    "leo": {
-        "imageSrc":"/src/img/team/Leo Edwards.webp",
-        "name": "Leo Edwards",
-        "description": "As a high school student with little knowledge in the realm of Computer Science, entering the tech scene has been eyeopening and inspiring. I want to bring this to students all over Singapore.",
-        "githubLink": "https://github.com/true-Grand",
-        "inLink": "https://www.linkedin.com/in/truegrand?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-    },
-    "soh": {
-        "imageSrc":"/src/img/team/amanda.webp",
-        "name": "Soh Ying Amanda",
-        "description": "hi! i'm Amanda, a DHS student who loves math (and tech)",
-        "githubLink": "https://github.com/Limmer-Foxy",
-        "inLink": "https://www.linkedin.com/in/soh-ying-amanda/"
-    },
     "jolynn": {
         "imageSrc":"/src/img/team/jolynn.webp",
         "name": "Jolynn Yeo",
         "description": "hello! I am Jolynn from RI, I love everything tech and crochet!",
         "githubLink": "https://github.com/j0lynN-Y",
         "inLink": "https://linkedin.com/in/jolynn-yeo-7b61a1261"
-    },
-    "lai": {
-        "imageSrc":"/src/img/team/Calvin_Lai.webp",
-        "name": "Lai Kai Wen Calvin",
-        "description": "Rytsas! I'm fluent in High Valyrian. I also specialize in working with cloud services such as AWS Cloud and Microsoft Azure.",
-        "githubLink": "https://github.com/Mystichunterz",
-        "inLink": "https://www.linkedin.com/in/calvin-lai-1865b9279/"
     },
     "tan": {
         "imageSrc":"/src/img/team/Tan-Eason.webp",
@@ -149,13 +129,6 @@
         "description": "\"I have played these games before\"",
         "githubLink": "https://github.com/LucasCYJ",
         "inLink": "https://www.linkedin.com/in/lucas-chua-a444782b7"
-    },
-    "sim": {
-        "imageSrc":"/src/img/team/Brayden.webp",
-        "name": "Sim Yu Bin Brayden",
-        "description": "",
-        "githubLink": "https://github.com/brayden-sim",
-        "inLink": "https://www.linkedin.com/in/brayden-sim/"
     },
     "loh": {
         "name": "Loh Shao Qi",
@@ -186,12 +159,6 @@
         "name": "Rameshkumar Dhanvine",
         "description": "JC2 student who loves AI, Math and Physics",
         "inLink": "http://www.linkedin.com/in/dhanvine-rameshkumar"
-    },
-    "yau": {
-        "name": "Yau Le Han",
-        "description": "JC2 in VJ, comms open :)",
-        "githubLink": "https://github.com/lh00000",
-        "inLink": "http://www.linkedin.com/in/le-han-yau-5a6187261"
     },
     "tan_2": {
         "name": "Tan Jun Wei",
@@ -292,5 +259,117 @@
         "description": "i make stuff like apps and websites and games ig",
         "githubLink": "https://github.com/PhyoTP",
         "webLink": "https://phyotp.dev/"
+    },
+    "christine": {
+        "imageSrc":"",
+        "name": "Christine Lee Lin Shan",
+        "description": "Hi I'm Christine, a person interested in music, tech, chem... Anything interesting :)",
+        "githubLink": "https://github.com/Hiya123 "
+    },
+    "jasim": {
+        "name": "Jasim Mohammed Ahmed Sahi ",
+        "description": "Hi interested in Cybersecurity ",
+        "githubLink": "https://github.com/non"
+    },
+    "wong": {
+        "name": "Wong Sze Yee",
+        "description": "Hi! I\u2019m Sze Yee and I like to code (games).",
+        "githubLink": "https://github.com/unipug1"
+    },
+    "loi": {
+        "imageSrc":"/src/img/team/Loi Zi Wei Ariel.webp",
+        "name": "Loi Zi Wei Ariel",
+        "description": "I\u2019m Ariel, I\u2019m Sec 4 in CGSS now and I am ",
+        "githubLink": "https://github.com/Ariellzw "
+    },
+    "adele": {
+        "name": "Adele Lim Yu Xuan",
+        "description": "hii c:",
+        "githubLink": "https://github.com/adelelyx"
+    },
+    "suman": {
+        "imageSrc":"/src/img/team/suman.webp",
+        "name": "Suman Gudlesh Hallikeri",
+        "description": "Hi, I\u2019m Suman. As a H2 Computing grad, Stack Overflow is my spirit animal :)",
+        "githubLink": "https://github.com/5um4n",
+        "inLink": "https://www.linkedin.com/in/sumangh61/"
+    },
+    "shah": {
+        "name": "Shah Aashka Anand",
+        "description": "hii I've been coding for a bit over 2 years now. i love animals & going on walks :)",
+        "githubLink": "https://github.com/aashka202"
+    },
+    "andrea": {
+        "name": "Andrea Tan Kai Xuan",
+        "description": "Hello! I am Andrea and I am interested in AI and cybersecurity! ",
+        "inLink":"https://www.linkedin.com/in/andrea-tan-828652369/"
+    },
+    "liu": {
+        "imageSrc":"/src/img/team/chris.webp",
+        "name": "Liu Weimi Chris",
+        "description": "C++ is skbidi ",
+        "githubLink": "https://github.com/dabby12",
+        "webLink":"https://chris-liu-portfolio.vercel.app/"
+    },
+    "yu_2": {
+        "imageSrc":"/src/img/team/Yu Youyi.webp",
+        "name": "Yu Youyi",
+        "description": "I like traveling ",
+        "githubLink": "https://github.com/yy2711"
+    },
+    "junchi": {
+        "imageSrc":"/src/img/team/nguyen ha thai son (junchi).webp",
+        "name": "Nguyen Ha Thai Son (Junchi)",
+        "description": "Helo, i'm into ai/ml, ping pong and kdramas that ruin sleep schedules \ud83d\ude14",
+        "githubLink": "https://github.com/junchinguyen",
+        "webLink": "https://www.kaggle.com/nguyenhathaison"
+    },
+    "jerriel": {
+        "imageSrc":"/src/img/team/JerrielChangJieBin.webp",
+        "name": "Jerriel Chang Jie Bin",
+        "description": "-",
+        "githubLink": "https://github.com/https://github.com/StudyBeeTutoring",
+        "webLink": "https://sites.google.com/view/jerriels-projects/home"
+    },
+    "thetpai": {
+        "imageSrc": "/src/img/team/thetpai.webp",
+        "name": "Phyo Thet Pai",
+        "description": "i make stuff like apps and websites and games ig",
+        "githubLink": "https://github.com/PhyoTP",
+        "webLink": "https://phyotp.dev/"
+    },
+    "hrithik": {
+        "imageSrc": "/src/img/team/Hrithik.webp",
+        "name": "Hrithik Ram Ganesh Kumar",
+        "description": "Hi I am Hrithik and I am probably breaking my bones by building robots or losing hair over ctfs.",
+        "githubLink": "https://github.com/Hrithikram101",
+        "inLink": "https://www.linkedin.com/in/hrithik-ram-ganesh-kumar-7752b0261/"
+    },
+    "goh": {
+        "name": "Goh Seng Woon Jayden",
+        "description": "i make stuff like apps and websites and games ig"
+    },
+    "htet": {
+        "imageSrc": "/src/img/team/Htet_Wai_Yan.webp",
+        "name": "Htet Wai Yan",
+        "description": "E = MC^2 + AI (I = 0)",
+        "githubLink": "https://github.com/day-dreamin"
+    },
+    "timothy": {
+        "imageSrc": "/src/img/team/Timothy.webp",
+        "name": "Timothy Hui Jun Xiang",
+        "description": "Hi I am Timothy, a JC1 student from JPJC. I take PXME and I love computing and AI. Currently working on an AI project!",
+        "inLink": "https://www.linkedin.com/in/timothy-hui-9024b7320"
+    },
+    "rayyan": {
+        "name": "Rayyan Wong",
+        "description": "Hello! I am Rayyan. "
+    },
+    "yang": {
+        "imageSrc": "/src/img/team/yay.webp",
+        "name": "Yang An Yi",
+        "description": "i play ctfs and code sometimes",
+        "githubLink": "https://github.com/yanganyi",
+        "inLink": "https://www.linkedin.com/in/yang-an-yi-814b9b250/"
     }
 }
