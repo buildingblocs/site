@@ -40,7 +40,7 @@ export default function Nav() {
         {
             title: "December Conference",
             href: "/events/december",
-            desc: "BuildingBloCS is back with our final conference for 2025 on Web Dev!",
+            desc: "The December Conference teaches you how to create your very own website",
         },
         {
             title: "June Conference",
