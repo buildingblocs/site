@@ -201,7 +201,7 @@ timeline:
       desc: Your faciliator will bring you to the correct areas
     - time: 14:30 - 16:00
       title: Closing Ceremony
-directionsData: //fill in accordingly
+directionsData: 
   - title: "All Days"
     tracks:
       - "All Rooms":
