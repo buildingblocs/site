@@ -201,3 +201,17 @@ timeline:
       desc: Your faciliator will bring you to the correct areas
     - time: 14:30 - 16:00
       title: Closing Ceremony
+directionsData: //fill in accordingly
+  - title: "All Days"
+    tracks:
+      - "All Rooms":
+          - title: "From City Hall, Dhoby Ghaut"
+            directions:
+              - method: "Navigate to the School of Computing... head to the glass enclosure."
+                img: "/events/june/directions/CityHallDhobyGhaut1.png"
+              - method: "Go down the escalator, and turn left."
+                img: "/events/june/directions/CityHallDhobyGhaut2.png"
+          - title: "Bencoolen MRT"
+            directions:
+              - method: "Exit via Exit C and turn right."
+                img: "/events/june/directions/Bencoolen1.png"
