@@ -142,7 +142,7 @@ timeline:
                   title: UI/UX with Figma
                   desc: An introduction to UI/UX and Figma, and everything that comes with designing user interfaces.
                   author: by Yueyi
-directionsData: //fill in with the actual data
+directionsData:
   - title: "All Days"
     tracks:
       - "All Rooms":
