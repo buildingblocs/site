@@ -1,12 +1,17 @@
 ---
 import { Image } from "astro:assets";
-const { img, title, date, desc, imgalt, link } = Astro.props;
+const { img, title, date, desc, imgalt, link, soon, active } = Astro.props;
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 ---
 
 <div class="flex flex-col">
   <!-- Poster -->
-  <div class="overflow-hidden rounded-xl">
+  <div class="overflow-hidden rounded-xl relative w-1/2">
+    {soon &&
+    <p class="absolute w-full object-cover h-full bg-black/50 text-center text-white text-2xl font-semibold flex items-center justify-center">
+        Coming Soon!
+    </p>
+    }
     <Image
         src={img}
         alt={imgalt}
@@ -30,8 +35,12 @@ import { ArrowRightIcon } from "@radix-ui/react-icons";
       {desc}
     </p>
 
-    <a href={link} class="flex items-center gap-x-2 w-max rounded-md px-2 py-1 -ml-1 bg-slate-800 group">
+    <a href={link} class={`flex items-center gap-x-2 w-max rounded-md px-2 py-1 -ml-1 ${active ? 'bg-blue-500' : 'bg-slate-800'} group mt-4`}>
+      {!active ? 
+        <p>Previous conference</p>
+      : 
         <p>Learn more</p>
+      }
         <ArrowRightIcon className="mt-1 group-hover:translate-x-1 group-hover:mr-2 w-[1.2rem] h-[1.2rem] transition" />
     </a>
   </div>

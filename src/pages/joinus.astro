@@ -1,25 +1,34 @@
-<!-- ---
+---
 import Layout from "../layout.astro";
 import { Accordion, AccordionItem, Icon } from "free-astro-components";
+import heroseven from "../img/index/hero/7.webp";
+import { Image } from "astro:assets";
 ---
 <Layout title="Join us!" desc="We need YOU!!">
-    <section id="joinus"> 
-        <h2 style="text-align: center; padding: 20px;">We need YOU!!</h2>
-        image here -->
-        <!-- <div style="text-align: center; padding: 20px; font-size: 20px;">
-            BuildingBloCS is a Singapore student-led, year-long outreach computing programme, providing workshops and competitions - by students, for students - to encourage the learning of computer science. By joining us, <b>YOU</b> can meet like-minded individuals who are passionate about technology too! But if you don't know coding, that's fine too! Anybody is free to join us as long as you're passionate in contributing to BBCS!
+    <section id="joinus" class="px-8 py-4"> 
+        <div class="relative rounded-xl overflow-hidden">
+            <h2 class="absolute w-full object-cover h-full bg-black/50 text-center text-white text-2xl font-semibold flex items-center justify-center">We need YOU!!</h2>
+            <Image
+                src={heroseven}
+                alt="Join Us"
+                class="object-cover min-h-full"
+                loading=eager
+            />
         </div>
+         <p style="padding: 16px; font-size: 16px;">
+            BuildingBloCS is a Singapore student-led, year-long outreach computing programme, providing workshops and competitions - by students, for students - to encourage the learning of computer science. By joining us, <b>YOU</b> can meet like-minded individuals who are passionate about technology too! But if you don't know coding, that's fine too! Anybody is free to join us as long as you're passionate in contributing to BBCS!
+         </p>
     </section>
     <section id="depts">
         <h2 style="text-align: justify; padding: 20px;">Here are the various departments that you can join!</h2>
         <div>
-            <img src="">
+            Insert departments here
         </div>
     </section>
     <section id="common-queries">
         <div>
             <h2 style="text-align: justify; padding: 20px;">Common Queries</h2>
-            <Accordion variant="splitted" class="common-queries-accordion">
+            <Accordion variant="splitted" class="common-queries-accordion w-full px-4">
                 <AccordionItem title="How do I sign up?" class="common-query-item">
                     <div>
                     You can sign up by clicking the button below! We will schedule a short call
@@ -81,9 +90,9 @@ import { Accordion, AccordionItem, Icon } from "free-astro-components";
             
         </div>
     </section>
-    <section id="testimonials">
-        <h2 style="text-align: justify; padding: 20px; ">Testimonials</h2>
-        <Accordion variant="bordered" class="testimonial-accordion">
+    <section id="testimonials" class="px-4">
+        <h2 style="text-align: justify; padding: 16px; ">Testimonials</h2>
+        <Accordion variant="bordered" class="testimonial-accordion w-full">
             <AccordionItem title="Jin En, TJC" class="testimonial-item" open>
                 <div>
                      I express eternal gratitude for the BBCS community, where individuals have crafted an environment that is not only secure and welcoming but also empowering for non-coders like myself. Within the BBCS community, I have discovered a platform to learn and grow alongside numerous talented, interesting, and inspiring individuals, forging meaningful connections and friendships that contribute significantly to the organisation's noble cause. BBCS has afforded me leadership opportunities that would have been otherwise inaccessible in a traditional academic setting, and it has enabled my participation in events that I might not have discovered without the organisation's guidance. Through BBCS, I have forged connections with individuals within Singapore and from diverse corners of the globe, facilitated by engaging events such as FOSSASIA and BBCS' various conferences.
@@ -102,7 +111,7 @@ import { Accordion, AccordionItem, Icon } from "free-astro-components";
         </Accordion>
     </section>
     <section id="sign-up">
-        <h2 class="flex justify-center flex-wrap">So what are you waiting for?</h2>
+        <h2 class="flex justify-center flex-wrap pt-4">So what are you waiting for?</h2>
         <div class="outer_border" style="display: flex; justify-content: center;">
             <div class="inner_border" style="display: inline-block; width: fit-content; padding: 20px; text-align: center; background-color: #FFA216">
             <form action="https://forms.gle/YtysiBrYqWTDZvgG6">
@@ -111,4 +120,4 @@ import { Accordion, AccordionItem, Icon } from "free-astro-components";
             </div>
         </div>
     </section>
-</Layout> -->
+</Layout>

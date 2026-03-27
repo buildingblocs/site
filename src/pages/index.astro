@@ -115,18 +115,22 @@ const timeline: Timeline[] = [
 ];
 const conferences = [ // img, title, date, desc, imgalt, link
     {
-        date: "10th - 14th June",
+        date: "June (to be confirmed)",
         title: "June Conference",
-        desc: "Our annual flagship Conference is back! Register now and delve into the realms of AI.    ",
+        desc: "More details about the June Conference will be released in the coming months, but expect a fun-filled day of workshops and talks!",
         link: "/events/june",
-        img: "/events/june/1.webp"
+        img: "/events/june/1.webp",
+        soon: true,
+        active: false
     },
     {
-        date: "8th - 15th December",
+        date: "8th - 15th December 2025",
         title: "December Conference",
         desc: "The last conference of the year, December Conference, contains eight different workshops teaching about web development.",
         link: "/events/december",
-        img: "/events/december/1.png"
+        img: "/events/december/1.png",
+        soon: false,
+        active: false
     },
 ];
 ---
@@ -209,6 +213,8 @@ const conferences = [ // img, title, date, desc, imgalt, link
                         desc={conference.desc}
                         link={conference.link}
                         date={conference.date}
+                        soon={conference.soon}
+                        active={conference.active}
                     />
             ))}
         </div>
