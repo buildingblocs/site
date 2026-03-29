@@ -6,7 +6,7 @@ export default function UniversalDirections({ data }: { data: any[] }) {
     const randomInRange = (min: number, max: number) => Math.random() * (max - min) + min;
 
     return (
-        <Tabs className="my-5" defaultValue={data[0].title}>
+        <Tabs className="my-5">
             <TabsList className="w-full">
                 {data.map((day) => (
                     <TabsTrigger key={day.title} className="w-full" value={day.title}>
@@ -17,7 +17,7 @@ export default function UniversalDirections({ data }: { data: any[] }) {
 
             {data.map((day) => (
                 <TabsContent key={day.title} value={day.title}>
-                    <Tabs defaultValue={Object.keys(day.tracks[0])[0]}>
+                    <Tabs>
                         
                         <TabsList className="w-full mt-2">
                             {day.tracks.map((trackObj: any) => {
@@ -37,7 +37,7 @@ export default function UniversalDirections({ data }: { data: any[] }) {
                             return (
                                 <TabsContent key={trackName} value={trackName}>
 
-                                    <Tabs defaultValue={methods[0].title}>
+                                    <Tabs>
                                         <TabsList className="w-full flex-wrap gap-y-1 mt-2">
                                             {methods.map((m: any) => (
                                                 <TabsTrigger key={m.title} value={m.title} className="flex-1">

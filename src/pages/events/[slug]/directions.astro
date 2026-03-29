@@ -22,7 +22,7 @@ const { entry } = Astro.props;
         ← Back to {entry.data.title}
     </a>
     <h1 class="text-4xl font-bold mt-4">Directions</h1>
-    <p class="text-slate-400">Step-by-step guide to the venue.</p>
+    <p class="text-slate-400">Select the day, your track, and the mode of transport to get step-by-step directions to the venue.</p>
     
     <UniversalDirections client:load data={entry.data.directionsData} />
   </div>
