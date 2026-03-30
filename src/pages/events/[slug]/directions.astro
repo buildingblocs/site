@@ -1,0 +1,29 @@
+---
+import Layout from "src/layout.astro";
+import { getCollection, getEntry } from "astro:content";
+import UniversalDirections from "@/components/eventpage/UniversalDirections";
+
+export async function getStaticPaths() {
+  const eventEntries = await getCollection("events");
+  return eventEntries
+    .filter(entry => entry.data.directionsData)
+    .map((entry) => ({
+      params: { slug: entry.id },
+      props: { entry },
+    }));
+}
+
+const { entry } = Astro.props;
+---
+
+<Layout title={`Directions - ${entry.data.title}`} desc={`How to get to ${entry.data.title}`}>
+  <div class="max-w-4xl mx-auto p-6 sm:p-10">
+    <a href={`/events/${entry.id}`} class="text-slate-400 hover:text-white transition-colors">
+        ← Back to {entry.data.title}
+    </a>
+    <h1 class="text-4xl font-bold mt-4">Directions</h1>
+    <p class="text-slate-400">Select the day, your track, and the mode of transport to get step-by-step directions to the venue.</p>
+    
+    <UniversalDirections client:load data={entry.data.directionsData} />
+  </div>
+</Layout>

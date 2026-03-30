@@ -11,6 +11,20 @@ const eventsData = defineCollection({
     status: z.string(),
     partners: z.string().optional(),
     directions: z.string().optional(),
+    directionsData: z.array(z.object({
+      title: z.string(), 
+      tracks: z.array(z.record( 
+        z.array(z.object({
+          title: z.string(), 
+          directions: z.array(z.object({
+            method: z.string().optional(),
+            bold_method: z.string().optional(),
+            img: z.string(),
+            hyperlink: z.string().url().optional(),
+          }))
+        }))
+      ))
+    })).optional(),
     luma: z.string().optional(),
     signupLink: z.string().optional(),
     details: z.string().array(),
