@@ -18,6 +18,7 @@ import contentOne from "../img/index/content/1.webp";
 import contentTwo from "../img/index/content/2.webp";
 import contentThree from "../img/index/content/3.webp";
 import contentFour from "../img/index/content/4.webp";
+import Conference from "../components/index/conference.astro";
 
 interface Timeline {
   date: string;
@@ -111,23 +112,25 @@ const timeline: Timeline[] = [
         title: "Expansion into other Schools",
         desc: "We expanded to take organisers from NUSH, TJC, SP and many more institutes around Singapore, hosting events yearly.",
     },
+];
+const conferences = [ // img, title, date, desc, imgalt, link
     {
-        date: "17th - 21st March 2025",
-        title: "March Conference",
-        desc: "The March Conference aims to spark an interest in Python and Data Science, with five workshops and a hackathon.",
-        link: "/events/march"
-    },
-    {
-        date: "10th - 14th June 2025",
+        date: "June (to be confirmed)",
         title: "June Conference",
-        desc: "Our annual flagship conference taught our 300+ participants how to create and use Artificial Intelligence, locally and on the cloud.",
-        link: "/events/june"
+        desc: "More details about the June Conference will be released in the coming months, but expect a fun-filled day of workshops and talks!",
+        link: "/events/june",
+        img: "/events/june/1.webp",
+        soon: true,
+        active: false
     },
     {
         date: "8th - 15th December 2025",
         title: "December Conference",
         desc: "The last conference of the year, December Conference, contains eight different workshops teaching about web development.",
-        link: "/events/december"
+        link: "/events/december",
+        img: "/events/december/1.png",
+        soon: false,
+        active: false
     },
 ];
 ---
@@ -195,4 +198,25 @@ const timeline: Timeline[] = [
             }
         </ol>
     </div>
+    <!-- Conferences -->
+    <div class="mx-auto max-w-6xl px-6 py-6">
+        <h2 class="mb-12 text-3xl font-semibold text-white">
+            Conferences
+        </h2>
+
+        <div class="grid gap-8 md:grid-cols-2">
+            {conferences.map((conference) => (
+                    <Conference
+                        img={conference.img}
+                        imgalt={conference.title + " poster"}
+                        title={conference.title}
+                        desc={conference.desc}
+                        link={conference.link}
+                        date={conference.date}
+                        soon={conference.soon}
+                        active={conference.active}
+                    />
+            ))}
+        </div>
+  </div>
 </Layout>

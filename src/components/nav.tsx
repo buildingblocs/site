@@ -30,10 +30,10 @@ export default function Nav() {
             title: "Our Team",
             href: "/team",
         },
-        // {
-        //     title: "Join Us",
-        //     href: "/joinus",
-        // },
+        {
+            title: "Join Us",
+            href: "/joinus",
+        },
     ];
 
     const events = [
@@ -47,11 +47,11 @@ export default function Nav() {
             href: "/events/june",
             desc: "The June Conference is an AI-centered conference designed for everyone",
         },
-        {
-            title: "March Conference",
-            href: "/events/march",
-            desc: "The March Conference aims to introduce beginners to Python and Data Science",
-        },
+        // {
+        //     title: "March Conference",
+        //     href: "/events/march",
+        //     desc: "The March Conference aims to introduce beginners to Python and Data Science",
+        // },
         {
             title: "Looking for older events?",
             href: "/archive",
@@ -84,12 +84,12 @@ export default function Nav() {
                         >
                             Our Team
                         </a>
-                        {/* <a
+                        <a
                             href="/joinus"
                             className="text-sm font-medium rounded-md px-2 transition hover:bg-white hover:text-black"
                         >
                             Join Us
-                        </a> */}
+                        </a>
 
                         <Popover>
                             <PopoverTrigger className="translate-y-0 translate-x-0 text-sm font-medium rounded-md px-2 flex items-center gap-x-1 outline-0 group transition hover:bg-white hover:text-black data-[state=open]:bg-slate-700">
