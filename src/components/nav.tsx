@@ -38,19 +38,9 @@ export default function Nav() {
 
     const events = [
         {
-            title: "December Conference",
-            href: "/events/december",
-            desc: "The December Conference teaches you how to create your very own website",
-        },
-        {
-            title: "June Conference",
-            href: "/events/june",
-            desc: "The June Conference is an AI-centered conference designed for everyone",
-        },
-        {
-            title: "March Conference",
-            href: "/events/march",
-            desc: "The March Conference aims to introduce beginners to Python and Data Science",
+            title: "Coming soon",
+            href: "https://buildingblocs.notion.site/343104f6313d80c8a3f2da6bded7b2cf",
+            desc: "Join the newsletter to get notified",
         },
         {
             title: "Looking for older events?",
