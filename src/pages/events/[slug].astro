@@ -6,17 +6,22 @@ import Faq from "@/components/eventpage/accordion";
 import Timeline from "@/components/eventpage/timeline";
 import { Image } from "astro:assets";
 import { partnerMap } from "@/partners"
-
 import { getCollection } from "astro:content";
-// 1. Generate a new path for every collection entry
+import type { EventData } from "@/content/config";
+
+type EventEntry = {
+  id: string;
+  data: EventData;
+}
+
 export async function getStaticPaths() {
-  const eventEntries = await getCollection("events");
+  const eventEntries = await getCollection("events") as EventEntry[];
   return eventEntries.map((entry) => ({
     params: { slug: entry.id },
     props: { entry },
   }));
 }
-// 2. For your template, you can get the entry directly from the prop
+
 const { entry } = Astro.props;
 
 const partners = entry.data.partners
@@ -77,7 +82,7 @@ let formattedTitle = title.replace(" ", "<br>");
 
       <Faq client:load faq={entry.data.faq} />
 
-      {partners && 
+      {partners &&
         <div class="bg-slate-900 rounded-xl px-3 pb-4 pt-2 mt-2 border border-slate-700 w-full">
           <p class="text-xs mb-3">
             Proudly supported by:
@@ -85,17 +90,17 @@ let formattedTitle = title.replace(" ", "<br>");
           <div class="flex">
             {partners.map((partner) => (
               <div class="flex-1 flex justify-center items-center">
-                <Image 
-                  src={partner.src} 
-                  alt={`${partner.title}'s logo`} 
-                  class="h-10 object-contain max-w-full" 
-                  loading="lazy" 
+                <Image
+                  src={partner.src}
+                  alt={`${partner.title}'s logo`}
+                  class="h-10 object-contain max-w-full"
+                  loading="lazy"
                 />
               </div>
             ))}
           </div>
         </div>
-      }        
+      }
     </div>
     <div class="flex-1 gap-y-4 flex flex-col">
       {entry.data.prospectus &&  // entry.data.status !== 'closed' && <-- why was prospectus only shown when status is open?
@@ -141,11 +146,9 @@ let formattedTitle = title.replace(" ", "<br>");
 
   const emblaNode = document.querySelector(".embla__viewport") as HTMLElement;
 
-  // Initialize Embla Carousel
   const autoplay = Autoplay()
   const embla = EmblaCarousel(emblaNode, { loop: false }, [autoplay]);
 
-  // Event listeners for previous and next buttons
   const prevButtonNode = document.querySelector(".embla__prev") as HTMLElement;
   const nextButtonNode = document.querySelector(".embla__next") as HTMLElement;
 
