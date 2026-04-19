@@ -6,6 +6,13 @@ import {
     GitHubLogoIcon,
     DiscordLogoIcon,
 } from "@radix-ui/react-icons";
+import { getCollection } from "astro:content";
+import type { EventData } from "@/content/config";
+
+type Page = {
+    title: string;
+    link: string;
+};
 
 const pages = [
     {
@@ -24,19 +31,29 @@ const pages = [
         title: "Archive",
         link: "/archive",
     },
-    // {
-    //     title: "March Conference",
-    //     link: "/events/march",
-    // },
-    // {
-    //     title: "June Conference",
-    //     link: "/events/june",
-    // },
-    // {
-    //     title: "December Conference",
-    //     link: "/events/december",
-    // },
 ];
+
+type EventEntry = {
+    id: string;
+    data: EventData;
+    collection: string;
+};
+
+const eventEntries = (await getCollection("events")) as EventEntry[];
+
+let eventPages: Page[] = [];
+
+if (eventEntries && eventEntries.length != 0) {
+    eventPages = [
+        ...pages,
+        ...eventEntries.map((entry) => ({
+            title: entry.data.title,
+            link: `/${entry.collection}/${entry.id}`,
+        })),
+    ];
+} else {
+    eventPages = [...pages];
+}
 ---
 
 <footer class="max-w-6xl mx-auto mb-8 px-5">
@@ -50,7 +67,7 @@ const pages = [
     </a>
     <ul class="flex gap-x-4 ml-2 text-slate-200 flex-col sm:flex-row gap-y-2">
         {
-            pages.map((page) => (
+            eventPages.map((page) => (
                 <li>
                     <a href={page.link} class="hover:underline">
                         {page.title}
