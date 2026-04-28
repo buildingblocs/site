@@ -16,6 +16,7 @@ import {
     ModalBody,
     ModalFooter,
 } from "free-astro-components";
+
 export default function Nav() {
     const mobileLinks = [
         {
