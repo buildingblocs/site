@@ -3,8 +3,6 @@ import { Button } from "@/components/ui/button";
 import confetti from "canvas-confetti";
 
 export default function UniversalDirections({ data }: { data: any[] }) {
-    const randomInRange = (min: number, max: number) => Math.random() * (max - min) + min;
-
     return (
         <Tabs className="my-5">
             <TabsList className="w-full">

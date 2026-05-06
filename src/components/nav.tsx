@@ -16,7 +16,8 @@ import {
     ModalBody,
     ModalFooter,
 } from "free-astro-components";
-export default function Nav() {
+
+export default function Nav({ data }: { data: any[] }) {
     const mobileLinks = [
         {
             title: "Home",
@@ -87,7 +88,7 @@ export default function Nav() {
                                 <ChevronDownIcon className="transition group-data-[state=open]:rotate-180 group-data-[state=open]:mt-0.5" />
                             </PopoverTrigger>
                             <PopoverContent className="max-w-xs p-2 flex flex-col mt-5 bg-slate-900 border-slate-700 text-white">
-                                {events.map((event) => (
+                                {data.map((event) => (
                                     <a
                                         href={event.href}
                                         className="font-semibold hover:bg-slate-800 p-2 rounded-md text-sm transition"
@@ -155,10 +156,12 @@ export default function Nav() {
                                         {link.title}
                                     </a>
                                 ))}
-                                {mobileEvents.map((event) => (
-                                    <a href={event.href} key={event.title}>
+                                {data.map((event) => (
+                                    event.title !== "Coming Soon" && (
+                                        <a href={event.href} key={event.title}>
                                         {event.title}
                                     </a>
+                                    )
                                 ))}
                             </div>
                         </SheetContent>

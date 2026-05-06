@@ -5,6 +5,7 @@ import { z, defineCollection } from "astro:content";
 export const eventSchema = z.object({
     title: z.string(),
     status: z.string(),
+    duration: z.string(),
     partners: z.string().optional(),
     directions: z.string().optional(),
     directionsData: z
@@ -35,6 +36,9 @@ export const eventSchema = z.object({
     signupLink: z.string().optional(),
     details: z.string().array(),
     excerpt: z.string(),
+    openExcerpt: z.string(),
+    closedExcerpt: z.string(),
+    overExcerpt: z.string(),
     desc: z.string(),
     faq: z.array(
         z.object({
