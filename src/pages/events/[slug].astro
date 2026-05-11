@@ -80,8 +80,10 @@ let formattedTitle = title.replace(" ", "<br>");
       {entry.data.status !== 'closed' && <p set:html={entry.data.desc} /> }
       {entry.data.status == 'closed' && <p>Registration is closed! To modify your existing registration, please email us at hello@buildingblocs.sg</p>}
 
-      <Faq client:load faq={entry.data.faq} />
-
+      <div class="hidden md:block">
+        <Faq client:load faq={entry.data.faq} />
+      </div>
+      
       {partners &&
         <div class="bg-slate-900 rounded-xl px-3 pb-4 pt-2 mt-2 border border-slate-700 w-full">
           <p class="text-xs mb-3">
@@ -136,6 +138,10 @@ let formattedTitle = title.replace(" ", "<br>");
         </div>
       }
       <Timeline timeline={entry.data.timeline} client:load />
+
+      <div class="md:hidden">
+        <Faq client:load faq={entry.data.faq} />
+      </div>
     </div>
   </div>
   <script is:inline id="luma-checkout" src="https://embed.lu.ma/checkout-button.js" />
