@@ -1,0 +1,253 @@
+title: June Jam
+status: open # over open closed draft
+# directions: /events/december/directions
+signupLink: https://form.buildingblocs.sg/69f5e982d9acf77f2171ecc2
+duration: "8th - 12th June"
+details:
+    - "Workshops: 8th - 12th June"
+    - "Award Ceremony: 12th June"
+    - "Venue: Nanyang Technological University"
+    - "Email contact for queries: hello@buildingblocs.sg"
+excerpt: Get ready for BuildingBloCS June Jam! Level up your game development skills, learn exciting new concepts, and connect with like-minded individuals.
+openExcerpt: Level up your game development skills, sign up now!
+closedExcerpt: The December Conference teaches you how to create your very own website
+overExcerpt: The December Conference teaches you how to create your very own website
+desc: >-
+    BuildingBloCS is back with our inaugural Game Jam! From Pygame, Unity, C#, to topics like 
+    Electronic Music Composition, Blender, Fluid Simulation and even Data Science, there's 
+    something for everyone to learn about Game Dev, regardless of whether you’re a professional 
+    or a beginner. The best part? Enjoy lunch for all five days as you attend the workshops 
+    and sit in for our ceremonies. We look forward to welcoming you to start your journey to 
+    develop games; sign up now before registrations close!
+    <br><br>
+    The schedule is subject to change, however the start and end times will remain the same. Updates
+    to the schedule will be reflected on this page
+faq:
+    - q: Must I go for all the workshops?
+      a: For this year's June Jam, we are introducing two types of workshops, core workshops and side quests. Core workshops are essential for you to get started with game development itself, helping you get the most out of the conference and to do well for the Game Jam. Side quests are optional, but builds on the foundation of core workshops.  A participation certificate will only be given to those who attend <b>all</b> of the core workshops.
+    - q: Who can come for the conference?
+      a: This conference is for students, ranging from secondary to university-level students. We aim to target beginner developers, so don't worry if you've got no experience, just come in with an open mind and a passion to learn!
+    - q: Why should I sign up? Is it free?
+      a: It's a free, fun and easy way to learn new skills about many new topics related to computing! What more could you ask for?
+    - q: What if something pops up and I can't make it?
+      a: Please open a ticket in the BuildingBloCS server so we can update your registration status.
+    - q: What is the Game Jam? Is it compulsory?
+      a: The Game Jam is a competition where you'll have to work in teams of 4 to create a game based on a theme provided. It's a great way to practice your skills, however, it is not compulsory, to encourage everyone to learn and attend.
+    - q: What are the prizes? When will I get them?
+      a: We can't divulge any information about the prizes, but they will be shipped out after the finals, on Monday, 15th June!
+    - q: How will the Game Jam groups be allocated? Can I choose my teammates?
+      a: For this Game Jam, we will be allocating the groups for you. However, if you (mutually) indicate someone you'll like to work with, we'll take that into consideration. Any other empty slots will be filled randomly, taking into account your age.
+    - q: Am I allowed to use AI during the Game Jam?
+      a: While <b>we do permit the use of AI during the Game Jam</b>, we hope that you will not overuse it, as being able to code on your own is extremely beneficial to your own learning.
+    - q: I still have questions! Who can I contact?
+      a: The fastest way to reach us is to open a ticket on our Discord server, which you can join at <a href="https://go.buildingblocs.sg/discord">go.buildingblocs.sg/discord</a> <br> However, if you are unable to use Discord, you may also shoot us an email at <a href="mailto:hello@buildingblocs.sg">hello@buildingblocs.sg</a>
+prospectus:
+    - src: /june/1.png
+    - src: /june/2.png
+    - src: /june/3.png
+    - src: /june/4.png
+    - src: /june/5.png
+    - src: /june/6.png
+    - src: /june/7.png
+    - src: /june/8.png
+    - src: /june/9.png
+    - src: /june/10.png
+    - src: /june/11.png
+    - src: /june/12.png
+    - src: /june/13.png
+    - src: /june/14.png
+    - src: /june/15.png
+timeline:
+    - title: Pygame Track
+      events:
+          - date: 8th
+            event:
+                - time: 09:30 - 10:00
+                  title: Registration
+                - time: 10:00 - 11:00
+                  title: Opening Ceremony
+                - time: 11:00 - 14:00
+                  title: Basics of Python 
+                  desc: Kickstart your programming journey, with topics such as functions, loops, input and output
+                  author: by Rayner
+                - time: 14:00 - 15:00
+                  title: Lunch
+                - time: 15:00 - 18:00
+                  title: "Python: Object Oriented Programming"
+                  desc: Organize your code into reusable objects with Python, making your game easier to maintain, scale and much more efficient
+                  author: by An Yi and Kai En
+          - date: 9th
+            event:
+                - time: 09:30 - 10:00
+                  title: Registration
+                - time: 10:00 - 12:30
+                  title: Game Design
+                  desc: Design and plan your game by learning the science that goes behind games, such as risk versus reward, resources, combat, and more
+                  author: by Yu Fang and Sanika
+                - time: 12:30 - 13:30
+                  title: Lunch
+                - time: 13:30 - 14:30
+                  title: Extended Lunch
+                  desc: Explore NTU, introduce yourself and get to know your teammates better!
+                - time: 14:30 - 17:30
+                  title: Pygame
+                  desc: Start making your very own 2D game with Python, learning the game loop architecture, entity management, game states, and more
+                  author: by An Yi and Kai En
+          - date: 10th
+            event:
+                - time: 13:00 - 14:00
+                  title: Registration & Lunch
+                  desc: Arrive by 1pm if you would like to enjoy the lunch :)
+                - time: 14:00 - 17:00
+                  title: Data Structures and Algorithms
+                  desc: Learn more about how games can be more efficient with the use of Data Structures & Algorithms!
+                  author: by Shivani and Sheng Xin
+                - time: 17:00 - 18:30
+                  title: Game Jam time
+                  desc: A dedicated slot of time for you to work on the game with your teammates, alongside requesting consultation from workshop speakers
+          - date: 11th
+            event:
+                - time: 09:30 - 10:00
+                  title: Registration
+                - time: 10:00 - 13:30
+                  title: Blender
+                  desc: Navigate through Blender, the free and open-source 3D Creation software, creating assets for your games alongside modeling and rendering
+                  author: by Yueyi and James
+                - time: 13:30 - 14:30
+                  title: Lunch
+                - time: 14:30 - 17:00
+                  title: Electronic Music Composition
+                  desc: Learn how to create game music suitable for your game with a simple DAW named Bandlab
+                  author: by Christine
+                - time: 17:00 - 18:30
+                  title: Game Jam time
+                  desc: A dedicated slot of time for you to work on the game with your teammates, alongside requesting consultation from workshop speakers
+          - date: 12th
+            event:
+                - time: 09:30 - 10:00
+                  title: Registration
+                - time: 10:00 - 13:00
+                  title: Booths & Judging
+                  desc: Your team will receive a dedicated timetable with more information, closer to the date
+                - time: 13:00 - 14:30
+                  title: Lunch
+                - time: 14:30 - 17:30
+                  title: Prize Ceremony
+    - title: Unity Track
+      events:
+          - date: 8th
+            event:
+                - time: 09:30 - 10:00
+                  title: Registration
+                - time: 10:00 - 11:00
+                  title: Opening Ceremony
+                - time: 11:00 - 13:30
+                  title: Game Design
+                  desc: Design and plan your game by learning the science that goes behind games, such as risk versus reward, resources, combat, and more
+                  author: by Yu Fang and Sanika
+                - time: 13:30 - 14:30
+                  title: Lunch
+                - time: 14:30 - 17:30
+                  title: C# for Game Dev
+                  desc: An introduction to C#, used in Unity and other domains. Grasp the basics of the language, such as variables, operators, objects.
+                  author: by Thet Pai and Bryan
+          - date: 9th
+            event:
+                - time: 09:30 - 10:00
+                  title: Registration
+                - time: 10:00 - 13:00
+                  title: C# for Game Dev
+                  desc: An introduction to C#, used in Unity and other domains. Grasp the basics of the language, such as variables, operators, objects.
+                  author: by Thet Pai and Bryan
+                - time: 13:00 - 14:00
+                  title: Lunch
+                - time: 14:00 - 15:00
+                  title: Extended Lunch
+                  desc: Explore NTU, introduce yourself and get to know your teammates better!
+                - time: 15:00 - 18:00
+                  title: Unity
+                  desc: A crash course on how to use the Unity Game Engine, one of the most widely used engines in game development.
+                  author: by Thet Pai and Bryan
+          - date: 10th
+            event:
+                - time: 09:30 - 10:00
+                  title: Registration
+                - time: 10:00 - 13:00
+                  title: Unity
+                  desc: A crash course on how to use the Unity Game Engine, one of the most widely used engines in game development.
+                  author: by Thet Pai and Bryan
+                - time: 13:00 - 14:00
+                  title: Lunch
+                - time: 14:00 - 17:00
+                  title: Data Structures and Algorithms
+                  desc: Learn more about how games can be more efficient with the use of Data Structures & Algorithms!
+                  author: by Shivani and Sheng Xin
+                - time: 17:00 - 18:30
+                  title: Game Jam time
+                  desc: A dedicated slot of time for you to work on the game with your teammates, alongside requesting consultation from workshop speakers
+          - date: 11th
+            event:
+                - time: 09:30 - 10:00
+                  title: Registration
+                - time: 10:00 - 13:30
+                  title: Blender
+                  desc: Navigate through Blender, the free and open-source 3D Creation software, creating assets for your games alongside modeling and rendering
+                  author: by Yueyi and James
+                - time: 13:30 - 14:30
+                  title: Lunch
+                - time: 14:30 - 17:00
+                  title: Electronic Music Composition
+                  desc: Learn how to create game music suitable for your game with a simple DAW named Bandlab
+                  author: by Christine
+                - time: 17:00 - 18:30
+                  title: Game Jam time
+                  desc: A dedicated slot of time for you to work on the game with your teammates, alongside requesting consultation from workshop speakers
+          - date: 12th
+            event:
+                - time: 09:30 - 10:00
+                  title: Registration
+                - time: 10:00 - 13:00
+                  title: Booths & Judging
+                  desc: Your team will receive a dedicated timetable with more information, closer to the date
+                - time: 13:00 - 14:30
+                  title: Lunch
+                - time: 14:30 - 17:30
+                  title: Prize Ceremony
+directionsData:
+    - title: "All Days"
+      tracks:
+          - "All Rooms":
+                - title: "From City Hall, Dhoby Ghaut"
+                  directions:
+                      - method: "Navigate to the School of Computing... head to the glass enclosure."
+                        img: "/events/december/directions/CityHallDhobyGhaut1.png"
+                      - method: "Go down the escalator, and turn left."
+                        img: "/events/december/directions/CityHallDhobyGhaut2.png"
+                - title: "Bencoolen MRT"
+                  directions:
+                      - method: "Exit via Exit C and turn right."
+                        img: "/events/december/directions/Bencoolen1.png"
+          - "All Roomss":
+                - title: "From City Hall, Dhoby Ghaut"
+                  directions:
+                      - method: "Navigate to the School of Computing... head to the glass enclosure."
+                        img: "/events/december/directions/CityHallDhobyGhaut1.png"
+                      - method: "Go down the escalator, and turn left."
+                        img: "/events/december/directions/CityHallDhobyGhaut2.png"
+                - title: "Bencoolen MRT"
+                  directions:
+                      - method: "Exit via Exit C and turn right."
+                        img: "/events/december/directions/Bencoolen1.png"
+    - title: "Day 3"
+      tracks:
+          - "All Rooms":
+                - title: "From City Hall, Dhoby Ghaut"
+                  directions:
+                      - method: "Navigate to the School of Computing... head to the glass enclosure."
+                        img: "/events/december/directions/CityHallDhobyGhaut1.png"
+                      - method: "Go down the escalator, and turn left."
+                        img: "/events/december/directions/CityHallDhobyGhaut2.png"
+                - title: "Bencoolen MRT"
+                  directions:
+                      - method: "Exit via Exit C and turn right."
+                        img: "/events/december/directions/Bencoolen1.png"
