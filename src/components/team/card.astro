@@ -35,7 +35,7 @@ const photo = images[imageSrc] ? images[imageSrc]() : blank;
             {igLink && <a href={igLink}><InstagramLogoIcon className="w-5 h-5" /></a>}
         </div>
     </div>        
-    <Image src={photo} alt="hi" class="w-32 h-32 mb-3 rounded-full shadow-lg self-center object-cover"/>
+    <Image src={photo} alt="hi" height=300 width=300 class="w-32 h-32 mb-3 rounded-full shadow-lg self-center object-cover"/>
     <h3 class="text-center font-semibold text-xl">{name}</h3>
     <p class="text-center leading-5 text-sm mx-4 mt-1 text-slate-300">{description}</p>
 </div>
