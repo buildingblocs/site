@@ -75,7 +75,7 @@ timeline:
                 - time: 15:00 - 18:00
                   title: "Python: Object Oriented Programming"
                   desc: Organize your code into reusable objects with Python, making your game easier to maintain, scale and much more efficient
-                  author: by An Yi and Kai En
+                  author: by An Yi and Kaien
           - date: 9th
             event:
                 - time: 09:30 - 10:00
@@ -92,7 +92,7 @@ timeline:
                 - time: 14:30 - 17:30
                   title: Pygame
                   desc: Start making your very own 2D game with Python, learning the game loop architecture, entity management, game states, and more
-                  author: by An Yi and Kai En
+                  author: by An Yi and Kaien
           - date: 10th
             event:
                 - time: 13:00 - 14:00
