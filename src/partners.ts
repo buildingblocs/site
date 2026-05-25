@@ -1,11 +1,7 @@
 import youthtechsg from "./img/partners/youthtechsg.png";
 import github from "./img/partners/github.svg";
 import moe from "./img/partners/moe.svg";
-import sutd from "./img/partners/sutd.webp";
-import okx from "./img/partners/okx.svg";
-import revenuecat from "./img/partners/revenuecat.svg";
-import yubico from "./img/partners/yubico.svg";
-import nie from "./img/partners/nie.webp";
+import nie from "./img/partners/nie.png";
 import smu from "./img/partners/smu.png";
 import htx from "./img/partners/htx.png";
 import csit from "./img/partners/csit.png";
@@ -13,27 +9,56 @@ import ddas from "./img/partners/ddas.png";
 import espressif from "./img/partners/espressif.png";
 import wizardzines from "./img/partners/wizardzines.png";
 import singaprinting from "./img/partners/singaprinting.png";
-import exabytes from "./img/partners/exabytes.svg"
+import exabytes from "./img/partners/exabytes.svg";
+import ntu from "./img/partners/ntu.png";
+import janestreet from "./img/partners/janestreet.svg";
 
-export const curr_partners = [    
-    {
-        src: htx,
-        title: "HTX",
-        desc: "HTX is a statutory board under the Ministry of Home Affairs that develops science and technology capabilities to empower the Home Team's operations and keep Singapore safe.",
-        website: "https://www.htx.gov.sg/",
-    },
+export const curr_partners = [
     {
         src: csit,
-        title: "CSIT",
+        title: "Centre for Strategic Infocomm Technologies",
         desc: "CSIT is a technical agency in the Ministry of Defence that harnesses cutting-edge digital technologies to meet Singapore's security needs.",
         website: "https://www.csit.gov.sg/",
     },
     {
-        src: ddas,
-        title: "DDAS",
-        desc: "The Digital Defence Alliance Singapore (DDAS) is dedicated to strengthening Singapore's Digital Defence pillar by empowering enterprises and individuals with digital readiness and cyber resilience capabilities.",
-        website: "https://www.ddas.sg/",
+        src: htx,
+        title: "Home Team Science and Technology Agency",
+        desc: "HTX is a statutory board under the Ministry of Home Affairs that develops science and technology capabilities to empower the Home Team's operations and keep Singapore safe.",
+        website: "https://www.htx.gov.sg/",
     },
+    {
+        src: moe,
+        title: "Ministry of Education",
+        desc: "The Ministry of Education (MOE) of Singapore formulates and implements education policies on education structure, curriculum, pedagogy, and assessment.",
+        website: "https://www.moe.gov.sg/",
+    },
+    {
+        src: ntu,
+        title: "Nanyang Technological University",
+        desc: "Nanyang Technological University is one of the top universities in Singapore offering undergraduate and postgraduate education in engineering, business, science, humanities, arts, social sciences, education and medicine.",
+        website: "https://www.ntu.edu.sg/",
+    },
+    {
+        src: nie,
+        title: "National Institute of Education",
+        desc: "The National Institute of Education (NIE) of Singapore is the national teacher education institute and an integral part of the nation's education system.",
+        website: "https://www.ntu.edu.sg/nie/",
+    },
+    {
+        src: youthtechsg,
+        title: "YouthTechSG",
+        desc: "YouthTechSG is a youth-led charitable movement dedicated to empowering every young person to shape their future and create meaningful impact through technology.",
+        website: "https://www.youthtech.sg/",
+    },
+    {
+        src: janestreet,
+        title: "Jane Street",
+        desc: "Jane Street is a quantitative trading firm and liquidity provider with a unique focus on technology and collaborative problem solving.",
+        website: "https://www.janestreet.com/",
+    },
+];
+
+export const prev_partners = [
     {
         src: smu,
         title: "Singapore Management University",
@@ -71,50 +96,10 @@ export const curr_partners = [
         website: "https://www.singaprinting.com/",
     },
     {
-        src: youthtechsg,
-        title: "YouthTechSG",
-        desc: "YouthTechSG is a youth-led charitable movement dedicated to empowering every young person to shape their future and create meaningful impact through technology.",
-        website: "https://www.youthtech.sg/",
-    },
-];
-
-export const prev_partners = [
-    {
-        src: moe,
-        title: "Ministry of Education",
-        desc: "The Ministry of Education (MOE) of Singapore formulates and implements education policies on education structure, curriculum, pedagogy, and assessment.",
-        website: "https://www.moe.gov.sg/",
-    },
-    {
-        src: nie,
-        title: "National Institute of Education",
-        desc: "The National Institute of Education (NIE) of Singapore is the national teacher education institute and an integral part of the nation's education system.",
-        website: "https://www.ntu.edu.sg/nie/",
-    },
-    {
-        src: yubico,
-        title: "Yubico",
-        desc: "Yubico, a global cybersecurity company and inventor of the YubiKey, offers the gold standard for phishing-resistant multi-factor authentication (MFA).",
-        website: "https://www.yubico.com/",
-    },
-    {
-        src: revenuecat,
-        title: "RevenueCat",
-        desc: "RevenueCat is a mobile subscription service. They provide a comprehensive toolset for developers to implement and manage in-app purchases and subscriptions.",
-        website: "https://www.revenuecat.com/",
-    },
-    {
-        src: okx,
-        title: "OKX",
-        desc: "OKX is a Seychelles-based cryptocurrency exchange. As of Jan 2025, OKX is the 4th largest cryptocurrency exchange in the world according to CoinMarketCap.",
-        website: "https://www.okx.com/",
-    },
-
-    {
-        src: sutd,
-        title: "Singapore University of Technology and Design",
-        desc: "SUTD integrates design, AI and technology into a holistic, interdisciplinary education and research experience. This unique approach encourages our students to push the boundaries of innovating solutions to real-world problems.",
-        website: "https://www.sutd.edu.sg/",
+        src: ddas,
+        title: "DDAS",
+        desc: "The Digital Defence Alliance Singapore (DDAS) is dedicated to strengthening Singapore's Digital Defence pillar by empowering enterprises and individuals with digital readiness and cyber resilience capabilities.",
+        website: "https://www.ddas.sg/",
     },
 ];
 
