@@ -12,12 +12,12 @@ import {
     <main class="flex justify-center flex-wrap mx-5 gap-x-4 mb-4">
         {
             curr_partners.map((partner) => (
-                <div class="bg-slate-900 max-w-xs w-full rounded-xl p-5 mt-5 border border-slate-700">
-                    <a class="float-right" href={partner.website} target="_blank" rel="noopener noreferrer">
+                <div class="bg-slate-900 max-w-xs w-full rounded-xl p-5 mt-5 border border-slate-700 flex flex-col">
+                    <a class="self-end" href={partner.website} target="_blank" rel="noopener noreferrer">
                         <ExternalLinkIcon className="w-5 h-5" />
                     </a>
                     <Image src={partner.src} alt=`${partner.title}'s logo` loading=eager class="h-20 mx-auto object-contain" />
-                    <h2 class="my-2 text-2xl">{partner.title}</h2>
+                    <h2 class="mt-6 mb-2 text-2xl">{partner.title}</h2>
                     <p>{partner.desc}</p>
                 </div>
             ))
@@ -27,12 +27,12 @@ import {
     <main class="flex justify-center flex-wrap mx-5 gap-x-4 mb-20">
         {
             prev_partners.map((partner) => (
-                <div class="bg-slate-900 max-w-xs w-full rounded-xl p-5 mt-5 border border-slate-700">
-                <a class="float-right" href={partner.website} target="_blank" rel="noopener noreferrer">
-                    <ExternalLinkIcon className="w-5 h-5" />
-                </a>
+                <div class="bg-slate-900 max-w-xs w-full rounded-xl p-5 mt-5 border border-slate-700 flex flex-col">
+                    <a class="self-end" href={partner.website} target="_blank" rel="noopener noreferrer">
+                        <ExternalLinkIcon className="w-5 h-5" />
+                    </a>
                     <Image src={partner.src} alt=`${partner.title}'s logo` loading=eager class="h-20 mx-auto object-contain" />
-                    <h2 class="my-2 text-2xl">{partner.title}</h2>
+                    <h2 class="mt-6 mb-2 text-2xl">{partner.title}</h2>
                     <p>{partner.desc}</p>
                 </div>
             ))
