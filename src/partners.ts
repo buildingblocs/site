@@ -11,6 +11,7 @@ import wizardzines from "./img/partners/wizardzines.png";
 import singaprinting from "./img/partners/singaprinting.png";
 import exabytes from "./img/partners/exabytes.svg";
 import ntu from "./img/partners/ntu.png";
+import janestreet from "./img/partners/janestreet.svg";
 
 export const curr_partners = [
     {
@@ -48,6 +49,12 @@ export const curr_partners = [
         title: "YouthTechSG",
         desc: "YouthTechSG is a youth-led charitable movement dedicated to empowering every young person to shape their future and create meaningful impact through technology.",
         website: "https://www.youthtech.sg/",
+    },
+    {
+        src: janestreet,
+        title: "Jane Street",
+        desc: "Jane Street is a quantitative trading firm and liquidity provider with a unique focus on technology and collaborative problem solving.",
+        website: "https://www.janestreet.com/",
     },
 ];
 
