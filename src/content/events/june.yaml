@@ -150,7 +150,7 @@ timeline:
                 - time: 14:30 - 17:30
                   title: C# for Game Dev
                   desc: An introduction to C#, used in Unity and other domains. Grasp the basics of the language, such as variables, operators, objects.
-                  author: by Thet Pai and Bryan
+                  author: by Bryan
           - date: 9th
             event:
                 - time: 09:30 - 10:00
@@ -167,7 +167,7 @@ timeline:
                 - time: 15:00 - 18:00
                   title: Unity
                   desc: A crash course on how to use the Unity Game Engine, one of the most widely used engines in game development.
-                  author: by Thet Pai and Bryan
+                  author: by Thet Pai
           - date: 10th
             event:
                 - time: 09:30 - 10:00
@@ -175,7 +175,7 @@ timeline:
                 - time: 10:00 - 13:00
                   title: Unity
                   desc: A crash course on how to use the Unity Game Engine, one of the most widely used engines in game development.
-                  author: by Thet Pai and Bryan
+                  author: by Thet Pai
                 - time: 13:00 - 14:00
                   title: Lunch
                 - time: 14:00 - 17:00
