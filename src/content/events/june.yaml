@@ -162,7 +162,7 @@ timeline:
                 - time: 14:30 - 17:30
                   title: C# for Game Dev
                   desc: An introduction to C#, used in Unity and other domains. Grasp the basics of the language, such as variables, operators, objects.
-                  author: by Bryan
+                  author: by Bryan, at LT5
           - date: 9th
             event:
                 - time: 09:30 - 10:00
