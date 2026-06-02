@@ -46,6 +46,12 @@ export const eventSchema = z.object({
             a: z.string(),
         }),
     ),
+    links: z.array(
+        z.object({
+            title: z.string(),
+            link: z.string(),
+        }),
+    ),
     prospectus: z
         .object({
             src: z.string(),

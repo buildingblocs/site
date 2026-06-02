@@ -62,6 +62,9 @@ prospectus:
     - src: /june/13.png
     - src: /june/14.png
     - src: /june/15.png
+links:
+    - title: "None for now"
+      link: "https://example.com"
 timeline:
     - title: Pygame Track
       events:

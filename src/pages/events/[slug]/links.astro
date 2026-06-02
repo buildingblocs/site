@@ -1,0 +1,92 @@
+---
+import Layout from "src/layout.astro";
+import { getCollection } from "astro:content";
+import type { EventData } from "@/content/config";
+
+type EventEntry = {
+    id: string;
+    data: EventData;
+};
+
+export async function getStaticPaths() {
+    const eventEntries = (await getCollection("events")) as EventEntry[];
+    return eventEntries
+        .filter((entry) => entry.data.links)
+        .map((entry) => ({
+            params: { slug: entry.id },
+            props: { entry },
+        }));
+}
+
+const { entry } = Astro.props;
+
+const links = entry.data.links.map((link) => {
+    let host = link.link;
+
+    try {
+        host = new URL(link.link).hostname.replace(/^www\./, "");
+    } catch {
+        host = link.link.replace(/^\//, "");
+    }
+
+    const isExternal = /^https?:\/\//.test(link.link);
+
+    return {
+        ...link,
+        host,
+        isExternal,
+    };
+});
+---
+
+<Layout
+    title={`Links - ${entry.data.title}`}
+    desc={`Common links for ${entry.data.title}`}
+>
+    <div class="min-h-[calc(100vh-14rem)] bg-slate-950">
+        <main class="mx-auto w-full max-w-3xl px-4 py-8 sm:px-6 sm:py-12">
+            <a
+                href={`/events/${entry.id}`}
+                class="text-slate-400 hover:text-white transition-colors"
+            >
+                ← Back to {entry.data.title}
+            </a>
+            <h1 class="text-4xl font-bold mt-4">Links</h1>
+            <p class="text-slate-400">
+                Common links for {entry.data.title}
+            </p>
+
+            <section class="mt-8 grid gap-3" aria-label="Event links">
+                {
+                    links.map((link) => (
+                        <a
+                            href={link.link}
+                            target={link.isExternal ? "_blank" : undefined}
+                            rel={
+                                link.isExternal
+                                    ? "noopener noreferrer"
+                                    : undefined
+                            }
+                            class="group flex min-h-24 items-center justify-between gap-4 rounded-lg border border-slate-800 bg-slate-900/70 p-5 transition-all hover:-translate-y-0.5 hover:bg-slate-900 hover:shadow-lg hover:shadow-orange-950/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+                        >
+                            <span class="min-w-0">
+                                <span class="block truncate text-lg font-semibold text-white">
+                                    {link.title}
+                                </span>
+                                <span class="mt-1 block truncate text-sm text-slate-400 group-hover:text-slate-300">
+                                    {link.host}
+                                </span>
+                            </span>
+                            <span
+                                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-md text-lg transition-colors group-hover:border-orange-400 group-hover:bg-orange-400 group-hover:text-slate-950"
+                                aria-hidden="true"
+                            >
+                                ↗
+                            </span>
+                        </a>
+                    ))
+                }
+            </section>
+        </main>
+    </div>
+</Layout>

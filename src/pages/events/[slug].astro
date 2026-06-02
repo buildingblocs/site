@@ -70,6 +70,14 @@ let formattedTitle = title.replace(" ", "<br>");
             </Button>
           </a>
         }
+        {entry.data.links &&
+          <a href=`/events/${entry.id}/links` class="w-max">
+            <Button className="flex gap-x-2">
+                Links
+                <ArrowRightIcon />
+            </Button>
+          </a>
+        }
       </div>
 
       <!-- march conference only: change in DSA timings
