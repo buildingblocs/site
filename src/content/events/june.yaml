@@ -225,27 +225,20 @@ timeline:
                 - time: 15:00 - 17:30
                   title: Prize Ceremony
 directionsData:
-    - title: "All Days"
+    - title: "Day 1"
       tracks:
-          - "All Rooms":
-                - title: "From City Hall, Dhoby Ghaut"
+          - "All Tracks":
+                - title: "Taking MRT"
                   directions:
-                      - method: "Navigate to the School of Computing... head to the glass enclosure."
-                        img: "/events/december/directions/CityHallDhobyGhaut1.png"
-                      - method: "Go down the escalator, and turn left."
-                        img: "/events/december/directions/CityHallDhobyGhaut2.png"
-                - title: "Bencoolen MRT"
-                  directions:
-                      - method: "Exit via Exit C and turn right."
-                        img: "/events/december/directions/Bencoolen1.png"
-          - "All Roomss":
-                - title: "From City Hall, Dhoby Ghaut"
-                  directions:
-                      - method: "Navigate to the School of Computing... head to the glass enclosure."
-                        img: "/events/december/directions/CityHallDhobyGhaut1.png"
-                      - method: "Go down the escalator, and turn left."
-                        img: "/events/december/directions/CityHallDhobyGhaut2.png"
-                - title: "Bencoolen MRT"
+                      - method: "Head to Pioneer MRT on the EWL"
+                        img: "/june/directions/ewl.jpg"
+                      - method: "Once you reach Pioneer, at the gantry, turn left to Exit A. Then head down and straight into the coffeeshop to get to the bus stop, and wait for bus 179"
+                        img: "/june/directions/pioneer.jpg"
+                      - method: "On bus 179, head to Lee Wee Nam Library bus stop"
+                        img: "/june/directions/179route.png"
+                      - method: "Here is a surrounding image of the bus stop for your reference"
+                        img: "/june/directions/surrounding.png"
+                - title: "Drop off by car"
                   directions:
                       - method: "Exit via Exit C and turn right."
                         img: "/events/december/directions/Bencoolen1.png"
