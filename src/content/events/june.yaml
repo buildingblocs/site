@@ -1,6 +1,6 @@
 title: June Jam
 status: open # over open closed draft
-# directions: /events/december/directions
+directions: /events/june/directions
 signupLink: https://form.buildingblocs.sg/69f5e982d9acf77f2171ecc2
 duration: "8th - 12th June"
 details:
@@ -241,20 +241,29 @@ directionsData:
                         img: "/june/directions/179route.png"
                       - method: "Here is a surrounding image of the bus stop for your reference"
                         img: "/june/directions/surrounding.png"
+                      - method: "Once you reach the bus stop, you should see this sign. Head to the right to North Spine Plaza"
+                        img: "/june/directions/busStopSign.jpg"
+                      - method: "Go towards the right and up the staircase"
+                        img: "/june/directions/fromBusToStairs.jpg"
+                      - method: "At the end, go to Level 1 up through the stairs"
+                        img: "/june/directions/toL1FromStairs.jpg"
+                      - method: "Now, head towards the stairs and go up to Level 2 to reach LT1"
+                        img: "/june/directions/fromL1ToL2.jpg"
                 - title: "Drop off by car"
                   directions:
-                      - method: "Exit via Exit C and turn right."
-                        img: "/events/december/directions/Bencoolen1.png"
-    - title: "Day 3"
-      tracks:
-          - "All Rooms":
-                - title: "From City Hall, Dhoby Ghaut"
-                  directions:
-                      - method: "Navigate to the School of Computing... head to the glass enclosure."
-                        img: "/events/december/directions/CityHallDhobyGhaut1.png"
-                      - method: "Go down the escalator, and turn left."
-                        img: "/events/december/directions/CityHallDhobyGhaut2.png"
-                - title: "Bencoolen MRT"
-                  directions:
-                      - method: "Exit via Exit C and turn right."
-                        img: "/events/december/directions/Bencoolen1.png"
+                      - method: "Enter North Spine Plaza into your GPS"
+                        img: "/june/directions/map1.jpg"
+                      - method: "Head into the small road, as shown on the pin, after going over North Spine building"
+                        img: "/june/directions/map2.jpg"
+                      - method: "You should see a building of Lecture Theatre 1A as you go past the building"
+                        img: "/june/directions/extBefTurn.jpg"
+                      - method: "Once you turn into the road, head into the lobby"
+                        img: "/june/directions/intoLobby.jpg"
+                      - method: "Go into the lift and up to Level 1"
+                        img: "/june/directions/liftToL1.jpg"
+                      - method: "At level 1, head straight till you reach the stairs"
+                        img: "/june/directions/fromL1ToStairs.jpg"
+                      - method: "Go to level 2 through the stairs"
+                        img: "/june/directions/stairsToL2.jpg"
+                      - method: "Turn to your right to reach LT1"
+                        img: "/june/directions/reachLT1.jpg"
