@@ -63,8 +63,8 @@ prospectus:
     - src: /june/14.png
     - src: /june/15.png
 links:
-    - title: "None for now"
-      link: "https://example.com"
+    - title: "NTU Wifi Guide"
+      link: "https://www.ntu.edu.sg/life-at-ntu/internet-account-and-policy#Content_C059_Col00"
 timeline:
     - title: Pygame Track
       events:
