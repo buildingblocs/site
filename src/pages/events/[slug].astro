@@ -86,7 +86,7 @@ let formattedTitle = title.replace(" ", "<br>");
         <p>Note: the timings for Data Structures & Algorithms and Streamlit has been swapped, please refer below for the updated timings.</p>
       </div> -->
       {entry.data.status !== 'closed' && <p set:html={entry.data.desc} /> }
-      {entry.data.status == 'closed' && <p>Registration is closed! To modify your existing registration, please email us at hello@buildingblocs.sg</p>}
+      {entry.data.status == 'closed' && <p>Registration is closed! To modify your existing registration, please open a ticket on Discord, or email us at hello@buildingblocs.sg</p>}
 
       <div class="hidden md:block">
         <Faq client:load faq={entry.data.faq} />

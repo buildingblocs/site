@@ -1,5 +1,5 @@
 title: June Jam
-status: open # over open closed draft
+status: closed # over open closed draft
 directions: /events/june/directions
 signupLink: https://form.buildingblocs.sg/69f5e982d9acf77f2171ecc2
 duration: "8th - 12th June"
@@ -27,7 +27,7 @@ desc: >-
     <b>30 May: Schedule has been updated, with Day 1 starting at 9.30 while Day 2-5 start at 10</b>
 faq:
     - q: What are the transportation methods available?
-      a: We are offering free shuttle bus from Tanah Merah and Serangoon / Boon Keng. Otherwise, you can come by car, or take public Transportation
+      a: We are offering free shuttle bus from Tanah Merah and Serangoon MRT bus stops. Otherwise, you can come by car, or take public Transportation
     - q: Must I go for all the workshops?
       a: For this year's June Jam, we are introducing two types of workshops, core workshops and side quests. Core workshops are essential for you to get started with game development itself, helping you get the most out of the event and to do well for the Game Jam. Side quests are optional, but builds on the foundation of core workshops.  A participation certificate will only be given to those who attend <b>all</b> of the core workshops.
     - q: Who can come for the event?
