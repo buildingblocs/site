@@ -65,6 +65,8 @@ prospectus:
 links:
     - title: "NTU Wifi Guide"
       link: "https://www.ntu.edu.sg/life-at-ntu/internet-account-and-policy#Content_C059_Col00"
+    - title: "Content for Workshops"
+      link: "https://content.buildingblocs.sg/"
 timeline:
     - title: Pygame Track
       events:
