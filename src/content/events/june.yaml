@@ -230,7 +230,7 @@ timeline:
                 - time: 15:00 - 17:30
                   title: Prize Ceremony
 directionsData:
-    - title: "Day 1"
+    - title: "Day 1 & Day 2"
       tracks:
           - "All Tracks":
                 - title: "Taking MRT"
