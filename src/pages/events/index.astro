@@ -1,0 +1,26 @@
+---
+import { sanityClient } from "sanity:client";
+import Layout from "../../layout.astro";
+import MainDirectory from "@/components/directory/main.astro";
+
+// const content = await sanityClient.fetch(
+//     `*[name == "About Us"][0]`
+// );
+
+let pages;
+
+pages = await sanityClient.fetch(
+    `*[_type == "event"]`
+);
+
+const breadcrumbs = [
+    {
+        link: "",
+        name: "Events"
+    }
+]
+---
+
+<Layout title="Events" desc="" breadcrumbs={breadcrumbs} showInfo>
+    <MainDirectory pages={pages} parent="events" />
+</Layout>

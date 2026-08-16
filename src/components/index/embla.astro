@@ -1,38 +1,48 @@
 ---
-import "@fontsource-variable/playfair-display";
-import { Button } from "@/components/ui/button";
-import { ArrowDownIcon } from "@radix-ui/react-icons";
+// @ts-ignore
+import "@fontsource/special-gothic-expanded-one";
+
+const { title, desc } = Astro.props;
 ---
 
 <style>
     h1 {
-        font-family: "Playfair Display Variable", serif;
+        font-family: 'Special Gothic Expanded One', sans-serif;
+    }
+
+    .fade-to-black {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(2, 6, 23, 1));
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        mask-image: linear-gradient(to bottom, transparent, black);
+        -webkit-mask-image: linear-gradient(to bottom, transparent, black);
+    }
+
+    .blur-fade {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        mask-image: linear-gradient(to bottom, transparent, black);
+        -webkit-mask-image: linear-gradient(to bottom, transparent, black);
     }
 </style>
-<div class="h-[90vh] m-3 sm:m-5 relative">
+<div class="relative">
     <div
-        class="z-10 text-white absolute top-0 left-0 h-full w-full flex flex-col text-center justify-center items-center p-3"
+        class="z-10 text-white absolute top-0 left-0 h-screen w-full flex items-end pb-10 p-3"
     >
-        <h1 class="text-4xl sm:text-6xl font-medium">
-            ignite your passion <br class="hidden sm:inline" /> in computing.
-        </h1>
-        <p class="max-w-xl mt-4 mb-2">
-            BuildingBloCS is a year-long outreach programme for students, by
-            students, aimed at promoting more exposure to Computing and CS as a
-            whole to Secondary School, JC and IP students.
-        </p>
-        <a href="#us">
-            <Button variant="ghost">
-                learn more
-                <ArrowDownIcon className="ml-1" />
-            </Button>
-        </a>
+        <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center w-full mx-auto pl-3 sm:pl-5">
+            <h1 class="text-5xl sm:text-6xl font-medium w-full" set:html={title} />
+            <p class="max-w-xl mt-4 mb-2">
+                {desc}
+            </p>
+        </div>
     </div>
-    <div class="embla opacity-50 overflow-hidden rounded-[2rem] flex">
+    <div class="embla overflow-hidden flex h-[110vh]">
         <div class="embla__container flex">
             <slot />
         </div>
     </div>
+    <div class="fade-to-black absolute bottom-0 h-[40vh] w-full" />
+    <div class="blur-fade absolute bottom-0 h-[25vh] w-full" />
 </div>
 <script>
     import EmblaCarousel from "embla-carousel";

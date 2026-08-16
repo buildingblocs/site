@@ -1,41 +1,127 @@
 ---
+import { sanityClient } from "sanity:client";
 import Layout from "../layout.astro";
+import SanityImage from "@/components/sanity/Image.astro";
+import { ExternalLinkIcon } from "@radix-ui/react-icons";
+import type { SanityImageSource } from "@sanity/image-url";
 
-import { Image } from "astro:assets";
-import { curr_partners, prev_partners } from "../partners";
-import {
-  ExternalLinkIcon
-} from "@radix-ui/react-icons";
+type Sponsor = {
+    _id: string;
+    name: string;
+    logo: { asset: SanityImageSource };
+    link: string;
+    description: string;
+};
+
+type SponsorsQuery = {
+    currentSponsors: Array<{ tier?: string; sponsor: Sponsor }>;
+    allSponsors: Sponsor[];
+};
+
+const breadcrumbs = [
+    {
+        link: "",
+        name: "Our Partners",
+    },
+];
+
+const query = `{
+  "currentSponsors": *[name == "Archive" && defined(latestEvent)][0].latestEvent->sponsors[]{
+    tier,
+    sponsor->{
+      _id,
+      name,
+      logo,
+      link,
+      description
+    }
+  },
+  "allSponsors": *[_type == "event"].sponsors[].sponsor->{
+      _id,
+      name,
+      logo,
+      link,
+      description
+  }
+}`;
+
+const { currentSponsors, allSponsors } = await sanityClient.fetch<SponsorsQuery>(query);
+
+const currentIds = new Set(
+    currentSponsors.filter((s) => s.sponsor).map((s) => s.sponsor._id),
+);
+
+const uniqueSponsors = [
+    ...new Map(allSponsors.filter(Boolean).map((s) => [s._id, s])).values(),
+];
+
+const pastSponsors = uniqueSponsors.filter((s) => !currentIds.has(s._id));
 ---
-<Layout title="Our Partners" desc="BuildingBloCS is only possible with the help of our partners" showTitle>
-    <h2 class="flex justify-center flex-wrap pt-4 text-2xl">Current Partners</h2>
-    <main class="flex justify-center flex-wrap mx-5 gap-x-4 mb-4">
+
+<Layout
+    title="Our Partners"
+    desc="BuildingBloCS is only possible with the help of our partners"
+    breadcrumbs={breadcrumbs}
+    showInfo
+>
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="flex justify-center flex-wrap mx-5 gap-x-4 mb-4">
+            {
+                currentSponsors
+                    .filter((s) => s.sponsor)
+                    .map(({ sponsor }) => (
+                        <div class="bg-slate-900 max-w-xs w-full rounded-xl p-5 relative mt-5 border border-slate-700 flex flex-col">
+                            <a
+                                class="absolute right-4 top-4"
+                                href={sponsor.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <ExternalLinkIcon className="w-5 h-5" />
+                            </a>
+                            <SanityImage
+                                asset={sponsor.logo.asset}
+                                alt={`${sponsor.name}'s Logo'`}
+                                raw={true}
+                                className="h-15 w-full mx-auto object-contain"
+                            />
+                            <h2 class="mt-6 mb-2 text-2xl">{sponsor.name}</h2>
+                            <p>{sponsor.description}</p>
+                        </div>
+                    ))
+            }
+        </div>
+
         {
-            curr_partners.map((partner) => (
-                <div class="bg-slate-900 max-w-xs w-full rounded-xl p-5 mt-5 border border-slate-700 flex flex-col">
-                    <a class="self-end" href={partner.website} target="_blank" rel="noopener noreferrer">
-                        <ExternalLinkIcon className="w-5 h-5" />
-                    </a>
-                    <Image src={partner.src} alt=`${partner.title}'s logo` loading=eager class="h-20 w-full mx-auto object-contain" />
-                    <h2 class="mt-6 mb-2 text-2xl">{partner.title}</h2>
-                    <p>{partner.desc}</p>
+            pastSponsors.length != 0 && (
+                <div class="flex flex-col">
+                    <h3 class="text-center">Past Sponsors</h3>
+                    <div class="flex justify-center flex-wrap mx-5 gap-x-4 mb-4">
+                        {pastSponsors.map((sponsor) => (
+                            <div class="bg-slate-900 max-w-xs w-full rounded-xl p-5 relative mt-5 border border-slate-700 flex flex-col">
+                                <a
+                                    class="absolute right-4 top-4"
+                                    href={sponsor.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <ExternalLinkIcon className="w-5 h-5" />
+                                </a>
+                                <SanityImage
+                                    asset={sponsor.logo.asset}
+                                    alt={`${sponsor.name}'s Logo'`}
+                                    raw={true}
+                                    className="h-15 w-full mx-auto object-contain"
+                                />
+                                <h2 class="mt-6 mb-2 text-2xl">
+                                    {sponsor.name}
+                                </h2>
+                                <p>{sponsor.description}</p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
-            ))
+            )
         }
-    </main>
-    <h2 class="flex justify-center flex-wrap pt-4 text-2xl">Previous Partners</h2>
-    <main class="flex justify-center flex-wrap mx-5 gap-x-4 mb-20">
-        {
-            prev_partners.map((partner) => (
-                <div class="bg-slate-900 max-w-xs w-full rounded-xl p-5 mt-5 border border-slate-700 flex flex-col">
-                    <a class="self-end" href={partner.website} target="_blank" rel="noopener noreferrer">
-                        <ExternalLinkIcon className="w-5 h-5" />
-                    </a>
-                    <Image src={partner.src} alt=`${partner.title}'s logo` loading=eager class="h-20 w-full mx-auto object-contain" />
-                    <h2 class="mt-6 mb-2 text-2xl">{partner.title}</h2>
-                    <p>{partner.desc}</p>
-                </div>
-            ))
-        }
-    </main>
+    </div>
 </Layout>

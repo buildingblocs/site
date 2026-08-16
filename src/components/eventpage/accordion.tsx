@@ -2,18 +2,18 @@ import {
     Accordion,
     AccordionContent,
     AccordionItem,
-    AccordionTrigger,
-} from "@/components/ui/accordion"
+    AccordionTrigger
+} from "@/components/ui/accordion";
 
-export default function Faq({ faq }: { faq: Array<{ q: string; a: string; }> }) {
+export default function Faq({ faq }: { faq: Array<{ question: string; answer: string; _key: string; }> }) {
     const faqs = faq.map((faq) =>
-        <AccordionItem value={faq.q} key={faq.q}>
-            <AccordionTrigger>{faq.q}</AccordionTrigger>
+        <AccordionItem className=" border-white/15 border-b last:border-b-0" value={faq.question} key={faq._key}>
+            <AccordionTrigger>{faq.question}</AccordionTrigger>
             <AccordionContent>
-                <div className="prose prose-invert" dangerouslySetInnerHTML={{ __html: faq.a }} />
+                <div className="prose prose-invert" dangerouslySetInnerHTML={{ __html: faq.answer }} />
             </AccordionContent>
         </AccordionItem>);
     return (
-        <Accordion type="multiple">{faqs}</Accordion>
-    )
+        <Accordion className="border border-white/15" type="multiple">{faqs}</Accordion>
+    );
 }

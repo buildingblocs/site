@@ -1,0 +1,66 @@
+---
+import Layout from "../../layout.astro";
+
+import { sanityClient } from "sanity:client";
+import { PortableText } from "astro-portabletext";
+import ColumnLayout from "@/components/sanity/columnLayout.astro";
+import ContentImg from "@/components/sanity/contentImg.astro";
+import ImageCover from "@/components/sanity/imageCover.astro";
+import type { About } from "@/sanity.types";
+
+type AboutPage = Omit<About, "name" | "slug" | "content"> & {
+    name: string;
+    slug: { current: string };
+    content: NonNullable<About["content"]>;
+};
+
+interface Props {
+    pageData: AboutPage;
+}
+
+export async function getStaticPaths() {
+    const pages = await sanityClient.fetch<AboutPage[]>(
+        `*[_type == "about" && name != "About Us" && slug.current != "/" && defined(slug.current)]`
+    );
+
+    return pages.map((page) => {
+        const cleanSlug = page.slug.current.replace(/^\/|\/$/g, "");
+
+        return {
+            params: {
+                slug: cleanSlug
+            },
+            props: {
+                pageData: page
+            }
+        };
+    });
+}
+
+const { pageData } = Astro.props;
+
+const breadcrumbs = [
+    {
+        link: "/about-us",
+        name: "About Us"
+    },
+    {
+        link: "",
+        name: pageData.name
+    }
+]
+
+const components = {
+    type: {
+        columnLayout: ColumnLayout,
+        blockImage: ContentImg,
+        imageCover: ImageCover
+    }
+};
+---
+
+<Layout title={pageData.name} desc={pageData.desc} breadcrumbs={breadcrumbs} showInfo>
+    <div class="max-w-6xl px-5 mx-auto flex flex-col mt-5 gap-y-5">
+        <PortableText value={pageData.content} components={components} />
+    </div>
+</Layout>

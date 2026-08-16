@@ -1,0 +1,36 @@
+---
+import { PortableText } from "astro-portabletext";
+import ContentImg from "@/components/sanity/contentImg.astro";
+import type { About } from "@/sanity.types.ts";
+
+type ColumnLayoutBlock = Extract<
+    NonNullable<About["content"]>[number],
+    { _type: "columnLayout" }
+>;
+
+interface Props {
+    node: ColumnLayoutBlock;
+}
+
+const { node } = Astro.props;
+
+const components = {
+    type: {
+        blockImage: ContentImg
+    }
+};
+---
+
+<style>
+    div :global(h2) {
+        width: 100%;
+    }
+</style>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-10 my-10">
+    {node.columns && node.columns.map((column) => (
+        <div class="flex flex-col gap-y-2 sm:gap-y-4 justify-center items-center">
+            {column.content && <PortableText value={column.content} components={components} />}
+        </div>
+    ))}
+</div>

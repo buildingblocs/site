@@ -1,0 +1,24 @@
+---
+import { imageUrlFor } from "@/lib/image.ts";
+
+type Asset = Parameters<typeof imageUrlFor>[0];
+
+export interface Props {
+    asset: Asset;
+    alt: string;
+    raw: boolean;
+    className?: string;
+}
+
+const { asset, alt, raw, className } = Astro.props;
+
+let image;
+
+if (raw) {
+    image = imageUrlFor(asset, false);
+} else {
+    image = imageUrlFor(asset, true);
+}
+---
+
+<img src={image} alt={alt} class={className} />

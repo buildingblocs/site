@@ -1,183 +1,254 @@
 ---
 import Layout from "../../layout.astro";
 import { Button } from "@/components/ui/button";
-import { ArrowLeftIcon, ArrowRightIcon, InfoCircledIcon } from "@radix-ui/react-icons";
+import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
 import Faq from "@/components/eventpage/accordion";
 import Timeline from "@/components/eventpage/timeline";
-import { Image } from "astro:assets";
-import { partnerMap } from "@/partners"
-import { getCollection } from "astro:content";
-import type { EventData } from "@/content/config";
+import { sanityClient } from "sanity:client";
+import SanityImg from "@/components/sanity/Image.astro";
+import SiteBreadcrumb from "@/components/breadcrumb";
+import type { SanityImageSource } from "@sanity/image-url";
+import type { Event } from "@/sanity.types";
 
-type EventEntry = {
-  id: string;
-  data: EventData;
+type EventSponsor = {
+    _key: string;
+    tier?: "Gold" | "Silver" | "Bronze";
+    sponsor: {
+        name: string;
+        logo: { asset: SanityImageSource };
+    };
+};
+
+type EventPage = Omit<Event, "name" | "slug" | "excerpts" | "details" | "sponsors" | "faqs" | "prospectus" | "schedule"> & {
+    name: string;
+    slug: { current: string };
+    excerpts: { excerpt: string };
+    details: string[];
+    sponsors: EventSponsor[];
+    faqs: Array<{ _key: string; question: string; answer: string }>;
+    prospectus?: Array<{ asset: SanityImageSource }>;
+    schedule: Array<{
+        _key: string;
+        track?: string;
+        days: Array<{
+            _key: string;
+            day: string;
+            daySchedule: Array<{
+                _key: string;
+                timing?: string;
+                title: string;
+                desc?: string;
+                author?: string;
+            }>;
+        }>;
+    }>;
+};
+
+interface Props {
+    pageData: EventPage;
 }
 
 export async function getStaticPaths() {
-  const eventEntries = await getCollection("events") as EventEntry[];
-  return eventEntries.map((entry) => ({
-    params: { slug: entry.id },
-    props: { entry },
-  }));
+    const pages = await sanityClient.fetch<EventPage[]>(
+        `*[_type == "event" && defined(slug.current)]{
+  ...,
+  sponsors[]{
+    _key,
+    tier,
+    sponsor->{
+      name,
+      logo,
+    }
+  }
+}`
+    );
+
+    return pages.map((page) => {
+        const cleanSlug = page.slug.current.replace(/^\/|\/$/g, "");
+
+        return {
+            params: {
+                slug: cleanSlug
+            },
+            props: {
+                pageData: page
+            }
+        };
+    });
 }
 
-const { entry } = Astro.props;
-
-const partners = entry.data.partners
-  ? partnerMap[entry.data.partners as keyof typeof partnerMap]
-  : undefined;
-let title = entry.data.title;
-let formattedTitle = title.replace(" ", "<br>");
+const { pageData } = Astro.props;
+// let formattedTitle = title.replace(" ", "<br>");
+const breadcrumbs = [
+    {
+        link: "/events",
+        name: "Events"
+    },
+    {
+        link: "",
+        name: "June Jam"
+    }
+];
 ---
 
-<Layout title={entry.data.title} desc={entry.data.excerpt}>
-  <div class="max-w-6xl flex mx-auto mb-10 gap-x-6 md:flex-row flex-col p-4 sm:p-10 gap-y-10">
-    <div class="flex-1 gap-y-4 flex flex-col">
-      <h1 class="text-5xl">{entry.data.title}</h1>
-      <h2>Key Details</h2>
-      <ul class="list-disc marker:text-slate-500 ml-4 list-inside">
-        {entry.data.details.map((detail) => <li set:html={detail} />)}
-      </ul>
+<style>
+    h2 {
+        font-size: 1.3rem;
+    }
+</style>
 
-      <div class="flex gap-x-3">
-        {entry.data.luma && entry.data.status == 'open' &&
-          <a
-            href=`https://lu.ma/event/${entry.data.luma}?utm_source=bbcs-site`
-            data-luma-action="checkout"
-            data-luma-event-id={entry.data.luma}
-            class="w-max"
-          >
-            <Button className="flex gap-x-2">
-                Register for Event
-                <ArrowRightIcon />
-            </Button>
-          </a>
-        }
-        {entry.data.signupLink && entry.data.status == "open" && (
-          <a href={entry.data.signupLink} target="_blank" rel="noopener noreferrer">
-            <Button className="flex gap-x-2">
-              Register
-              <ArrowRightIcon />
-            </Button>
-          </a>
-        )}
-        {entry.data.directions &&
-          <a href={entry.data.directions} class="w-max">
-            <Button className="flex gap-x-2">
-                Directions
-                <ArrowRightIcon />
-            </Button>
-          </a>
-        }
-        {entry.data.links &&
-          <a href=`/events/${entry.id}/links` class="w-max">
-            <Button className="flex gap-x-2">
-                Links
-                <ArrowRightIcon />
-            </Button>
-          </a>
-        }
-      </div>
-
-      <!-- march conference only: change in DSA timings
-      <div class="bg-yellow-900 text-yellow-500 rounded-md p-3 flex flex-row items-center space-x-3">
-        <InfoCircledIcon className="w-5 h-5 flex-none"></InfoCircledIcon>
-        <p>Note: the timings for Data Structures & Algorithms and Streamlit has been swapped, please refer below for the updated timings.</p>
-      </div> -->
-      {entry.data.status !== 'closed' && <p set:html={entry.data.desc} /> }
-      {entry.data.status == 'closed' && <p>Registration is closed! To modify your existing registration, please open a ticket on Discord, or email us at hello@buildingblocs.sg</p>}
-
-      <div class="hidden md:block">
-        <Faq client:load faq={entry.data.faq} />
-      </div>
-      
-      {partners &&
-        <div class="bg-slate-900 rounded-xl px-3 pb-4 pt-2 mt-2 border border-slate-700 w-full">
-          <p class="text-xs mb-3">
-            Proudly supported by:
-          </p>
-          <div class="flex">
-            {partners.map((partner) => (
-              <div class="flex-1 flex justify-center items-center">
-                <Image
-                  src={partner.src}
-                  alt={`${partner.title}'s logo`}
-                  class="h-10 object-contain max-w-full"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      }
-    </div>
-    <div class="flex-1 gap-y-4 flex flex-col">
-      {entry.data.prospectus &&  // entry.data.status !== 'closed' && <-- why was prospectus only shown when status is open?
-        <div class="embla w-4/5 mx-auto relative">
-          {/* <p class="text-slate-300 font-medium">Official Prospectus</p> */}
-          <div class="embla__viewport overflow-hidden rounded-xl">
-            <div class="embla__container flex">
-              {
-                entry.data.prospectus?.map((slide) => (
-                  <div class="embla__slide">
-                    <img
-                      src={slide.src}
-                      alt='Prospectus Slides'
-                      class="object-contain mx-auto"
-                    />
-                  </div>
-                ))
-              }
+<Layout title={pageData.name} desc={pageData.excerpts.excerpt}>
+    <div class="max-w-6xl flex mx-auto mb-10 gap-x-6 md:flex-row flex-col gap-y-10 pt-0 px-6">
+        <div class="flex-1 gap-y-4 flex flex-col">
+            <div>
+                <SiteBreadcrumb breadcrumb={breadcrumbs} />
+                <h1 class="text-5xl">{pageData.name}</h1>
             </div>
-          </div>
-          <Button
-            className="embla__prev absolute md:-left-12 -left-10 top-1/2 transform -translate-y-1/2 rounded-full px-0 h-8 w-8"
-          >
-            <ArrowLeftIcon className="w-5 h-5" />
-            <span class="sr-only">Previous slide</span>
-          </Button>
-          <Button
-            className="embla__next absolute md:-right-12 -right-10 top-1/2 transform -translate-y-1/2 rounded-full px-0 h-8 w-8"
-          >
-            <ArrowRightIcon className="w-5 h-5" />
-            <span class="sr-only">Next slide</span>
-          </Button>
-        </div>
-      }
-      <Timeline timeline={entry.data.timeline} client:load />
+            <h2>Key Details</h2>
+            <ul class="list-disc marker:text-slate-500 ml-4 list-inside">
+                {pageData.details.map((detail) =>
+                    <li set:html={detail} />)}
+            </ul>
 
-      <div class="md:hidden">
-        <Faq client:load faq={entry.data.faq} />
-      </div>
+            <div class="flex gap-x-3">
+                {pageData.signupForm && pageData.status == "open" && (
+                    <a href={pageData.signupForm} target="_blank" rel="noopener noreferrer">
+                        <Button className="flex gap-x-2">
+                            Register
+                            <ArrowRightIcon />
+                        </Button>
+                    </a>
+                )}
+                {pageData.directions &&
+                    <a href=`/events/${pageData.slug.current}/directions` class="w-max">
+                        <Button className="flex gap-x-2 button">
+                            Directions
+                            <ArrowRightIcon />
+                        </Button>
+                    </a>
+                }
+                {pageData.links &&
+                    <a href=`/events/${pageData.slug.current}/links` class="w-max">
+                        <Button className="flex gap-x-2 button">
+                            Links
+                            <ArrowRightIcon />
+                        </Button>
+                    </a>
+                }
+            </div>
+
+            {pageData.sponsors &&
+                <div
+                    class="bg-slate-900/50 rounded-xl px-3 pb-4 pt-2 mt-2 border-white/15 border w-full gap-3 flex flex-col">
+                    <div class="text-xs justify-between flex">
+                        <p>
+                            Proudly supported by:
+                        </p>
+                        <a href="/partners" class="hover:underline flex items-center justify-center gap-x-1">
+                            See More
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="15"
+                                height="15"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-arrow-right-icon lucide-arrow-right"
+                            >
+                                <path d="M5 12h14" />
+                                <path d="m12 5 7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="flex">
+                        {pageData.sponsors.filter((sponsor) => sponsor.tier === "Gold").map((sponsor) => (
+                            <div class="flex-1 flex justify-center items-center">
+                                <SanityImg raw={false} alt={sponsor.sponsor.name} asset={sponsor.sponsor.logo.asset}
+                                           className="h-10 object-contain max-w-full" />
+                            </div>
+                        ))}
+                    </div>
+                    <div class="flex">
+                        {pageData.sponsors.filter((sponsor) => sponsor.tier === "Silver").map((sponsor) => (
+                            <div class="flex-1 flex justify-center items-center">
+                                <SanityImg raw={false} alt={sponsor.sponsor.name} asset={sponsor.sponsor.logo.asset}
+                                           className="h-10 object-contain max-w-full" />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            }
+
+            <div class="hidden md:flex flex-col gap-3">
+                <h2>Frequently Asked Questions</h2>
+                <Faq client:load faq={pageData.faqs} />
+            </div>
+        </div>
+        <div class="flex-1 gap-y-4 flex flex-col">
+            <div class="embla w-4/5 mx-auto relative">
+                {/* <p class="text-slate-300 font-medium">Official Prospectus</p> */}
+                <div class="embla__viewport overflow-hidden rounded-xl button">
+                    <div class="embla__container flex">
+                        {
+                            pageData.prospectus?.map((slide) => (
+                                <div class="embla__slide">
+                                    <SanityImg raw={false} asset={slide.asset} alt="Prospectus Slides" />
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
+                <Button
+                    className="button embla__prev absolute md:-left-12 -left-10 top-1/2 transform -translate-y-1/2 rounded-full px-0 h-8 w-8"
+                >
+                    <ArrowLeftIcon className="w-5 h-5" />
+                    <span class="sr-only">Previous slide</span>
+                </Button>
+                <Button
+                    className="button embla__next absolute md:-right-12 -right-10 top-1/2 transform -translate-y-1/2 rounded-full px-0 h-8 w-8"
+                >
+                    <ArrowRightIcon className="w-5 h-5" />
+                    <span class="sr-only">Next slide</span>
+                </Button>
+            </div>
+            <h2>Schedule</h2>
+            <Timeline timeline={pageData.schedule} client:load />
+
+            <div class="md:hidden flex flex-col gap-y-3">
+                <h2>Frequently Asked Questions</h2>
+                <Faq client:load faq={pageData.faqs} />
+            </div>
+        </div>
     </div>
-  </div>
-  <script is:inline id="luma-checkout" src="https://embed.lu.ma/checkout-button.js" />
+    <!--<script is:inline id="luma-checkout" src="https://embed.lu.ma/checkout-button.js" />-->
 </Layout>
 <script>
-  import EmblaCarousel from "embla-carousel";
-  import Autoplay from "embla-carousel-autoplay";
+    import EmblaCarousel from "embla-carousel";
+    import Autoplay from "embla-carousel-autoplay";
 
-  const emblaNode = document.querySelector(".embla__viewport") as HTMLElement;
+    const emblaNode = document.querySelector(".embla__viewport") as HTMLElement;
 
-  const autoplay = Autoplay()
-  const embla = EmblaCarousel(emblaNode, { loop: false }, [autoplay]);
+    const autoplay = Autoplay();
+    const embla = EmblaCarousel(emblaNode, { loop: false }, [autoplay]);
 
-  const prevButtonNode = document.querySelector(".embla__prev") as HTMLElement;
-  const nextButtonNode = document.querySelector(".embla__next") as HTMLElement;
+    const prevButtonNode = document.querySelector(".embla__prev") as HTMLElement;
+    const nextButtonNode = document.querySelector(".embla__next") as HTMLElement;
 
-  prevButtonNode.addEventListener("click", () => {
-    embla.scrollPrev()
-    autoplay.stop()
-  }, false);
-  nextButtonNode.addEventListener("click", () => {
-    embla.scrollNext()
-    autoplay.stop()
-  }, false);
+    prevButtonNode.addEventListener("click", () => {
+        embla.scrollPrev();
+        autoplay.stop();
+    }, false);
+    nextButtonNode.addEventListener("click", () => {
+        embla.scrollNext();
+        autoplay.stop();
+    }, false);
 </script>
 <style>
-  .embla__slide {
-    flex: 0 0 100%;
-    display: flex;
-  }
+    .embla__slide {
+        flex: 0 0 100%;
+        display: flex;
+    }
 </style>

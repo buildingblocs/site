@@ -1,64 +1,72 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-interface TimelineEvent {
-  time?: string;
-  title: string;
-  desc?: string;
-  author?: string;
+interface ScheduleItem {
+    _key: string;
+    timing?: string;
+    title: string;
+    desc?: string;
+    author?: string;
 }
 
-interface TimelineDay {
-  date: string;
-  event: TimelineEvent[];
+interface DayItem {
+    _key: string;
+    day: string;
+    daySchedule: ScheduleItem[];
 }
 
-interface Timeline {
-  title?: string;
-  events: TimelineDay[];
+interface TimelineTrack {
+    _key: string;
+    track?: string;
+    days: DayItem[];
 }
 
-type TimelineType = Timeline[];
+type TimelineType = TimelineTrack[];
 
 export default function Timeline({ timeline }: { timeline: TimelineType }) {
-  const outerTabs = timeline.map((_) => (
-    <TabsTrigger value={_.title ?? ''} key={_.title} className="w-full">
-      {_.title}
-    </TabsTrigger>
-  ));
+    const outerTabs = timeline.map((trackItem) => (
+        <TabsTrigger value={trackItem._key} key={trackItem._key}
+                     className="w-full button bg-slate-700 hover:bg-slate-800 data-[state=active]:bg-slate-800/75">
+            {trackItem.track}
+        </TabsTrigger>
+    ));
 
-  const content = timeline.map((event) => (
-    <TabsContent value={event.title ?? ''} key={event.title}>
-      <Tabs defaultValue={event.events[0].date}>
-        <TabsList className="w-full">
-          {event.events.map((dateEvent) => (
-            <TabsTrigger value={dateEvent.date} key={dateEvent.date} className="w-full">
-              {dateEvent.date}
-            </TabsTrigger>
-          ))}
-        </TabsList>
-        {event.events.map((dateEvent) => (
-          <TabsContent value={dateEvent.date} key={dateEvent.date} className="mx-3 mt-4">
-            <ol className="relative border-l border-slate-800">
-              {dateEvent.event.map((ev, eventIndex) => (
-                <li key={`${dateEvent.date}-${eventIndex}`} className="ml-4 mt-2">
-                  <div className="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-slate-800 bg-slate-700" />
-                  <time className="mb-1 text-sm text-slate-400">{ev.time}</time>
-                  <h3>{ev.title}</h3>
-                  <p className="text-slate-300 leading-normal my-0.5">{ev.desc}</p>
-                  <p className="text-slate-400 text-sm">{ev.author}</p>
-                </li>
-              ))}
-            </ol>
-          </TabsContent>
-        ))}
-      </Tabs>
-    </TabsContent>
-  ));
+    const content = timeline.map((trackItem) => (
+        <TabsContent value={trackItem._key} key={trackItem._key}>
+            <Tabs defaultValue={trackItem.days[0]?._key} className="flex-col">
+                <TabsList className="w-full gap-x-1 rounded-[calc(1rem)] bg-slate-900 border border-white/15">
+                    {trackItem.days.map((dayItem) => (
+                        <TabsTrigger value={dayItem._key} key={dayItem._key}
+                                     className="w-full button bg-slate-700 hover:bg-slate-800 data-[state=active]:bg-slate-800/75">
+                            {dayItem.day}
+                        </TabsTrigger>
+                    ))}
+                </TabsList>
+                {trackItem.days.map((dayItem) => (
+                    <TabsContent value={dayItem._key} key={dayItem._key} className="mx-3 mt-4">
+                        <ol className="relative border-l border-slate-800">
+                            {dayItem.daySchedule.map((ev) => (
+                                <li key={ev._key} className="ml-4 mt-2">
+                                    <div
+                                        className="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-slate-800 bg-slate-700" />
+                                    <time className="mb-1 text-sm text-slate-400">{ev.timing}</time>
+                                    <h3>{ev.title}</h3>
+                                    <p className="text-slate-300 leading-normal my-0.5">{ev.desc}</p>
+                                    <p className="text-slate-400 text-sm">{ev.author}</p>
+                                </li>
+                            ))}
+                        </ol>
+                    </TabsContent>
+                ))}
+            </Tabs>
+        </TabsContent>
+    ));
 
-  return (
-      <Tabs id="schedule" className="scroll-mt-10" defaultValue={timeline[0].title || ''}>
-        {timeline[0].title && <TabsList className="w-full">{outerTabs}</TabsList>}
-        {content}
-      </Tabs>
-  );
+    return (
+        <Tabs id="schedule" className="scroll-mt-10 flex-col" defaultValue={timeline[0]?._key}>
+            {timeline[0]?.track &&
+                <TabsList
+                    className="w-full gap-x-1 rounded-[calc(1rem)] bg-slate-900 border border-white/15">{outerTabs}</TabsList>}
+            {content}
+        </Tabs>
+    );
 }

@@ -1,0 +1,28 @@
+---
+import { sanityClient } from "sanity:client";
+import Layout from "../../layout.astro";
+import MainDirectory from "@/components/directory/main.astro";
+
+const content = await sanityClient.fetch(
+    `*[name == "About Us"][0]`
+);
+
+let pages;
+
+if (content.showList) {
+    pages = await sanityClient.fetch(
+        `*[_type == "about" && name != "About Us" && slug.current != "/"]`
+    );
+}
+
+const breadcrumbs = [
+    {
+        link: "",
+        name: "About Us"
+    }
+]
+---
+
+<Layout title={content.name} desc={content.desc} breadcrumbs={breadcrumbs} showInfo>
+    <MainDirectory pages={pages} grids={3} parent="about-us" />
+</Layout>

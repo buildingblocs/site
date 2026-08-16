@@ -1,0 +1,30 @@
+---
+const colours = [
+    "from-red-600/50",
+    "from-orange-600/50",
+    "from-amber-600/50",
+    "from-yellow-600/50",
+    "from-lime-600/50",
+    "from-green-600/50",
+    "from-emerald-600/50",
+    "from-teal-600/50",
+    "from-cyan-600/50",
+    "from-sky-600/50",
+    "from-blue-600/50",
+    "from-indigo-600/50",
+    "from-violet-600/50",
+    "from-purple-600/50",
+    "from-fuchsia-600/50",
+    "from-pink-600/50",
+    "from-rose-600/50",
+    "from-slate-600/50",
+    "from-gray-600/50",
+    "from-zinc-600/50",
+    "from-neutral-600/50",
+    "from-stone-600/50"
+];
+
+const colour = colours[Math.floor(Math.random() * colours.length)];
+---
+<div
+    class=`absolute top-0 left-0 w-full h-60 bg-linear-to-b  to-slate-950 -z-10 pointer-events-none ${colour}` />

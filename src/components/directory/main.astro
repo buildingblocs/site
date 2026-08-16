@@ -1,0 +1,55 @@
+---
+const { pages, grids = 2, parent } = Astro.props;
+
+type Page = {
+    slug?: {
+        current?: string
+    };
+    name?: string
+    title?: string
+    host?: string
+    excerpts: {
+        excerpt: string;
+    };
+    desc?: string;
+    url?: string;
+}
+---
+
+<div class="max-w-6xl px-5 mx-auto flex flex-col mt-5 gap-y-5">
+    <section class=`grid-cols-1 sm:grid-cols-2 grid gap-5 ${grids == 3 && "lg:grid-cols-3"}`>
+        {
+            pages &&
+            pages.map((page: Page) => (
+                <a
+                    href={page.slug?.current ? `${parent}/${page.slug.current}` : `${page.url}`}
+                    class="bg-slate-900/50 hover:bg-slate-800 rounded-3xl p-5 button flex flex-col gap-y-1  hover:-translate-y-2 transition"
+                >
+                    <div class="flex gap-x-1 items-center">
+                        <h2>{page.name || page.title}</h2>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-arrow-right-icon lucide-arrow-right"
+                        >
+                            <path d="M5 12h14" />
+                            <path d="m12 5 7 7-7 7" />
+                        </svg>
+                    </div>
+                    <p class="text-sm text-slate-400">
+                        {page.excerpts?.excerpt && page.excerpts.excerpt}
+                        {page.desc && page.desc}
+                        {page.host}
+                    </p>
+                </a>
+            ))
+        }
+    </section>
+</div>

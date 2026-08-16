@@ -1,152 +1,34 @@
 ---
 import Layout from "../layout.astro";
 import Embla from "../components/index/embla.astro";
-import Content from "../components/index/content.astro";
-import { ArrowRightIcon } from "@radix-ui/react-icons";
-import { getCollection } from "astro:content";
-import type { EventData } from "@/content/config";
 
-import { Image } from "astro:assets";
-import heroOne from "../img/index/hero/1.webp";
-import heroTwo from "../img/index/hero/2.webp";
-import heroThree from "../img/index/hero/3.webp";
-import heroFour from "../img/index/hero/4.webp";
-import heroFive from "../img/index/hero/5.webp";
-import heroSix from "../img/index/hero/6.webp";
-import heroseven from "../img/index/hero/7.webp";
+import { PortableText } from "astro-portabletext";
+import { sanityClient } from "sanity:client";
+import ColumnLayout from "@/components/sanity/columnLayout.astro";
+import ContentImg from "@/components/sanity/contentImg.astro";
+import SanityImage from "@/components/sanity/Image.astro";
+import type { SanityImageSource } from "@sanity/image-url";
+import type { About } from "@/sanity.types";
 
-import contentOne from "../img/index/content/1.webp";
-import contentTwo from "../img/index/content/2.webp";
-import contentThree from "../img/index/content/3.webp";
-import contentFour from "../img/index/content/4.webp";
+type HomePage = Omit<About, "name" | "desc" | "imageHero" | "content"> & {
+    name: string;
+    desc: string;
+    imageHero: Array<{ asset: SanityImageSource }>;
+    content: NonNullable<About["content"]>;
+};
 
-interface Timeline {
-  date: string;
-  title: string;
-  desc: string;
-  link?: string;
-}
+const content = await sanityClient.fetch<HomePage>(
+    `*[slug.current == "/"][0]`
+);
 
-const slides = [
-    {
-        src: heroOne,
-        alt: "BuildingBloCS organising team at FOSSASIA 2022",
-        width: 4032,
-        height: 3024,
-    },
-    {
-        src: heroTwo,
-        alt: "Zayan and Prannay doing some shenanigans",
-        width: 6000,
-        height: 4000,
-    },
-    {
-        src: heroThree,
-        alt: "Student coding with block-based programming languages",
-        width: 4000,
-        height: 2825,
-    },
-    {
-        src: heroFour,
-        alt: "Group of students at a workshop during the 2024 BuildingBloCS June Conference",
-        width: 6000,
-        height: 4000,
-    },
-    {
-        src: heroFive,
-        alt: "An organiser providing assistance during workshop",
-        width: 6000,
-        height: 4000,
-    },
-    {
-        src: heroSix,
-        alt: "Student busy coding using VS Code",
-        width: 4608,
-        height: 3456,
-    },
-    {
-        src: heroseven,
-        alt: "Group photo after workshop",
-        width: 3888,
-        height: 2592,
-    },
-];
-
-const contents = [
-    {
-        textleft: true,
-        img: contentOne,
-        imgalt: "Students at a BuildingBloCS event",
-        title: "By students, for students.",
-        desc: "BuildingBloCS is the largest nationwide “By Student, For Student” Computing Advocacy Program, aimed at teaching students the way of the coder 💻",
-    },
-    {
-        img: contentTwo,
-        imgalt: "An organiser speaking at a FOSSASIA event",
-        title: "Multi-focused.",
-        desc: "We touch base on various topics, like AI, Cybersecurity and Software Development, to varying levels of complexity. It's truly fun for everyone!",
-    },
-    {
-        textleft: true,
-        img: contentThree,
-        imgalt: "Two organisers speaking at a FOSSASIA event",
-        title: "Passionate Speakers.",
-        desc: "We give opportunities to various speakers to talk about their work and interests, and we don't shy away from getting into the nitty-gritty 🚀",
-    },
-    {
-        img: contentFour,
-        imgalt: "Students having a group discussion at a BuildingBloCS event",
-        title: "Events for everyone.",
-        desc: "We host events for students from Secondary Schools, JCs, Polys and International Schools. All are welcome!",
-    },
-];
-
-const timeline: Timeline[] = [
-    {
-        date: "2017",
-        title: "Started as VIA@DHS",
-        desc: "An initiative sparked by the Dunman High Infocomm Club and Mr Gi Soong Chee.",
-    },
-    {
-        date: "2018 - " + new Date().getFullYear().toString(),
-        title: "Expansion into other Schools",
-        desc: "We expanded to take organisers from NUSH, TJC, SP and many more institutes around Singapore, hosting events yearly.",
+const components = {
+    type: {
+        columnLayout: ColumnLayout,
+        blockImage: ContentImg
     }
-];
+};
 
-type EventEntry = {
-  id: string;
-  data: EventData;
-  collection: string;
-}
-
-const eventEntries = await getCollection("events") as EventEntry[];
-
-let eventsTimeline: Timeline[] = []
-
-if (eventEntries && eventEntries.length != 0) {
-  eventsTimeline = [
-    ...timeline,
-    ...eventEntries.map((entry) => ({
-      date: entry.data.duration,
-      title: entry.data.title,
-      desc: entry.data.excerpt,
-      link: `/${entry.collection}/${entry.id}`
-    }))
-  ]
-} else {
-  eventsTimeline = [
-    ...timeline,
-    {
-        date: "June 2026",
-        title: "Coming soon",
-        desc: "Click the link and join the newsletter to get notified when there's a new event!",
-        link: "https://buildingblocs.notion.site/343104f6313d80c8a3f2da6bded7b2cf"
-    }
-  ]
-}
-
-
+const formattedTitle = content.name.replace(", ", ",<br>");
 ---
 
 <style>
@@ -158,58 +40,23 @@ if (eventEntries && eventEntries.length != 0) {
     }
 </style>
 
-<Layout title="For students, By students" desc="A year-long outreach programme, aimed at promoting more exposure to Computing and CS as a whole to students">
+<Layout title={content.name}
+        desc={content.desc}>
+
     <!-- Embla Carousel -->
-    <Embla>
-        {/* min-h-full is required for safari */}
+    <Embla title={formattedTitle} desc={content.desc}>
         {
-            slides.map((slide) => (
+            content.imageHero.map((slide) => (
                 <div class="embla__slide">
-                    <Image
-                        src={slide.src}
-                        alt={slide.alt}
-                        class="object-cover min-h-full"
-                        loading=eager
-                    />
+                    <SanityImage asset={slide.asset} alt="hi" raw={false}
+                                 className="object-cover min-h-[110vh] min-w-full" />
                 </div>
             ))
         }
     </Embla>
+
     <!-- Content -->
-    <div id="us" class="scroll-mt-24">
-        {
-            contents.map((content) => (
-                <Content
-                    textleft={content.textleft}
-                    img={content.img}
-                    imgalt={content.imgalt}
-                    title={content.title}
-                    desc={content.desc}
-                />
-            ))
-        }
-    </div>
-    <!-- Timeline -->
-    <div class="max-w-2xl mx-auto px-4 mb-20">
-        <h2>Our History</h2>
-        <ol class="relative border-l border-slate-800 mt-3">
-            {
-                eventsTimeline.map((item) => (
-                <li class="ml-4 mt-4" data-key={item.date.toString()}>
-                        <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-slate-800 bg-slate-700" />
-                        <time class="mb-1 text-sm text-slate-400">{item.date}</time>
-                        {item.link ? (
-                            <a href={item.link} class="flex items-center gap-x-2 w-max rounded-md px-2 py-1 -ml-1 bg-slate-800 group">
-                                <h3>{item.title}</h3>
-                                <ArrowRightIcon className="mt-1 group-hover:translate-x-1 group-hover:mr-2 w-[1.2rem] h-[1.2rem] transition-all" />
-                            </a>
-                        ) : (
-                            <h3>{item.title}</h3>
-                        )}
-                        <p>{item.desc}</p>
-                    </li>
-                ))
-            }
-        </ol>
+    <div class="max-w-6xl mx-auto px-6 lg:px-8 xl:px-0">
+        <PortableText value={content.content} components={components} />
     </div>
 </Layout>

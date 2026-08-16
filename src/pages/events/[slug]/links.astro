@@ -1,92 +1,78 @@
 ---
 import Layout from "src/layout.astro";
-import { getCollection } from "astro:content";
-import type { EventData } from "@/content/config";
+import { sanityClient } from "sanity:client";
+import MainDirectory from "@/components/directory/main.astro";
 
-type EventEntry = {
-    id: string;
-    data: EventData;
+type EventLinksPage = {
+    name: string;
+    slug: { current: string };
+    links: Array<{ _key: string; title?: string; url: string }>;
 };
 
-export async function getStaticPaths() {
-    const eventEntries = (await getCollection("events")) as EventEntry[];
-    return eventEntries
-        .filter((entry) => entry.data.links)
-        .map((entry) => ({
-            params: { slug: entry.id },
-            props: { entry },
-        }));
+interface Props {
+    pageData: EventLinksPage;
 }
 
-const { entry } = Astro.props;
+export async function getStaticPaths() {
+    const pages = await sanityClient.fetch<EventLinksPage[]>(
+        `*[_type == 'event' && defined(slug.current)]{links, slug, name}`
+    );
 
-const links = entry.data.links.map((link) => {
-    let host = link.link;
+    return pages.map((page) => {
+        const cleanSlug = page.slug.current.replace(/^\/|\/$/g, "");
+
+        return {
+            params: {
+                slug: cleanSlug
+            },
+            props: {
+                pageData: page
+            }
+        };
+    });
+}
+
+const { pageData } = Astro.props;
+
+const links = pageData.links.map((link) => {
+    let host;
 
     try {
-        host = new URL(link.link).hostname.replace(/^www\./, "");
+        host = new URL(link.url).hostname.replace(/^www\./, "");
     } catch {
-        host = link.link.replace(/^\//, "");
+        host = link.url.replace(/^\//, "");
     }
 
-    const isExternal = /^https?:\/\//.test(link.link);
+    const isExternal = /^https?:\/\//.test(link.url);
 
     return {
         ...link,
         host,
-        isExternal,
+        isExternal
     };
 });
+
+const breadcrumbs = [
+    {
+        link: "",
+        name: "Events"
+    },
+    {
+        link: `/events/${pageData.slug.current}`,
+        name: pageData.name
+    },
+    {
+        link: "",
+        name: "Links"
+    }
+];
 ---
 
 <Layout
-    title={`Links - ${entry.data.title}`}
-    desc={`Common links for ${entry.data.title}`}
+    title={`Links`}
+    desc={`Common links for ${pageData.name}`}
+    breadcrumbs={breadcrumbs}
+    showInfo
 >
-    <div class="min-h-[calc(100vh-14rem)] bg-slate-950">
-        <main class="mx-auto w-full max-w-3xl px-4 py-8 sm:px-6 sm:py-12">
-            <a
-                href={`/events/${entry.id}`}
-                class="text-slate-400 hover:text-white transition-colors"
-            >
-                ← Back to {entry.data.title}
-            </a>
-            <h1 class="text-4xl font-bold mt-4">Links</h1>
-            <p class="text-slate-400">
-                Common links for {entry.data.title}
-            </p>
-
-            <section class="mt-8 grid gap-3" aria-label="Event links">
-                {
-                    links.map((link) => (
-                        <a
-                            href={link.link}
-                            target={link.isExternal ? "_blank" : undefined}
-                            rel={
-                                link.isExternal
-                                    ? "noopener noreferrer"
-                                    : undefined
-                            }
-                            class="group flex min-h-24 items-center justify-between gap-4 rounded-lg border border-slate-800 bg-slate-900/70 p-5 transition-all hover:-translate-y-0.5 hover:bg-slate-900 hover:shadow-lg hover:shadow-orange-950/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-                        >
-                            <span class="min-w-0">
-                                <span class="block truncate text-lg font-semibold text-white">
-                                    {link.title}
-                                </span>
-                                <span class="mt-1 block truncate text-sm text-slate-400 group-hover:text-slate-300">
-                                    {link.host}
-                                </span>
-                            </span>
-                            <span
-                                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-md text-lg transition-colors group-hover:border-orange-400 group-hover:bg-orange-400 group-hover:text-slate-950"
-                                aria-hidden="true"
-                            >
-                                ↗
-                            </span>
-                        </a>
-                    ))
-                }
-            </section>
-        </main>
-    </div>
+    <MainDirectory pages={links} grids={3} parent="events" />
 </Layout>
