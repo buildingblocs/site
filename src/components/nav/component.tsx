@@ -81,7 +81,7 @@ export default function Nav({ data }: { data: NavQuery }) {
                 ))}
             </NavDropdown>
 
-            <NavDropdown name="Events" link="/events">
+            <NavDropdown name="Events" link="#">
                 {data?.event && data.event.length > 0 ? (
                     data.event.map((event) => (
                         <NavDropdownLink link={event.slug?.current || ""} parent="events" name={event.name || ""}

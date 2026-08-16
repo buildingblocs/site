@@ -26,7 +26,7 @@ const breadcrumbs = [
 ];
 
 const query = `{
-  "currentSponsors": *[name == "Archive" && defined(latestEvent)][0].latestEvent->sponsors[]{
+  "currentSponsors": *[name == "About Us" && defined(latestEvent)][0].latestEvent->sponsors[]{
     tier,
     sponsor->{
       _id,
