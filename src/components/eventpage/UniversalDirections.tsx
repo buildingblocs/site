@@ -1,7 +1,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import confetti from "canvas-confetti";
-import { imageUrlFor } from "@/lib/image.ts"; // adjust to wherever your Sanity image URL builder lives
+import { imageUrlFor } from "@/lib/image.ts";
 
 export interface SanityImage {
     _type: "image";

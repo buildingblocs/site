@@ -22,7 +22,7 @@ type Page = {
             pages &&
             pages.map((page: Page) => (
                 <a
-                    href={page.slug?.current ? `${parent}/${page.slug.current}` : `${page.url}`}
+                    href={page.slug?.current ? `${page.slug.current}` : `${page.url}`}
                     class="bg-slate-900/50 hover:bg-slate-800 rounded-3xl p-5 button flex flex-col gap-y-1  hover:-translate-y-2 transition"
                 >
                     <div class="flex gap-x-1 items-center">
