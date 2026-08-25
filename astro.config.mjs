@@ -20,7 +20,7 @@ export default defineConfig({
       useCdn: false,
       // Optional: log server-side Sanity client requests.
       // Modes: 'dev' | 'build' | 'always'
-      logClientRequests: "dev"
+      // logClientRequests: "dev"
   })],
 
   vite: {
