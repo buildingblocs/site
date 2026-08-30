@@ -113,7 +113,7 @@ export type About = {
     _createdAt: string
     _updatedAt: string
     _rev: string
-    name?: string
+    title: string
     latestEvent?: EventReference
     desc?: string
     showList?: boolean

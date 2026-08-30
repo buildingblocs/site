@@ -17,18 +17,16 @@ type HomePage = Omit<About, "name" | "desc" | "imageHero" | "content"> & {
     content: NonNullable<About["content"]>;
 };
 
-const content = await sanityClient.fetch<HomePage>(
-    `*[slug.current == "/"][0]`
-);
+const content = await sanityClient.fetch<HomePage>(`*[slug.current == "/"][0]`);
 
 const components = {
     type: {
         columnLayout: ColumnLayout,
-        blockImage: ContentImg
-    }
+        blockImage: ContentImg,
+    },
 };
 
-const formattedTitle = content?.name ? content.name.replace(", ", ",<br>") : "";
+const formattedTitle = content.title.replace(", ", ",<br>");
 ---
 
 <style>
@@ -40,16 +38,18 @@ const formattedTitle = content?.name ? content.name.replace(", ", ",<br>") : "";
     }
 </style>
 
-<Layout title={content.name}
-        desc={content.desc}>
-
+<Layout title={content.title} desc={content.desc}>
     <!-- Embla Carousel -->
     <Embla title={formattedTitle} desc={content.desc}>
         {
             content.imageHero.map((slide) => (
                 <div class="embla__slide">
-                    <SanityImage asset={slide.asset} alt="hi" raw={false}
-                                 className="object-cover min-h-[110vh] min-w-full" />
+                    <SanityImage
+                        asset={slide.asset}
+                        alt="hi"
+                        raw={false}
+                        className="object-cover min-h-[110vh] min-w-full"
+                    />
                 </div>
             ))
         }
