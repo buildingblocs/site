@@ -1,0 +1,202 @@
+---
+import Layout from "../layout.astro";
+import Embla from "../components/index/embla.astro";
+import MainDirectory from "@/components/directory/main.astro";
+import { PortableText } from "astro-portabletext";
+import { sanityClient } from "sanity:client";
+import ColumnLayout from "@/components/sanity/columnLayout.astro";
+import ContentImg from "@/components/sanity/contentImg.astro";
+import ImageCover from "@/components/sanity/imageCover.astro";
+import SanityImage from "@/components/sanity/Image.astro";
+
+type SanityPage = {
+    _id: string;
+    title: string;
+    desc?: string;
+    showList?: boolean;
+    parent?: {
+        _ref?: string;
+    };
+    slug?: {
+        current?: string;
+    };
+    useImageHero?: boolean;
+    imageHero?: Array<any>;
+    content?: any;
+};
+
+export async function getStaticPaths() {
+    // 1. Fetch All Pages (Single Request)
+    const rawPages = await sanityClient.fetch<SanityPage[]>(
+        `*[_type == "page"]`
+    );
+
+    if (!rawPages || rawPages.length === 0) {
+        return [];
+    }
+
+    const pageMap = new Map<string, SanityPage>();
+    rawPages.forEach((page) => {
+        if (page._id) {
+            // Store both draft/published IDs if needed, stripping "drafts." prefix for key matching if necessary
+            const cleanId = page._id.replace(/^drafts\./, "");
+            pageMap.set(cleanId, page);
+            pageMap.set(page._id, page);
+        }
+    });
+
+    // Helper to resolve the path of a page by traversing up parent references
+    function getPagePathSegments(page: SanityPage): string[] {
+        const segments: string[] = [];
+        let currentId: string | undefined = page._id;
+        const visited = new Set<string>();
+
+        while (typeof currentId === "string" && currentId.length > 0) {
+            const idToClean: string = currentId;
+            const cleanCurrentId: string = idToClean.replace(/^drafts\./, "");
+            if (visited.has(cleanCurrentId)) {
+                console.warn(`Circular reference detected in page parent hierarchy for page ID: ${currentId}`);
+                break;
+            }
+            visited.add(cleanCurrentId);
+
+            const currentPage: SanityPage | undefined = pageMap.get(cleanCurrentId) || pageMap.get(idToClean);
+            if (!currentPage) break;
+
+            const rawSlug = currentPage.slug?.current;
+            const cleanSlug = rawSlug ? rawSlug.replace(/^\/|\/$/g, "") : "";
+            if (cleanSlug) {
+                segments.unshift(cleanSlug);
+            }
+
+            currentId = currentPage.parent?._ref;
+        }
+
+        return segments;
+    }
+
+    // Precompute full path for all pages
+    const pagePaths = new Map<string, string>();
+    const pageHierarchy = new Map<string, SanityPage[]>(); // id -> breadcrumb chain top-to-bottom
+
+    rawPages.forEach((page) => {
+        const segments = getPagePathSegments(page);
+        const fullPath = segments.join("/");
+        pagePaths.set(page._id, fullPath);
+
+        // Build breadcrumb chain from root down to this page
+        const chain: SanityPage[] = [];
+        let currId: string | undefined = page._id;
+        const visited = new Set<string>();
+
+        while (typeof currId === "string" && currId.length > 0) {
+            const idToClean: string = currId;
+            const cleanCurrId: string = idToClean.replace(/^drafts\./, "");
+            if (visited.has(cleanCurrId)) break;
+            visited.add(cleanCurrId);
+
+            const currPage: SanityPage | undefined = pageMap.get(cleanCurrId) || pageMap.get(idToClean);
+            if (!currPage) break;
+
+            chain.unshift(currPage);
+            currId = currPage.parent?._ref;
+        }
+        pageHierarchy.set(page._id, chain);
+    });
+
+    return rawPages.map((page) => {
+        const fullPath = pagePaths.get(page._id) || "";
+        const paramSlug = fullPath === "" ? undefined : fullPath;
+
+        // Build breadcrumbs for this page
+        const chain = pageHierarchy.get(page._id) || [page];
+        const breadcrumbs = chain.map((chainItem, index) => {
+            const isLast = index === chain.length - 1;
+            const itemPath = pagePaths.get(chainItem._id) || "";
+            return {
+                name: chainItem.title,
+                link: isLast ? "" : (itemPath ? `/${itemPath}` : "/")
+            };
+        });
+
+        // If page has showList, collect direct child pages with resolved paths
+        let childPages: Array<{ title: string; desc?: string; slug: { current: string } }> = [];
+        if (page.showList) {
+            const cleanPageId = page._id.replace(/^drafts\./, "");
+            childPages = rawPages
+                .filter((child) => {
+                    const childParentRef = child.parent?._ref;
+                    if (!childParentRef) return false;
+                    const cleanChildParentRef = childParentRef.replace(/^drafts\./, "");
+                    return cleanChildParentRef === cleanPageId || childParentRef === page._id;
+                })
+                .map((child) => {
+                    const childPath = pagePaths.get(child._id) || "";
+                    return {
+                        title: child.title,
+                        desc: child.desc,
+                        slug: {
+                            current: childPath ? `/${childPath}` : "/"
+                        }
+                    };
+                });
+        }
+
+        return {
+            params: {
+                slug: paramSlug
+            },
+            props: {
+                pageData: page,
+                breadcrumbs,
+                childPages
+            }
+        };
+    });
+}
+
+interface Props {
+    pageData: SanityPage;
+    breadcrumbs: Array<{ link: string; name: string }>;
+    childPages: Array<{ title: string; desc?: string; slug: { current: string } }>;
+}
+
+const { pageData, breadcrumbs, childPages } = Astro.props;
+
+const components = {
+    type: {
+        columnLayout: ColumnLayout,
+        blockImage: ContentImg,
+        imageCover: ImageCover
+    }
+};
+
+const formattedTitle = pageData.title ? pageData.title.replace(", ", ",<br>") : "";
+---
+
+<Layout title={pageData.title} desc={pageData.desc} breadcrumbs={breadcrumbs} showInfo={!pageData.useImageHero}>
+    {pageData.useImageHero && pageData.imageHero && pageData.imageHero.length > 0 && (
+        <Embla title={formattedTitle} desc={pageData.desc}>
+            {pageData.imageHero.map((slide: any) => (
+                <div class="embla__slide flex min-h-[90vh] min-w-full opacity-50">
+                    <SanityImage
+                        asset={slide.asset || slide}
+                        alt={pageData.title}
+                        raw={false}
+                        className="object-cover min-h-[110vh] min-w-full"
+                    />
+                </div>
+            ))}
+        </Embla>
+    )}
+
+    {pageData.showList ? (
+        <MainDirectory pages={childPages} grids={3} />
+    ) : (
+        pageData.content && (
+            <div class="max-w-6xl px-5 mx-auto flex flex-col mt-5 gap-y-5">
+                <PortableText value={pageData.content} components={components} />
+            </div>
+        )
+    )}
+</Layout>

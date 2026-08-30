@@ -28,7 +28,7 @@ const components = {
     }
 };
 
-const formattedTitle = content.name.replace(", ", ",<br>");
+const formattedTitle = content?.name ? content.name.replace(", ", ",<br>") : "";
 ---
 
 <style>
