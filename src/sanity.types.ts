@@ -12,520 +12,502 @@
  * ---------------------------------------------------------------------------------
  */
 
-export declare const internalGroqTypeReferenceTo: unique symbol;
+export declare const internalGroqTypeReferenceTo: unique symbol
 
 // Source: schema.json
 export type EventReference = {
-    _ref: string;
-    _type: "reference";
-    _weak?: boolean;
-    [internalGroqTypeReferenceTo]?: "event";
-};
+  _ref: string
+  _type: 'reference'
+  _weak?: boolean
+  [internalGroqTypeReferenceTo]?: 'event'
+}
 
 export type AboutReference = {
-    _ref: string;
-    _type: "reference";
-    _weak?: boolean;
-    [internalGroqTypeReferenceTo]?: "about";
-};
+  _ref: string
+  _type: 'reference'
+  _weak?: boolean
+  [internalGroqTypeReferenceTo]?: 'about'
+}
 
 export type SanityImageAssetReference = {
-    _ref: string;
-    _type: "reference";
-    _weak?: boolean;
-    [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
-};
+  _ref: string
+  _type: 'reference'
+  _weak?: boolean
+  [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
+}
 
 export type SiteInfo = {
-    _id: string;
-    _type: "siteInfo";
-    _createdAt: string;
-    _updatedAt: string;
-    _rev: string;
-    name?: string;
-    footer?: {
-        main?: Array<{
-            title?: string;
-            isInternal?: boolean;
-            externalLink?: string;
-            internalLink?: EventReference | AboutReference;
-            _key: string;
-        }>;
-        section?: Array<{
-            title?: string;
-            links?: Array<{
-                title?: string;
-                isInternal?: boolean;
-                externalLink?: string;
-                internalLink?: EventReference | AboutReference;
-                _key: string;
-            }>;
-            _key: string;
-        }>;
-        social?: Array<{
-            title?: string;
-            link?: string;
-            icon?: {
-                asset?: SanityImageAssetReference;
-                media?: unknown;
-                hotspot?: SanityImageHotspot;
-                crop?: SanityImageCrop;
-                _type: "image";
-            };
-            _key: string;
-        }>;
-    };
-    nav?: {
-        featured?: {
-            showFeatured?: boolean;
-            message?: string;
-            isInternal?: boolean;
-            externalLink?: string;
-            internalLink?: EventReference | AboutReference;
-        };
-        banner?: {
-            showBanner?: boolean;
-            message?: string;
-            type?: "info" | "alert" | "warn";
-        };
-    };
-};
+  _id: string
+  _type: 'siteInfo'
+  _createdAt: string
+  _updatedAt: string
+  _rev: string
+  name?: string
+  footer?: {
+    main?: Array<{
+      title?: string
+      isInternal?: boolean
+      externalLink?: string
+      internalLink?: EventReference | AboutReference
+      _key: string
+    }>
+    section?: Array<{
+      title?: string
+      links?: Array<{
+        title?: string
+        isInternal?: boolean
+        externalLink?: string
+        internalLink?: EventReference | AboutReference
+        _key: string
+      }>
+      _key: string
+    }>
+    social?: Array<{
+      title?: string
+      link?: string
+      icon?: {
+        asset?: SanityImageAssetReference
+        media?: unknown
+        hotspot?: SanityImageHotspot
+        crop?: SanityImageCrop
+        _type: 'image'
+      }
+      _key: string
+    }>
+  }
+  nav?: {
+    featured?: {
+      showFeatured?: boolean
+      message?: string
+      isInternal?: boolean
+      externalLink?: string
+      internalLink?: EventReference | AboutReference
+    }
+    banner?: {
+      showBanner?: boolean
+      message?: string
+      type?: 'info' | 'alert' | 'warn'
+    }
+  }
+}
 
 export type SanityImageCrop = {
-    _type: "sanity.imageCrop";
-    top?: number;
-    bottom?: number;
-    left?: number;
-    right?: number;
-};
+  _type: 'sanity.imageCrop'
+  top?: number
+  bottom?: number
+  left?: number
+  right?: number
+}
 
 export type SanityImageHotspot = {
-    _type: "sanity.imageHotspot";
-    x?: number;
-    y?: number;
-    height?: number;
-    width?: number;
-};
+  _type: 'sanity.imageHotspot'
+  x?: number
+  y?: number
+  height?: number
+  width?: number
+}
 
 export type About = {
-    _id: string;
-    _type: "about";
-    _createdAt: string;
-    _updatedAt: string;
-    _rev: string;
-    name?: string;
-    title?: string;
-    latestEvent?: EventReference;
-    desc?: string;
-    showList?: boolean;
-    slug?: Slug;
-    useImageHero?: boolean;
-    imageHero?: Array<{
-        asset?: SanityImageAssetReference;
-        media?: unknown;
-        hotspot?: SanityImageHotspot;
-        crop?: SanityImageCrop;
-        _type: "image";
-        _key: string;
-    }>;
-    content?: Array<
-        | {
-              children?: Array<{
-                  marks?: Array<string>;
-                  text?: string;
-                  _type: "span";
-                  _key: string;
-              }>;
-              style?:
-                  | "normal"
-                  | "h1"
-                  | "h2"
-                  | "h3"
-                  | "h4"
-                  | "h5"
-                  | "h6"
-                  | "blockquote";
-              listItem?: "bullet" | "number";
-              markDefs?: Array<{
-                  href?: string;
-                  _type: "link";
-                  _key: string;
-              }>;
-              level?: number;
-              _type: "block";
-              _key: string;
-          }
-        | {
-              asset?: SanityImageAssetReference;
-              media?: unknown;
-              hotspot?: SanityImageHotspot;
-              crop?: SanityImageCrop;
-              alt?: string;
-              _type: "blockImage";
-              _key: string;
-          }
-        | {
-              image?: {
-                  asset?: SanityImageAssetReference;
-                  media?: unknown;
-                  hotspot?: SanityImageHotspot;
-                  crop?: SanityImageCrop;
-                  _type: "image";
-              };
-              altText?: string;
-              name?: string;
-              link?: string;
-              desc?: string;
-              _type: "imageCover";
-              _key: string;
-          }
-        | {
-              title?: string;
-              desc?: string;
-              primaryButton?: {
-                  text?: string;
-                  link?: string;
-              };
-              secondaryButton?: {
-                  text?: string;
-                  link?: string;
-              };
-              _type: "cta";
-              _key: string;
-          }
-        | {
-              columns?: Array<{
-                  content?: Array<
-                      | {
-                            children?: Array<{
-                                marks?: Array<string>;
-                                text?: string;
-                                _type: "span";
-                                _key: string;
-                            }>;
-                            style?:
-                                | "normal"
-                                | "h1"
-                                | "h2"
-                                | "h3"
-                                | "h4"
-                                | "h5"
-                                | "h6"
-                                | "blockquote";
-                            listItem?: "bullet" | "number";
-                            markDefs?: Array<{
-                                href?: string;
-                                _type: "link";
-                                _key: string;
-                            }>;
-                            level?: number;
-                            _type: "block";
-                            _key: string;
-                        }
-                      | {
-                            asset?: SanityImageAssetReference;
-                            media?: unknown;
-                            hotspot?: SanityImageHotspot;
-                            crop?: SanityImageCrop;
-                            alt?: string;
-                            _type: "blockImage";
-                            _key: string;
-                        }
-                      | {
-                            image?: {
-                                asset?: SanityImageAssetReference;
-                                media?: unknown;
-                                hotspot?: SanityImageHotspot;
-                                crop?: SanityImageCrop;
-                                _type: "image";
-                            };
-                            altText?: string;
-                            name?: string;
-                            link?: string;
-                            desc?: string;
-                            _type: "imageCover";
-                            _key: string;
-                        }
-                      | {
-                            title?: string;
-                            desc?: string;
-                            primaryButton?: {
-                                text?: string;
-                                link?: string;
-                            };
-                            secondaryButton?: {
-                                text?: string;
-                                link?: string;
-                            };
-                            _type: "cta";
-                            _key: string;
-                        }
-                  >;
-                  _type: "column";
-                  _key: string;
-              }>;
-              _type: "columnLayout";
-              _key: string;
-          }
-    >;
-};
+  _id: string
+  _type: 'about'
+  _createdAt: string
+  _updatedAt: string
+  _rev: string
+  name?: string
+  latestEvent?: EventReference
+  desc?: string
+  showList?: boolean
+  slug?: Slug
+  useImageHero?: boolean
+  imageHero?: Array<{
+    asset?: SanityImageAssetReference
+    media?: unknown
+    hotspot?: SanityImageHotspot
+    crop?: SanityImageCrop
+    _type: 'image'
+    _key: string
+  }>
+  content?: Array<
+    | {
+        children?: Array<{
+          marks?: Array<string>
+          text?: string
+          _type: 'span'
+          _key: string
+        }>
+        style?: 'normal' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'blockquote'
+        listItem?: 'bullet' | 'number'
+        markDefs?: Array<{
+          href?: string
+          _type: 'link'
+          _key: string
+        }>
+        level?: number
+        _type: 'block'
+        _key: string
+      }
+    | {
+        asset?: SanityImageAssetReference
+        media?: unknown
+        hotspot?: SanityImageHotspot
+        crop?: SanityImageCrop
+        alt?: string
+        _type: 'blockImage'
+        _key: string
+      }
+    | {
+        image?: {
+          asset?: SanityImageAssetReference
+          media?: unknown
+          hotspot?: SanityImageHotspot
+          crop?: SanityImageCrop
+          _type: 'image'
+        }
+        altText?: string
+        name?: string
+        link?: string
+        desc?: string
+        _type: 'imageCover'
+        _key: string
+      }
+    | {
+        title?: string
+        desc?: string
+        primaryButton?: {
+          text?: string
+          link?: string
+        }
+        secondaryButton?: {
+          text?: string
+          link?: string
+        }
+        _type: 'cta'
+        _key: string
+      }
+    | {
+        columns?: Array<{
+          content?: Array<
+            | {
+                children?: Array<{
+                  marks?: Array<string>
+                  text?: string
+                  _type: 'span'
+                  _key: string
+                }>
+                style?: 'normal' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'blockquote'
+                listItem?: 'bullet' | 'number'
+                markDefs?: Array<{
+                  href?: string
+                  _type: 'link'
+                  _key: string
+                }>
+                level?: number
+                _type: 'block'
+                _key: string
+              }
+            | {
+                asset?: SanityImageAssetReference
+                media?: unknown
+                hotspot?: SanityImageHotspot
+                crop?: SanityImageCrop
+                alt?: string
+                _type: 'blockImage'
+                _key: string
+              }
+            | {
+                image?: {
+                  asset?: SanityImageAssetReference
+                  media?: unknown
+                  hotspot?: SanityImageHotspot
+                  crop?: SanityImageCrop
+                  _type: 'image'
+                }
+                altText?: string
+                name?: string
+                link?: string
+                desc?: string
+                _type: 'imageCover'
+                _key: string
+              }
+            | {
+                title?: string
+                desc?: string
+                primaryButton?: {
+                  text?: string
+                  link?: string
+                }
+                secondaryButton?: {
+                  text?: string
+                  link?: string
+                }
+                _type: 'cta'
+                _key: string
+              }
+          >
+          _type: 'column'
+          _key: string
+        }>
+        _type: 'columnLayout'
+        _key: string
+      }
+  >
+}
 
 export type Slug = {
-    _type: "slug";
-    current?: string;
-    source?: string;
-};
+  _type: 'slug'
+  current?: string
+  source?: string
+}
 
 export type PartnersReference = {
-    _ref: string;
-    _type: "reference";
-    _weak?: boolean;
-    [internalGroqTypeReferenceTo]?: "partners";
-};
+  _ref: string
+  _type: 'reference'
+  _weak?: boolean
+  [internalGroqTypeReferenceTo]?: 'partners'
+}
 
 export type Event = {
-    _id: string;
-    _type: "event";
-    _createdAt: string;
-    _updatedAt: string;
-    _rev: string;
-    name?: string;
-    slug?: Slug;
-    signupForm?: string;
-    status?: "open" | "closed" | "over";
-    links?: Array<{
-        title?: string;
-        url?: string;
-        _key: string;
-    }>;
-    sponsors?: Array<{
-        sponsor?: PartnersReference;
-        tier?: "Gold" | "Silver" | "Bronze";
-        _key: string;
-    }>;
-    excerpts?: {
-        excerpt?: string;
-        openExcerpt?: string;
-        closedExcerpt?: string;
-        overExcerpt?: string;
-    };
-    directions?: Array<{
-        day?: string;
-        tracks?: Array<{
-            track?: string;
-            methods?: Array<{
-                methodName?: string;
-                steps?: Array<{
-                    image?: {
-                        asset?: SanityImageAssetReference;
-                        media?: unknown;
-                        hotspot?: SanityImageHotspot;
-                        crop?: SanityImageCrop;
-                        _type: "image";
-                    };
-                    step?: string;
-                    _key: string;
-                }>;
-                _key: string;
-            }>;
-            _key: string;
-        }>;
-        _key: string;
-    }>;
-    prospectus?: Array<{
-        asset?: SanityImageAssetReference;
-        media?: unknown;
-        hotspot?: SanityImageHotspot;
-        crop?: SanityImageCrop;
-        _type: "image";
-        _key: string;
-    }>;
-    details?: Array<string>;
-    description?: Array<{
-        children?: Array<{
-            marks?: Array<string>;
-            text?: string;
-            _type: "span";
-            _key: string;
-        }>;
-        style?:
-            "normal" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "blockquote";
-        listItem?: "bullet" | "number";
-        markDefs?: Array<{
-            href?: string;
-            _type: "link";
-            _key: string;
-        }>;
-        level?: number;
-        _type: "block";
-        _key: string;
-    }>;
-    faqs?: Array<{
-        question?: string;
-        answer?: string;
-        _key: string;
-    }>;
-    schedule?: Array<{
-        track?: string;
-        days?: Array<{
-            day?: string;
-            daySchedule?: Array<{
-                timing?: string;
-                title?: string;
-                desc?: string;
-                author?: string;
-                _key: string;
-            }>;
-            _type: "dayItem";
-            _key: string;
-        }>;
-        _type: "timeline";
-        _key: string;
-    }>;
-};
+  _id: string
+  _type: 'event'
+  _createdAt: string
+  _updatedAt: string
+  _rev: string
+  name?: string
+  slug?: Slug
+  signupForm?: string
+  status?: 'open' | 'closed' | 'over'
+  links?: Array<{
+    title?: string
+    url?: string
+    _key: string
+  }>
+  sponsors?: Array<{
+    sponsor?: PartnersReference
+    tier?: 'Gold' | 'Silver' | 'Bronze'
+    _key: string
+  }>
+  excerpts?: {
+    excerpt?: string
+    openExcerpt?: string
+    closedExcerpt?: string
+    overExcerpt?: string
+  }
+  directions?: Array<{
+    day?: string
+    tracks?: Array<{
+      track?: string
+      methods?: Array<{
+        methodName?: string
+        steps?: Array<{
+          image?: {
+            asset?: SanityImageAssetReference
+            media?: unknown
+            hotspot?: SanityImageHotspot
+            crop?: SanityImageCrop
+            _type: 'image'
+          }
+          step?: string
+          _key: string
+        }>
+        _key: string
+      }>
+      _key: string
+    }>
+    _key: string
+  }>
+  prospectus?: Array<{
+    asset?: SanityImageAssetReference
+    media?: unknown
+    hotspot?: SanityImageHotspot
+    crop?: SanityImageCrop
+    _type: 'image'
+    _key: string
+  }>
+  details?: Array<string>
+  description?: Array<{
+    children?: Array<{
+      marks?: Array<string>
+      text?: string
+      _type: 'span'
+      _key: string
+    }>
+    style?: 'normal' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'blockquote'
+    listItem?: 'bullet' | 'number'
+    markDefs?: Array<{
+      href?: string
+      _type: 'link'
+      _key: string
+    }>
+    level?: number
+    _type: 'block'
+    _key: string
+  }>
+  faqs?: Array<{
+    question?: string
+    answer?: string
+    _key: string
+  }>
+  schedule?: Array<{
+    track?: string
+    days?: Array<{
+      day?: string
+      daySchedule?: Array<{
+        timing?: string
+        title?: string
+        desc?: string
+        author?: string
+        _key: string
+      }>
+      _type: 'dayItem'
+      _key: string
+    }>
+    _type: 'timeline'
+    _key: string
+  }>
+}
 
 export type Partners = {
-    _id: string;
-    _type: "partners";
-    _createdAt: string;
-    _updatedAt: string;
-    _rev: string;
-    name?: string;
-    description?: string;
-    link?: string;
-    logo?: {
-        asset?: SanityImageAssetReference;
-        media?: unknown;
-        hotspot?: SanityImageHotspot;
-        crop?: SanityImageCrop;
-        _type: "image";
-    };
-};
+  _id: string
+  _type: 'partners'
+  _createdAt: string
+  _updatedAt: string
+  _rev: string
+  name?: string
+  description?: string
+  link?: string
+  logo?: {
+    asset?: SanityImageAssetReference
+    media?: unknown
+    hotspot?: SanityImageHotspot
+    crop?: SanityImageCrop
+    _type: 'image'
+  }
+}
 
 export type MediaTag = {
-    _id: string;
-    _type: "media.tag";
-    _createdAt: string;
-    _updatedAt: string;
-    _rev: string;
-    name?: Slug;
-};
+  _id: string
+  _type: 'media.tag'
+  _createdAt: string
+  _updatedAt: string
+  _rev: string
+  name?: Slug
+}
 
 export type SanityImagePaletteSwatch = {
-    _type: "sanity.imagePaletteSwatch";
-    background?: string;
-    foreground?: string;
-    population?: number;
-    title?: string;
-};
+  _type: 'sanity.imagePaletteSwatch'
+  background?: string
+  foreground?: string
+  population?: number
+  title?: string
+}
 
 export type SanityImagePalette = {
-    _type: "sanity.imagePalette";
-    darkMuted?: SanityImagePaletteSwatch;
-    lightVibrant?: SanityImagePaletteSwatch;
-    darkVibrant?: SanityImagePaletteSwatch;
-    vibrant?: SanityImagePaletteSwatch;
-    dominant?: SanityImagePaletteSwatch;
-    lightMuted?: SanityImagePaletteSwatch;
-    muted?: SanityImagePaletteSwatch;
-};
+  _type: 'sanity.imagePalette'
+  darkMuted?: SanityImagePaletteSwatch
+  lightVibrant?: SanityImagePaletteSwatch
+  darkVibrant?: SanityImagePaletteSwatch
+  vibrant?: SanityImagePaletteSwatch
+  dominant?: SanityImagePaletteSwatch
+  lightMuted?: SanityImagePaletteSwatch
+  muted?: SanityImagePaletteSwatch
+}
 
 export type SanityImageDimensions = {
-    _type: "sanity.imageDimensions";
-    height?: number;
-    width?: number;
-    aspectRatio?: number;
-};
+  _type: 'sanity.imageDimensions'
+  height?: number
+  width?: number
+  aspectRatio?: number
+}
 
 export type SanityImageMetadata = {
-    _type: "sanity.imageMetadata";
-    location?: Geopoint;
-    dimensions?: SanityImageDimensions;
-    palette?: SanityImagePalette;
-    lqip?: string;
-    blurHash?: string;
-    thumbHash?: string;
-    hasAlpha?: boolean;
-    isOpaque?: boolean;
-};
+  _type: 'sanity.imageMetadata'
+  location?: Geopoint
+  dimensions?: SanityImageDimensions
+  palette?: SanityImagePalette
+  lqip?: string
+  blurHash?: string
+  thumbHash?: string
+  hasAlpha?: boolean
+  isOpaque?: boolean
+}
 
 export type SanityFileAsset = {
-    _id: string;
-    _type: "sanity.fileAsset";
-    _createdAt: string;
-    _updatedAt: string;
-    _rev: string;
-    originalFilename?: string;
-    label?: string;
-    title?: string;
-    description?: string;
-    altText?: string;
-    sha1hash?: string;
-    extension?: string;
-    mimeType?: string;
-    size?: number;
-    assetId?: string;
-    uploadId?: string;
-    path?: string;
-    url?: string;
-    source?: SanityAssetSourceData;
-};
+  _id: string
+  _type: 'sanity.fileAsset'
+  _createdAt: string
+  _updatedAt: string
+  _rev: string
+  originalFilename?: string
+  label?: string
+  title?: string
+  description?: string
+  altText?: string
+  sha1hash?: string
+  extension?: string
+  mimeType?: string
+  size?: number
+  assetId?: string
+  uploadId?: string
+  path?: string
+  url?: string
+  source?: SanityAssetSourceData
+}
 
 export type SanityAssetSourceData = {
-    _type: "sanity.assetSourceData";
-    name?: string;
-    id?: string;
-    url?: string;
-};
+  _type: 'sanity.assetSourceData'
+  name?: string
+  id?: string
+  url?: string
+}
 
 export type SanityImageAsset = {
-    _id: string;
-    _type: "sanity.imageAsset";
-    _createdAt: string;
-    _updatedAt: string;
-    _rev: string;
-    originalFilename?: string;
-    label?: string;
-    title?: string;
-    description?: string;
-    altText?: string;
-    sha1hash?: string;
-    extension?: string;
-    mimeType?: string;
-    size?: number;
-    assetId?: string;
-    uploadId?: string;
-    path?: string;
-    url?: string;
-    metadata?: SanityImageMetadata;
-    source?: SanityAssetSourceData;
-};
+  _id: string
+  _type: 'sanity.imageAsset'
+  _createdAt: string
+  _updatedAt: string
+  _rev: string
+  originalFilename?: string
+  label?: string
+  title?: string
+  description?: string
+  altText?: string
+  sha1hash?: string
+  extension?: string
+  mimeType?: string
+  size?: number
+  assetId?: string
+  uploadId?: string
+  path?: string
+  url?: string
+  metadata?: SanityImageMetadata
+  source?: SanityAssetSourceData
+}
 
 export type Geopoint = {
-    _type: "geopoint";
-    lat?: number;
-    lng?: number;
-    alt?: number;
-};
+  _type: 'geopoint'
+  lat?: number
+  lng?: number
+  alt?: number
+}
 
 export type AllSanitySchemaTypes =
-    | EventReference
-    | AboutReference
-    | SanityImageAssetReference
-    | SiteInfo
-    | SanityImageCrop
-    | SanityImageHotspot
-    | About
-    | Slug
-    | PartnersReference
-    | Event
-    | Partners
-    | MediaTag
-    | SanityImagePaletteSwatch
-    | SanityImagePalette
-    | SanityImageDimensions
-    | SanityImageMetadata
-    | SanityFileAsset
-    | SanityAssetSourceData
-    | SanityImageAsset
-    | Geopoint;
+  | EventReference
+  | AboutReference
+  | SanityImageAssetReference
+  | SiteInfo
+  | SanityImageCrop
+  | SanityImageHotspot
+  | About
+  | Slug
+  | PartnersReference
+  | Event
+  | Partners
+  | MediaTag
+  | SanityImagePaletteSwatch
+  | SanityImagePalette
+  | SanityImageDimensions
+  | SanityImageMetadata
+  | SanityFileAsset
+  | SanityAssetSourceData
+  | SanityImageAsset
+  | Geopoint
