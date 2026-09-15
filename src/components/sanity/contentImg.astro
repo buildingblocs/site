@@ -8,6 +8,6 @@ export type Props = $<ImageProps & TypedObject>;
 
 const { node /*, isInline */ } = Astro.props;
 ---
-<Image {...node} raw={false}
+<Image {...node} raw={false} width={1200} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 1200px"
        className="md:max-w-md lg:max-w-lg xl:max-w-xl rounded-xl w-full object-cover border border-slate-700 sm:h-96 h-60"
 />

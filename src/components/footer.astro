@@ -12,7 +12,7 @@ type FooterData = {
     aboutPages: Array<{ name?: string; slug?: { current: string } }>;
 };
 
-const { mainPages, social, events, aboutPages } =
+const { mainPages, social, events } =
     await sanityClient.fetch<FooterData>(`{
     "mainPages": *[_type == "siteInfo"][0].footer.main,
     "social": *[_type == "siteInfo"][0].footer.social,
@@ -66,13 +66,6 @@ const { mainPages, social, events, aboutPages } =
                 <li class="font-medium text-xl">
                     <a href="/about-us">About Us</a>
                 </li>
-                <!-- {aboutPages.filter((aboutPage) => !aboutPage.slug?.current.startsWith("/")).map((aboutPage) => (
-                    <li class="flex flex-col gap-1">
-                        <a href={`/about-us/${aboutPage.slug?.current}`} class="hover:underline text-slate-200">
-                            {aboutPage.name}
-                        </a>
-                    </li>
-                ))} -->
                 <li class="flex flex-col gap-1">
                     <a
                         href={`/about-us/archive`}
@@ -91,7 +84,10 @@ const { mainPages, social, events, aboutPages } =
                 <a aria-label=`Our ${page.title}` href={page.link}>
                     {page.icon?.asset && (
                         <ImageAstroComponent
-                            raw
+                            raw={false}
+                            width={64}
+                            widths={[32, 64, 128]}
+                            sizes="32px"
                             asset={page.icon.asset}
                             alt=`Our ${page.title}`
                         />

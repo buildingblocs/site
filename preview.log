@@ -1,7 +1,7 @@
 
 > buildingblocs@0.0.1 preview /app
-> astro preview --port 4321
+> astro preview
 
- astro  v7.2.2 ready in 54 ms
+ astro  v7.2.2 ready in 63 ms
 ┃ Local    http://localhost:4321/
 ┃ Network  use --host to expose

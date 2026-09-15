@@ -166,7 +166,7 @@ const breadcrumbs = [
                     <div class="flex">
                         {pageData.sponsors.filter((sponsor) => sponsor.tier === "Gold").map((sponsor) => (
                             <div class="flex-1 flex justify-center items-center">
-                                <SanityImg raw={false} alt={sponsor.sponsor.name} asset={sponsor.sponsor.logo.asset}
+                                <SanityImg raw={false} width={300} widths={[150, 300, 450]} sizes="(max-width: 640px) 150px, 300px" alt={sponsor.sponsor.name} asset={sponsor.sponsor.logo.asset}
                                            className="h-10 object-contain max-w-full" />
                             </div>
                         ))}
@@ -174,7 +174,7 @@ const breadcrumbs = [
                     <div class="flex">
                         {pageData.sponsors.filter((sponsor) => sponsor.tier === "Silver").map((sponsor) => (
                             <div class="flex-1 flex justify-center items-center">
-                                <SanityImg raw={false} alt={sponsor.sponsor.name} asset={sponsor.sponsor.logo.asset}
+                                <SanityImg raw={false} width={300} widths={[150, 300, 450]} sizes="(max-width: 640px) 150px, 300px" alt={sponsor.sponsor.name} asset={sponsor.sponsor.logo.asset}
                                            className="h-10 object-contain max-w-full" />
                             </div>
                         ))}
@@ -195,7 +195,7 @@ const breadcrumbs = [
                         {
                             pageData.prospectus?.map((slide) => (
                                 <div class="embla__slide">
-                                    <SanityImg raw={false} asset={slide.asset} alt="Prospectus Slides" />
+                                    <SanityImg raw={false} width={1000} sizes="(max-width: 768px) 100vw, 800px" asset={slide.asset} alt="Prospectus Slides" />
                                 </div>
                             ))
                         }

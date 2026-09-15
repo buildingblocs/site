@@ -183,6 +183,9 @@ const formattedTitle = pageData.title ? pageData.title.replace(", ", ",<br>") : 
                         asset={slide.asset || slide}
                         alt={pageData.title}
                         raw={false}
+                        width={1920}
+                        sizes="100vw"
+                        loading="eager"
                         className="object-cover min-h-[110vh] min-w-full"
                     />
                 </div>

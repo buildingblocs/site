@@ -1,7 +1,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import confetti from "canvas-confetti";
-import { imageUrlFor } from "@/lib/image.ts";
+import { imageUrlFor, imageSrcSetFor } from "@/lib/image.ts";
 
 export interface SanityImage {
     _type: "image";
@@ -43,8 +43,12 @@ function StepsList({ steps }: { steps: Step[] }) {
             {steps.map((step, sIdx) => (
                 <div key={step._key} className="mt-6 text-center">
                     <img
-                        src={imageUrlFor(step.image, false)}
+                        src={imageUrlFor(step.image, true, { width: 1000, quality: 80 })}
+                        srcSet={imageSrcSetFor(step.image, true, [360, 640, 960, 1200], { quality: 80 })}
+                        sizes="(max-width: 768px) 100vw, 960px"
                         alt={step.step}
+                        loading="lazy"
+                        decoding="async"
                         className="rounded-xl ring ring-white/50 mx-auto max-w-full"
                     />
                     <p className="mt-3 mx-10">

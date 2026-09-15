@@ -82,7 +82,10 @@ const pastSponsors = uniqueSponsors.filter((s) => !currentIds.has(s._id));
                             <SanityImage
                                 asset={sponsor.logo.asset}
                                 alt={`${sponsor.name}'s Logo'`}
-                                raw={true}
+                                raw={false}
+                                width={400}
+                                widths={[200, 400, 600]}
+                                sizes="(max-width: 640px) 200px, 320px"
                                 className="h-15 w-full mx-auto object-contain"
                             />
                             <h2 class="mt-6 mb-2 text-2xl">{sponsor.name}</h2>
@@ -110,7 +113,10 @@ const pastSponsors = uniqueSponsors.filter((s) => !currentIds.has(s._id));
                                 <SanityImage
                                     asset={sponsor.logo.asset}
                                     alt={`${sponsor.name}'s Logo'`}
-                                    raw={true}
+                                    raw={false}
+                                    width={400}
+                                    widths={[200, 400, 600]}
+                                    sizes="(max-width: 640px) 200px, 320px"
                                     className="h-15 w-full mx-auto object-contain"
                                 />
                                 <h2 class="mt-6 mb-2 text-2xl">

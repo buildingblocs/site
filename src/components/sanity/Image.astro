@@ -1,24 +1,54 @@
 ---
-import { imageUrlFor } from "@/lib/image.ts";
+import { imageUrlFor, imageSrcSetFor, type ImageUrlOptions } from "@/lib/image.ts";
 
 type Asset = Parameters<typeof imageUrlFor>[0];
 
 export interface Props {
     asset: Asset;
     alt: string;
-    raw: boolean;
+    raw?: boolean;
     className?: string;
+    width?: number;
+    height?: number;
+    quality?: number;
+    fit?: ImageUrlOptions["fit"];
+    widths?: number[];
+    sizes?: string;
+    loading?: "lazy" | "eager";
+    decoding?: "async" | "sync" | "auto";
 }
 
-const { asset, alt, raw, className } = Astro.props;
+const {
+    asset,
+    alt,
+    raw = false,
+    className,
+    width,
+    height,
+    quality,
+    fit,
+    widths,
+    sizes,
+    loading = "lazy",
+    decoding = "async",
+} = Astro.props;
 
-let image;
+const imageOptions: ImageUrlOptions = { width, height, quality, fit };
+const image = imageUrlFor(asset, !raw, imageOptions);
 
-if (raw) {
-    image = imageUrlFor(asset, false);
-} else {
-    image = imageUrlFor(asset, true);
-}
+// Generate srcset unless raw is true
+const srcset = !raw ? imageSrcSetFor(asset, true, widths, { height, quality, fit }) : undefined;
+const defaultSizes = !raw ? (sizes ?? "(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px") : undefined;
 ---
 
-<img src={image} alt={alt} class={className} />
+<img
+    src={image}
+    srcset={srcset}
+    sizes={defaultSizes}
+    alt={alt}
+    class={className}
+    width={width}
+    height={height}
+    loading={loading}
+    decoding={decoding}
+/>
