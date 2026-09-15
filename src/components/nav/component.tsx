@@ -71,10 +71,9 @@ export default function Nav({ data }: { data: NavQuery }) {
             <>
                 <a
                     href="/partners"
-                    className="flex justify-between items-center font-medium rounded-md px-2 transition hover:bg-white hover:text-black"
+                    className="flex justify-between items-center font-medium rounded-2xl sm:rounded-md px-2 transition sm:hover:bg-white sm:hover:text-black"
                 >
                     Our Partners
-                    <ArrowRightIcon className="min-w-5 h-5 sm:hidden block" />
                 </a>
 
                 <NavDropdown name="About Us" link="/about-us">
@@ -92,10 +91,10 @@ export default function Nav({ data }: { data: NavQuery }) {
                         name="Archive"
                         desc=""
                     />
-                    <Separator className="bg-white/15 my-1" />
+                    <Separator className="bg-white/15 my-1 sm:block hidden" />
                     <a
                         href="/about-us"
-                        className="hover:bg-slate-800/75 sm:p-2 text-md sm:text-sm rounded-lg transition no-underline! flex justify-between sm:justify-start gap-x-1"
+                        className="hover:bg-slate-800/75 sm:p-2 text-md sm:text-sm rounded-lg transition no-underline! flex items-center justify-start gap-x-2 sm:gap-x-1"
                     >
                         Pages in About Us
                         <ArrowRightIcon className="min-w-5 h-5 sm:min-w-3" />
@@ -125,18 +124,18 @@ export default function Nav({ data }: { data: NavQuery }) {
                             </span>
                         </a>
                     )}
-                    <Separator className="bg-white/15 my-1" />
+                    <Separator className="bg-white/15 my-1 sm:block hidden" />
                     <a
                         href="/about-us/archive"
-                        className="sm:font-semibold hover:bg-slate-800/75 sm:p-2 text-md sm:text-sm rounded-lg transition no-underline! flex justify-between"
+                        className="sm:font-semibold hover:bg-slate-800/75 sm:p-2 text-md sm:text-sm rounded-lg transition no-underline! flex justify-start items-center gap-x-2 sm:gap-x-1"
                     >
-                        Looking for older events?
-                        <ArrowRightIcon className="min-w-5 h-5 sm:hidden block" />
+                        Past Events
+                        <ArrowRightIcon className="min-w-5 h-5 sm:min-w-3" />
                     </a>
-                    <Separator className="bg-white/15 my-1" />
+                    <Separator className="bg-white/15 my-1 sm:block hidden" />
                     <a
                         href="/events"
-                        className="hover:bg-slate-800/75 sm:p-2 text-md sm:text-sm rounded-lg transition no-underline! flex justify-between sm:justify-start gap-x-1"
+                        className="hover:bg-slate-800/75 sm:p-2 text-md sm:text-sm rounded-lg transition no-underline! flex justify-start items-center gap-x-2 sm:gap-x-1"
                     >
                         Pages in Events
                         <ArrowRightIcon className="min-w-5 h-5 sm:min-w-3" />

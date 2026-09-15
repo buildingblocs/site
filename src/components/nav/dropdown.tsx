@@ -33,18 +33,11 @@ export default function NavDropdown({
                 </PopoverContent>
             </Popover>
             <Accordion className="sm:hidden flex" type="multiple">
-                <AccordionItem
-                    value={name}
-                    className="data-[state=open]:bg-white/5 transition-all data-[state=open]:py-2 gap-y-2 flex flex-col"
-                >
-                    <AccordionTrigger className="data-[state=open]:mx-2 data-[state=open]:px-1 data-[state=closed]:px-2 py-0 flex items-center data-[state=open]:bg-white/15 rounded-lg">
-                        <a href={link} className="text-3xl">
-                            {name}
-                        </a>
+                <AccordionItem value={name} className="transition-all">
+                    <AccordionTrigger className="px-2 py-0 flex items-center no-underline! text-3xl">
+                      {name}
                     </AccordionTrigger>
-                    <AccordionContent className="no-underline! -mx-1 pb-0!">
-                        {children}
-                    </AccordionContent>
+                    <AccordionContent className="py-2 text-xl font-normal flex flex-col gap-y-1">{children}</AccordionContent>
                 </AccordionItem>
             </Accordion>
         </>
