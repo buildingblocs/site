@@ -47,7 +47,8 @@ function getPagePath(page: SanityPage): string {
         if (visited.has(cleanedId)) break;
         visited.add(cleanedId);
 
-        const currentPage: SanityPage | undefined = pageMap.get(cleanedId) || pageMap.get(idToClean);
+        const currentPage: SanityPage | undefined =
+            pageMap.get(cleanedId) || pageMap.get(idToClean);
         if (!currentPage) break;
 
         const rawSlug = currentPage.slug?.current;
@@ -87,7 +88,9 @@ const getFooterTitle = (page: SanityPage, url: string): string =>
     url === "/" ? "Home" : page.title;
 
 // Process top-level pages (pages without a parent)
-const topLevelPages = (rawPages || []).filter((page: SanityPage) => !page.parent?._ref);
+const topLevelPages = (rawPages || []).filter(
+    (page: SanityPage) => !page.parent?._ref,
+);
 
 topLevelPages.forEach((page: SanityPage) => {
     const cId = cleanId(page._id);
@@ -100,10 +103,12 @@ topLevelPages.forEach((page: SanityPage) => {
             return child.parent?._ref && cleanId(child.parent._ref) === cId;
         });
 
-        const childLinks: FooterLink[] = directChildren.map((child: SanityPage) => ({
-            title: child.title,
-            url: getPagePath(child),
-        }));
+        const childLinks: FooterLink[] = directChildren.map(
+            (child: SanityPage) => ({
+                title: child.title,
+                url: getPagePath(child),
+            }),
+        );
 
         sections.push({
             title: pageTitle,
@@ -161,6 +166,12 @@ if (homeIndex !== -1) {
                         </a>
                     </li>
                 ))}
+
+                <li>
+                    <a href="/partners" class="hover:underline">
+                        Our Partners
+                    </a>
+                </li>
             </ul>
         </div>
 
