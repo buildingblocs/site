@@ -1,24 +1,62 @@
 ---
-import { imageUrlFor } from "@/lib/image.ts";
+import { imageUrlFor, imageSrcSetFor, type ImageOptions } from "@/lib/image.ts";
 
 type Asset = Parameters<typeof imageUrlFor>[0];
 
 export interface Props {
     asset: Asset;
     alt: string;
-    raw: boolean;
+    raw?: boolean;
     className?: string;
+    width?: number;
+    height?: number;
+    widths?: number[];
+    sizes?: string;
+    fit?: ImageOptions["fit"];
+    quality?: number;
+    loading?: "lazy" | "eager";
+    decoding?: "async" | "auto" | "sync";
 }
 
-const { asset, alt, raw, className } = Astro.props;
+const {
+    asset,
+    alt,
+    raw = false,
+    className,
+    width,
+    height,
+    widths,
+    sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 100vw",
+    fit,
+    quality,
+    loading = "lazy",
+    decoding = "async"
+} = Astro.props;
 
-let image;
+const options: ImageOptions = { width, height, fit, quality };
+
+let src: string = "";
+let srcset: string | undefined = undefined;
 
 if (raw) {
-    image = imageUrlFor(asset, false);
+    src = imageUrlFor(asset, false);
 } else {
-    image = imageUrlFor(asset, true);
+    src = imageUrlFor(asset, true, options);
+    // Generate responsive srcset if exact width/height are not locked or explicit widths are provided
+    if (!width || widths) {
+        srcset = imageSrcSetFor(asset, widths, { height, fit, quality });
+    }
 }
 ---
 
-<img src={image} alt={alt} class={className} />
+<img
+    src={src}
+    srcset={srcset}
+    sizes={srcset ? sizes : undefined}
+    alt={alt}
+    class={className}
+    width={width}
+    height={height}
+    loading={loading}
+    decoding={decoding}
+/>
