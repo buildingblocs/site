@@ -74,11 +74,21 @@ export default function Nav({ data }: { data: NavQuery }) {
                 <ArrowRightIcon className="min-w-5 h-5 sm:hidden block" />
             </a>
 
-            <NavDropdown name="About Us" link="/about-us">
-                {data.about.map((page) => (
+          <NavDropdown name="About Us" link="/about-us">
+            {/*broken for now*/}
+                {/*{data.about.map((page) => (
                     <NavDropdownLink link={page.slug?.current || ""} parent="about-us" name={page.name || ""}
                                      desc="" />
-                ))}
+                ))}*/}
+            <a
+                href="/about-us/archive"
+                className="sm:font-semibold justify-between items-center hover:bg-slate-800/75 sm:p-2 py-1 rounded-xl sm:text-sm text-2xl transition flex no-underline! px-0 sm:px-2 w-full"
+            >
+                <div className="flex flex-col">
+                    Archive
+                </div>
+                <ArrowRightIcon className="min-w-5 h-5 sm:hidden block" />
+            </a>
             </NavDropdown>
 
             <NavDropdown name="Events" link="#">
