@@ -19,14 +19,30 @@ type EventSponsor = {
     };
 };
 
-type EventPage = Omit<Event, "name" | "slug" | "excerpts" | "details" | "sponsors" | "faqs" | "prospectus" | "schedule"> & {
+type EventPage = Omit<
+    Event,
+    | "name"
+    | "slug"
+    | "excerpts"
+    | "details"
+    | "sponsors"
+    | "faqs"
+    | "prospectus"
+    | "schedule"
+> & {
     name: string;
     slug: { current: string };
     excerpts: { excerpt: string };
     details: string[];
     sponsors: EventSponsor[];
     faqs: Array<{ _key: string; question: string; answer: string }>;
-    prospectus?: Array<{ asset: SanityImageSource }>;
+    prospectus?: Array<{
+        asset: SanityImageSource;
+        dimensions: {
+            width: number;
+            height: number;
+        };
+    }>;
     schedule: Array<{
         _key: string;
         track?: string;
@@ -51,28 +67,31 @@ interface Props {
 export async function getStaticPaths() {
     const pages = await sanityClient.fetch<EventPage[]>(
         `*[_type == "event" && defined(slug.current)]{
-  ...,
-  sponsors[]{
-    _key,
-    tier,
-    sponsor->{
-      name,
-      logo,
-    }
-  }
-}`
+            ...,
+            prospectus[]{
+                ...,
+                "dimensions": asset->metadata.dimensions{
+                    width,
+                    height
+                }
+            },
+            sponsors[]{
+                _key,
+                tier,
+                sponsor->{
+                    name,
+                    logo
+                }
+            }
+        }`,
     );
 
     return pages.map((page) => {
         const cleanSlug = page.slug.current.replace(/^\/|\/$/g, "");
 
         return {
-            params: {
-                slug: cleanSlug
-            },
-            props: {
-                pageData: page
-            }
+            params: { slug: cleanSlug },
+            props: { pageData: page },
         };
     });
 }
@@ -82,12 +101,12 @@ const { pageData } = Astro.props;
 const breadcrumbs = [
     {
         link: "/events",
-        name: "Events"
+        name: "Events",
     },
     {
         link: "",
-        name: "June Jam"
-    }
+        name: "June Jam",
+    },
 ];
 ---
 
@@ -106,45 +125,56 @@ const breadcrumbs = [
             </div>
             <h2>Key Details</h2>
             <ul class="list-disc marker:text-slate-500 ml-4 list-inside">
-                {pageData.details.map((detail) =>
-                    <li set:html={detail} />)}
+                {pageData.details.map((detail) => (
+                    <li set:html={detail} />
+                ))}
             </ul>
 
             <div class="flex gap-x-3">
                 {pageData.signupForm && pageData.status == "open" && (
-                    <a href={pageData.signupForm} target="_blank" rel="noopener noreferrer">
+                    <a
+                        href={pageData.signupForm}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <Button className="flex gap-x-2">
                             Register
                             <ArrowRightIcon />
                         </Button>
                     </a>
                 )}
-                {pageData.directions &&
-                    <a href=`/events/${pageData.slug.current}/directions` class="w-max">
+                {pageData.directions && (
+                    <a
+                        href=`/events/${pageData.slug.current}/directions`
+                        class="w-max"
+                    >
                         <Button className="flex gap-x-2 button">
                             Directions
                             <ArrowRightIcon />
                         </Button>
                     </a>
-                }
-                {pageData.links &&
-                    <a href=`/events/${pageData.slug.current}/links` class="w-max">
+                )}
+                {pageData.links && (
+                    <a
+                        href=`/events/${pageData.slug.current}/links`
+                        class="w-max"
+                    >
                         <Button className="flex gap-x-2 button">
                             Links
                             <ArrowRightIcon />
                         </Button>
                     </a>
-                }
+                )}
             </div>
 
-            {pageData.sponsors &&
-                <div
-                    class="bg-slate-900/50 rounded-xl px-3 pb-4 pt-2 mt-2 border-white/15 border w-full gap-3 flex flex-col">
+            {pageData.sponsors && (
+                <div class="bg-slate-900/50 rounded-xl px-3 pb-4 pt-2 mt-2 border-white/15 border w-full gap-3 flex flex-col">
                     <div class="text-xs justify-between flex">
-                        <p>
-                            Proudly supported by:
-                        </p>
-                        <a href="/partners" class="hover:underline flex items-center justify-center gap-x-1">
+                        <p>Proudly supported by:</p>
+                        <a
+                            href="/partners"
+                            class="hover:underline flex items-center justify-center gap-x-1"
+                        >
                             See More
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -164,23 +194,35 @@ const breadcrumbs = [
                         </a>
                     </div>
                     <div class="flex">
-                        {pageData.sponsors.filter((sponsor) => sponsor.tier === "Gold").map((sponsor) => (
-                            <div class="flex-1 flex justify-center items-center">
-                                <SanityImg raw={false} alt={sponsor.sponsor.name} asset={sponsor.sponsor.logo.asset}
-                                           className="h-10 object-contain max-w-full" />
-                            </div>
-                        ))}
+                        {pageData.sponsors
+                            .filter((sponsor) => sponsor.tier === "Gold")
+                            .map((sponsor) => (
+                                <div class="flex-1 flex justify-center items-center">
+                                    <SanityImg
+                                        raw={false}
+                                        alt={sponsor.sponsor.name}
+                                        asset={sponsor.sponsor.logo.asset}
+                                        className="h-10 object-contain max-w-full"
+                                    />
+                                </div>
+                            ))}
                     </div>
                     <div class="flex">
-                        {pageData.sponsors.filter((sponsor) => sponsor.tier === "Silver").map((sponsor) => (
-                            <div class="flex-1 flex justify-center items-center">
-                                <SanityImg raw={false} alt={sponsor.sponsor.name} asset={sponsor.sponsor.logo.asset}
-                                           className="h-10 object-contain max-w-full" />
-                            </div>
-                        ))}
+                        {pageData.sponsors
+                            .filter((sponsor) => sponsor.tier === "Silver")
+                            .map((sponsor) => (
+                                <div class="flex-1 flex justify-center items-center">
+                                    <SanityImg
+                                        raw={false}
+                                        alt={sponsor.sponsor.name}
+                                        asset={sponsor.sponsor.logo.asset}
+                                        className="h-10 object-contain max-w-full"
+                                    />
+                                </div>
+                            ))}
                     </div>
                 </div>
-            }
+            )}
 
             <div class="hidden md:flex flex-col gap-3">
                 <h2>Frequently Asked Questions</h2>
@@ -192,24 +234,24 @@ const breadcrumbs = [
                 {/* <p class="text-slate-300 font-medium">Official Prospectus</p> */}
                 <div class="embla__viewport overflow-hidden rounded-xl button">
                     <div class="embla__container flex">
-                        {
-                            pageData.prospectus?.map((slide) => (
-                                <div class="embla__slide">
-                                    <SanityImg raw={false} asset={slide.asset} alt="Prospectus Slides" />
-                                </div>
-                            ))
-                        }
+                        {pageData.prospectus?.map((slide) => (
+                            <div class="embla__slide">
+                                <SanityImg
+                                    raw={false}
+                                    asset={slide.asset}
+                                    width={slide.dimensions.width}
+                                    height={slide.dimensions.height}
+                                    alt="Prospectus Slides"
+                                />
+                            </div>
+                        ))}
                     </div>
                 </div>
-                <Button
-                    className="button embla__prev absolute md:-left-12 -left-10 top-1/2 transform -translate-y-1/2 rounded-full px-0 h-8 w-8"
-                >
+                <Button className="button embla__prev absolute md:-left-12 -left-10 top-1/2 transform -translate-y-1/2 rounded-full px-0 h-8 w-8">
                     <ArrowLeftIcon className="w-5 h-5" />
                     <span class="sr-only">Previous slide</span>
                 </Button>
-                <Button
-                    className="button embla__next absolute md:-right-12 -right-10 top-1/2 transform -translate-y-1/2 rounded-full px-0 h-8 w-8"
-                >
+                <Button className="button embla__next absolute md:-right-12 -right-10 top-1/2 transform -translate-y-1/2 rounded-full px-0 h-8 w-8">
                     <ArrowRightIcon className="w-5 h-5" />
                     <span class="sr-only">Next slide</span>
                 </Button>
@@ -234,17 +276,29 @@ const breadcrumbs = [
     const autoplay = Autoplay();
     const embla = EmblaCarousel(emblaNode, { loop: false }, [autoplay]);
 
-    const prevButtonNode = document.querySelector(".embla__prev") as HTMLElement;
-    const nextButtonNode = document.querySelector(".embla__next") as HTMLElement;
+    const prevButtonNode = document.querySelector(
+        ".embla__prev",
+    ) as HTMLElement;
+    const nextButtonNode = document.querySelector(
+        ".embla__next",
+    ) as HTMLElement;
 
-    prevButtonNode.addEventListener("click", () => {
-        embla.scrollPrev();
-        autoplay.stop();
-    }, false);
-    nextButtonNode.addEventListener("click", () => {
-        embla.scrollNext();
-        autoplay.stop();
-    }, false);
+    prevButtonNode.addEventListener(
+        "click",
+        () => {
+            embla.scrollPrev();
+            autoplay.stop();
+        },
+        false,
+    );
+    nextButtonNode.addEventListener(
+        "click",
+        () => {
+            embla.scrollNext();
+            autoplay.stop();
+        },
+        false,
+    );
 </script>
 <style>
     .embla__slide {

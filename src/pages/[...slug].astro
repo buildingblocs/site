@@ -193,28 +193,23 @@ const formattedTitle = pageData.title
     : "";
 ---
 
-<Layout
-    title={pageData.title}
-    desc={pageData.desc}
-    breadcrumbs={breadcrumbs}
-    showInfo={!pageData.useImageHero}
->
-    {pageData.useImageHero &&
-        pageData.imageHero &&
-        pageData.imageHero.length > 0 && (
-            <Embla title={formattedTitle} desc={pageData.desc}>
-                {pageData.imageHero.map((slide: any) => (
-                    <div class="embla__slide flex min-h-[90vh] min-w-full opacity-50">
-                        <SanityImage
-                            asset={slide.asset || slide}
-                            alt={pageData.title}
-                            raw={false}
-                            className="object-cover min-h-[110vh] min-w-full"
-                        />
-                    </div>
-                ))}
-            </Embla>
-        )}
+<Layout title={pageData.title} desc={pageData.desc} breadcrumbs={breadcrumbs} showInfo={!pageData.useImageHero}>
+    {pageData.useImageHero && pageData.imageHero && pageData.imageHero.length > 0 && (
+        <Embla title={formattedTitle} desc={pageData.desc}>
+            {pageData.imageHero.map((slide: any) => (
+                <div class="embla__slide flex min-h-[90vh] min-w-full opacity-50">
+                    <SanityImage
+                        asset={slide.asset || slide}
+                        alt={pageData.title}
+                        raw={false}
+                        sizes="100vw"
+                        widths={[640, 960, 1280, 1600, 1920, 2560]}
+                        className="object-cover min-h-[110vh] min-w-full"
+                    />
+                </div>
+            ))}
+        </Embla>
+    )}
 
     {pageData.showList ? (
         <MainDirectory pages={childPages} grids={3} />
