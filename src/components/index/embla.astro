@@ -7,11 +7,15 @@ const { title, desc } = Astro.props;
 
 <style>
     h1 {
-        font-family: 'Special Gothic Expanded One', sans-serif;
+        font-family: "Special Gothic Expanded One", sans-serif;
     }
 
     .fade-to-black {
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(2, 6, 23, 1));
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0),
+            rgba(2, 6, 23, 1)
+        );
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
         mask-image: linear-gradient(to bottom, transparent, black);
@@ -26,14 +30,13 @@ const { title, desc } = Astro.props;
     }
 </style>
 <div class="relative">
-    <div
-        class="z-10 text-white absolute top-0 left-0 h-screen w-full flex items-end pb-10 p-3"
-    >
+    <div class="z-10 text-white absolute top-0 left-0 h-screen w-full flex items-end pb-10 p-3">
         <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center w-full mx-auto pl-3 sm:pl-5">
-            <h1 class="text-5xl sm:text-6xl font-medium w-full" set:html={title} />
-            <p class="max-w-xl mt-4 mb-2">
-                {desc}
-            </p>
+            <h1
+                class="text-4xl sm:text-6xl font-medium w-full"
+                set:html={title}
+            />
+            <p class="max-w-xl mt-4 mb-2">{desc}</p>
         </div>
     </div>
     <div class="embla overflow-hidden flex h-[110vh]">

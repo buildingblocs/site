@@ -29,17 +29,18 @@ const isHome = Astro.url.pathname === "/";
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <title>{title} | BuildingBloCS</title>
     </head>
-    <body class:list={["bg-slate-950", !isHome && "pt-20!"]}>
+    <!-- pt is marked impt else layout will shift on mobile nav opening?? -->
+    <body class:list={["bg-slate-950", !isHome && "pt-5! sm:pt-20!"]}>
         <Nav client:load data={nav} />
-        {
-            showInfo && (
-                <div class="max-w-6xl mx-auto px-6 flex flex-col gap-y-2">
+        {showInfo && (
+            <div class="max-w-6xl mx-auto px-6 flex flex-col gap-y-2">
+                <div class="flex flex-col gap-y-2 mr-30">
                     <SiteBreadcrumb breadcrumb={breadcrumbs} />
                     <h1>{title}</h1>
-                    <p>{desc}</p>
                 </div>
-            )
-        }
+                <p>{desc}</p>
+            </div>
+        )}
         <Gradient />
         <div class="min-h-[calc(100vh-14rem)]">
             <slot />
