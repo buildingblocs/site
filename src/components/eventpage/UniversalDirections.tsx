@@ -74,10 +74,10 @@ function StepsList({ steps }: { steps: Step[] }) {
 export default function UniversalDirections({ data }: { data: Day[] }) {
     return (
         <Tabs className="my-5 flex-col">
-            <TabsList className="w-full gap-x-1 rounded-[calc(1rem)] bg-slate-900 border border-white/15">
+            <TabsList className="tab-list">
                 {data.map((day) => (
                     <TabsTrigger key={day._key}
-                                 className="w-full button bg-slate-700 hover:bg-slate-800 data-[state=active]:bg-slate-800/75"
+                                 className="tab-trigger"
                                  value={day._key}>
                         {day.day}
                     </TabsTrigger>
@@ -89,10 +89,10 @@ export default function UniversalDirections({ data }: { data: Day[] }) {
                     <Tabs
                         className="flex-col gap-x-1">
                         <TabsList
-                            className="w-full gap-x-1 rounded-[calc(1rem)] bg-slate-900 border border-white/15">
+                            className="tab-list">
                             {day.tracks.map((track) => (
                                 <TabsTrigger key={track._key} value={track._key}
-                                             className="w-full button bg-slate-700 hover:bg-slate-800 data-[state=active]:bg-slate-800/75">
+                                             className="tab-trigger">
                                     {track.track}
                                 </TabsTrigger>
                             ))}
@@ -103,12 +103,12 @@ export default function UniversalDirections({ data }: { data: Day[] }) {
                                 {track.methods && track.methods.length > 0 ? (
                                     <Tabs className="flex-col">
                                         <TabsList
-                                            className="flex-wrap w-full gap-1 rounded-[calc(1rem)] bg-slate-900 border border-white/15">
+                                            className="tab-list-wrap">
                                             {track.methods.map((method) => (
                                                 <TabsTrigger
                                                     key={method._key}
                                                     value={method._key}
-                                                    className="flex-1 button bg-slate-700 hover:bg-slate-800 data-[state=active]:bg-slate-800/75"
+                                                    className="tab-trigger"
                                                 >
                                                     {method.methodName}
                                                 </TabsTrigger>

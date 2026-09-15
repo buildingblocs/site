@@ -12,8 +12,7 @@ type FooterData = {
     aboutPages: Array<{ name?: string; slug?: { current: string } }>;
 };
 
-const { mainPages, social, events, aboutPages } =
-    await sanityClient.fetch<FooterData>(`{
+const { mainPages, social, events } = await sanityClient.fetch<FooterData>(`{
     "mainPages": *[_type == "siteInfo"][0].footer.main,
     "social": *[_type == "siteInfo"][0].footer.social,
     "events": *[_type == "event"]{name, slug},
@@ -45,7 +44,7 @@ const { mainPages, social, events, aboutPages } =
 
         <div class="flex gap-x-10 mr-20 px-2 sm:px-0 flex-col sm:flex-row">
             <ul class="mt-6 flex flex-col gap-2">
-                <li class="font-medium text-xl">
+                <li class="font-medium text-xl hover:underline">
                     <a href="/events">Events</a>
                 </li>
                 {events
@@ -63,7 +62,7 @@ const { mainPages, social, events, aboutPages } =
             </ul>
 
             <ul class="mt-6 flex flex-col gap-2">
-                <li class="font-medium text-xl">
+                <li class="font-medium text-xl hover:underline">
                     <a href="/about-us">About Us</a>
                 </li>
                 <!-- {aboutPages.filter((aboutPage) => !aboutPage.slug?.current.startsWith("/")).map((aboutPage) => (
