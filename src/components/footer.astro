@@ -16,12 +16,14 @@ type SanityPage = {
     };
 };
 
-const { social, rawPages } = await sanityClient.fetch<{
+const { social, rawPages, events } = await sanityClient.fetch<{
     social: NonNullable<SiteInfo["footer"]>["social"];
     rawPages: SanityPage[];
+    events: { name: string; slug: { current: string } }[];
 }>(`{
     "social": *[_type == "siteInfo"][0].footer.social,
-    "rawPages": *[_type == "page"]
+    "rawPages": *[_type == "page"],
+    "events": *[_type == "event" && defined(slug.current) && defined(name)]{name, slug}
 }`);
 
 const cleanId = (id: string): string => id.replace(/^drafts\./, "");
@@ -113,6 +115,15 @@ topLevelPages.forEach((page: SanityPage) => {
             url: pageUrl,
         });
     }
+});
+
+sections.push({
+    title: "Events",
+    url: "/events",
+    children: (events || []).map((event) => ({
+        title: event.name,
+        url: `/events/${event.slug.current}`,
+    })),
 });
 
 // Ensure "Home" is always first in standalone links
