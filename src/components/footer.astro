@@ -5,19 +5,128 @@ import ImageAstroComponent from "./sanity/Image.astro";
 import { Image } from "astro:assets";
 import type { SiteInfo } from "@/sanity.types.ts";
 
-type FooterData = {
-    mainPages: NonNullable<SiteInfo["footer"]>["main"];
-    social: NonNullable<SiteInfo["footer"]>["social"];
-    events: Array<{ name?: string; slug?: { current: string } }>;
-    aboutPages: Array<{ name?: string; slug?: { current: string } }>;
+type SanityPage = {
+    _id: string;
+    title: string;
+    parent?: {
+        _ref?: string;
+    };
+    slug?: {
+        current?: string;
+    };
 };
 
-const { mainPages, social, events } = await sanityClient.fetch<FooterData>(`{
-    "mainPages": *[_type == "siteInfo"][0].footer.main,
+const { social, rawPages } = await sanityClient.fetch<{
+    social: NonNullable<SiteInfo["footer"]>["social"];
+    rawPages: SanityPage[];
+}>(`{
     "social": *[_type == "siteInfo"][0].footer.social,
-    "events": *[_type == "event"]{name, slug},
-    "aboutPages": *[_type == "about"]{name, slug}
+    "rawPages": *[_type == "page"]
 }`);
+
+const cleanId = (id: string): string => id.replace(/^drafts\./, "");
+
+const pageMap = new Map<string, SanityPage>();
+(rawPages || []).forEach((page: SanityPage) => {
+    if (page._id) {
+        pageMap.set(cleanId(page._id), page);
+        pageMap.set(page._id, page);
+    }
+});
+
+function getPagePath(page: SanityPage): string {
+    const segments: string[] = [];
+    let currentId: string | undefined = page._id;
+    const visited = new Set<string>();
+
+    while (typeof currentId === "string" && currentId.length > 0) {
+        const idToClean: string = currentId;
+        const cleanedId: string = cleanId(idToClean);
+        if (visited.has(cleanedId)) break;
+        visited.add(cleanedId);
+
+        const currentPage: SanityPage | undefined = pageMap.get(cleanedId) || pageMap.get(idToClean);
+        if (!currentPage) break;
+
+        const rawSlug = currentPage.slug?.current;
+        const cleanSlug = rawSlug ? rawSlug.replace(/^\/|\/$/g, "") : "";
+        if (cleanSlug) {
+            segments.unshift(cleanSlug);
+        }
+
+        currentId = currentPage.parent?._ref;
+    }
+
+    return segments.length > 0 ? `/${segments.join("/")}` : "/";
+}
+
+// Find set of page IDs that are parents to at least one page
+const parentIdSet = new Set<string>();
+(rawPages || []).forEach((page: SanityPage) => {
+    if (page.parent?._ref) {
+        parentIdSet.add(cleanId(page.parent._ref));
+    }
+});
+
+type FooterLink = {
+    title: string;
+    url: string;
+};
+
+type FooterSection = {
+    title: string;
+    url: string;
+    children: FooterLink[];
+};
+
+const standaloneLinks: FooterLink[] = [];
+const sections: FooterSection[] = [];
+
+// Process top-level pages (pages without a parent)
+const topLevelPages = (rawPages || []).filter((page: SanityPage) => !page.parent?._ref);
+
+topLevelPages.forEach((page: SanityPage) => {
+    const cId = cleanId(page._id);
+    const pageUrl = getPagePath(page);
+    const pageTitle = page.title;
+
+    if (parentIdSet.has(cId)) {
+        // Page has subdirectories -> group as section
+        const directChildren = (rawPages || []).filter((child: SanityPage) => {
+            return child.parent?._ref && cleanId(child.parent._ref) === cId;
+        });
+
+        const childLinks: FooterLink[] = directChildren.map((child: SanityPage) => ({
+            title: child.title,
+            url: getPagePath(child),
+        }));
+
+        sections.push({
+            title: pageTitle,
+            url: pageUrl,
+            children: childLinks,
+        });
+    } else {
+        // Page has no subdirectories -> standalone
+        standaloneLinks.push({
+            title: pageTitle,
+            url: pageUrl,
+        });
+    }
+});
+
+// Ensure "Home" is always first in standalone links
+const homeIndex = standaloneLinks.findIndex(
+    (link) => link.title.toLowerCase() === "home" || link.url === "/",
+);
+
+let finalStandaloneLinks: FooterLink[] = [];
+if (homeIndex !== -1) {
+    const [homeLink] = standaloneLinks.splice(homeIndex, 1);
+    finalStandaloneLinks = [homeLink, ...standaloneLinks];
+} else {
+    finalStandaloneLinks = [{ title: "Home", url: "/" }, ...standaloneLinks];
+}
 ---
 
 <footer class="max-w-6xl mx-auto mb-8 px-5 mt-20">
@@ -32,9 +141,9 @@ const { mainPages, social, events } = await sanityClient.fetch<FooterData>(`{
                 />
             </a>
             <ul class="flex gap-x-4 ml-2 text-slate-200 flex-col sm:flex-row gap-y-2">
-                {mainPages?.map((page) => (
+                {finalStandaloneLinks.map((page) => (
                     <li>
-                        <a href={page.externalLink} class="hover:underline">
+                        <a href={page.url} class="hover:underline">
                             {page.title}
                         </a>
                     </li>
@@ -43,56 +152,35 @@ const { mainPages, social, events } = await sanityClient.fetch<FooterData>(`{
         </div>
 
         <div class="flex gap-x-10 mr-20 px-2 sm:px-0 flex-col sm:flex-row">
-            <ul class="mt-6 flex flex-col gap-2">
-                <li class="font-medium text-xl hover:underline">
-                    <a href="/events">Events</a>
-                </li>
-                {events
-                    .filter((event) => !event.slug?.current.startsWith("/"))
-                    .map((event) => (
+            {sections.map((section) => (
+                <ul class="mt-6 flex flex-col gap-2">
+                    <li class="font-medium text-xl hover:underline">
+                        <a href={section.url}>{section.title}</a>
+                    </li>
+                    {section.children.map((child) => (
                         <li class="flex flex-col gap-1">
                             <a
-                                href={`/events/${event.slug?.current}`}
+                                href={child.url}
                                 class="hover:underline text-slate-200"
                             >
-                                {event.name}
+                                {child.title}
                             </a>
                         </li>
                     ))}
-            </ul>
-
-            <ul class="mt-6 flex flex-col gap-2">
-                <li class="font-medium text-xl hover:underline">
-                    <a href="/about-us">About Us</a>
-                </li>
-                <!-- {aboutPages.filter((aboutPage) => !aboutPage.slug?.current.startsWith("/")).map((aboutPage) => (
-                    <li class="flex flex-col gap-1">
-                        <a href={`/about-us/${aboutPage.slug?.current}`} class="hover:underline text-slate-200">
-                            {aboutPage.name}
-                        </a>
-                    </li>
-                ))} -->
-                <li class="flex flex-col gap-1">
-                    <a
-                        href={`/about-us/archive`}
-                        class="hover:underline text-slate-200"
-                    >
-                        Archive
-                    </a>
-                </li>
-            </ul>
+                </ul>
+            ))}
         </div>
     </div>
 
     <ul class="flex ml-2 mt-6 gap-x-6">
         {social?.map((page) => (
             <li>
-                <a aria-label=`Our ${page.title}` href={page.link}>
+                <a aria-label={`Our ${page.title}`} href={page.link}>
                     {page.icon?.asset && (
                         <ImageAstroComponent
                             raw
                             asset={page.icon.asset}
-                            alt=`Our ${page.title}`
+                            alt={`Our ${page.title}`}
                         />
                     )}
                 </a>
