@@ -25,7 +25,7 @@ type TimelineType = TimelineTrack[];
 export default function Timeline({ timeline }: { timeline: TimelineType }) {
     const outerTabs = timeline.map((trackItem) => (
         <TabsTrigger value={trackItem._key} key={trackItem._key}
-                     className="w-full button bg-slate-700 hover:bg-slate-800 data-[state=active]:bg-slate-800/75">
+                     className="tab-trigger">
             {trackItem.track}
         </TabsTrigger>
     ));
@@ -33,10 +33,10 @@ export default function Timeline({ timeline }: { timeline: TimelineType }) {
     const content = timeline.map((trackItem) => (
         <TabsContent value={trackItem._key} key={trackItem._key}>
             <Tabs defaultValue={trackItem.days[0]?._key} className="flex-col">
-                <TabsList className="w-full gap-x-1 rounded-[calc(1rem)] bg-slate-900 border border-white/15">
+                <TabsList className="tab-list">
                     {trackItem.days.map((dayItem) => (
                         <TabsTrigger value={dayItem._key} key={dayItem._key}
-                                     className="w-full button bg-slate-700 hover:bg-slate-800 data-[state=active]:bg-slate-800/75">
+                                     className="tab-trigger">
                             {dayItem.day}
                         </TabsTrigger>
                     ))}
@@ -65,7 +65,7 @@ export default function Timeline({ timeline }: { timeline: TimelineType }) {
         <Tabs id="schedule" className="scroll-mt-10 flex-col" defaultValue={timeline[0]?._key}>
             {timeline[0]?.track &&
                 <TabsList
-                    className="w-full gap-x-1 rounded-[calc(1rem)] bg-slate-900 border border-white/15">{outerTabs}</TabsList>}
+                    className="tab-list">{outerTabs}</TabsList>}
             {content}
         </Tabs>
     );

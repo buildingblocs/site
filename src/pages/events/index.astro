@@ -2,23 +2,72 @@
 import { sanityClient } from "sanity:client";
 import Layout from "../../layout.astro";
 import MainDirectory from "@/components/directory/main.astro";
+import type { SanityImageSource } from "@sanity/image-url";
+import type { Event } from "@/sanity.types";
 
-// const content = await sanityClient.fetch(
-//     `*[name == "About Us"][0]`
-// );
+type EventSponsor = {
+    _key: string;
+    tier?: "Gold" | "Silver" | "Bronze";
+    sponsor: {
+        name: string;
+        logo: { asset: SanityImageSource };
+    };
+};
+
+type EventPage = Omit<
+    Event,
+    | "name"
+    | "slug"
+    | "excerpts"
+    | "details"
+    | "sponsors"
+    | "faqs"
+    | "prospectus"
+    | "schedule"
+> & {
+    name: string;
+    slug: { current: string };
+    excerpts: { excerpt: string };
+    details: string[];
+    sponsors: EventSponsor[];
+    faqs: Array<{ _key: string; question: string; answer: string }>;
+    prospectus?: Array<{ asset: SanityImageSource }>;
+    schedule: Array<{
+        _key: string;
+        track?: string;
+        days: Array<{
+            _key: string;
+            day: string;
+            daySchedule: Array<{
+                _key: string;
+                timing?: string;
+                title: string;
+                desc?: string;
+                author?: string;
+            }>;
+        }>;
+    }>;
+};
 
 let pages;
 
-pages = await sanityClient.fetch(
-    `*[_type == "event"]`
-);
+pages = (await sanityClient.fetch(`*[_type == "event"]`)) as EventPage[];
+
+pages = pages.map((link) => {
+    const slug = { _type: "slug", current: `events/${link.slug.current}` };
+
+    return {
+        ...link,
+        slug,
+    };
+});
 
 const breadcrumbs = [
     {
         link: "",
-        name: "Events"
-    }
-]
+        name: "Events",
+    },
+];
 ---
 
 <Layout title="Events" desc="" breadcrumbs={breadcrumbs} showInfo>

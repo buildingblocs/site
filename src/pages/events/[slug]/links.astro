@@ -15,7 +15,7 @@ interface Props {
 
 export async function getStaticPaths() {
     const pages = await sanityClient.fetch<EventLinksPage[]>(
-        `*[_type == 'event' && defined(slug.current)]{links, slug, name}`
+        `*[_type == 'event' && defined(slug.current)]{links, slug, name}`,
     );
 
     return pages.map((page) => {
@@ -23,11 +23,11 @@ export async function getStaticPaths() {
 
         return {
             params: {
-                slug: cleanSlug
+                slug: cleanSlug,
             },
             props: {
-                pageData: page
-            }
+                pageData: page,
+            },
         };
     });
 }
@@ -48,23 +48,23 @@ const links = pageData.links.map((link) => {
     return {
         ...link,
         host,
-        isExternal
+        isExternal,
     };
 });
 
 const breadcrumbs = [
     {
         link: "",
-        name: "Events"
+        name: "Events",
     },
     {
         link: `/events/${pageData.slug.current}`,
-        name: pageData.name
+        name: pageData.name,
     },
     {
         link: "",
-        name: "Links"
-    }
+        name: "Links",
+    },
 ];
 ---
 

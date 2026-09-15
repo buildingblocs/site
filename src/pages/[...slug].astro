@@ -27,9 +27,8 @@ type SanityPage = {
 
 export async function getStaticPaths() {
     // 1. Fetch All Pages (Single Request)
-    const rawPages = await sanityClient.fetch<SanityPage[]>(
-        `*[_type == "page"]`
-    );
+    const rawPages =
+        await sanityClient.fetch<SanityPage[]>(`*[_type == "page"]`);
 
     if (!rawPages || rawPages.length === 0) {
         return [];
@@ -55,12 +54,15 @@ export async function getStaticPaths() {
             const idToClean: string = currentId;
             const cleanCurrentId: string = idToClean.replace(/^drafts\./, "");
             if (visited.has(cleanCurrentId)) {
-                console.warn(`Circular reference detected in page parent hierarchy for page ID: ${currentId}`);
+                console.warn(
+                    `Circular reference detected in page parent hierarchy for page ID: ${currentId}`,
+                );
                 break;
             }
             visited.add(cleanCurrentId);
 
-            const currentPage: SanityPage | undefined = pageMap.get(cleanCurrentId) || pageMap.get(idToClean);
+            const currentPage: SanityPage | undefined =
+                pageMap.get(cleanCurrentId) || pageMap.get(idToClean);
             if (!currentPage) break;
 
             const rawSlug = currentPage.slug?.current;
@@ -95,7 +97,8 @@ export async function getStaticPaths() {
             if (visited.has(cleanCurrId)) break;
             visited.add(cleanCurrId);
 
-            const currPage: SanityPage | undefined = pageMap.get(cleanCurrId) || pageMap.get(idToClean);
+            const currPage: SanityPage | undefined =
+                pageMap.get(cleanCurrId) || pageMap.get(idToClean);
             if (!currPage) break;
 
             chain.unshift(currPage);
@@ -115,20 +118,30 @@ export async function getStaticPaths() {
             const itemPath = pagePaths.get(chainItem._id) || "";
             return {
                 name: chainItem.title,
-                link: isLast ? "" : (itemPath ? `/${itemPath}` : "/")
+                link: isLast ? "" : itemPath ? `/${itemPath}` : "/",
             };
         });
 
         // If page has showList, collect direct child pages with resolved paths
-        let childPages: Array<{ title: string; desc?: string; slug: { current: string } }> = [];
+        let childPages: Array<{
+            title: string;
+            desc?: string;
+            slug: { current: string };
+        }> = [];
         if (page.showList) {
             const cleanPageId = page._id.replace(/^drafts\./, "");
             childPages = rawPages
                 .filter((child) => {
                     const childParentRef = child.parent?._ref;
                     if (!childParentRef) return false;
-                    const cleanChildParentRef = childParentRef.replace(/^drafts\./, "");
-                    return cleanChildParentRef === cleanPageId || childParentRef === page._id;
+                    const cleanChildParentRef = childParentRef.replace(
+                        /^drafts\./,
+                        "",
+                    );
+                    return (
+                        cleanChildParentRef === cleanPageId ||
+                        childParentRef === page._id
+                    );
                 })
                 .map((child) => {
                     const childPath = pagePaths.get(child._id) || "";
@@ -136,21 +149,21 @@ export async function getStaticPaths() {
                         title: child.title,
                         desc: child.desc,
                         slug: {
-                            current: childPath ? `/${childPath}` : "/"
-                        }
+                            current: childPath ? `/${childPath}` : "/",
+                        },
                     };
                 });
         }
 
         return {
             params: {
-                slug: paramSlug
+                slug: paramSlug,
             },
             props: {
                 pageData: page,
                 breadcrumbs,
-                childPages
-            }
+                childPages,
+            },
         };
     });
 }
@@ -158,7 +171,11 @@ export async function getStaticPaths() {
 interface Props {
     pageData: SanityPage;
     breadcrumbs: Array<{ link: string; name: string }>;
-    childPages: Array<{ title: string; desc?: string; slug: { current: string } }>;
+    childPages: Array<{
+        title: string;
+        desc?: string;
+        slug: { current: string };
+    }>;
 }
 
 const { pageData, breadcrumbs, childPages } = Astro.props;
@@ -167,35 +184,47 @@ const components = {
     type: {
         columnLayout: ColumnLayout,
         blockImage: ContentImg,
-        imageCover: ImageCover
-    }
+        imageCover: ImageCover,
+    },
 };
 
-const formattedTitle = pageData.title ? pageData.title.replace(", ", ",<br>") : "";
+const formattedTitle = pageData.title
+    ? pageData.title.replace(", ", ",<br>")
+    : "";
 ---
 
-<Layout title={pageData.title} desc={pageData.desc} breadcrumbs={breadcrumbs} showInfo={!pageData.useImageHero}>
-    {pageData.useImageHero && pageData.imageHero && pageData.imageHero.length > 0 && (
-        <Embla title={formattedTitle} desc={pageData.desc}>
-            {pageData.imageHero.map((slide: any) => (
-                <div class="embla__slide flex min-h-[90vh] min-w-full opacity-50">
-                    <SanityImage
-                        asset={slide.asset || slide}
-                        alt={pageData.title}
-                        raw={false}
-                        className="object-cover min-h-[110vh] min-w-full"
-                    />
-                </div>
-            ))}
-        </Embla>
-    )}
+<Layout
+    title={pageData.title}
+    desc={pageData.desc}
+    breadcrumbs={breadcrumbs}
+    showInfo={!pageData.useImageHero}
+>
+    {pageData.useImageHero &&
+        pageData.imageHero &&
+        pageData.imageHero.length > 0 && (
+            <Embla title={formattedTitle} desc={pageData.desc}>
+                {pageData.imageHero.map((slide: any) => (
+                    <div class="embla__slide flex min-h-[90vh] min-w-full opacity-50">
+                        <SanityImage
+                            asset={slide.asset || slide}
+                            alt={pageData.title}
+                            raw={false}
+                            className="object-cover min-h-[110vh] min-w-full"
+                        />
+                    </div>
+                ))}
+            </Embla>
+        )}
 
     {pageData.showList ? (
         <MainDirectory pages={childPages} grids={3} />
     ) : (
         pageData.content && (
             <div class="max-w-6xl px-5 mx-auto flex flex-col mt-5 gap-y-5">
-                <PortableText value={pageData.content} components={components} />
+                <PortableText
+                    value={pageData.content}
+                    components={components}
+                />
             </div>
         )
     )}

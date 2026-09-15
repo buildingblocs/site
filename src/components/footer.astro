@@ -12,7 +12,7 @@ type FooterData = {
     aboutPages: Array<{ name?: string; slug?: { current: string } }>;
 };
 
-const { mainPages, social, events, aboutPages } = await sanityClient.fetch<FooterData>(`{
+const { mainPages, social, events } = await sanityClient.fetch<FooterData>(`{
     "mainPages": *[_type == "siteInfo"][0].footer.main,
     "social": *[_type == "siteInfo"][0].footer.social,
     "events": *[_type == "event"]{name, slug},
@@ -32,64 +32,71 @@ const { mainPages, social, events, aboutPages } = await sanityClient.fetch<Foote
                 />
             </a>
             <ul class="flex gap-x-4 ml-2 text-slate-200 flex-col sm:flex-row gap-y-2">
-                {
-                    mainPages?.map((page) => (
-                        <li>
-                            <a href={page.externalLink} class="hover:underline">
-                                {page.title}
-                            </a>
-                        </li>
-                    ))
-                }
+                {mainPages?.map((page) => (
+                    <li>
+                        <a href={page.externalLink} class="hover:underline">
+                            {page.title}
+                        </a>
+                    </li>
+                ))}
             </ul>
         </div>
 
         <div class="flex gap-x-10 mr-20 px-2 sm:px-0 flex-col sm:flex-row">
             <ul class="mt-6 flex flex-col gap-2">
-                <li class="font-medium text-xl">
-                    <a href="/events">
-                        Events
-                    </a>
+                <li class="font-medium text-xl hover:underline">
+                    <a href="/events">Events</a>
                 </li>
-                {events.filter((event) => !event.slug?.current.startsWith("/")).map((event) => (
-                    <li class="flex flex-col gap-1">
-                        <a href={`/events/${event.slug?.current}`} class="hover:underline text-slate-200">
-                            {event.name}
-                        </a>
-                    </li>
-                ))}
+                {events
+                    .filter((event) => !event.slug?.current.startsWith("/"))
+                    .map((event) => (
+                        <li class="flex flex-col gap-1">
+                            <a
+                                href={`/events/${event.slug?.current}`}
+                                class="hover:underline text-slate-200"
+                            >
+                                {event.name}
+                            </a>
+                        </li>
+                    ))}
             </ul>
 
             <ul class="mt-6 flex flex-col gap-2">
-                <li class="font-medium text-xl">
-                    <a href="/about-us">
-                        About Us
-                    </a>
+                <li class="font-medium text-xl hover:underline">
+                    <a href="/about-us">About Us</a>
                 </li>
-                {aboutPages.filter((aboutPage) => !aboutPage.slug?.current.startsWith("/")).map((aboutPage) => (
+                <!-- {aboutPages.filter((aboutPage) => !aboutPage.slug?.current.startsWith("/")).map((aboutPage) => (
                     <li class="flex flex-col gap-1">
                         <a href={`/about-us/${aboutPage.slug?.current}`} class="hover:underline text-slate-200">
                             {aboutPage.name}
                         </a>
                     </li>
-                ))}
+                ))} -->
+                <li class="flex flex-col gap-1">
+                    <a
+                        href={`/about-us/archive`}
+                        class="hover:underline text-slate-200"
+                    >
+                        Archive
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
 
     <ul class="flex ml-2 mt-6 gap-x-6">
-        {
-            social?.map((page) => (
-                <li>
-                    <a
-                        aria-label=`Our ${page.title}`
-                        href={page.link}
-                    >
-                        {page.icon?.asset &&
-                            <ImageAstroComponent raw asset={page.icon.asset} alt=`Our ${page.title}` />}
-                    </a>
-                </li>
-            ))
-        }
+        {social?.map((page) => (
+            <li>
+                <a aria-label=`Our ${page.title}` href={page.link}>
+                    {page.icon?.asset && (
+                        <ImageAstroComponent
+                            raw
+                            asset={page.icon.asset}
+                            alt=`Our ${page.title}`
+                        />
+                    )}
+                </a>
+            </li>
+        ))}
     </ul>
 </footer>

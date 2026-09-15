@@ -123,7 +123,7 @@ input:hover {
     color: rgb(255, 162, 22);
 }
 
-.button {
+@utility button {
     box-shadow: 0px 24px 24px -18px inset #ffffff14, 0px 1px 0.5px 0px inset #ffffff40, 0px -1px 0.5px 0px inset #00000040, 0px 1px 2px 0px #00000024, 0px 3px 4px 0px #00000012;
 }
 
@@ -260,4 +260,16 @@ input:hover {
     p {
         @apply leading-tight;
     }
+}
+
+.tab-trigger {
+    @apply w-full hover:bg-slate-800 data-[state=active]:bg-slate-700 data-[state=active]:button
+}
+
+.tab-list {
+    @apply w-full gap-x-1 rounded-[calc(1rem)] bg-slate-900 border border-white/15
+}
+
+.tab-list-wrap {
+    @apply flex-wrap w-full gap-1 rounded-[calc(1rem)] bg-slate-900 border border-white/15
 }
