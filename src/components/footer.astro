@@ -83,6 +83,8 @@ type FooterSection = {
 
 const standaloneLinks: FooterLink[] = [];
 const sections: FooterSection[] = [];
+const getFooterTitle = (page: SanityPage, url: string): string =>
+    url === "/" ? "Home" : page.title;
 
 // Process top-level pages (pages without a parent)
 const topLevelPages = (rawPages || []).filter((page: SanityPage) => !page.parent?._ref);
@@ -90,7 +92,7 @@ const topLevelPages = (rawPages || []).filter((page: SanityPage) => !page.parent
 topLevelPages.forEach((page: SanityPage) => {
     const cId = cleanId(page._id);
     const pageUrl = getPagePath(page);
-    const pageTitle = page.title;
+    const pageTitle = getFooterTitle(page, pageUrl);
 
     if (parentIdSet.has(cId)) {
         // Page has subdirectories -> group as section
