@@ -54,7 +54,7 @@ let pages;
 pages = (await sanityClient.fetch(`*[_type == "event"]`)) as EventPage[];
 
 pages = pages.map((link) => {
-    const slug = { _type: "slug", current: `events/${link.slug.current}` };
+    const slug = { _type: "slug", current: `/events/${link.slug.current}` };
 
     return {
         ...link,
