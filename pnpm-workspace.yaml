@@ -1,3 +1,15 @@
 allowBuilds:
   esbuild: true
   sharp: true
+minimumReleaseAgeExclude:
+  - '@astrojs/react@6.0.6'
+  - astro@7.3.3
+  - '@sanity/access-ui@6.15.0'
+  - '@sanity/diff@6.15.0'
+  - '@sanity/mutator@6.15.0'
+  - '@sanity/schema@6.15.0'
+  - '@sanity/types@6.15.0'
+  - '@sanity/util@6.15.0'
+  - '@sanity/validation@6.15.0'
+  - lucide-react@1.47.0
+  - sanity@6.15.0
