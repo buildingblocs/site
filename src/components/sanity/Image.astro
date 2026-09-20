@@ -30,7 +30,8 @@ const {
     fit,
     quality,
     loading = "lazy",
-    decoding = "async"
+    decoding = "async",
+    fetchpriority = "auto",
 } = Astro.props;
 
 const options: ImageOptions = { width, height, fit, quality };
@@ -59,4 +60,5 @@ if (raw) {
     height={height}
     loading={loading}
     decoding={decoding}
+    fetchpriority={fetchpriority}
 />
