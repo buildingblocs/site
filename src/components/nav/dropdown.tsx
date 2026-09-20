@@ -1,4 +1,5 @@
 import { ChevronDownIcon } from "@radix-ui/react-icons";
+import { useState, useEffect } from "react";
 import {
     Popover,
     PopoverContent,
@@ -21,10 +22,24 @@ export default function NavDropdown({
     link: string;
     children: ReactNode;
 }) {
+
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const close = () => setOpen(false);
+
+    document.addEventListener("astro:before-preparation", close);
+    document.addEventListener("astro:after-swap", close);
+
+    return () => {
+      document.removeEventListener("astro:before-preparation", close);
+      document.removeEventListener("astro:after-swap", close);
+    };
+  }, []);
     return (
         <>
-            <Popover>
-                <PopoverTrigger className="sm:flex translate-y-0 translate-x-0 justify-start text-sm font-medium rounded-md px-2 hidden items-center gap-x-1 outline-0 group transition hover:bg-white hover:text-black data-[state=open]:hover:text-white data-[state=open]:bg-slate-700 cursor-pointer">
+            <Popover open={open} onOpenChange={setOpen}>
+                <PopoverTrigger onClick={() => setOpen(false)} className="sm:flex translate-y-0 translate-x-0 justify-start text-sm font-medium rounded-md px-2 hidden items-center gap-x-1 outline-0 group transition hover:bg-white hover:text-black data-[state=open]:hover:text-white data-[state=open]:bg-slate-700 cursor-pointer">
                     {name}
                     <ChevronDownIcon className="transition group-data-[state=open]:rotate-180 group-data-[state=open]:mt-0.5" />
                 </PopoverTrigger>

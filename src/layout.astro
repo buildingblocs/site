@@ -3,6 +3,7 @@ import "./styles.css";
 import Nav from "./components/nav/component.tsx";
 import Footer from "./components/footer.astro";
 import SiteBreadcrumb from "./components/breadcrumb";
+import { ClientRouter } from "astro:transitions";
 
 import { sanityClient } from "sanity:client";
 import Gradient from "@/components/gradient.astro";
@@ -31,7 +32,8 @@ const isHome = Astro.url.pathname === "/";
     </head>
     <!-- pt is marked impt else layout will shift on mobile nav opening?? -->
     <body class:list={["bg-slate-950", !isHome && "pt-5! sm:pt-20!"]}>
-        <Nav client:load data={nav} />
+        <ClientRouter />
+        <Nav client:load data={nav} transition:persist />
         {showInfo && (
             <div class="max-w-6xl mx-auto px-6 flex flex-col gap-y-2">
                 <div class="flex flex-col gap-y-2 mr-30">
