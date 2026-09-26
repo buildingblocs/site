@@ -4,17 +4,10 @@ import { sanityClient } from "sanity:client";
 import ImageAstroComponent from "./sanity/Image.astro";
 import { Image } from "astro:assets";
 import type { SiteInfo } from "@/sanity.types.ts";
-
-type SanityPage = {
-    _id: string;
-    title: string;
-    parent?: {
-        _ref?: string;
-    };
-    slug?: {
-        current?: string;
-    };
-};
+import {
+    buildFooterPageLinks,
+    type SanityPage,
+} from "@/lib/pages";
 
 const { social, rawPages, events } = await sanityClient.fetch<{
     social: NonNullable<SiteInfo["footer"]>["social"];
@@ -26,125 +19,10 @@ const { social, rawPages, events } = await sanityClient.fetch<{
     "events": *[_type == "event" && defined(slug.current) && defined(name)]{name, slug}
 }`);
 
-const cleanId = (id: string): string => id.replace(/^drafts\./, "");
-
-const pageMap = new Map<string, SanityPage>();
-(rawPages || []).forEach((page: SanityPage) => {
-    if (page._id) {
-        pageMap.set(cleanId(page._id), page);
-        pageMap.set(page._id, page);
-    }
-});
-
-function getPagePath(page: SanityPage): string {
-    const segments: string[] = [];
-    let currentId: string | undefined = page._id;
-    const visited = new Set<string>();
-
-    while (typeof currentId === "string" && currentId.length > 0) {
-        const idToClean: string = currentId;
-        const cleanedId: string = cleanId(idToClean);
-        if (visited.has(cleanedId)) break;
-        visited.add(cleanedId);
-
-        const currentPage: SanityPage | undefined =
-            pageMap.get(cleanedId) || pageMap.get(idToClean);
-        if (!currentPage) break;
-
-        const rawSlug = currentPage.slug?.current;
-        const cleanSlug = rawSlug ? rawSlug.replace(/^\/|\/$/g, "") : "";
-        if (cleanSlug) {
-            segments.unshift(cleanSlug);
-        }
-
-        currentId = currentPage.parent?._ref;
-    }
-
-    return segments.length > 0 ? `/${segments.join("/")}` : "/";
-}
-
-// Find set of page IDs that are parents to at least one page
-const parentIdSet = new Set<string>();
-(rawPages || []).forEach((page: SanityPage) => {
-    if (page.parent?._ref) {
-        parentIdSet.add(cleanId(page.parent._ref));
-    }
-});
-
-type FooterLink = {
-    title: string;
-    url: string;
-};
-
-type FooterSection = {
-    title: string;
-    url: string;
-    children: FooterLink[];
-};
-
-const standaloneLinks: FooterLink[] = [];
-const sections: FooterSection[] = [];
-const getFooterTitle = (page: SanityPage, url: string): string =>
-    url === "/" ? "Home" : page.title;
-
-// Process top-level pages (pages without a parent)
-const topLevelPages = (rawPages || []).filter(
-    (page: SanityPage) => !page.parent?._ref,
+const { standaloneLinks: finalStandaloneLinks, sections } = buildFooterPageLinks(
+    rawPages || [],
+    events || []
 );
-
-topLevelPages.forEach((page: SanityPage) => {
-    const cId = cleanId(page._id);
-    const pageUrl = getPagePath(page);
-    const pageTitle = getFooterTitle(page, pageUrl);
-
-    if (parentIdSet.has(cId)) {
-        // Page has subdirectories -> group as section
-        const directChildren = (rawPages || []).filter((child: SanityPage) => {
-            return child.parent?._ref && cleanId(child.parent._ref) === cId;
-        });
-
-        const childLinks: FooterLink[] = directChildren.map(
-            (child: SanityPage) => ({
-                title: child.title,
-                url: getPagePath(child),
-            }),
-        );
-
-        sections.push({
-            title: pageTitle,
-            url: pageUrl,
-            children: childLinks,
-        });
-    } else {
-        // Page has no subdirectories -> standalone
-        standaloneLinks.push({
-            title: pageTitle,
-            url: pageUrl,
-        });
-    }
-});
-
-sections.push({
-    title: "Events",
-    url: "/events",
-    children: (events || []).map((event) => ({
-        title: event.name,
-        url: `/events/${event.slug.current}`,
-    })),
-});
-
-// Ensure "Home" is always first in standalone links
-const homeIndex = standaloneLinks.findIndex(
-    (link) => link.title.toLowerCase() === "home" || link.url === "/",
-);
-
-let finalStandaloneLinks: FooterLink[] = [];
-if (homeIndex !== -1) {
-    const [homeLink] = standaloneLinks.splice(homeIndex, 1);
-    finalStandaloneLinks = [homeLink, ...standaloneLinks];
-} else {
-    finalStandaloneLinks = [{ title: "Home", url: "/" }, ...standaloneLinks];
-}
 ---
 
 <footer class="max-w-6xl mx-auto mb-8 px-5 mt-20">
