@@ -12,18 +12,25 @@ export interface FAQItem {
 }
 
 interface EventAccordionProps {
-  faq?: FAQItem[]   // used by slug.astro
-  faqs?: FAQItem[]  // incase it uses faqs
+  faq?: FAQItem[]
+  faqs?: FAQItem[]
+  items?: FAQItem[]
+  // Supports PortableText / Sanity Block rendering
+  value?: {
+    faqs?: FAQItem[]
+    items?: FAQItem[]
+  }
 }
 
-export default function Faq({ faq, faqs }: EventAccordionProps) {
-  const items = faq || faqs
+export default function Faq({ faq, faqs, items, value }: EventAccordionProps) {
+  //  handle direct props (faq, faqs, items) or Sanity PortableText block (value)
+  const list = faq || faqs || items || value?.faqs || value?.items
 
-  if (!items || items.length === 0) return null
+  if (!list || list.length === 0) return null
 
   return (
     <Accordion type="single" collapsible className="w-full">
-      {items.map((item) => (
+      {list.map((item) => (
         <AccordionItem key={item._key} value={item._key}>
           <AccordionTrigger className="text-left font-medium">
             {item.question}
