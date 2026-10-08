@@ -1,19 +1,38 @@
 import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger
-} from "@/components/ui/accordion";
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
-export default function Faq({ faq }: { faq: Array<{ question: string; answer: string; _key: string; }> }) {
-    const faqs = faq.map((faq) =>
-        <AccordionItem className=" border-white/15 border-b last:border-b-0" value={faq.question} key={faq._key}>
-            <AccordionTrigger>{faq.question}</AccordionTrigger>
-            <AccordionContent>
-                <div className="prose prose-invert" dangerouslySetInnerHTML={{ __html: faq.answer }} />
-            </AccordionContent>
-        </AccordionItem>);
-    return (
-        <Accordion className="border border-white/15" type="multiple">{faqs}</Accordion>
-    );
+export interface FAQItem {
+  _key: string
+  question: string
+  answer: string
+}
+
+interface EventAccordionProps {
+  faq?: FAQItem[]   // used by slug.astro
+  faqs?: FAQItem[]  // incase it uses faqs
+}
+
+export default function Faq({ faq, faqs }: EventAccordionProps) {
+  const items = faq || faqs
+
+  if (!items || items.length === 0) return null
+
+  return (
+    <Accordion type="single" collapsible className="w-full">
+      {items.map((item) => (
+        <AccordionItem key={item._key} value={item._key}>
+          <AccordionTrigger className="text-left font-medium">
+            {item.question}
+          </AccordionTrigger>
+          <AccordionContent className="whitespace-pre-line text-muted-foreground">
+            {item.answer}
+          </AccordionContent>
+        </AccordionItem>
+      ))}
+    </Accordion>
+  )
 }
