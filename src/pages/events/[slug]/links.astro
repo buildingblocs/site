@@ -6,7 +6,7 @@ import MainDirectory from "@/components/directory/main.astro";
 type EventLinksPage = {
     name: string;
     slug: { current: string };
-    links: Array<{ _key: string; title?: string; url: string }>;
+    links?: Array<{ _key: string; title?: string; url: string }>;
 };
 
 interface Props {
@@ -34,23 +34,27 @@ export async function getStaticPaths() {
 
 const { pageData } = Astro.props;
 
-const links = pageData.links.map((link) => {
-    let host;
+const hasLinks = pageData.links && pageData.links.length > 0;
 
-    try {
-        host = new URL(link.url).hostname.replace(/^www\./, "");
-    } catch {
-        host = link.url.replace(/^\//, "");
-    }
+const links = hasLinks
+    ? pageData.links!.map((link) => {
+          let host;
 
-    const isExternal = /^https?:\/\//.test(link.url);
+          try {
+              host = new URL(link.url).hostname.replace(/^www\./, "");
+          } catch {
+              host = link.url.replace(/^\//, "");
+          }
 
-    return {
-        ...link,
-        host,
-        isExternal,
-    };
-});
+          const isExternal = /^https?:\/\//.test(link.url);
+
+          return {
+              ...link,
+              host,
+              isExternal,
+          };
+      })
+    : [];
 
 const breadcrumbs = [
     {
@@ -74,5 +78,13 @@ const breadcrumbs = [
     breadcrumbs={breadcrumbs}
     showInfo
 >
-    <MainDirectory pages={links} grids={3} parent="events" />
+    {
+        hasLinks ? (
+            <MainDirectory pages={links} grids={3} parent="events" />
+        ) : (
+            <div class="max-w-6xl px-5 mx-auto my-10 text-center text-slate-400">
+                <p class="text-lg">No links for now</p>
+            </div>
+        )
+    }
 </Layout>
