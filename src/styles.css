@@ -258,10 +258,6 @@ input:hover {
     h3 {
         @apply text-2xl font-medium;
     }
-
-    p {
-        @apply leading-tight;
-    }
 }
 
 .tab-trigger {

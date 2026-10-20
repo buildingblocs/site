@@ -94,7 +94,7 @@ export default function Nav({ data }: { data: NavQuery }) {
                     <Separator className="bg-white/15 my-1 sm:block hidden" />
                     <a
                         href="/about-us"
-                        className="hover:bg-slate-800/75 sm:p-2 text-md sm:text-sm rounded-lg transition no-underline! flex items-center justify-start gap-x-2 sm:gap-x-1"
+                        className="hover:bg-slate-800/75 sm:p-2 text-base rounded-lg transition no-underline! flex items-center justify-start gap-x-2 sm:gap-x-1"
                     >
                         Pages in About Us
                         <ArrowRightIcon className="min-w-5 h-5 sm:min-w-3" />
@@ -127,7 +127,7 @@ export default function Nav({ data }: { data: NavQuery }) {
                     <Separator className="bg-white/15 my-1 sm:block hidden" />
                     <a
                         href="/about-us/archive"
-                        className="sm:font-semibold hover:bg-slate-800/75 sm:p-2 text-md sm:text-sm rounded-lg transition no-underline! flex justify-start items-center gap-x-2 sm:gap-x-1"
+                        className="sm:font-semibold hover:bg-slate-800/75 sm:p-2 text-base rounded-lg transition no-underline! flex justify-start items-center gap-x-2 sm:gap-x-1"
                     >
                         Past Events
                         <ArrowRightIcon className="min-w-5 h-5 sm:min-w-3" />
@@ -135,7 +135,7 @@ export default function Nav({ data }: { data: NavQuery }) {
                     <Separator className="bg-white/15 my-1 sm:block hidden" />
                     <a
                         href="/events"
-                        className="hover:bg-slate-800/75 sm:p-2 text-md sm:text-sm rounded-lg transition no-underline! flex justify-start items-center gap-x-2 sm:gap-x-1"
+                        className="hover:bg-slate-800/75 sm:p-2 text-base rounded-lg transition no-underline! flex justify-start items-center gap-x-2 sm:gap-x-1"
                     >
                         Pages in Events
                         <ArrowRightIcon className="min-w-5 h-5 sm:min-w-3" />
@@ -195,7 +195,7 @@ export default function Nav({ data }: { data: NavQuery }) {
                                 <HamburgerMenuIcon className="w-6 h-6" />
                             </SheetTrigger>
                             <SheetContent>
-                                <div className="px-5 flex flex-col justify-center h-full text-3xl gap-y-2 font-medium relative bg-slate-800">
+                                <div className="px-5 flex flex-col justify-center h-full text-xl gap-y-2 font-medium relative bg-slate-800">
                                     {Links()}
                                 </div>
                             </SheetContent>
@@ -209,7 +209,7 @@ export default function Nav({ data }: { data: NavQuery }) {
                         className="h-15 flex sticky top-0 z-20"
                         href={data.siteInfo.nav.featured.externalLink}
                     >
-                        <div className="px-4 pr-2 rounded-full mt-4 bg-slate-900/50 hover:bg-slate-800/50 transition backdrop-filter backdrop-blur-[2px] button flex items-center gap-x-3 text-md sm:text-sm font-bold">
+                        <div className="px-4 pr-2 rounded-full mt-4 bg-slate-900/50 hover:bg-slate-800/50 transition backdrop-filter backdrop-blur-[2px] button flex items-center gap-x-3 text-md font-bold">
                             <p>{data.siteInfo.nav.featured.message}</p>
                             <div className="bg-[#FF9900] rounded-full p-1 px-1.5 transition flex gap-x-2 items-center text-black">
                                 <ArrowRightIcon className="w-4 h-5" />

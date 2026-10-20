@@ -22,24 +22,26 @@ export default function NavDropdown({
     link: string;
     children: ReactNode;
 }) {
+    const [open, setOpen] = useState(false);
 
-  const [open, setOpen] = useState(false);
+    useEffect(() => {
+        const close = () => setOpen(false);
 
-  useEffect(() => {
-    const close = () => setOpen(false);
+        document.addEventListener("astro:before-preparation", close);
+        document.addEventListener("astro:after-swap", close);
 
-    document.addEventListener("astro:before-preparation", close);
-    document.addEventListener("astro:after-swap", close);
-
-    return () => {
-      document.removeEventListener("astro:before-preparation", close);
-      document.removeEventListener("astro:after-swap", close);
-    };
-  }, []);
+        return () => {
+            document.removeEventListener("astro:before-preparation", close);
+            document.removeEventListener("astro:after-swap", close);
+        };
+    }, []);
     return (
         <>
             <Popover open={open} onOpenChange={setOpen}>
-                <PopoverTrigger onClick={() => setOpen(false)} className="sm:flex translate-y-0 translate-x-0 justify-start text-sm font-medium rounded-md px-2 hidden items-center gap-x-1 outline-0 group transition hover:bg-white hover:text-black data-[state=open]:hover:text-white data-[state=open]:bg-slate-700 cursor-pointer">
+                <PopoverTrigger
+                    onClick={() => setOpen(false)}
+                    className="sm:flex translate-y-0 translate-x-0 justify-start text-sm font-medium rounded-md px-2 hidden items-center gap-x-1 outline-0 group transition hover:bg-white hover:text-black data-[state=open]:hover:text-white data-[state=open]:bg-slate-700 cursor-pointer"
+                >
                     {name}
                     <ChevronDownIcon className="transition group-data-[state=open]:rotate-180 group-data-[state=open]:mt-0.5" />
                 </PopoverTrigger>
@@ -49,10 +51,12 @@ export default function NavDropdown({
             </Popover>
             <Accordion className="sm:hidden flex" type="multiple">
                 <AccordionItem value={name} className="transition-all">
-                    <AccordionTrigger className="px-2 py-0 flex items-center no-underline! text-3xl">
-                      {name}
+                    <AccordionTrigger className="px-2 py-0 flex items-center no-underline! text-xl">
+                        {name}
                     </AccordionTrigger>
-                    <AccordionContent className="py-2 text-xl font-normal flex flex-col gap-y-1">{children}</AccordionContent>
+                    <AccordionContent className="py-2 text-xl font-normal flex flex-col gap-y-1">
+                        {children}
+                    </AccordionContent>
                 </AccordionItem>
             </Accordion>
         </>

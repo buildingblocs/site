@@ -63,7 +63,7 @@ export default function Timeline({ timeline }: { timeline: TimelineType }) {
                                     <p className="text-[1.3rem] font-semibold">
                                         {ev.title}
                                     </p>
-                                    <p className="text-sm leading-normal mt-1 mb-2">
+                                    <p className="text-sm mt-1 mb-2">
                                         {ev.desc}
                                     </p>
                                     <p className="text-slate-500 text-sm">
