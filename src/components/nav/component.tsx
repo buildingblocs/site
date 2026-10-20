@@ -209,9 +209,9 @@ export default function Nav({ data }: { data: NavQuery }) {
                         className="h-15 flex sticky top-0 z-20"
                         href={data.siteInfo.nav.featured.externalLink}
                     >
-                        <div className="px-4 pr-2 rounded-full mt-4 bg-slate-900/50 hover:bg-slate-800/50 transition backdrop-filter backdrop-blur-[2px] button flex items-center gap-x-3">
+                        <div className="px-4 pr-2 rounded-full mt-4 bg-slate-900/50 hover:bg-slate-800/50 transition backdrop-filter backdrop-blur-[2px] button flex items-center gap-x-3 text-md sm:text-sm font-bold">
                             <p>{data.siteInfo.nav.featured.message}</p>
-                            <div className="bg-orange-500 rounded-full p-1 px-1.5 transition flex gap-x-2 items-center font-semibold">
+                            <div className="bg-[#FF9900] rounded-full p-1 px-1.5 transition flex gap-x-2 items-center text-black">
                                 <ArrowRightIcon className="w-4 h-5" />
                             </div>
                         </div>

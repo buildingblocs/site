@@ -16,7 +16,7 @@ type Page = {
 };
 ---
 
-<div class="max-w-6xl px-5 mx-auto flex flex-col mt-5 gap-y-5">
+<div class="max-w-6xl px-5 mx-auto flex flex-col mt-10 gap-y-5">
     <section
         class=`grid-cols-1 sm:grid-cols-2 grid gap-5 ${grids == 3 && "lg:grid-cols-3"}`
     >
@@ -28,27 +28,10 @@ type Page = {
                             ? `${page.slug.current}`
                             : `${page.url}`
                     }
-                    class="bg-slate-800/50 hover:bg-slate-700 rounded-3xl p-5 button flex flex-col gap-y-1 hover:-translate-y-2 transition"
+                    class="bg-slate-900 hover:bg-slate-800/60 rounded-3xl p-8 button flex flex-col gap-y-3 transition"
                 >
-                    <div class="flex gap-x-1 items-center">
-                        <h2>{page.name || page.title}</h2>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="lucide lucide-arrow-right-icon lucide-arrow-right"
-                        >
-                            <path d="M5 12h14" />
-                            <path d="m12 5 7 7-7 7" />
-                        </svg>
-                    </div>
-                    <p class="text-sm text-slate-400">
+                    <h3>{page.name || page.title}</h3>
+                    <p class="text-slate-400 leading-normal">
                         {page.excerpts?.excerpt && page.excerpts.excerpt}
                         {page.desc && page.desc}
                         {page.host}

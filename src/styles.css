@@ -1,7 +1,10 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
-@import "@fontsource-variable/inter";
 @import "tailwindcss";
+
+@theme inline {
+    --font-sans: var(--font-instrument);
+}
 
 html {
     scroll-behavior: smooth;
@@ -14,17 +17,17 @@ html {
 }
 
 .inner_border {
-    border: 1px solid #FFA216;
+    border: 1px solid #ffa216;
     border-radius: 10px;
-    background-color: #040C2F;
+    background-color: #040c2f;
     width: 80%;
     display: inline-block;
 }
 
 /* common queries accordion */
 .common-queries-accordion {
-    --ac-accordion-background-color: #040C2F;
-    --ac-accordion-border-color: #FFA216;
+    --ac-accordion-background-color: #040c2f;
+    --ac-accordion-border-color: #ffa216;
     width: fit-content;
 }
 
@@ -36,22 +39,22 @@ html {
 
 .common-queries-accordion .common-query-item summary:hover {
     background: none !important;
-    color: #FFA216 !important;
+    color: #ffa216 !important;
 }
 
 .common-queries-accordion .common-query-item summary:active {
-    color: #FFA216 !important;
+    color: #ffa216 !important;
     background: none !important;
 }
 
 /* focus (after click/tab) */
 .common-queries-accordion .common-query-item summary:focus {
-    color: #FFA216 !important;
+    color: #ffa216 !important;
     outline: none;
 }
 
 .common-queries-accordion .common-query-item[open] summary {
-    color: #FFA216 !important;
+    color: #ffa216 !important;
 }
 
 /*end common queries accordion */
@@ -62,8 +65,8 @@ input:hover {
 
 /*testimonials accordion*/
 .testimonial-accordion {
-    --ac-accordion-background-color: #040C2F;
-    --ac-accordion-border-color: #FFA216;
+    --ac-accordion-background-color: #040c2f;
+    --ac-accordion-border-color: #ffa216;
     width: fit-content;
 }
 
@@ -75,22 +78,22 @@ input:hover {
 
 .testimonial-accordion .testimonial-item summary:hover {
     background: none !important;
-    color: #FFA216 !important;
+    color: #ffa216 !important;
 }
 
 .testimonial-accordion .testimonial-item summary:active {
-    color: #FFA216 !important;
+    color: #ffa216 !important;
     background: none !important;
 }
 
 /* focus (after click/tab) */
 .testimonial-accordion .testimonial-item summary:focus {
-    color: #FFA216 !important;
+    color: #ffa216 !important;
     outline: none;
 }
 
 .testimonial-accordion .testimonial-item[open] summary {
-    color: #FFA216 !important;
+    color: #ffa216 !important;
 }
 
 /*end testimonial accordion */
@@ -112,11 +115,11 @@ input:hover {
 }
 
 .contact-modal p {
-    font-family: 'Courier New', Courier, Consolas, monospace;
+    font-family: "Courier New", Courier, Consolas, monospace;
 }
 
 .contact-modal a {
-    font-family: 'Courier New', Courier, Consolas, monospace;
+    font-family: "Courier New", Courier, Consolas, monospace;
     font-weight: 700;
     text-decoration: underline;
     left: 2rem;
@@ -124,7 +127,12 @@ input:hover {
 }
 
 @utility button {
-    box-shadow: 0px 24px 24px -18px inset #ffffff14, 0px 1px 0.5px 0px inset #ffffff40, 0px -1px 0.5px 0px inset #00000040, 0px 1px 2px 0px #00000024, 0px 3px 4px 0px #00000012;
+    box-shadow:
+        0px 24px 24px -18px inset #ffffff14,
+        0px 1px 0.5px 0px inset #ffffff40,
+        0px -1px 0.5px 0px inset #00000040,
+        0px 1px 2px 0px #00000024,
+        0px 3px 4px 0px #00000012;
 }
 
 @layer base {
@@ -229,18 +237,12 @@ input:hover {
         --sidebar-ring: oklch(0.556 0 0);
     }
 
-    .theme {
-        --font-heading: var(--font-sans);
-        --font-sans: 'Inter Variable', sans-serif;
-    }
-
     html {
         @apply font-sans;
     }
 }
 
 @layer base {
-
     body {
         @apply text-white;
     }
@@ -250,7 +252,7 @@ input:hover {
     }
 
     h2 {
-        @apply text-3xl font-semibold;
+        @apply text-3xl font-bold;
     }
 
     h3 {
@@ -263,13 +265,13 @@ input:hover {
 }
 
 .tab-trigger {
-    @apply w-full hover:bg-slate-800 data-[state=active]:bg-slate-700 data-[state=active]:button
+    @apply w-full hover:bg-slate-800 data-[state=active]:bg-slate-800 data-[state=active]:button;
 }
 
 .tab-list {
-    @apply w-full gap-x-1 rounded-[calc(1rem)] bg-slate-900 border border-white/15
+    @apply w-full rounded-full bg-slate-900 border border-white/15;
 }
 
 .tab-list-wrap {
-    @apply flex-wrap w-full gap-1 rounded-[calc(1rem)] bg-slate-900 border border-white/15
+    @apply flex-wrap w-full gap-1 rounded-full bg-slate-900 border border-white/15;
 }

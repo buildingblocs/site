@@ -1,45 +1,49 @@
 import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export interface FAQItem {
-  _key: string
-  question: string
-  answer: string
+    _key: string;
+    question: string;
+    answer: string;
 }
 
 interface EventAccordionProps {
-  faq?: FAQItem[]
-  faqs?: FAQItem[]
-  items?: FAQItem[]
-  // Supports PortableText / Sanity Block rendering
-  value?: {
-    faqs?: FAQItem[]
-    items?: FAQItem[]
-  }
+    faq?: FAQItem[];
+    faqs?: FAQItem[];
+    items?: FAQItem[];
+    // Supports PortableText / Sanity Block rendering
+    value?: {
+        faqs?: FAQItem[];
+        items?: FAQItem[];
+    };
 }
 
 export default function Faq({ faq, faqs, items, value }: EventAccordionProps) {
-  //  handle direct props (faq, faqs, items) or Sanity PortableText block (value)
-  const list = faq || faqs || items || value?.faqs || value?.items
+    //  handle direct props (faq, faqs, items) or Sanity PortableText block (value)
+    const list = faq || faqs || items || value?.faqs || value?.items;
 
-  if (!list || list.length === 0) return null
+    if (!list || list.length === 0) return null;
 
-  return (
-    <Accordion type="single" collapsible className="w-full">
-      {list.map((item) => (
-        <AccordionItem key={item._key} value={item._key}>
-          <AccordionTrigger className="text-left font-medium">
-            {item.question}
-          </AccordionTrigger>
-          <AccordionContent className="whitespace-pre-line text-muted-foreground">
-            {item.answer}
-          </AccordionContent>
-        </AccordionItem>
-      ))}
-    </Accordion>
-  )
+    return (
+        <Accordion type="single" collapsible className="w-full">
+            {list.map((item) => (
+                <AccordionItem
+                    key={item._key}
+                    value={item._key}
+                    className="border-slate-600"
+                >
+                    <AccordionTrigger className="text-left text-base font-medium">
+                        {item.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="whitespace-pre-line text-sm text-muted-foreground">
+                        {item.answer}
+                    </AccordionContent>
+                </AccordionItem>
+            ))}
+        </Accordion>
+    );
 }

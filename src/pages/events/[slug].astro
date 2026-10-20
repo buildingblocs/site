@@ -117,18 +117,21 @@ const breadcrumbs = [
 </style>
 
 <Layout title={pageData.name} desc={pageData.excerpts.excerpt}>
-    <div class="max-w-6xl flex mx-auto mb-10 gap-x-6 md:flex-row flex-col gap-y-10 pt-0 px-6">
-        <div class="flex-1 gap-y-4 flex flex-col">
+    <div class="max-w-6xl flex mx-auto mb-10 gap-x-8 lg:gap-x-16 md:flex-row flex-col gap-y-10 pt-0 px-6">
+        <div class="flex-1 gap-y-8 flex flex-col">
             <div class="mr-25">
                 <SiteBreadcrumb breadcrumb={breadcrumbs} />
-                <h1 class="text-5xl">{pageData.name}</h1>
+                <h1 class="text-5xl leading-14">{pageData.name}</h1>
             </div>
-            <h2>Key Details</h2>
-            <ul class="list-disc marker:text-slate-500 ml-4 list-inside">
-                {pageData.details.map((detail) => (
-                    <li set:html={detail} />
-                ))}
-            </ul>
+
+            <div class="space-y-4">
+                <h2>Key Details</h2>
+                <ul class="list-disc marker:text-slate-500 ml-4 list-inside leading-7">
+                    {pageData.details.map((detail) => (
+                        <li set:html={detail} />
+                    ))}
+                </ul>
+            </div>
 
             <div class="flex gap-x-3">
                 {pageData.signupForm && pageData.status == "open" && (
@@ -137,9 +140,12 @@ const breadcrumbs = [
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <Button className="flex gap-x-2">
+                        <Button
+                            size="lg"
+                            className="flex gap-x-2 button h-16 gap-3 px-6 text-3xl rounded-full"
+                        >
                             Register
-                            <ArrowRightIcon />
+                            <ArrowRightIcon className="size-8" />
                         </Button>
                     </a>
                 )}
@@ -148,7 +154,7 @@ const breadcrumbs = [
                         href=`/events/${pageData.slug.current}/directions`
                         class="w-max"
                     >
-                        <Button className="flex gap-x-2 button">
+                        <Button size="lg" className="flex gap-x-2 button">
                             Directions
                             <ArrowRightIcon />
                         </Button>
@@ -159,7 +165,7 @@ const breadcrumbs = [
                         href=`/events/${pageData.slug.current}/links`
                         class="w-max"
                     >
-                        <Button className="flex gap-x-2 button">
+                        <Button size="lg" className="flex gap-x-2 button">
                             Links
                             <ArrowRightIcon />
                         </Button>
@@ -224,12 +230,12 @@ const breadcrumbs = [
                 </div>
             )}
 
-            <div class="hidden md:flex flex-col gap-3">
+            <div class="hidden md:flex flex-col gap-4">
                 <h2>Frequently Asked Questions</h2>
                 <Faq client:load faq={pageData.faqs} />
             </div>
         </div>
-        <div class="flex-1 gap-y-4 flex flex-col">
+        <div class="flex-1 gap-y-10 flex flex-col">
             <div class="embla w-4/5 mx-auto relative">
                 {/* <p class="text-slate-300 font-medium">Official Prospectus</p> */}
                 <div class="embla__viewport overflow-hidden rounded-xl button">
@@ -249,17 +255,20 @@ const breadcrumbs = [
                         ))}
                     </div>
                 </div>
-                <Button className="button embla__prev absolute md:-left-12 -left-10 top-1/2 transform -translate-y-1/2 rounded-full px-0 h-8 w-8">
+                <Button className="button embla__prev absolute md:-left-12 -left-10 top-1/2 rounded-full px-0 h-8 w-8">
                     <ArrowLeftIcon className="w-5 h-5" />
                     <span class="sr-only">Previous slide</span>
                 </Button>
-                <Button className="button embla__next absolute md:-right-12 -right-10 top-1/2 transform -translate-y-1/2 rounded-full px-0 h-8 w-8">
+                <Button className="button embla__next absolute md:-right-12 -right-10 top-1/2 rounded-full px-0 h-8 w-8">
                     <ArrowRightIcon className="w-5 h-5" />
                     <span class="sr-only">Next slide</span>
                 </Button>
             </div>
-            <h2>Schedule</h2>
-            <Timeline timeline={pageData.schedule} client:load />
+
+            <div class="space-y-4">
+                <h2>Schedule</h2>
+                <Timeline timeline={pageData.schedule} client:load />
+            </div>
 
             <div class="md:hidden flex flex-col gap-y-3">
                 <h2>Frequently Asked Questions</h2>

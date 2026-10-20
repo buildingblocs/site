@@ -39,6 +39,7 @@
     "embla-carousel": "^8.6.0",
     "embla-carousel-autoplay": "^8.6.0",
     "lucide-react": "^1.47.0",
+    "prettier-plugin-astro": "^1.1.1",
     "radix-ui": "^1.6.7",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",

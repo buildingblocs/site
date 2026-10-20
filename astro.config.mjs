@@ -1,4 +1,4 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, fontProviders } from "astro/config";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import sanity from "@sanity/astro";
@@ -7,27 +7,40 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://buildingblocs.sg",
+    site: "https://buildingblocs.sg",
 
-  redirects: {
-      "/past-years": "/about-us/archive"
-  },
+    fonts: [
+        {
+            provider: fontProviders.fontsource(),
+            name: "Instrument Sans",
+            cssVariable: "--font-instrument",
+            weights: ["400 700"],
+        },
+    ],
 
-  integrations: [react(), sitemap(), sanity({
-      projectId: "oovnxnpf",
-      dataset: "production",
-      // Set useCdn to false if you're building statically.
-      useCdn: false,
-      // Optional: log server-side Sanity client requests.
-      // Modes: 'dev' | 'build' | 'always'
-      // logClientRequests: "dev"
-  })],
+    redirects: {
+        "/past-years": "/about-us/archive",
+    },
 
-  vite: {
-    plugins: [tailwindcss()]
-  },
+    integrations: [
+        react(),
+        sitemap(),
+        sanity({
+            projectId: "oovnxnpf",
+            dataset: "production",
+            // Set useCdn to false if you're building statically.
+            useCdn: false,
+            // Optional: log server-side Sanity client requests.
+            // Modes: 'dev' | 'build' | 'always'
+            // logClientRequests: "dev"
+        }),
+    ],
 
-  build: {
-    inlineStylesheets: "always",
-  },
+    vite: {
+        plugins: [tailwindcss()],
+    },
+
+    build: {
+        inlineStylesheets: "always",
+    },
 });

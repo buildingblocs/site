@@ -3,18 +3,22 @@ import {
     BreadcrumbItem,
     BreadcrumbLink,
     BreadcrumbList,
-    BreadcrumbSeparator
+    BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { Fragment } from "react";
 
 type breadcrumbs = {
     link: string;
     name: string;
-}[]
+}[];
 
-export default function SiteBreadcrumb({ breadcrumb }: { breadcrumb: breadcrumbs }) {
+export default function SiteBreadcrumb({
+    breadcrumb,
+}: {
+    breadcrumb: breadcrumbs;
+}) {
     return (
-        <Breadcrumb>
+        <Breadcrumb className="mb-4">
             <BreadcrumbList>
                 <BreadcrumbItem>
                     <BreadcrumbLink href="/">Home</BreadcrumbLink>
