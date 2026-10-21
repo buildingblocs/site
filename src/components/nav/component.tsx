@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet.tsx";
 import { Separator } from "@/components/ui/separator.tsx";
 import {
@@ -19,6 +20,20 @@ export type NavQuery = {
 };
 
 export default function Nav({ data }: { data: NavQuery }) {
+    const [openSheet, setOpenSheet] = useState(false);
+
+    useEffect(() => {
+        const close = () => setOpenSheet(false);
+
+        document.addEventListener("astro:before-preparation", close);
+        document.addEventListener("astro:after-swap", close);
+
+        return () => {
+            document.removeEventListener("astro:before-preparation", close);
+            document.removeEventListener("astro:after-swap", close);
+        };
+    }, []);
+
     type EventStatus = "open" | "closed" | "over" | undefined;
 
     type EventExcerpts =
@@ -190,12 +205,19 @@ export default function Nav({ data }: { data: NavQuery }) {
 
                     {/* start of mobile links */}
                     <div className="sm:hidden flex">
-                        <Sheet>
+                        <Sheet open={openSheet} onOpenChange={setOpenSheet}>
                             <SheetTrigger aria-label="Navigation Menu">
                                 <HamburgerMenuIcon className="w-6 h-6" />
                             </SheetTrigger>
                             <SheetContent>
-                                <div className="px-5 flex flex-col justify-center h-full text-xl gap-y-2 font-medium relative bg-slate-800">
+                                <div
+                                    onClick={(e) => {
+                                        if ((e.target as HTMLElement).closest("a")) {
+                                            setOpenSheet(false);
+                                        }
+                                    }}
+                                    className="px-5 flex flex-col justify-center h-full text-xl gap-y-2 font-medium relative bg-slate-800"
+                                >
                                     {Links()}
                                 </div>
                             </SheetContent>
