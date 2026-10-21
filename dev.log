@@ -1,0 +1,25 @@
+
+> buildingblocs@0.0.1 dev /app
+> astro dev
+
+05:53:28 [vite] connected.
+05:53:28 [types] Generated 1ms
+05:53:28 [vite] connected.
+05:53:28 [vite] Re-optimizing dependencies because vite config has changed
+05:53:28 [WARN] [vite] Failed to resolve dependency: react-compiler-runtime, present in client 'optimizeDeps.include'
+05:53:28 [WARN] [vite] Failed to resolve dependency: lodash/startCase.js, present in client 'optimizeDeps.include'
+ astro  v7.3.3 ready in 1220 ms
+┃ Local    http://localhost:4321/
+┃ Network  use --host to expose
+05:53:28 watching for file changes...
+
+ update  ▶ New version of Astro available: 7.4.1
+  Run pnpm dlx @astrojs/upgrade to update
+
+05:54:07 [200] / 116ms
+05:54:09 [vite] [optimizer] bundling dependencies...
+05:54:09 [200] /_image 68ms
+05:54:10 [vite] dependencies optimized: astro/virtual-modules/transitions-events.js, astro/virtual-modules/transitions-router.js, astro/virtual-modules/transitions-swap-functions.js, astro/virtual-modules/transitions-types.js
+05:54:13 [200] /partners 231ms
+05:54:14 [200] /partners 386ms
+ ELIFECYCLE  Command failed with exit code 143.
