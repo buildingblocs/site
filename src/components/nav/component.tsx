@@ -38,11 +38,11 @@ export default function Nav({ data }: { data: NavQuery }) {
 
     type EventExcerpts =
         | {
-              excerpt?: string;
-              openExcerpt?: string;
-              closedExcerpt?: string;
-              overExcerpt?: string;
-          }
+            excerpt?: string;
+            openExcerpt?: string;
+            closedExcerpt?: string;
+            overExcerpt?: string;
+        }
         | undefined;
 
     function getExcerpt(status: EventStatus, excerpts: EventExcerpts): string {
@@ -86,7 +86,7 @@ export default function Nav({ data }: { data: NavQuery }) {
             <>
                 <a
                     href="/partners"
-                    className="flex justify-between items-center font-medium rounded-2xl sm:rounded-md px-2 transition sm:hover:bg-white sm:hover:text-black"
+                    className="flex justify-between items-center font-medium rounded-2xl md:rounded-md px-2 transition md:hover:bg-white md:hover:text-black"
                 >
                     Our Partners
                 </a>
@@ -106,13 +106,13 @@ export default function Nav({ data }: { data: NavQuery }) {
                         name="Archive"
                         desc=""
                     />
-                    <Separator className="bg-white/15 my-1 sm:block hidden" />
+                    <Separator className="bg-white/15 my-1 md:block hidden" />
                     <a
                         href="/about-us"
-                        className="hover:bg-slate-800/75 sm:p-2 text-base rounded-lg transition no-underline! flex items-center justify-start gap-x-2 sm:gap-x-1"
+                        className="hover:bg-slate-800/75 md:p-2 text-base rounded-lg transition no-underline! flex items-center justify-start gap-x-2 md:gap-x-1"
                     >
                         Pages in About Us
-                        <ArrowRightIcon className="min-w-5 h-5 sm:min-w-3" />
+                        <ArrowRightIcon className="min-w-5 h-5 md:min-w-3" />
                     </a>
                 </NavDropdown>
 
@@ -139,21 +139,21 @@ export default function Nav({ data }: { data: NavQuery }) {
                             </span>
                         </a>
                     )}
-                    <Separator className="bg-white/15 my-1 sm:block hidden" />
+                    <Separator className="bg-white/15 my-1 md:block hidden" />
                     <a
                         href="/about-us/archive"
-                        className="sm:font-semibold hover:bg-slate-800/75 sm:p-2 text-base rounded-lg transition no-underline! flex justify-start items-center gap-x-2 sm:gap-x-1"
+                        className="md:font-semibold hover:bg-slate-800/75 md:p-2 text-base rounded-lg transition no-underline! flex justify-start items-center gap-x-2 md:gap-x-1"
                     >
                         Past Events
-                        <ArrowRightIcon className="min-w-5 h-5 sm:min-w-3" />
+                        <ArrowRightIcon className="min-w-5 h-5 md:min-w-3" />
                     </a>
-                    <Separator className="bg-white/15 my-1 sm:block hidden" />
+                    <Separator className="bg-white/15 my-1 md:block hidden" />
                     <a
                         href="/events"
-                        className="hover:bg-slate-800/75 sm:p-2 text-base rounded-lg transition no-underline! flex justify-start items-center gap-x-2 sm:gap-x-1"
+                        className="hover:bg-slate-800/75 md:p-2 text-base rounded-lg transition no-underline! flex justify-start items-center gap-x-2 md:gap-x-1"
                     >
                         Pages in Events
-                        <ArrowRightIcon className="min-w-5 h-5 sm:min-w-3" />
+                        <ArrowRightIcon className="min-w-5 h-5 md:min-w-3" />
                     </a>
                 </NavDropdown>
             </>
@@ -167,7 +167,7 @@ export default function Nav({ data }: { data: NavQuery }) {
                     className={cn(
                         "sticky top-0 z-20 flex items-center justify-center py-2 font-medium gap-2",
                         bannerBackgrounds[
-                            data.siteInfo.nav.banner.type as bannerStatus
+                        data.siteInfo.nav.banner.type as bannerStatus
                         ],
                     )}
                 >
@@ -178,33 +178,33 @@ export default function Nav({ data }: { data: NavQuery }) {
                 </div>
             )}
             <div
-                className={`h-15 sm:left-7 flex-row-reverse sm:flex-row right-3 flex fixed z-20 gap-x-4 ${data?.siteInfo?.nav?.banner?.showBanner ? "top-10" : "top-0"}`}
+                className={`h-15 md:left-7 flex-row-reverse md:flex-row right-3 flex fixed z-20 gap-x-4 ${data?.siteInfo?.nav?.banner?.showBanner ? "top-10" : "top-0"}`}
             >
                 {/* first nav pill */}
-                <div className="px-5 sm:px-4 rounded-full mt-4 bg-slate-900/50 backdrop-filter backdrop-blur-[2px] button gap-x-4 sm:gap-x-2 flex items-center">
+                <div className="px-5 md:px-4 rounded-full mt-4 bg-slate-900/50 backdrop-filter backdrop-blur-[2px] button gap-x-4 md:gap-x-2 flex items-center">
                     {/* logo */}
                     <a href="/">
                         <img
                             src="/colour_sidetext_dark.svg"
                             alt="BuildingBloCS logo"
-                            className="w-full h-7 mr-1 sm:flex hidden"
+                            className="w-full h-7 mr-1 md:flex hidden"
                         />
                         <img
                             src="/favicon.svg"
                             alt="BuildingBloCS logo"
-                            className="w-full h-5 mr-1 sm:hidden flex"
+                            className="w-full h-5 mr-1 md:hidden flex"
                         />
                     </a>
 
                     <Separator orientation="vertical" className="bg-white/15" />
 
                     {/* start of desktop links */}
-                    <div className="gap-x-2 sm:flex hidden text-sm">
+                    <div className="gap-x-2 md:flex hidden text-sm">
                         {Links()}
                     </div>
 
                     {/* start of mobile links */}
-                    <div className="sm:hidden flex">
+                    <div className="md:hidden flex">
                         <Sheet open={openSheet} onOpenChange={setOpenSheet}>
                             <SheetTrigger aria-label="Navigation Menu">
                                 <HamburgerMenuIcon className="w-6 h-6" />
@@ -228,12 +228,13 @@ export default function Nav({ data }: { data: NavQuery }) {
                 {/* second nav pill */}
                 {data?.siteInfo?.nav?.featured?.showFeatured && (
                     <a
-                        className="h-15 flex sticky top-0 z-20"
+                        className="h-15 flex sticky top-0 z-20 min-w-0 max-w-[50vw]"
                         href={data.siteInfo.nav.featured.externalLink}
                     >
-                        <div className="px-4 pr-2 rounded-full mt-4 bg-slate-900/50 hover:bg-slate-800/50 transition backdrop-filter backdrop-blur-[2px] button flex items-center gap-x-3 text-md font-bold">
-                            <p>{data.siteInfo.nav.featured.message}</p>
-                            <div className="bg-[#FF9900] rounded-full p-1 px-1.5 transition flex gap-x-2 items-center text-black">
+                        <div className="px-4 pr-2 rounded-full mt-4 bg-slate-900/50 hover:bg-slate-800/50 transition backdrop-filter backdrop-blur-[2px] button flex items-center gap-x-3 text-md font-bold min-w-0 w-full">
+                            <p className="lg:block hidden">{data.siteInfo.nav.featured.message}</p>
+                            <p className="lg:hidden block truncate flex-1 min-w-0">{data.siteInfo.nav.featured.smallMessage}</p>
+                            <div className="bg-[#FF9900] rounded-full p-1 px-1.5 transition flex gap-x-2 items-center text-black shrink-0">
                                 <ArrowRightIcon className="w-4 h-5" />
                             </div>
                         </div>

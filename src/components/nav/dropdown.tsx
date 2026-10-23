@@ -40,7 +40,7 @@ export default function NavDropdown({
             <Popover open={open} onOpenChange={setOpen}>
                 <PopoverTrigger
                     onClick={() => setOpen(false)}
-                    className="sm:flex translate-y-0 translate-x-0 justify-start text-sm font-medium rounded-md px-2 hidden items-center gap-x-1 outline-0 group transition hover:bg-white hover:text-black data-[state=open]:hover:text-white data-[state=open]:bg-slate-700 cursor-pointer"
+                    className="md:flex translate-y-0 translate-x-0 justify-start text-sm font-medium rounded-md px-2 hidden items-center gap-x-1 outline-0 group transition hover:bg-white hover:text-black data-[state=open]:hover:text-white data-[state=open]:bg-slate-700 cursor-pointer"
                 >
                     {name}
                     <ChevronDownIcon className="transition group-data-[state=open]:rotate-180 group-data-[state=open]:mt-0.5" />
@@ -49,7 +49,7 @@ export default function NavDropdown({
                     {children}
                 </PopoverContent>
             </Popover>
-            <Accordion className="sm:hidden flex" type="multiple">
+            <Accordion className="md:hidden flex" type="multiple">
                 <AccordionItem value={name} className="transition-all">
                     <AccordionTrigger className="px-2 py-0 flex items-center no-underline! text-xl">
                         {name}

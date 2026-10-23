@@ -79,6 +79,7 @@ export type SiteInfo = {
     featured?: {
       showFeatured?: boolean
       message?: string
+      smallMessage?: string
       isInternal?: boolean
       externalLink?: string
       internalLink?: EventReference | AboutReference

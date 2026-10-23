@@ -14,7 +14,7 @@ export default function NavDropdownLink({
     return (
         <a
             href={link[0] == "/" ? link : `/${parent}/${link}`}
-            className="font-bold sm:font-semibold justify-between items-center hover:bg-slate-800/75 sm:p-2 py-1 rounded-xl text-lg transition flex no-underline! px-0 sm:px-2 w-full"
+            className="font-bold md:font-semibold justify-between items-center hover:bg-slate-800/75 md:p-2 py-1 rounded-xl text-lg transition flex no-underline! px-0 md:px-2 w-full"
         >
             <div className="flex flex-col">
                 {name}
