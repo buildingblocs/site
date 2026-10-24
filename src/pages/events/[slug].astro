@@ -282,34 +282,39 @@ const breadcrumbs = [
     import EmblaCarousel from "embla-carousel";
     import Autoplay from "embla-carousel-autoplay";
 
-    const emblaNode = document.querySelector(".embla__viewport") as HTMLElement;
+    document.addEventListener("astro:page-load", () => {
+        const emblaNode = document.querySelector(
+            ".embla__viewport",
+        ) as HTMLElement | null;
+        if (!emblaNode) return;
 
-    const autoplay = Autoplay();
-    const embla = EmblaCarousel(emblaNode, { loop: false }, [autoplay]);
+        const autoplay = Autoplay();
+        const embla = EmblaCarousel(emblaNode, { loop: false }, [autoplay]);
 
-    const prevButtonNode = document.querySelector(
-        ".embla__prev",
-    ) as HTMLElement;
-    const nextButtonNode = document.querySelector(
-        ".embla__next",
-    ) as HTMLElement;
+        const prevButtonNode = document.querySelector(
+            ".embla__prev",
+        ) as HTMLElement | null;
+        const nextButtonNode = document.querySelector(
+            ".embla__next",
+        ) as HTMLElement | null;
 
-    prevButtonNode.addEventListener(
-        "click",
-        () => {
-            embla.scrollPrev();
-            autoplay.stop();
-        },
-        false,
-    );
-    nextButtonNode.addEventListener(
-        "click",
-        () => {
-            embla.scrollNext();
-            autoplay.stop();
-        },
-        false,
-    );
+        prevButtonNode?.addEventListener(
+            "click",
+            () => {
+                embla.scrollPrev();
+                autoplay.stop();
+            },
+            false,
+        );
+        nextButtonNode?.addEventListener(
+            "click",
+            () => {
+                embla.scrollNext();
+                autoplay.stop();
+            },
+            false,
+        );
+    });
 </script>
 <style>
     .embla__slide {
