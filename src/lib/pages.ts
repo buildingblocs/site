@@ -41,7 +41,28 @@ export interface FooterSection {
 export const cleanId = (id: string): string => id.replace(/^drafts\./, "");
 
 export async function fetchRawPages(): Promise<SanityPage[]> {
-    const rawPages = await sanityClient.fetch<SanityPage[]>(`*[_type == "page"]`);
+    const rawPages = await sanityClient.fetch<SanityPage[]>(`
+        *[_type == "page"]{
+            ...,
+            content[]{
+                ...,
+                _type == "partnersBlock" => {
+                    ...,
+                    eventRef->{
+                        name,
+                        sponsors[]{
+                            _key,
+                            tier,
+                            sponsor->{
+                                name,
+                                logo
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    `);
     return rawPages || [];
 }
 

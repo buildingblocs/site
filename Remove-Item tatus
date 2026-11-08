@@ -1,0 +1,54 @@
+[1mdiff --git a/src/lib/pages.ts b/src/lib/pages.ts[m
+[1mindex 32ff1ba..f5b7dfc 100644[m
+[1m--- a/src/lib/pages.ts[m
+[1m+++ b/src/lib/pages.ts[m
+[36m@@ -41,7 +41,28 @@[m [mexport interface FooterSection {[m
+ export const cleanId = (id: string): string => id.replace(/^drafts\./, "");[m
+ [m
+ export async function fetchRawPages(): Promise<SanityPage[]> {[m
+[31m-    const rawPages = await sanityClient.fetch<SanityPage[]>(`*[_type == "page"]`);[m
+[32m+[m[32m    const rawPages = await sanityClient.fetch<SanityPage[]>(`[m
+[32m+[m[32m        *[_type == "page"]{[m
+[32m+[m[32m            ...,[m
+[32m+[m[32m            content[]{[m
+[32m+[m[32m                ...,[m
+[32m+[m[32m                _type == "partnersBlock" => {[m
+[32m+[m[32m                    ...,[m
+[32m+[m[32m                    eventRef->{[m
+[32m+[m[32m                        name,[m
+[32m+[m[32m                        sponsors[]{[m
+[32m+[m[32m                            _key,[m
+[32m+[m[32m                            tier,[m
+[32m+[m[32m                            sponsor->{[m
+[32m+[m[32m                                name,[m
+[32m+[m[32m                                logo[m
+[32m+[m[32m                            }[m
+[32m+[m[32m                        }[m
+[32m+[m[32m                    }[m
+[32m+[m[32m                }[m
+[32m+[m[32m            }[m
+[32m+[m[32m        }[m
+[32m+[m[32m    `);[m
+     return rawPages || [];[m
+ }[m
+ [m
+[1mdiff --git a/src/pages/[...slug].astro b/src/pages/[...slug].astro[m
+[1mindex 694ec9a..e303e83 100644[m
+[1m--- a/src/pages/[...slug].astro[m
+[1m+++ b/src/pages/[...slug].astro[m
+[36m@@ -7,6 +7,7 @@[m [mimport ColumnLayout from "@/components/sanity/columnLayout.astro";[m
+ import ContentImg from "@/components/sanity/contentImg.astro";[m
+ import ImageCover from "@/components/sanity/imageCover.astro";[m
+ import SanityImage from "@/components/sanity/Image.astro";[m
+[32m+[m[32mimport PartnersBlock from "@/components/sanity/partnersBlock.astro";[m
+ import {[m
+     fetchRawPages,[m
+     computePagePathsAndHierarchy,[m
+[36m@@ -59,6 +60,7 @@[m [mconst components = {[m
+         columnLayout: ColumnLayout,[m
+         blockImage: ContentImg,[m
+         imageCover: ImageCover,[m
+[32m+[m[32m        partnersBlock: PartnersBlock,[m
+     },[m
+ };[m
+ [m

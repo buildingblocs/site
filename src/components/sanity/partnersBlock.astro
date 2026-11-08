@@ -1,0 +1,63 @@
+---
+import SanityImg from "@/components/sanity/Image.astro";
+
+interface Props {
+    node: {
+        eventRef?: {
+            sponsors?: Array<{
+                _key: string;
+                tier?: "Gold" | "Silver" | "Bronze";
+                sponsor: {
+                    name: string;
+                    logo: { asset: any };
+                };
+            }>;
+        };
+    };
+}
+
+const { node } = Astro.props;
+const sponsors = node?.eventRef?.sponsors;
+
+if (!sponsors || sponsors.length === 0) {
+    return null;
+}
+---
+
+<div class="bg-slate-900/50 rounded-xl px-3 pb-4 pt-2 mt-2 border-white/15 border w-full gap-3 flex flex-col">
+    <div class="text-xs justify-between flex">
+        <p>Proudly supported by:</p>
+    </div>
+    
+    <!-- Gold Tiers -->
+    <div class="flex">
+        {sponsors
+            .filter((sponsor) => sponsor.tier === "Gold")
+            .map((sponsor) => (
+                <div class="flex-1 flex justify-center items-center">
+                    <SanityImg
+                        raw={false}
+                        alt={sponsor.sponsor.name}
+                        asset={sponsor.sponsor.logo.asset}
+                        className="h-10 object-contain max-w-full"
+                    />
+                </div>
+            ))}
+    </div>
+
+    <!-- Silver Tiers -->
+    <div class="flex">
+        {sponsors
+            .filter((sponsor) => sponsor.tier === "Silver")
+            .map((sponsor) => (
+                <div class="flex-1 flex justify-center items-center">
+                    <SanityImg
+                        raw={false}
+                        alt={sponsor.sponsor.name}
+                        asset={sponsor.sponsor.logo.asset}
+                        className="h-10 object-contain max-w-full"
+                    />
+                </div>
+            ))}
+    </div>
+</div>
