@@ -19,18 +19,30 @@ export type NavQuery = {
     siteInfo: Pick<SiteInfo, "nav"> | null;
 };
 
-export default function Nav({ data }: { data: NavQuery }) {
+export default function Nav({
+    data,
+    initialPathname = "",
+}: {
+    data: NavQuery;
+    initialPathname?: string;
+}) {
     const [openSheet, setOpenSheet] = useState(false);
+    const [pathname, setPathname] = useState(initialPathname);
 
     useEffect(() => {
         const close = () => setOpenSheet(false);
+        const updatePathname = () => setPathname(window.location.pathname);
 
         document.addEventListener("astro:before-preparation", close);
         document.addEventListener("astro:after-swap", close);
+        document.addEventListener("astro:after-swap", updatePathname);
+        document.addEventListener("astro:page-load", updatePathname);
 
         return () => {
             document.removeEventListener("astro:before-preparation", close);
             document.removeEventListener("astro:after-swap", close);
+            document.removeEventListener("astro:after-swap", updatePathname);
+            document.removeEventListener("astro:page-load", updatePathname);
         };
     }, []);
 
@@ -38,11 +50,11 @@ export default function Nav({ data }: { data: NavQuery }) {
 
     type EventExcerpts =
         | {
-            excerpt?: string;
-            openExcerpt?: string;
-            closedExcerpt?: string;
-            overExcerpt?: string;
-        }
+              excerpt?: string;
+              openExcerpt?: string;
+              closedExcerpt?: string;
+              overExcerpt?: string;
+          }
         | undefined;
 
     function getExcerpt(status: EventStatus, excerpts: EventExcerpts): string {
@@ -161,27 +173,32 @@ export default function Nav({ data }: { data: NavQuery }) {
     }
 
     return (
-        <>
+        <div
+            className={cn(
+                "top-0 inset-x-0 z-20 mb-4 pointer-events-none",
+                pathname === "/" ? "fixed" : "sticky",
+            )}
+        >
             {data?.siteInfo?.nav?.banner?.showBanner && (
                 <div
                     className={cn(
-                        "sticky top-0 z-20 flex items-center justify-center py-2 font-medium gap-2",
+                        "pointer-events-auto px-5 flex items-center justify-center py-2 font-medium gap-2",
                         bannerBackgrounds[
-                        data.siteInfo.nav.banner.type as bannerStatus
+                            data.siteInfo.nav.banner.type as bannerStatus
                         ],
                     )}
                 >
-                    {getBannerIcon(
-                        data.siteInfo.nav.banner.type as bannerStatus,
-                    )}
+                    <span className="shrink-0">
+                        {getBannerIcon(
+                            data.siteInfo.nav.banner.type as bannerStatus,
+                        )}
+                    </span>
                     {data.siteInfo.nav.banner.message}
                 </div>
             )}
-            <div
-                className={`h-15 md:left-7 flex-row-reverse md:flex-row right-3 flex fixed z-20 gap-x-4 ${data?.siteInfo?.nav?.banner?.showBanner ? "top-10" : "top-0"}`}
-            >
+            <div className="h-15 pr-3 md:pl-7 flex-row-reverse md:flex-row flex gap-x-4">
                 {/* first nav pill */}
-                <div className="px-5 md:px-4 rounded-full mt-4 bg-slate-900/50 backdrop-filter backdrop-blur-[2px] button gap-x-4 md:gap-x-2 flex items-center">
+                <div className="pointer-events-auto px-5 md:px-4 rounded-full mt-4 bg-slate-900/50 backdrop-filter backdrop-blur-[2px] button gap-x-4 md:gap-x-2 flex items-center">
                     {/* logo */}
                     <a href="/">
                         <img
@@ -212,7 +229,11 @@ export default function Nav({ data }: { data: NavQuery }) {
                             <SheetContent>
                                 <div
                                     onClick={(e) => {
-                                        if ((e.target as HTMLElement).closest("a")) {
+                                        if (
+                                            (e.target as HTMLElement).closest(
+                                                "a",
+                                            )
+                                        ) {
                                             setOpenSheet(false);
                                         }
                                     }}
@@ -228,12 +249,16 @@ export default function Nav({ data }: { data: NavQuery }) {
                 {/* second nav pill */}
                 {data?.siteInfo?.nav?.featured?.showFeatured && (
                     <a
-                        className="h-15 flex sticky top-0 z-20 min-w-0 max-w-[50vw]"
+                        className="pointer-events-auto h-15 flex min-w-0 max-w-[50vw]"
                         href={data.siteInfo.nav.featured.externalLink}
                     >
                         <div className="px-4 pr-2 rounded-full mt-4 bg-slate-900/50 hover:bg-slate-800/50 transition backdrop-filter backdrop-blur-[2px] button flex items-center gap-x-3 text-md font-bold min-w-0 w-full">
-                            <p className="lg:block hidden">{data.siteInfo.nav.featured.message}</p>
-                            <p className="lg:hidden block truncate flex-1 min-w-0">{data.siteInfo.nav.featured.smallMessage}</p>
+                            <p className="lg:block hidden">
+                                {data.siteInfo.nav.featured.message}
+                            </p>
+                            <p className="lg:hidden block truncate flex-1 min-w-0">
+                                {data.siteInfo.nav.featured.smallMessage}
+                            </p>
                             <div className="bg-[#FF9900] rounded-full p-1 px-1.5 transition flex gap-x-2 items-center text-black shrink-0">
                                 <ArrowRightIcon className="w-4 h-5" />
                             </div>
@@ -241,6 +266,6 @@ export default function Nav({ data }: { data: NavQuery }) {
                     </a>
                 )}
             </div>
-        </>
+        </div>
     );
 }

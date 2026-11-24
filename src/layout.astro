@@ -36,11 +36,17 @@ const isHome = Astro.url.pathname === "/";
         <ClientRouter />
     </head>
     <!-- pt is marked impt else layout will shift on mobile nav opening?? -->
-    <body class:list={["bg-slate-950", !isHome && "pt-24"]}>
-        <Nav client:load data={nav} transition:persist />
+    <!-- <body class:list={["bg-slate-950", !isHome && "pt-24"]}> -->
+    <body class:list={["bg-slate-950"]}>
+        <Nav
+            client:load
+            data={nav}
+            initialPathname={Astro.url.pathname}
+            transition:persist
+        />
         {showInfo && (
-            <div class="max-w-6xl mx-auto px-6 flex mt-4 flex-col gap-y-2">
-                <div class="flex flex-col gap-y-2 mr-25 mt-4">
+            <div class="max-w-6xl mx-auto px-6 flex flex-col gap-y-2">
+                <div class="flex flex-col gap-y-2 mr-25">
                     <SiteBreadcrumb breadcrumb={breadcrumbs} />
                     <h1>{title}</h1>
                 </div>

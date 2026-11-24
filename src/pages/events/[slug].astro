@@ -9,6 +9,7 @@ import SanityImg from "@/components/sanity/Image.astro";
 import SiteBreadcrumb from "@/components/breadcrumb";
 import type { SanityImageSource } from "@sanity/image-url";
 import type { Event } from "@/sanity.types";
+import { PortableText } from "astro-portabletext";
 
 type EventSponsor = {
     _key: string;
@@ -231,13 +232,18 @@ const breadcrumbs = [
             )}
 
             <div class="hidden md:flex flex-col gap-4">
+                {pageData.description && pageData.description.length > 0 && (
+                    <div class="space-y-4 leading-relaxed [&_p:empty]:hidden [&_a]:text-orange-400 [&_a]:underline [&_a]:underline-offset-4 hover:[&_a]:text-orange-300 [&_strong]:text-white [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:list-inside [&_ol]:list-decimal [&_ol]:list-inside [&_li]:leading-7 [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:text-white [&_h3]:text-xl [&_h3]:font-semibold [&_h3]:text-white [&_blockquote]:border-l-2 [&_blockquote]:border-slate-500 [&_blockquote]:pl-4 [&_blockquote]:italic">
+                        <PortableText value={pageData.description} />
+                    </div>
+                )}
                 <h2>Frequently Asked Questions</h2>
                 <Faq client:load faq={pageData.faqs} />
             </div>
         </div>
         <div class="flex-1 gap-y-10 flex flex-col">
             <div class="embla w-4/5 mx-auto relative">
-                {/* <p class="text-slate-300 font-medium">Official Prospectus</p> */}
+                <p class="text-slate-300 font-semibold">Official Prospectus</p>
                 <div class="embla__viewport overflow-hidden rounded-xl button">
                     <div class="embla__container flex">
                         {pageData.prospectus?.map((slide) => (
@@ -271,6 +277,11 @@ const breadcrumbs = [
             </div>
 
             <div class="md:hidden flex flex-col gap-y-3">
+                {pageData.description && pageData.description.length > 0 && (
+                    <div class="space-y-4 leading-relaxed [&_p:empty]:hidden [&_a]:text-orange-400 [&_a]:underline [&_a]:underline-offset-4 hover:[&_a]:text-orange-300 [&_strong]:text-white [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:list-inside [&_ol]:list-decimal [&_ol]:list-inside [&_li]:leading-7 [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:text-white [&_h3]:text-xl [&_h3]:font-semibold [&_h3]:text-white [&_blockquote]:border-l-2 [&_blockquote]:border-slate-500 [&_blockquote]:pl-4 [&_blockquote]:italic">
+                        <PortableText value={pageData.description} />
+                    </div>
+                )}
                 <h2>Frequently Asked Questions</h2>
                 <Faq client:load faq={pageData.faqs} />
             </div>
